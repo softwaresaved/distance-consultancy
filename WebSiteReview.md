@@ -298,11 +298,11 @@ Problematic links were spotted on the following pages:
 Don't claim Distance is 'easy to use'
 -------------------------------------
 
-[Distance](http://distancesampling.org/) says that:
+The [front page](http://distancesampling.org/) states that:
 
 > Distance for Windows is an industry standard (free and easy to use) ...
 
-[Distance for Windows](http://distancesampling.org/Distance/index.html) says tat:
+[Distance for Windows](http://distancesampling.org/Distance/index.html) states that:
 
 > It is a Windows program, featuring a graphical user interface that is easy to learn and use.'
 
@@ -393,8 +393,8 @@ Add a site map
 
 Given the number of pages in the web site, a site map would be useful.
 
-Add former team members to the team page
-----------------------------------------
+Move former team members to the team page
+-----------------------------------------
 
 [Distance history](http://distancesampling.org/distancehistory.html) lists the Distance team alumni. The current team is listed on [Distance development team](http://distancesampling.org/authors.html). It might be preferable to keep all the team members, current and former, on a single page. If a member leaves then they can just be moved down the page.
 
