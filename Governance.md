@@ -107,8 +107,11 @@ There is no Bugzilla entry with this number.
 Questions:
 
 * Where and how are the Known Problems recorded?
+  *     I believe these are stored in the RTF document itself
 * What is the process for recording them?
+  *     I don't know
 * What is the process for resolving them?
+  *     I don't know
 
 See also 'Define a support policy and process' below.
 
@@ -128,9 +131,13 @@ The project releases a number of products:
 Questions:
 
 * Are older Distance versions supported?
+  *  No, we recommend people update 
 * Are the R packages supported?
+  *  Yes, via Googlegroup 
 * Are in-development versions cloned from GitHub supported?
+  *  Not really
 * Are the extras supported?
+  *  No 
 
 As there have been issues with users being reluctant to use Bugzilla, users can be told to submit all feature requests and bug reports go via GoogleGroup. For these, a team member can then raise a ticket. 
 
@@ -172,10 +179,15 @@ These are augmented by the number of e-mail list users, with the comment that:
 Questions:
 
 * How is the data stored?
+  *  \\SHELOB\www\htmlruwpa\distance\log
 * Where is the data held?
+  *  \\SHELOB\www\htmlruwpa\distance\log
 * Who has access? More than one team member? 
+  *  Thomas, Miller, Rexstad
 * Is the analysis process documented? 
+  *  Partially; see Y:\Workshops\Distance\DistanceDownloads\getdownloadsfromemail.r 
 * Is it automated?
+  *  No 
 
 Consider cross-referencing e-mails from downloaders with e-mails to the forum e.g. a serious user could be a downloader who has submitted N+ e-mails to the forum.
 
@@ -211,9 +223,13 @@ Bibliography
 Questions:
 
 * How is the data stored?
+  * Bibtex file using JabRef
 * Where is the data held?
+  *  C:\Users\eric\Dropbox\onlinebib  Dave, you can discuss this
 * Who has access? More than one team member? 
+  *   Marques, Miller, Rexstad
 * Why is there a discrepency in the counts?
+  *  notsure what is happening with reference numbers of the two files `dbib.html` and `ruwpa` address
 
 It may be worth having one definitive version of the data, or just deprecating the latter page with the former.
 
