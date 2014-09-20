@@ -223,13 +223,13 @@ Bibliography
 Questions:
 
 * How is the data stored?
-  * Bibtex file using JabRef
+  * 3 Bibtex files using JabRef, are concatenated then an HTML page is generated. See [the distancesampling.com repository, file `makebib.sh`](https://github.com/DistanceDevelopment/distancesampling.com/blob/master/biblio/makebib.sh). The script is run as a `cron` job on a server at CREEM, every Monday.
 * Where is the data held?
-  *  C:\Users\eric\Dropbox\onlinebib  Dave, you can discuss this
+  *  Shared Dropbox folder between Dave Miller, Eric Rexstad and Tiago Marques.
 * Who has access? More than one team member? 
   *   Marques, Miller, Rexstad
 * Why is there a discrepency in the counts?
-  *  notsure what is happening with reference numbers of the two files `dbib.html` and `ruwpa` address
+  *  These are two different versions, the former is updated by `cron`, not sure about the other. We should re-direct that page to the new site.
 
 It may be worth having one definitive version of the data, or just deprecating the latter page with the former.
 
