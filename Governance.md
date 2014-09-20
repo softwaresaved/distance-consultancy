@@ -213,7 +213,10 @@ Such changes should be considered carefully and users warned if such changes are
 Is compatibility of Distance extras with Distance releases tested?
 ------------------------------------------------------------------
 
-[Distance Extras](http://distancesampling.org/distanceextras.html) provides links to Distance-related tools and downloads. Are these tested for compatibility with new Distance releases as they appear?
+[Distance Extras](http://distancesampling.org/distanceextras.html) provides links to Distance-related tools and downloads.
+
+ * Are these tested for compatibility with new Distance releases as they appear?
+   * No.
 
 Bibliography
 ------------
