@@ -179,13 +179,13 @@ These are augmented by the number of e-mail list users, with the comment that:
 Questions:
 
 * How is the data stored?
-  *  \\SHELOB\www\htmlruwpa\distance\log
+  *  Old data (pre-new website) is stored on `\\SHELOB\www\htmlruwpa\distance\log` a network share/webserver at CREEM. New data is stored in a Google Spreadsheet.
 * Where is the data held?
-  *  \\SHELOB\www\htmlruwpa\distance\log
+  *  See above.
 * Who has access? More than one team member? 
   *  Thomas, Miller, Rexstad
 * Is the analysis process documented? 
-  *  Partially; see Y:\Workshops\Distance\DistanceDownloads\getdownloadsfromemail.r 
+  *  Partially; see `Y:\Workshops\Distance\DistanceDownloads\getdownloadsfromemail.r`
 * Is it automated?
   *  No 
 
