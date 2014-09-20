@@ -135,7 +135,7 @@ Questions:
 * Are the R packages supported?
   *  Yes, via Googlegroup 
 * Are in-development versions cloned from GitHub supported?
-  *  Not really
+  *  Not really, though if someone e-mails me (Dave) about a bug in a dev version, I wouldn't treat it any differently from any other bug. We don't recommend folks use dev R packages with Distance for Windows.
 * Are the extras supported?
   *  No 
 
