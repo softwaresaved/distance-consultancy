@@ -107,8 +107,11 @@ There is no Bugzilla entry with this number.
 Questions:
 
 * Where and how are the Known Problems recorded?
+  *     I believe these are stored in the RTF document itself
 * What is the process for recording them?
+  *     I don't know
 * What is the process for resolving them?
+  *     I don't know
 
 See also 'Define a support policy and process' below.
 
@@ -128,9 +131,13 @@ The project releases a number of products:
 Questions:
 
 * Are older Distance versions supported?
+  *  No, we recommend people update 
 * Are the R packages supported?
+  *  Yes, via Googlegroup 
 * Are in-development versions cloned from GitHub supported?
+  *  Not really, though if someone e-mails me (Dave) about a bug in a dev version, I wouldn't treat it any differently from any other bug. We don't recommend folks use dev R packages with Distance for Windows.
 * Are the extras supported?
+  *  No 
 
 As there have been issues with users being reluctant to use Bugzilla, users can be told to submit all feature requests and bug reports go via GoogleGroup. For these, a team member can then raise a ticket. 
 
@@ -172,10 +179,15 @@ These are augmented by the number of e-mail list users, with the comment that:
 Questions:
 
 * How is the data stored?
+  *  Old data (pre-new website) is stored on `\\SHELOB\www\htmlruwpa\distance\log` a network share/webserver at CREEM. New data is stored in a Google Spreadsheet.
 * Where is the data held?
+  *  See above.
 * Who has access? More than one team member? 
+  *  Thomas, Miller, Rexstad
 * Is the analysis process documented? 
+  *  Partially; see `Y:\Workshops\Distance\DistanceDownloads\getdownloadsfromemail.r`
 * Is it automated?
+  *  No 
 
 Consider cross-referencing e-mails from downloaders with e-mails to the forum e.g. a serious user could be a downloader who has submitted N+ e-mails to the forum.
 
@@ -201,7 +213,10 @@ Such changes should be considered carefully and users warned if such changes are
 Is compatibility of Distance extras with Distance releases tested?
 ------------------------------------------------------------------
 
-[Distance Extras](http://distancesampling.org/distanceextras.html) provides links to Distance-related tools and downloads. Are these tested for compatibility with new Distance releases as they appear?
+[Distance Extras](http://distancesampling.org/distanceextras.html) provides links to Distance-related tools and downloads.
+
+ * Are these tested for compatibility with new Distance releases as they appear?
+   * No.
 
 Bibliography
 ------------
@@ -211,9 +226,13 @@ Bibliography
 Questions:
 
 * How is the data stored?
+  * 3 Bibtex files using JabRef, are concatenated then an HTML page is generated. See [the distancesampling.com repository, file `makebib.sh`](https://github.com/DistanceDevelopment/distancesampling.com/blob/master/biblio/makebib.sh). The script is run as a `cron` job on a server at CREEM, every Monday.
 * Where is the data held?
+  *  Shared Dropbox folder between Dave Miller, Eric Rexstad and Tiago Marques.
 * Who has access? More than one team member? 
+  *   Marques, Miller, Rexstad
 * Why is there a discrepency in the counts?
+  *  These are two different versions, the former is updated by `cron`, not sure about the other. We should re-direct that page to the new site.
 
 It may be worth having one definitive version of the data, or just deprecating the latter page with the former.
 
