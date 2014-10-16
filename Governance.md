@@ -1,6 +1,11 @@
 Project Governance
 ==================
 
+Mike Jackson, The Software Sustainability Institute / EPCC, The University of Edinburgh
+
+Introduction
+------------
+
 The [Distance project](http://distancesampling.org) provides software, Distance, for the design and analysis of distance sampling surveys of wildlife populations. Distance is used by biologists, students, and decision makers to better understand animal populations without the need for these users to have degrees in statistics or computer science. 
 
 This report discusses issues around the governance of the Distance project. This includes copyright, licencing, support, contributions, issue and bug management etc.
@@ -14,6 +19,7 @@ This report, started 08/09/14, is currently work-in-progress and is a mix of not
 
 * [Web site review](./WebSiteReview.md)
 * [User experience review](./UserExperienceReview.md)
+* Developer experience review
 
 ----------------------------------------------------------------------
 
@@ -93,8 +99,8 @@ Being unresponsive may lead users to conclude that the project is dead, or a pro
 
 See also 'Define a support policy and process' below.
 
-How are Known Problems managed?
--------------------------------
+Adopt an issue tracker
+----------------------
 
 [Current restrictions, known problems and workarounds Distance 6.0 Release 2](http://distancesampling.org/Distance/old-versions/d60knownproblems.html) lists various known problems e.g.
 
@@ -104,14 +110,28 @@ These are also listed in the [Distance 6.2 Release 1 Release Notes - 22 April 20
 
 There is no Bugzilla entry with this number.
 
-Questions:
+Currentlym known problems, resolved problems and possible solutions are spread across the user's guide and the developer's manual, and within web pages. For Distance's R components, `NEWS` files in each component's GitHub repository liss changes and bug fixes. It is unclear how, or whether, these myriad resources are kept consistent.
 
-* Where and how are the Known Problems recorded?
-  *     I believe these are stored in the RTF document itself
-* What is the process for recording them?
-  *     I don't know
-* What is the process for resolving them?
-  *     I don't know
+The developer's manual, p13, describes, at least part of, the current process for tracking bugs and issues with Distance for Windows, refering to files on the Distance developer's virtual machine:
+
+> Worklist, resolved and known problems These are Word documents. Worklist contains a list of things to do, KnownProblems contains the list of known problems (with numbers) and ResolvedProblems is the list of problems fixed in each version. KnownProblems is periodically saved as an html file and uploaded to the Distance web-site. Once problems are fixed they are greyed out in KnownProblems, and when a new version is released all of the fixed problems are transferred over into the ResolvedProblems list ... which forms the basis for part of the ReadMe file ...
+
+It is unclear how bugs are recorded, whether developers record problems they are notified of via e-mail, and how, and whether, they are resolved. It is also unclear why both Bugzilla and this manual, document-oriented solution are being used, perhaps to make updating documentation easier.
+
+Fully adopting an issue tracker for managing known problems and solutions would allow for a more systematic and organised approach to problem management. Rather than information spread across a number of documents, hosted in a number of locations, they'd provide a single point of access - one problem recorded in one place only - for developers and, if made publicly readable, for users. Making them publicly readable would make the creation of known problems and resolved problems more efficient - release notes and other documents can just provide a list of the issues corresponding to each known problem or resolved problem, plus their descriptive text. Users can then consult the issue tracker for more information.
+
+The GitHub repositories for `mrds`, `dsm`, `Distance`, `packrat-distance-6.2` and `WiSP` all have issue trackers but these are unused.
+
+One migration plan towards using issue trackers is:
+
+* Create two new repositories in the [Distance development](https://github.com/DistanceDevelopment) GitHub project, one each for:
+  - Distance for Windows
+  - FORTRAN MCDS analysis engine
+* Harvest all the known problems for Distance for Windows, FORTRAN MCDS analysis engine and R MRDS and DSM components.
+* Populate the issue trackers for each of these components with the known problems.
+* Link the issue trackers from the Help and Support and Get in Touch pages proposed in the [Web site review](./WebSiteReview.md).
+
+There have been issues with users being reluctant to use Bugzilla - GitHub issue trackers have a far less intimidating user interface. They also allow for a more direct linkage between issues and the source code to which the issues apply.
 
 See also 'Define a support policy and process' below.
 
@@ -128,26 +148,25 @@ The project releases a number of products:
 
 > Please remember that Distance is free, so techical support is given on a 'best effort' basis (i.e., we'll do the best we can, given our other commitments).
 
-Questions:
+From discussions with the Distance developers it was discovered that:
 
-* Are older Distance versions supported?
-  *  No, we recommend people update 
-* Are the R packages supported?
-  *  Yes, via Googlegroup 
-* Are in-development versions cloned from GitHub supported?
-  *  Not really, though if someone e-mails me (Dave) about a bug in a dev version, I wouldn't treat it any differently from any other bug. We don't recommend folks use dev R packages with Distance for Windows.
-* Are the extras supported?
-  *  No 
+* Older Distance versions are not officially supported. It is recommended that users use the most recent version.
+* R packages are supported via the GoogleGroup.
+* In-development versions cloned from the GitHub repositories are not supported and their use is not recommended. However, bug reports would be logged and addressed.
+* Distance extras are not supported.
+
+However, from the web site, it is unclear to users exactly what support they can expect. 
 
 As there have been issues with users being reluctant to use Bugzilla, users can be told to submit all feature requests and bug reports go via GoogleGroup. For these, a team member can then raise a ticket. 
 
-You can never 100% stop users e-mailing invididual members of the team. However, any users that contact individual team members can politely be requested to resubmit their request to the GoogleGroup. Such requests can emphasise that others may be interested in the request (or may be stuck with the same bug) and may be interested in the answer. If a user really wants/needs help they will do this. Or, for a first-timer, you can send their e-mail and your reply to the GoogleGroup yourself. If they reply to you personally, remember to CC the GoogleGroup in your reply.
+You can never 100% stop users e-mailing individual members of the team. However, any users that contact individual team members can politely be requested to resubmit their request to the GoogleGroup. Such requests can emphasise that others may be interested in the request (or may be stuck with the same bug) and may be interested in the answer. If a user really wants/needs help they will do this. Or, for a first-timer, you can send their e-mail and your reply to the GoogleGroup yourself. If they reply to you personally, remember to CC the GoogleGroup in your reply.
 
 For a project I worked on for many years, OGSA-DAI, we found that this approach was the least painful.
 
 It is worth defining a support process and policy. This can define:
 
-* Level of support e.g. 'best effort', above.
+* Which products are supported, and which are not.
+* The level of support for each component e.g. 'best effort', above.
 * When users can expect a response e.g. 'we aim to reply to all e-mails within 1 week'. 
  * Responding to an e-mail or new Bugzilla or GitHub ticket ensures the user does not feel ignored, which can be an issue as mentioned previously. 
  * Responding to a user request does not imply fixing a bug or implementing a feature, it merely acknowledges that you've heard them. No-one has a right to *expect* support for free software.
@@ -176,18 +195,7 @@ These are augmented by the number of e-mail list users, with the comment that:
 
 > A separate measure of the number of 'serious' users of Distance is those on the distance-sampling email list.  These people are prepared to receive several emails a week on the topic of distance sampling, so can be taken to be somewhat committed to the subject. Not all members of the list are necessarily Distance users, but we expect that most are.
 
-Questions:
-
-* How is the data stored?
-  *  Old data (pre-new website) is stored on `\\SHELOB\www\htmlruwpa\distance\log` a network share/webserver at CREEM. New data is stored in a Google Spreadsheet.
-* Where is the data held?
-  *  See above.
-* Who has access? More than one team member? 
-  *  Thomas, Miller, Rexstad
-* Is the analysis process documented? 
-  *  Partially; see `Y:\Workshops\Distance\DistanceDownloads\getdownloadsfromemail.r`
-* Is it automated?
-  *  No 
+Impact data from the old Distance web-site is stored on a local network share/web server within CREEM at St. Andrews, `\\SHELOB\www\htmlruwpa\distance\log`. Impact data for the new web-site is stored within a Google spreadsheet to which Dave Miller, Eric Rexstad and Len Thomas have access. Analysis is documented (`Y:\Workshops\Distance\DistanceDownloads\getdownloadsfromemail.r`) and is currently manual.
 
 Consider cross-referencing e-mails from downloaders with e-mails to the forum e.g. a serious user could be a downloader who has submitted N+ e-mails to the forum.
 
@@ -200,48 +208,67 @@ You may want to approach these groups and ask whether some form of mutual promot
 
 ----------------------------------------------------------------------
 
+Backwards compatibility policy
+==============================
+
+Any changes to directory structures, naming conventions or project files could cause problems for existing users who wish to upgrade their version. Such changes should be considered carefully and users warned if such changes are implemented, before they upgrade.  Likewise, changes to function names, arguments or return types in R packages could also cause upgrade problems for developers using these. The backwards compatibility policy are mentioned in the user's guide but are not as explicit as they should be.
+
+Make backwards compatibility policy more explicit
+-------------------------------------------------
+
+User's guide p289 has a backwards compatibility statement for the database API in `D6DbEng.dll`:
+
+> Warning! The database API is primarily intended for internal use by those working on the Distance project. There is no guarantee that the API will remain the same in subsequent releases, although we will endeavor not to break the current interface.
+
+p311 states that:
+
+> In previous versions of Distance, the CDS and MCDS engine required 5 header lines, and not six (because there was no bootstrap progress file). Also, the bootstrap file came before the plot file. So, if you have any code for calling previous versions, you'll need to update it to call the new version.
+
+This reference to the MCDS command file breaks backwards compatibility with previous versions of MCDS. This is buried within 'Appendix - Inside Distance'. It did not appear in the Distance 6.2 Release 1 Release Notes - 22 April 2014. There there may be users who use MCDS stand-alone who would be unaware of this important change.
+
+p296 has a deprecation statement:
+
+> Note! The technology used by the Distance database engine (Jet 3.51) has been replaced by Microsoft by newer technology, so it is unlikely they will issue IISAM drivers to link to newer versions of the above software. Given the overhead that would be required, it is also unlikely that we will be updating the Distance database engine to use newer technology any time soon. Many newer programs can, however, work with files in the older formats - for example, newer versions of Excel can easily save files as Excel 97-2002 (Excel 8.0) and work with them in that format.
+
+Policies on backwards compatibility and deprecation should be prominent on the web-site and in the release notes and, for R components, in each R repository. This especially applies to any changes that are made that break backwards compatibility and which may cause users and developers problems, and waste their time, if they are not made aware of these changes.
+
+Be specific when mentioning previous versions
+---------------------------------------------
+
+User's guide p311 states:
+
+> In previous versions of Distance, the CDS and MCDS engine required 5 header lines, and not six (because there was no bootstrap progress file). Also, the bootstrap file came before the plot file. So, if you have any code for calling previous versions, you'll need to update it to call the new version
+
+It is unclear whether 'previous versions of Distance' means versions prior to Distance 6, or, versions prior to the version of Distance for which this paragraph was first added to the user guide. It would be clearer to phrase such statements as, for example:
+
+> In versions of Distance prior to Distance 6...
+
+Or, see [Migration from dsm 1.1.3 to 2.1.5](http://distancedevelopment.github.io/dsm-dsm113to215.html).
+
+Automate upgrade support
+------------------------
+
+It can be useful to provide tools to help users and developers automatically upgrade from previous versions e.g. for the above this could be a script to convert command files to the 6 header line format mentioned above.
+
+----------------------------------------------------------------------
+
 Various
 =======
-
-Is there a policy for backwards compatibility?
-----------------------------------------------
-
-Any changes to directory structures, naming conventions or project files could cause problems for existing users who wish to upgrade their version. Likewise, changes to function names, arguments or return types in R packages could also cause upgrade problems for developers using these.
-
-Such changes should be considered carefully and users warned if such changes are implemented, before they upgrade. A policy or process for deciding upon and implementing such changes, and notifying users, should be created and published on a project resource e.g. a wiki or the web site.
 
 Is compatibility of Distance extras with Distance releases tested?
 ------------------------------------------------------------------
 
-[Distance Extras](http://distancesampling.org/distanceextras.html) provides links to Distance-related tools and downloads.
-
- * Are these tested for compatibility with new Distance releases as they appear?
-   * No.
+[Distance Extras](http://distancesampling.org/distanceextras.html) provides links to Distance-related tools and downloads. As these are unsupported components they are not tested for compatibility with new Distance releases as they appear.
 
 Bibliography
 ------------
 
-[Distance Sampling References](http://distancesampling.org/dbib.html) on the web site and [Distance Sampling References](http://www.ruwpa.st-and.ac.uk/distancesamplingreferences/) accessed via the St. Andrews CREEM training pages both list searchable bibliographies. The pages have the same look and feel apart from colour scheme. However, the former lists 1274 references and the latter 1277.
+[Distance Sampling References](http://distancesampling.org/dbib.html) on the web site and [Distance Sampling References](http://www.ruwpa.st-and.ac.uk/distancesamplingreferences/) accessed via the St. Andrews CREEM training pages both list searchable bibliographies. The pages have the same look and feel apart from colour scheme.
 
-Questions:
+This data is stored as 3 Bibtex files using JabRef. These files are concatenated then an HTML page is generated. See [the distancesampling.com repository, file `makebib.sh`](https://github.com/DistanceDevelopment/distancesampling.com/blob/master/biblio/makebib.sh). The script is run as a `cron` job on a server at CREEM, every Monday.
 
-* How is the data stored?
-  * 3 Bibtex files using JabRef, are concatenated then an HTML page is generated. See [the distancesampling.com repository, file `makebib.sh`](https://github.com/DistanceDevelopment/distancesampling.com/blob/master/biblio/makebib.sh). The script is run as a `cron` job on a server at CREEM, every Monday.
-* Where is the data held?
-  *  Shared Dropbox folder between Dave Miller, Eric Rexstad and Tiago Marques.
-* Who has access? More than one team member? 
-  *   Marques, Miller, Rexstad
-* Why is there a discrepency in the counts?
-  *  These are two different versions, the former is updated by `cron`, not sure about the other. We should re-direct that page to the new site.
+The data is stored within a Dropbox folder shared between Dave Miller, Eric Rexstad and Tiago Marques, to which all have access.
 
-It may be worth having one definitive version of the data, or just deprecating the latter page with the former.
+The web site lists 1274 references and the CREEM training page lists 1277 references. The former is updated via a `cron` job.
 
-
-
-
-
-
-
-
-
-
+It may be worth having one definitive version of the data, or just deprecating the latter page with the former, with a redirect to the web site.
