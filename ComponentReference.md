@@ -105,8 +105,8 @@ R scripts
 * Source location: relative to %BASE%.
 * How to build?: Shipped as-is.
 
-| R | Source location | Description |
-| - | --------------- | ----------- |
+| R script | Source location | Description |
+| -------- | --------------- | ----------- |
 | dsm.support.r | | Support functions used when Distance calls the dsm library **None** |
 | mrds.support.r | | Support functions used when Distance calls the mrds library **None** |
 | support.r | | Functions that used by Distance when interfacing with R **None** |
