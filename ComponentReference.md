@@ -21,7 +21,7 @@ DLLs
 <p/>
 
 | DLL | Source location | How to build? | Description |
-| - | - | - | - |
+| --- | --------------- | ------------- | ----------- |
 | **Database API and engine** | | | |
 | D6Dbeng.dll | Database Engine | ? | Manages project files and data files. |
 | **Numerical server** | | | |
