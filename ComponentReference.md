@@ -18,8 +18,6 @@ DLLs
 * Language: Visual Basic source code.
 * Source location: relative to %BASE%.
 
-<p/>
-
 | DLL | Source location | How to build? | Description |
 | --- | --------------- | ------------- | ----------- |
 | **Database API and engine** | | | |
@@ -57,7 +55,7 @@ Widgets for display and interaction in the GUI. These are plugged-into Distance 
 * Source location: relative to %BASE%.
 
 | OCX | Source location | How to build? | Description |
-| - | - | - | - |
+| --- | --------------- | ------------- | ----------- |
 | **Properties dialogs** | | | Specifying options - one per NEngine plus others |
 | D6DesPrp.ocx | Design engine\Properties | ? | Design properties | 
 | D6SvyPrp.ocx | Survey\Properties | ? | Survey properties |
@@ -87,7 +85,7 @@ Executables
 -----------
 
 | EXE | Source location: | Language | How to build? | Description |
-| - | - | - | - | - |
+| --- | ---------------- | -------- | ------------- | ----------- |
 | **Numerical engine (NEngine)** | | | | |
 | MCDS.exe | %BASE%\Analysis Engines\CDS\Engine | FORTRAN | ? | Distance MCDS NEngine for MCDS and CDS |
 | **NEngine host** | | | | |
@@ -108,7 +106,7 @@ R scripts
 * How to build?: Shipped as-is.
 
 | R | Source location | Description |
-| - | - | - | - |
+| - | --------------- | ----------- |
 | dsm.support.r | | Support functions used when Distance calls the dsm library **None** |
 | mrds.support.r | | Support functions used when Distance calls the mrds library **None** |
 | support.r | | Functions that used by Distance when interfacing with R **None** |
@@ -121,7 +119,7 @@ Miscellaneous
 * How to build?: Shipped as-is.
 
 | File | Source location | Description |
-| - | - | - | - |
+| ---- | --------------- | ----------- |
 | DistIni.mdb | ? | Default project settings and settings not unique to specific projects |
 | DistanceProject.ico | ? | Icon |
 | ReadMe.rtf | ? | Release notes |
@@ -146,7 +144,7 @@ Registry sub-tree search order:
 **None**
 
 | File |
-| - |
+| ---- |
 | AF20.dll |
 | Actbar2.ocx |
 | Dao2535.tlb |
@@ -185,7 +183,7 @@ Registry sub-tree search order:
 -------------
 
 | File | Source location | How to build? | Description |
-| - | - | - | - |
+| ---- | --------------- | ------------- | ----------- |
 | **Content for GUI widgets** | | | |
 | Authors.rtf | | ? | For Help => About Distance... |
 | Sponsors.rtf | | ? | For Help => About Distance... |
@@ -214,7 +212,7 @@ R packages used to restore default versions within R library.
 * How to build?: Shipped as-is.
 
 | ZIP | Source location |
-| - | |
+| --- | --------------- |
 | BB_2014.1-1.zip | |
 | RColorBrewer_1.0-5.zip | |
 | Rcgmin_2013-02.20.zip | |
@@ -262,7 +260,7 @@ Sample project file and data folder for use as templates for new projects.
 * How to build?: Shipped as-is.
 
 | File | Description |
-| - | - |
+| ---- | ----------- |
 | Sample Template.dat | Distance project file |
 | Sample Template.dst | Distance data folder |
 | Sample Template.dst\DistData.mdb | Distance data file |
@@ -282,7 +280,7 @@ Each `.dst` file has a `.dat` folder (not shown) containing a `DistData.mdb` fil
 * How to build?: Shipped as-is.
 
 | File | Description |
-| - | - |
+| ---- | ----------- |
 | Example1.xls | Raw data |
 | Example1Backup.txt | Raw data |
 | Example2.xls - raw data | Raw data |
@@ -310,7 +308,7 @@ External components used within Distance and which are distributed with Distance
 Data management:
 
 | Company | Name | Description |
-| - | - | - |
+| ------- | ---- | ----------- |
 | Microsoft | DAO (Data Access Objects) | Powers database engine and provides in-code access to Microsoft Jet databases |
 | Microsoft | | Jet 3.51 IISAM (Installable Indexed Sequential Access Method) drivers: | 
 | |  Native Jet driver | Manages Microsoft Access 97 and earlier databases |
@@ -321,7 +319,7 @@ Data management:
 GUI:
 
 | Company | Name | Description |
-| - | - | - |
+| ------- | ---- | ----------- |
 | Data Dynamics  | ActiveBar | Toolbar functionality |
 | ComponentOne | VSFlex | Spreadsheet functionality |
 | FarPoint | TabPro | Tabs |
@@ -332,13 +330,13 @@ GUI:
 MCDS / FORTRAN:
 
 | Company | Name | Description |
-| - | - | - |
+| ------- | ---- | ----------- |
 | IMSL | Numerical routines | Come standard with Visual Fortran Professional |
 
 Miscellaneous:
 
 | Company | Name | Description |
-| - | - | - |
+| ------- | ---- | ----------- |
 | Microsoft Windows | Windows Script | Utilities e.g. regular expression searching, easy Windows file system manipulation |
 | Desaware | Spyworks | Low-level functions for process manipulation, etc. Allows some of the power of C++ to be implemented in VB. |
 | Polar Software | PolarZip | Compression functions |
