@@ -29,8 +29,10 @@ Distance for Windows <=> FORTRAN interface
 `Ec.exe` 
 
 * Execute command line after parsing and removing Windows NT-compatible redirection symbols
-* Used to capture standard error
-* See [Compaq Visual Fortran Release Notes August 2002](http://h21007.www2.hp.com/portal/download/files/unprot/Fortran/docs/visual/relnotes.htm):
+* Used to capture standard output and standard error.
+* See [Compaq Visual Fortran Release Notes August 2002](http://h21007.www2.hp.com/portal/download/files/unprot/Fortran/docs/visual/relnotes.htm).
+* See [Redirecting Command-Line Output to Files](https://www.xlsoft.com/jp/products/intel/cvf/docs/vf-html_e/pg/pgsredir.htm):
+  - 'The EC tool is located on the Visual Fortran CD-ROM in the `x86\Usupport\Misc\Win95 folder`'.
 
 <p/>
 

@@ -1,11 +1,13 @@
 
-Distance for Windows 6 - Component Reference
-============================================
+Distance for Windows - Component Reference
+==========================================
 
-Reference guide to Distance for Windows 6 components as they appear in a Distance for Windows installation.
+Reference guide to Distance for Windows components as they appear in a Distance for Windows installation.
 
 Notes:
 
+* This reference was written using Distance for Windows 6.
+* 'nnnn' denotes the Distance version e.g. 6.
 * VM location: location on Distance developer's virtual machine.
 * For file extensions see, [File extensions](./FileExtensions.md).
 
@@ -20,29 +22,29 @@ DLLs
 | DLL | VM location | How to build? | Description |
 | --- | ----------- | ------------- | ----------- |
 | **Database API and engine** | | | |
-| D6Dbeng.dll | Database Engine | ? | Manages project files and data files. |
+| DnnnnDbeng.dll | Database Engine | ? | Manages project files and data files. |
 | | | | |
 | **Numerical server** | | | |
-| D6NSvr.dll | Numerical server\NServer | ? | Manages NEngine runs |
+| DnnnnNSvr.dll | Numerical server\NServer | ? | Manages NEngine runs |
 | | | | |
 | **Numerical engine (NEngine)** | | | |
-| D6DesEng.dll | Design engine\Engine | ? | Design and survey engine |
+| DnnnnDesEng.dll | Design engine\Engine | ? | Design and survey engine |
 | | | | |
 | **Numerical engine interfaces (NEI)** | | | One per NEngine |
-| ID6NEng.dll | Numerical server\TypeLibrary | ? | NEI type library - implemented by all NEIs |
-| D6DesNEI.dll | Design engine\NEngineInterface | ? | Design engine NEI |
-| D6SvyNEI.dll | Survey\NEngineInterface | ? | Alternate design engine NEI used for generating single surveys (as opposed to running designs to estimate coverage) |
-| D6CDSNEI.dll | Analysis engines\CDS | ? | CDS and MCDS NEI | 
-| D6DSMNEI.dll | Analysis engines\DSM\NEngineInterface | ? | DSM NEI |
-| D6MRDSNEI.dll | Analysis engines\MRDS\NEngineInterface | ? | MRDS NEI |
-| D6NEIUtil.dll | Analysis engines\Shared Stuff\NEngineInterfaceUtilities | ? | NEI utilities |
+| IDnnnnNEng.dll | Numerical server\TypeLibrary | ? | NEI type library - implemented by all NEIs |
+| DnnnnDesNEI.dll | Design engine\NEngineInterface | ? | Design engine NEI |
+| DnnnnSvyNEI.dll | Survey\NEngineInterface | ? | Alternate design engine NEI used for generating single surveys (as opposed to running designs to estimate coverage) |
+| DnnnnCDSNEI.dll | Analysis engines\CDS | ? | CDS and MCDS NEI | 
+| DnnnnDSMNEI.dll | Analysis engines\DSM\NEngineInterface | ? | DSM NEI |
+| DnnnnMRDSNEI.dll | Analysis engines\MRDS\NEngineInterface | ? | MRDS NEI |
+| DnnnnNEIUtil.dll | Analysis engines\Shared Stuff\NEngineInterfaceUtilities | ? | NEI utilities |
 | | | | |
 | **Wizards** | | | |
-| D6IDWiz.dll | Interface\Wizards\Setup Project | ? | Import Data wizard |
-| D6SPWiz.dll | Interface\Wizards\Import Data | ? | Setup Project wizard |
+| DnnnnIDWiz.dll | Interface\Wizards\Setup Project | ? | Import Data wizard |
+| DnnnnSPWiz.dll | Interface\Wizards\Import Data | ? | Setup Project wizard |
 | | | | |
 | **Miscellaneous** | | | |
-| D6Util.dll | Utilities | ? | Utilities for strings, files, random numbers | 
+| DnnnnUtil.dll | Utilities | ? | Utilities for strings, files, random numbers | 
 | CTmr4.dll | Misc\CodeTimer | ? | High-resolution code timer, improved replacement for Microsoft's timer control |
 | CDlg3.dll | Misc\CommonDialog | ? | Common dialog, improved replacement for Microsoft's common dialog control |
 | LogStr3.dll | Misc\LogString | ? | Log string class, for appending strings within Log windows |
@@ -61,24 +63,24 @@ Widgets for display and interaction in the GUI. These are plugged-into Distance 
 | OCX | VM location | How to build? | Description |
 | --- | ----------- | ------------- | ----------- |
 | **Properties dialogs** | | | Specifying options - one per NEngine plus others |
-| D6DesPrp.ocx | Design engine\Properties | ? | Design properties | 
-| D6SvyPrp.ocx | Survey\Properties | ? | Survey properties |
-| D6DFPrp.ocx | Interface\Properties\Data Filter | ? | Data filter properties |
-| D6MDPrp.ocx | Interface\Properties\Model Definition | ? | Model definition properties - container for CDS and MRDS properties |
-| D6CDSPrp.ocx | Analysis engines\CDS\Properties  | ? | CDS analysis engine properties |
-| D6MRDSPrp.ocx | Analysis engines\MRDS\Properties | ? | MRDS analysis engine properties |
-| D6DSMPrp.ocx | Analysis engines\DSM\Properties | ? | DSM analysis engine properties |
+| DnnnnDesPrp.ocx | Design engine\Properties | ? | Design properties | 
+| DnnnnSvyPrp.ocx | Survey\Properties | ? | Survey properties |
+| DnnnnDFPrp.ocx | Interface\Properties\Data Filter | ? | Data filter properties |
+| DnnnnMDPrp.ocx | Interface\Properties\Model Definition | ? | Model definition properties - container for CDS and MRDS properties |
+| DnnnnCDSPrp.ocx | Analysis engines\CDS\Properties  | ? | CDS analysis engine properties |
+| DnnnnMRDSPrp.ocx | Analysis engines\MRDS\Properties | ? | MRDS analysis engine properties |
+| DnnnnDSMPrp.ocx | Analysis engines\DSM\Properties | ? | DSM analysis engine properties |
 | | | | |
 | **Details pages** | | | Viewing logs and results of runs - one per NEngine plus others |
-| D6DesDet.ocx | Design engine\Details | ? | Design details |
-| D6SvyDet.ocx | Survey\Details | ? | Survey details |
-| D6CDSDet.ocx | Analysis engines\CDS\Details | ? | CDS analysis engine details |
-| D6DSMDet.ocx | Analysis engines\DSM\Details | ? | DSM analysis engine details |
-| D6MRDSDet.ocx | Analysis engines\MRDS\Details | ? | MRDS analysis engine details |
+| DnnnnDesDet.ocx | Design engine\Details | ? | Design details |
+| DnnnnSvyDet.ocx | Survey\Details | ? | Survey details |
+| DnnnnCDSDet.ocx | Analysis engines\CDS\Details | ? | CDS analysis engine details |
+| DnnnnDSMDet.ocx | Analysis engines\DSM\Details | ? | DSM analysis engine details |
+| DnnnnMRDSDet.ocx | Analysis engines\MRDS\Details | ? | MRDS analysis engine details |
 | | | | |
 | **GIS** | | | |
-| D6Map.ocx | Map\Mapper | ? | Map display control |
-| D6Legend.ocx | Map\Legend | ? | Map legend control |
+| DnnnnMap.ocx | Map\Mapper | ? | Map display control |
+| DnnnnLegend.ocx | Map\Legend | ? | Map legend control |
 | | | | |
 | **Miscellaneous** | | | | 
 | CSDesc3.ocx | Misc\CoordSysDesc | ? |  Co-ordinate system description |
@@ -97,13 +99,13 @@ Executables
 | MCDS.exe | %BASE%\Analysis Engines\CDS\Engine | FORTRAN | ? | Distance MCDS NEngine for MCDS and CDS |
 | | | | | |
 | **NEngine host** | | | | |
-| D6NEH.exe | %BASE%\Numerical server\NEngineHost | VB | ? | Provides an indirect method the Numerical Server can use to call NEngine interfaces so that they run out of process. |
+| DnnnnNEH.exe | %BASE%\Numerical server\NEngineHost | VB | ? | Provides an indirect method the Numerical Server can use to call NEngine interfaces so that they run out of process. |
 | | | | | |
 | **Distance for Windows** | | | | |
 | Distance.exe | %BASE%\Interface | VB | ? | Distance for Windows GUI and entry point for user |
 | | | | | |
 | **Utilities** | | | | |
-| Ec.exe | %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities | n/a | as-is | Execute program and capture standard output and errors, used to invoke MCDS.exe |
+| Ec.exe | %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities | n/a | As-is. Originates from Compaq Visual Fortran. | Execute program and capture standard output and errors, used to invoke MCDS.exe. |
 | UNWISE.EXE | ? | | ? | Wise uninstaller |
 
 ----------------------------------------------------------------------
@@ -381,7 +383,8 @@ MCDS / FORTRAN:
 
 | Company | Name | Description |
 | ------- | ---- | ----------- |
-| IMSL | Numerical routines | Come standard with Visual Fortran Professional |
+| IMSL | Numerical routines | Come standard with Compaq Visual Fortran Professional |
+| Compaq | Visual Fortran Professional | Ec.exe - capture standard output and standard error |
 
 Miscellaneous:
 
