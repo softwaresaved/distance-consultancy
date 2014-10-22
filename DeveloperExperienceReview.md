@@ -612,6 +612,7 @@ There are a number of issues with the process:
   - [testthat](http://cran.r-project.org/web/packages/testthat/index.html), for testing as recommended on the [DistanceDevelopment web-site](http://distancedevelopment.github.io/dev-Testing-howto.html)
   - [packrat](https://github.com/rstudio/packrat), for dependency management as recommended on the [DistanceDevelopment web-site](http://distancedevelopment.github.io/dev-packrat.html).
   - [RStudio](http://www.rstudio.com/), for checking the .Rmd [R Markdown](http://rmarkdown.rstudio.com/) files and data files linked from [Distance for R](http://distancesampling.org/R/index.html).
+  - [ActiveState Perl](http://www.activestate.com/Products/ActivePerl/Download.html), listed in `%BASE%Extras\Internal Documentation\CVS stuff\compiling R modules.txt`.
 * Information is out of date e.g. p56 lists R Unix "tools" as part of the required tools for R development with a link to http://www.murdoch-sutherland.com/Rtools/. Rtools are now hosted at http://cran.r-project.org/bin/windows/Rtools/.
 * Some products are proprietary and rely on developer's contacting a named member of the Distance development team for CDs.
 * Version numbers recommended are very specific e.g. Doc-to-Help 2006 v3 (build 3.0.313). It is unclear for what products other, more recent, versions would be suitable.
