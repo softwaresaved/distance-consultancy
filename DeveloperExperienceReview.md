@@ -20,8 +20,9 @@ This report presents a review of Distance's resources for developers. The follow
 * Coding standards.
 * Testing processes.
 * Release processes for Distance for Windows and R packages.
+* Setting up a development environment.
 
-The review was undertaken between 06/10/14 and TODO/10/14. Please contact the reviewer at m.jackson@software.ac.uk if you have any queries.
+The review was undertaken between 06/10/14 and 22/10/14. Please contact the reviewer at m.jackson@software.ac.uk if you have any queries.
 
 Resources consulted
 -------------------
@@ -35,32 +36,33 @@ The following resources were consulted:
   - In the installation directory, `C:\Program Files (x86)\Distance 6\Help\distance.pdf`.
 * [Distance Extras](http://distancesampling.org/distanceextras.html) web page.
 * Len Thomson and Laura Marshall. Developers Manual, Distance, Research Unit for Wildlife Population Assessment University of St Andrews. DistanceDevelopersManual.pdf. Forwarded by David Miller on 31/07/14. Most of this manual dates from 2009.
-* Distance Windows XP Pro virtual machine. Forwarded by Eric Rextad on 06/10/14.
+* Distance Windows XP Pro virtual machine. Forwarded by Eric Rextad on 06/10/14. In the text the following abbreviations are used:
+  - `%BASE%` - `C:\Application Development\Distance60`
+  - `%BASE%Extras` - `C:\Application Development\Distance60Extras`
 * [DistanceDevelopment](https://github.com/DistanceDevelopment/) GitHub project. This includes:
   - GitHub repositories for Distance's R packages.
   - [DistanceDevelopment web-site](http://distancedevelopment.github.io).
 * [DistanceEngines](http://sourceforge.net/projects/distanceengines/) SourceForge project which includes:
-  - [CVS repository](http://distanceengines.cvs.sourceforge.net/viewvc/distanceengines/mcds/) for Distance's FORTRAN-based MCDS component.
+  - [CVS repository](http://distanceengines.cvs.sourceforge.net/viewvc/distanceengines/mcds/) for Distance's FORTRAN-based MCDS engine.
 
 ----------------------------------------------------------------------
 
-Migrate developer information to wikis or revision control
-==========================================================
+Refactor developer information form, content and hosting
+========================================================
 
-The single biggest issue for developers is their documentation. Asides from the developer's manual, held on the VM within `C:\Application Development\Distance60Extras\Internal Documentation\DevelopersManual`, there is also:
+A major challenge for developers is documentation. This is spread across a number of files in both text and Microsoft Word documents (dates last updated in brackets):
 
-* `C:\Application Development\Distance60Extras\Internal Documentation\CVS stuff\`:
-  - `compiling R modules.txt` - notes on compiling R modules under Windows, last updated 2006.
-  - `cvs-howto.txt` - notes on CVS use, last updated 2010.
-  - `release-howto.txt` - notes on releasing MRDS and MCDS, last updated 2005.
-* `C:\Application development\Distance60\Analysis Engines\DSM\Engine\how to make the R package.txt` - minimal notes on using Git.
-* `C:\Application development\Distance60\Analysis Engines\MRDS\Engine\how to download and make the R package.txt` - notes on using Git and R.
-
-For the developer's manual itself, the last updates to its contents were:
-
-* `11 Setting up a Computer.doc` - 2013.
-* `12 Distributing Distance.doc` - 2014.
-* All other chapters - 2009.
+* `%BASE%Extras\Internal Documentation\DevelopersManual`:
+  - `11 Setting up a Computer.doc` (2013).
+  - `12 Distributing Distance.doc` (2014).
+  - All other chapters (2009).
+* `%BASE%Extras\Internal Documentation\CVS stuff`:
+  - `compiling R modules.txt` - notes on compiling R modules under Windows (2006).
+  - `cvs-howto.txt` - notes on CVS use (2010).
+  - `release-howto.txt` - notes on releasing MRDS and MCDS on SourceForge (2005).
+* `%BASE%\Analysis Engines\DSM\Engine\how to make the R package.txt` - minimal notes on using Git (2014).
+* `%BASE%\Analysis Engines\MRDS\Engine\how to download and make the R package.txt` - notes on using Git and R (2014).
+* `%BASE%Extras\External Documentation\Documents\setup_project.txt` - notes on creating ComponentOne Doc-To-Help projects (2006).
 
 The outset of the developer's manual, p5, states that:
 
@@ -68,14 +70,16 @@ The outset of the developer's manual, p5, states that:
 
 Change log entries across the whole manual date between 2005-2009. Whether there has been any changes since then, and authors have just not updated the change logs or there have been no updates at all, is unclear unless looking at the properties of the files themselves.
 
-In addition, the developer's information is challenging as it is spread across a number of locations, held within numerous formats, is out-of-date and incomplete.
+More generally, the developer documentation is in many places incomplete or out-of-date.
 
-Moving the developer information to wikis or putting it under revision control would deliver a number of possible benefits:
+Use wikis or revision control
+-----------------------------
+
+Moving developer information to wikis or putting it under revision control would deliver a number of possible benefits:
 
 * An audit trail of who changed what, when and why is recorded. 
 * Who changed what and when is automated - there is no need for developers to specify when they last updated a document.
-* It may become easier for, or encourage, all members of the team to contribute to its growth e.g. filling in gaps in information or correcting errors as they arise.
-* Documentation can be hosted in its most appropriate location e.g. R coding standards, test and release processes with the R components etc.
+* It may become easier for all members of the team to contribute to its growth e.g. filling in gaps in information or correcting errors as they arise.
 
 Many options are possible As GitHub is already being used for project resources, GitHub's offerings are discussed along with others I've experience of.
 
@@ -113,7 +117,35 @@ Many options are possible As GitHub is already being used for project resources,
 
 More investigation is needed to determine the support the GitHub solutions have for auto-generating a PDF from the rendered MarkDown or HTML (though for GitHub `gh-pages`, an HTML->PDF converter would suffice), its support for converting local links into cross-references, building tables of contents and indexes etc.
 
-Any of the above proposals could also be adopted for the user's guide.
+Any of the above proposals can also be adopted for the user's guide.
+
+Host documentation alongside its related products
+-------------------------------------------------
+
+Hosting developer documentation alongside the components to which it applies can reduce the number of locations a developer needs to search for information. It can also help to ensure that the code and documentation remain in-synch.
+
+Distance consists of three products - its FORTRAN MCDS engine, its R DSM and MRDS engines, and its Visual Basic Distance for Windows components. There are three sets of developer-related documentation applicable to these:
+
+* FORTRAN MCDS engine:
+  - FORTRAN coding standards
+  - How to develop, build, run and test
+  - How to release on SourceForge
+* R DSM and MRDS engines:
+  - R coding standards
+  - How to develop, build, run and test
+  - How to release on GitHub
+  - How to release on CRAN
+* Distance for Windows:
+  - Visual Basic coding standards
+  - How to develop, build, run and test each component
+  - How to edit and build documentation
+  - How to build, run and test Distance for Windows
+  - How to release
+
+Review and update documentation
+-------------------------------
+
+Developer documentation should be completely reviewed and revised so it is complete and accurate. 
 
 ----------------------------------------------------------------------
 
@@ -260,10 +292,10 @@ List origins of tools and external components
 
 It would be useful to extend such lists with links to product or component web-sites.
 
-Provide external depencencies as a table
+Provide external dependencies as a table
 ----------------------------------------
 
-The developer's manual, Chapter 11. Setting up a Computer for Distance Development, p54-59, lists tools required by developers and their versions. It could be useful to summarise this, and the links to product or component web-sites in a single table for reference.
+The developer's manual, Chapter 11. Setting up a Computer for Distance Development, p54-59, lists tools required by developers and their versions. It can be useful to summarise this, and the links to product or component web-sites in a single table for reference.
 
 ----------------------------------------------------------------------
 
@@ -288,9 +320,11 @@ Revision control does not appear to be used for:
   - Release notes - Rich Text Format.
   - Splash screen graphic - Microsoft Image Composer files.
   - Icons for the GUI - ICO files.
-* Other project resources that are created by hand include:
+* Other project resources which are created by hand and include:
   - Class diagrams e.g. user's guide, p290, `D4DbEng.dll`'s public classes.
   - Component and structure diagrams e.g. developer's manual, Distance components, p8; structure of a Distance project on user's guide, p48, and developers manual, p16 etc.
+
+This is evidenced by the number of "old", "temp" and named developer-specific directories within the VM, which can be confusing for new, and not so new, developers.
 
 Put all manually-created artefacts under revision control
 ---------------------------------------------------------
@@ -300,14 +334,12 @@ All manually created resources should be under revision control as this helps av
 * ["FINAL".doc](http://www.phdcomics.com/comics/archive.php?comicid=1531)
 * [A story told in file names](http://www.phdcomics.com/comics/archive.php?comicid=1323)
 
-These problems are evidenced by the number of "old", "temp" and developer-specific directories within the VM, which can be confusing for new developers.
+Many of these resources are dependant upon the source code whether that be individual Visual Basic, FORTRAN or R components or Distance for Windows versions as a whole. Holding them under revision control allows for this dependence to managed more systematically. For example branches, and a suitable naming scheme, can be used to keep the user's guide in-synch with the version of Distance for Windows to which it applies - when a release of Distance for Windows is done, tags can be created in each of the repositories to snapshot the resources used to create that release.
 
-In addition, many of these resources are dependant upon the source code whether that be individual Visual Basic, FORTRAN or R components or Distance for Windows versions as a whole. Holding them under revision control allows for this dependence to managed more systematically. For example branches, and a suitable naming scheme, could be used to keep the user's guide in-synch with the version of Distance for Windows to which it applies - when a release of Distance for Windows is done, tags could be created in each of the repositories to snapshot the resources used to create that release.
+Move MCDS code to GitHub
+------------------------
 
-Move FORTRAN to GitHub
-----------------------
-
-It is recommended that the FORTRAN code be moved from SourceForge to GitHub. This would both keep all the Distance repositories together within the same GitHub project, but also mean that a single revision control tool can be used across all Distance components.
+It is recommended that the MCDS code be moved from SourceForge to GitHub. This would both keep all the Distance repositories together within the same GitHub project, but also mean that a single revision control tool can be used across all Distance components.
 
 Fix link to `mrds` repository
 -----------------------------
@@ -349,13 +381,13 @@ The last update was 3 years ago:
 
 This repository is consistent with that on the VM
 
-    C:\Application Development\Distance60\Analysis Engines\CDS\Engine\mcds\CVS
+    %BASE%\Analysis Engines\CDS\Engine\mcds\CVS
 
 Where `CVS\Root` lists:
 
     :ext:USERNAME@distanceengines.cvs.sourceforge.net:/cvsroot/distanceengines
 
-It should be clarified whether https://sourceforge.net/projects/distanceengines does hold the canonical FORTRAN code.
+It should be clarified whether https://sourceforge.net/projects/distanceengines does indeed hold the canonical FORTRAN code.
 
 Add an MCDS README
 ------------------
@@ -392,9 +424,7 @@ R scripts
 
 The developer's manual, Writing Code for Distance - Coding Conventions, p52, states that there are none at present for R. However, the DistanceDevelopment web-site has R [Coding Conventions](http://distancedevelopment.github.io/dev-Coding-Conventions.html) covering variables, functions and formatting.
 
-There is no single set of agreed R coding standards as documented in 
-
-Rasmus Baath, [The State of Naming Conventions in R](http://journal.r-project.org/archive/2012-2/RJournal_2012-2_Baaaath.pdf), The R Journal Vol. 4/2, December 2012.
+There is no single set of agreed R coding standards as documented in Rasmus Baath, [The State of Naming Conventions in R](http://journal.r-project.org/archive/2012-2/RJournal_2012-2_Baaaath.pdf), The R Journal Vol. 4/2, December 2012.
 
 However, Google does provide an [R Style Guide](https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml) for their projects which may be of interest.
 
@@ -406,25 +436,26 @@ The CRAN guide on [Writing R Extensions](http://cran.r-project.org/doc/manuals/r
 Propose a minimal set of coding standards for each language
 -----------------------------------------------------------
 
-Unfortunately, the more strict a set of coding standards, the less likely they are to be observed. However, a minimal set of coding standards for each language could be proposed for Distance. This could include:
+Unfortunately, the more strict a set of coding standards, the less likely they are to be observed. However, a minimal set of coding standards for each language can be adopted. This can include:
 
 * Each file must specify its copyright and licence.
 * All public functions and methods must have their role/function, argument and return types documented.
 * All functions and methods manipulating files and databases should document the expected file formats or database schema (or refer developers to a document or web-site where these can be found).
 * Recommended white-space and indentation of blocks.
 * Naming conventions for directories, files, functions, classes, methods etc.
+* Recommended mark-up format for auto-generated API documentation.
 
 ----------------------------------------------------------------------
 
 Testing protocols
 =================
 
-Distance for Windows
---------------------
+Provide information on how to run Distance for Windows test projects
+--------------------------------------------------------------------
 
-The VM has a number of test projects:
+The VM has a number of Distance test projects:
 
-    C:\Application Development\Distance60Extras\Test Projects
+    %BASE%Extras\Test Projects
       D62GolfteesTest.dat
       D62GolfteesTest.dst
       GolfteesTest.dat
@@ -432,12 +463,12 @@ The VM has a number of test projects:
       GolfteesTest1.dat
       GolfteesTest1.dst
 
-It is unclear how these projects are used for testing.
+It is unclear how these are used for testing.
 
-Visual Basic
-------------
+Provide information on how to write and run VB tests
+----------------------------------------------------
 
-The VB directories on the VM, under `C:\Application Development\Distance60`, have `Tester` sub-directories e.g.:
+The VB directories on the VM, under `%BASE%`, have `Tester` sub-directories e.g.:
 
     Analysis Engines\CDS\Details\Tester
     Analysis Engines\CDS\NEngineInterface\Tester
@@ -445,10 +476,15 @@ The VB directories on the VM, under `C:\Application Development\Distance60`, hav
 
 It is unclear how these are used for testing.
 
-FORTRAN
--------
+Implement MCDS tests
+--------------------
 
-There are no FORTRAN tests evident either within the the [DistanceEngines](http://sourceforge.net/projects/distanceengines/) SourceForge project or within the VM.
+There are no MCDS tests evident either within the the [DistanceEngines](http://sourceforge.net/projects/distanceengines/) SourceForge project or within the VM.
+
+Provide information on how to write and run MCDS tests
+------------------------------------------------------
+
+Once tests have been developed for MCDS.
 
 R scripts
 ---------
@@ -477,15 +513,26 @@ Distance Extras
 Release processes
 =================
 
-Distance for Windows
---------------------
+There are a number of issues with the process used to release Distance's products:
 
-TODO
+* FORTRAN MCDS engine
+* R DSM and MRDS engines
+* Distance for Windows
 
-R packages
-----------
+This includes:
 
-From the GitHub repositories for the R packages, there is an implied release process:
+* Incomplete documentation. There is no information at all on building a major Distance for Windows release, for example.
+* Out-of-date documentation.
+* Documentation spread over a number of files.
+* No mention of any requirement to run Visual Basic or R tests prior to release.
+* Release documentation mixed in with day-to-day developer documentation. This applies particularly to Chapter 12 - Distributing Distance of the developer's guide.
+* A number of manual steps to copy files output by one program (e.g. `MCDS.exe`, `ReadMe.rtf`, etc) into other locations. This also leads to duplication of auto-generated files which can cause confusion for new developers.
+* For R components, inconsistencies in directory formats lead to small inconsistencies in instructions e.g. 
+  - For DSM one builds a package in `%BASE%\Analysis Engines\DSM\Engine`
+  - For MRDS one builds a package in `%BASE%\Analysis Engines\MRDS\Engine\mrds`
+* Inconsistent use of version control e.g. there are branches for DSM and MRDS releases, but not for MCDS releases.
+
+In some cases there is an implicit, rather than explicit, release process. For example, from the GitHub repositories for the R packages it looks like:
 
 * A `NEWS` file is updated with the version number and a list of changes and bug fixes for that version. e.g. `mrds`, [NEWS](https://github.com/DistanceDevelopment/mrds/blob/master/NEWS).
 * Every release is put in a 'releases' part of the repository. e.g. `mrds`,  [releases](https://github.com/DistanceDevelopment/mrds/releases).
@@ -499,24 +546,120 @@ The [CRAN Repository Policy](http://cran.r-project.org/web/packages/policies.htm
 
 using the current development version of R (`R-devel`) before upload. The CRAN guide on [Writing R Extensions](http://cran.r-project.org/doc/manuals/r-release/R-exts.html) provides additional advice.
 
-Document the R release process
-------------------------------
+Document release processes
+--------------------------
 
-The R package release process should be expanded and documented. An appropriate place is within the [DistanceDevelopment](https://github.com/DistanceDevelopment/) GitHub project so it appears on the [DistanceDevelopment web-site](http://distancedevelopment.github.io).
+Release processes for each of Distance's products should be updated and completed. These should include:
+
+* How to build a release and any preconditions for doing so.
+* How to test a release.
+* How to release the release bundle e.g. upload to the web-site, GitHub or SourceForge.
+* How to test the uploaded bundle.
+* How to create a tag under revision control to ensure the code used to create that release is preserved.
+* etc.
 
 ----------------------------------------------------------------------
 
-Additional recommendations
-==========================
+Setting up a development environment
+====================================
 
-Automate upgrade support
-------------------------
+The developer's manual, Chapter 11. Setting up a Computer for Distance Development, provides information on setting up a development environment. The tool-set is listed as:
 
-The user's guide, p311, states that:
+* Distance for Windows Visual Basic components:
+  - Access 97
+  - Office XP Pro
+  - VB5 + service packs.
+  - VB6 + service packs.
+  - Microsoft Visual Basic 5
+  - Microsoft Jet 3.5 Service Pack 3 update
+  - Microsoft Visual Basic 6
+  - Microsoft Windows scripting 5.6
+  - ESRI MapObjects 2.3
+  - DataDynamics ActiveBar 2.5.2.121 
+  - VideoSoft VSFlex 7.0.1.187
+  - Tab Pro 3.1.22
+  - Active Threed 2.04
+  - Spyworks 6.3
+  - Polar Zip 5.0.12.0
+  - Zlib zip dll
+  - CCRP Browse Dialog Server 0.2.0.12
+  - MSDN (optional)
+* Distance for Windows:
+  - Wise Installation System 9.02
+  - WinZip and WinZip Self Extractor
+  - Microsoft Word 2003
+  - DocToHelp 2006 v3 (build 3.0.313)
+  - Microsoft Access 97 (optional)
+  - ESRI Arc (optional)
+  - Axialis IconWorkshop 6 (optional)
+  - Microsoft PhotoDraw
+  - CCRP CoolTools (optional)
+* FORTRAN MCDS engine:
+  - Compaq Digital Fortran 6.6 Professional
+  - Array Visualizer (optional)
+* R DSM and MRDS engines:
+  - R 3.0.2
+  - Unix "tools"
+  - Windows HTML Help Workshop 
+  - Tinn-R (optional)
+* General
+  - VMWare (optional)
+  - Textpad (optional)
 
-> In previous versions of Distance, the CDS and MCDS engine required 5 header lines, and not six (because there was no bootstrap progress file). Also, the bootstrap file came before the plot file. So, if you have any code for calling previous versions, you'll need to update it to call the new version.
+There are a number of issues with the process:
 
-It can be useful to provide tools to help users and developers automatically upgrade from previous versions e.g. for the above this could be a script to convert command files to the 6 header line format mentioned above.
+* Some tools are missing. For example:
+  - [testthat](http://cran.r-project.org/web/packages/testthat/index.html), for testing as recommended on the [DistanceDevelopment web-site](http://distancedevelopment.github.io/dev-Testing-howto.html)
+  - [packrat](https://github.com/rstudio/packrat), for dependency management as recommended on the [DistanceDevelopment web-site](http://distancedevelopment.github.io/dev-packrat.html).
+  - [RStudio](http://www.rstudio.com/), for checking the .Rmd [R Markdown](http://rmarkdown.rstudio.com/) files and data files linked from [Distance for R](http://distancesampling.org/R/index.html).
+* Information is out of date e.g. p56 lists R Unix "tools" as part of the required tools for R development with a link to http://www.murdoch-sutherland.com/Rtools/. Rtools are now hosted at http://cran.r-project.org/bin/windows/Rtools/.
+* Some products are proprietary and rely on developer's contacting a named member of the Distance development team for CDs.
+* Version numbers recommended are very specific e.g. Doc-to-Help 2006 v3 (build 3.0.313). It is unclear for what products other, more recent, versions would be suitable.
+* Some products, notably the Wise Installation System have been discontinued (in this case as the company no longer trades).
+
+This provides a major challenge to bringing on board new developers. The Distance team are aware of these challenges and are exploring alternatives. It is for this reason that a VMWare virtual machine, with the tool-set already installed, is provided to new Distance developers within St. Andrews. 
+Provide a "clean" virtual machine
+---------------------------------
+
+One of the issues with the VM as it stands is the mix, already noted of old, new, temporary, work-in-progress files and the lack of revision control. Adopting revision control, and providing new developers with a virtual machine with all the software required already installed but awaiting them to check out the Distance source code from its repositories would provide new developers with a cleaner, lighter-weight VM with which to start development.
+
+----------------------------------------------------------------------
+
+Additional documentation recommendations
+========================================
+
+Put Required knowledge in its own section
+-----------------------------------------
+
+The developer's manual, p5, describes the required knowledge that a developer needs, including Microsoft Component Object Model (COM), Visual Basic 6.0, data access objects, FORTRAN 77 and 90, R. This should be in a section of its own so it is more visible.
+
+Add GIS to required knowledge
+-----------------------------
+
+Knowledge of GIS concepts and ESRI shapefiles may also be required. The [Distance Extras](http://distancesampling.org/distanceextras.html) web page provides links to:
+
+* ESRI Shapefile Technical Description which describes the internal format of a shapefile.
+* Spatial data handling in R cheatsheet.
+
+which might be appropriate links to add also.
+
+Add packrat, testthat and RStudio to tools
+------------------------------------------
+
+The developer's manual, p56, lists R and Unix "tools" as part of the required tools for R development. Developers should also be recommended to get:
+
+* [testthat](http://cran.r-project.org/web/packages/testthat/index.html), for testing as recommended on the [DistanceDevelopment web-site](http://distancedevelopment.github.io/dev-Testing-howto.html)
+* [packrat](https://github.com/rstudio/packrat), for dependency management as recommended on the [DistanceDevelopment web-site](http://distancedevelopment.github.io/dev-packrat.html).
+* [RStudio](http://www.rstudio.com/), for checking the .Rmd [R Markdown](http://rmarkdown.rstudio.com/) files and data files linked from [Distance for R](http://distancesampling.org/R/index.html).
+
+Update link to Rtools
+---------------------
+
+The developer's manual, p56, lists R Unix "tools" as part of the required tools for R development:
+
+> Get the latest version from http://www.murdoch-sutherland.com/Rtools/. Choose "package authoring installation"
+
+Rtools are now hosted at http://cran.r-project.org/bin/windows/Rtools/.
 
 Pull out Appendix - Inside Distance into a stand-alone document
 ---------------------------------------------------------------
@@ -527,7 +670,7 @@ The user's guide, Appendix - Inside Distance, p289-296 is a work-in-progress sec
 * How to update `DistData.mdb` using versions of Microsoft Access 2000+. 
 * How to link to external data from `DistData.mdb` especially text files and Excel via Microsoft Jet drivers.
 
-The developer's manual, contains similar information in far greater detail. This could be pulled out into a stand-alone document. This document can serve as a guide for advanced users and for developers. It would also contribute to making the user's guide less monolithic.
+The developer's manual, contains similar information in far greater detail. This could be pulled out into a stand-alone document. This document can then serve as a guide for advanced users and for developers. It would also contribute to making the user's guide less monolithic.
 
 Combine internal components list and table
 ------------------------------------------
@@ -579,6 +722,25 @@ The [DistanceDevelopment web-site](http://distancedevelopment.github.io/) has co
 
 A developer looking at the `mrds` repository, for example, may be unaware of this web-site and the information therein. Provide a link from each `README.md` file in the package-specific repositories to this web-site.
 
+Make Creating a New Numerical Engine a stand-alone tutorial
+-----------------------------------------------------------
+
+The developer's manual, Creating a New Numerical Engine, p55-57, could be pulled out as a stand-alone tutorial or HOW-TO.
+
+----------------------------------------------------------------------
+
+Additional general recommendations
+==================================
+
+Automate upgrade support
+------------------------
+
+The user's guide, p311, states that:
+
+> In previous versions of Distance, the CDS and MCDS engine required 5 header lines, and not six (because there was no bootstrap progress file). Also, the bootstrap file came before the plot file. So, if you have any code for calling previous versions, you'll need to update it to call the new version.
+
+It can be useful to provide tools to help users and developers automatically upgrade from previous versions e.g. for the above this could be a script to convert command files to the 6 header line format mentioned above.
+
 Host project resources in project, not personal, spaces
 -------------------------------------------------------
 
@@ -592,44 +754,6 @@ Certain GitHub resources are hosted in David Miller's own GitHub repositories. F
   - https://github.com/dill/Distance/issues
 
 This can make it more difficult for other members of a project to access these project-specific resources, or update them if needed. It can also prove problematic as it increases the number of resources used by a project and incurs a greater maintenance overhead and risk of project resources stagnating.
-
-Put Required knowledge in its own section
------------------------------------------
-
-The developer's manual, p5, describes the required knowledge that a developer needs, including Microsoft Component Object Model (COM), Visual Basic 6.0, data access objects, FORTRAN 77 and 90, R. This should be in a section of its own so it is more visible.
-
-Add GIS to required knowledge
------------------------------
-
-Knowledge of GIS concepts and ESRI shapefiles may also be required. The [Distance Extras](http://distancesampling.org/distanceextras.html) web page provides links to:
-
-* ESRI Shapefile Technical Description which describes the internal format of a shapefile.
-* Spatial data handling in R cheatsheet.
-
-which might be appropriate links to add also.
-
-Add packrat, testthat and RStudio to tools
-------------------------------------------
-
-The developer's manual, p56, lists R and Unix "tools" as part of the required tools for R development. Developers should also be recommended to get:
-
-* [testthat](http://cran.r-project.org/web/packages/testthat/index.html), for testing as recommended on the [DistanceDevelopment web-site](http://distancedevelopment.github.io/dev-Testing-howto.html)
-* [packrat](https://github.com/rstudio/packrat), for dependency management as recommended on the [DistanceDevelopment web-site](http://distancedevelopment.github.io/dev-packrat.html).
-* [RStudio](http://www.rstudio.com/), for checking the .Rmd [R Markdown](http://rmarkdown.rstudio.com/) files and data files linked from [Distance for R](http://distancesampling.org/R/index.html).
-
-Update link to Rtools
----------------------
-
-The developer's manual, p56, lists R Unix "tools" as part of the required tools for R development:
-
-> Get the latest version from http://www.murdoch-sutherland.com/Rtools/. Choose "package authoring installation"
-
-Rtools are now hosted at http://cran.r-project.org/bin/windows/Rtools/.
-
-Make Creating a New Numerical Engine a stand-alone tutorial
------------------------------------------------------------
-
-The developer's manual, Creating a New Numerical Engine, p55-57, could be pulled out as a stand-alone tutorial or HOW-TO.
 
 Add copyright and licence statements to each R repository
 ---------------------------------------------------------
