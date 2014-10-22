@@ -21,8 +21,10 @@ These outcomes are intended to help the Distance project to reduce the time betw
 
 Other outputs currently being authored:
 
-* [Distance for Windows 6 - Component Reference](./ComponentReference.md)
-* [File extensions](./FileExtensions.md)
-* [Distance for Windows and FORTRAN](./ArchitectureFORTRAN.md)
-* [Distance for Windows and R](./ArchitectureR.md)
-* [How to set up a development environment](./SetUpDevelopmentEnvironment.md)
+* [Distance for Windows - Component 
+Reference](./developer/ComponentReference.md)
+* [File extensions](./developer/FileExtensions.md)
+* [Distance for Windows and FORTRAN](./developer/ArchitectureFORTRAN.md)
+* [Distance for Windows and R](./developer/ArchitectureR.md)
+* [How to set up a development 
+environment](./developer/SetUpDevelopmentEnvironment.md)
