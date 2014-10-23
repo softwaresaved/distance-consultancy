@@ -258,9 +258,9 @@ R packages used to restore default versions within R library.
 
 | ZIP | VM location |
 | --- | ----------- |
-| dsm_2.2.3.zip | %BASE%\Analysis Engines\DSM\Engine\dsm\ via %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\ |
+| dsm_2.2.3.zip | %BASE%\Analysis Engines\DSM\Engine\dsm\ via %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\RPackages\ |
 | | Git repository cloned from http://github.com/DistanceDevelopment/dsm |
-| mrds_2.1.5.zip | %BASE%\Analysis Engines\MRDS\Engine\mrds\ via %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\ | | | Git repository cloned from http://github.com/DistanceDevelopment/mrds |
+| mrds_2.1.5.zip | %BASE%\Analysis Engines\MRDS\Engine\mrds\ via %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\RPackages\ | | | Git repository cloned from http://github.com/DistanceDevelopment/mrds |
 
 Third-party packages:
 
