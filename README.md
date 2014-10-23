@@ -21,8 +21,10 @@ These outcomes are intended to help the Distance project to reduce the time betw
 
 Other outputs currently being authored:
 
-* [Distance for Windows - Component 
-Reference](./developer/ComponentReference.md)
+* [Distance for Windows - Source Code and Binaries
+Reference](./developer/SourceCodeAndBinariesReference.md)
+* [Distance for Windows - Installed Components
+Reference](./developer/InstalledComponentsReference.md)
 * [File extensions](./developer/FileExtensions.md)
 * [Distance for Windows and FORTRAN](./developer/ArchitectureFORTRAN.md)
 * [Distance for Windows and R](./developer/ArchitectureR.md)
