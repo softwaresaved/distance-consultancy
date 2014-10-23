@@ -1,14 +1,19 @@
 
-Distance for Windows - Component Reference
-==========================================
+Distance for Windows - Installed Components Reference
+=====================================================
 
-Reference guide to Distance for Windows components as they appear in a Distance for Windows installation.
+An overview of Distance for Windows installed components. 
+
+For an overview of the Distance source code and how these installed components are built from it, see [Distance for Windows - Source Code and Binaries Reference](./SourceCodeAndBinariesReference.md).
+
 
 Notes:
 
-* This reference was written using Distance for Windows 6.
+* Locations on the Distance virtual machine:
+  - %BASE% - C:\Application Development\Distance60
+  - %BASE%Extras - C:\Application Development\Distance60Extras
 * 'nnnn' denotes the Distance version e.g. 6.
-* VM location: location on Distance developer's virtual machine.
+* This reference was written using Distance for Windows 6.
 * For file extensions see, [File extensions](./FileExtensions.md).
 
 ----------------------------------------------------------------------
@@ -16,39 +21,36 @@ Notes:
 DLLs 
 ----
 
-* Language: Visual Basic source code. Project file shares same name as DLL.
-* VM location: relative to %BASE%.
-
-| DLL | VM location | How to build | Description |
-| --- | ----------- | ------------ | ----------- |
-| **Database API and engine** | | | |
-| DnnnnDbeng.dll | Database Engine\ | ? | Manages project files and data files. |
-| | | | |
-| **Numerical server** | | | |
-| DnnnnNSvr.dll | Numerical Server\NServer\ | ? | Manages NEngine runs |
-| | | | |
-| **Numerical engine (NEngine)** | | | |
-| DnnnnDesEng.dll | Design Engine\Engine\ | ? | Design and survey engine |
-| | | | |
-| **Numerical engine interfaces (NEI)** | | | One per NEngine |
-| IDnnnnNEng.dll | Numerical Server\TypeLibrary\ | ? | NEI type library - implemented by all NEIs |
-| DnnnnDesNEI.dll | Design Engine\NEngineInterface\ | ? | Design engine NEI |
-| DnnnnSvyNEI.dll | Survey\NEngineInterface\ | ? | Alternate design engine NEI used for generating single surveys (as opposed to running designs to estimate coverage) |
-| DnnnnCDSNEI.dll | Analysis Engines\CDS\NEngineInterface\ | ? | CDS and MCDS NEI | 
-| DnnnnDSMNEI.dll | Analysis Engines\DSM\NEngineInterface\ | ? | DSM NEI |
-| DnnnnMRDSNEI.dll | Analysis Engines\MRDS\NEngineInterface\ | ? | MRDS NEI |
-| DnnnnNEIUtil.dll | Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\ | ? | NEI utilities |
-| | | | |
-| **Wizards** | | | |
-| DnnnnIDWiz.dll | Interface\Wizards\Setup Project\ | ? | Import Data wizard |
-| DnnnnSPWiz.dll | Interface\Wizards\Import Data\ | ? | Setup Project wizard |
-| | | | |
-| **Miscellaneous** | | | |
-| DnnnnUtil.dll | Utilities\ | ? | Utilities for strings, files, random numbers | 
-| CTmr4.dll | Misc\CodeTimer\ | ? | High-resolution code timer, improved replacement for Microsoft's timer control |
-| CDlg3.dll | Misc\CommonDialog\ | ? | Common dialog, improved replacement for Microsoft's common dialog control |
-| LogStr3.dll | Misc\LogString\ | ? | Log string class, for appending strings within Log windows |
-| PrjParams6.dll | Misc\PrjParams\ | ? | Projection Parameters dialog, for editing GIS projection parameters |
+| DLL | Source location (relative to %BASE%) | Description |
+| --- | ------------------------------------ | ----------- |
+| **Database API and engine** | | |
+| DnnnnDbeng.dll | Database Engine\ | Manages project files and data files. |
+| | | |
+| **Numerical server** | | |
+| DnnnnNSvr.dll | Numerical Server\NServer\ | Manages NEngine runs |
+| | | |
+| **Numerical engine (NEngine)** | | |
+| DnnnnDesEng.dll | Design Engine\Engine\ | Design and survey engine |
+| | | |
+| **Numerical engine interfaces (NEI)** | | One per NEngine |
+| IDnnnnNEng.dll | Numerical Server\TypeLibrary\ | NEI type library - implemented by all NEIs |
+| DnnnnDesNEI.dll | Design Engine\NEngineInterface\ | Design engine NEI |
+| DnnnnSvyNEI.dll | Survey\NEngineInterface\ | Alternate design engine NEI used for generating single surveys (as opposed to running designs to estimate coverage) |
+| DnnnnCDSNEI.dll | Analysis Engines\CDS\NEngineInterface\ | CDS and MCDS NEI | 
+| DnnnnDSMNEI.dll | Analysis Engines\DSM\NEngineInterface\ | DSM NEI |
+| DnnnnMRDSNEI.dll | Analysis Engines\MRDS\NEngineInterface\ | MRDS NEI |
+| DnnnnNEIUtil.dll | Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\ | NEI utilities |
+| | | |
+| **Wizards** | | |
+| DnnnnIDWiz.dll | Interface\Wizards\Setup Project\ | Import Data wizard |
+| DnnnnSPWiz.dll | Interface\Wizards\Import Data\ | Setup Project wizard |
+| | | |
+| **Miscellaneous** | | |
+| DnnnnUtil.dll | Utilities\ | Utilities for strings, files, random numbers | 
+| CTmr4.dll | Misc\CodeTimer\ | High-resolution code timer, improved replacement for Microsoft's timer control |
+| CDlg3.dll | Misc\CommonDialog\ | Common dialog, improved replacement for Microsoft's common dialog control |
+| LogStr3.dll | Misc\LogString\ | Log string class, for appending strings within Log windows |
+| PrjParams6.dll | Misc\PrjParams\ | Projection Parameters dialog, for editing GIS projection parameters |
 
 ----------------------------------------------------------------------
 
@@ -57,88 +59,77 @@ OCX controls
 
 Widgets for display and interaction in the GUI. These are plugged-into Distance for Windows.
 
-* Language: Visual Basic source code. Project file shares same name as DLL.
-* VM location: relative to %BASE%.
-
-| OCX | VM location | How to build | Description |
-| --- | ----------- | ------------ | ----------- |
-| **Properties dialogs** | | | Specifying options - one per NEngine plus others |
-| DnnnnDesPrp.ocx | Design Engine\Properties\ | ? | Design properties | 
-| DnnnnSvyPrp.ocx | Survey\Properties\ | ? | Survey properties |
-| DnnnnDFPrp.ocx | Interface\Properties\Data Filter\ | ? | Data filter properties |
-| DnnnnMDPrp.ocx | Interface\Properties\Model Definition\ | ? | Model definition properties - container for CDS and MRDS properties |
-| DnnnnCDSPrp.ocx | Analysis Engines\CDS\Properties\  | ? | CDS analysis engine properties |
-| DnnnnMRDSPrp.ocx | Analysis Engines\MRDS\Properties\ | ? | MRDS analysis engine properties |
-| DnnnnDSMPrp.ocx | Analysis Engines\DSM\Properties\ | ? | DSM analysis engine properties |
-| | | | |
-| **Details pages** | | | Viewing logs and results of runs - one per NEngine plus others |
-| DnnnnDesDet.ocx | Design Engine\Details\ | ? | Design details |
-| DnnnnSvyDet.ocx | Survey\Details\ | ? | Survey details |
-| DnnnnCDSDet.ocx | Analysis Engines\CDS\Details\ | ? | CDS analysis engine details |
-| DnnnnDSMDet.ocx | Analysis Engines\DSM\Details\ | ? | DSM analysis engine details |
-| DnnnnMRDSDet.ocx | Analysis Engines\MRDS\Details\ | ? | MRDS analysis engine details |
-| | | | |
-| **GIS** | | | |
-| DnnnnMap.ocx | Map\Mapper\ | ? | Map display control |
-| DnnnnLegend.ocx | Map\Legend\ | ? | Map legend control |
-| | | | |
-| **Miscellaneous** | | | | 
-| CSDesc3.ocx | Misc\CoordSysDesc\ | ? |  Co-ordinate system description |
-| LLine3.ocx | Misc\LabelLine\ | ? | Labels with 3D lines |
-| LogWin3.ocx | Misc\LogWindow\ | ? | Log window |
-| SList4.ocx | Misc\SectionList\ | ? | Section list - efficient drop-down combo box for long lists |
+| OCX | Source location (relative to %BASE%) | Description |
+| --- | ------------------------------------ | ----------- |
+| **Properties dialogs** | | Specifying options - one per NEngine plus others |
+| DnnnnDesPrp.ocx | Design Engine\Properties\ | Design properties | 
+| DnnnnSvyPrp.ocx | Survey\Properties\ | Survey properties |
+| DnnnnDFPrp.ocx | Interface\Properties\Data Filter\ | Data filter properties |
+| DnnnnMDPrp.ocx | Interface\Properties\Model Definition\ | Model definition properties - container for CDS and MRDS properties |
+| DnnnnCDSPrp.ocx | Analysis Engines\CDS\Properties\ | CDS analysis engine properties |
+| DnnnnMRDSPrp.ocx | Analysis Engines\MRDS\Properties\ | MRDS analysis engine properties |
+| DnnnnDSMPrp.ocx | Analysis Engines\DSM\Properties\ | DSM analysis engine properties |
+| | | |
+| **Details pages** | | Viewing logs and results of runs - one per NEngine plus others |
+| DnnnnDesDet.ocx | Design Engine\Details\ | Design details |
+| DnnnnSvyDet.ocx | Survey\Details\ | Survey details |
+| DnnnnCDSDet.ocx | Analysis Engines\CDS\Details\ | CDS analysis engine details |
+| DnnnnDSMDet.ocx | Analysis Engines\DSM\Details\ | DSM analysis engine details |
+| DnnnnMRDSDet.ocx | Analysis Engines\MRDS\Details\ | MRDS analysis engine details |
+| | | |
+| **GIS** | | |
+| DnnnnMap.ocx | Map\Mapper\ | Map display control |
+| DnnnnLegend.ocx | Map\Legend\ | Map legend control |
+| | | |
+| **Miscellaneous** | | |
+| CSDesc3.ocx | Misc\CoordSysDesc\ | Co-ordinate system description |
+| LLine3.ocx | Misc\LabelLine\ | Labels with 3D lines |
+| LogWin3.ocx | Misc\LogWindow\ | Log window |
+| SList4.ocx | Misc\SectionList\ | Section list - efficient drop-down combo box for long lists |
 
 ----------------------------------------------------------------------
 
 Executables
 -----------
 
-| EXE | VM location | Language | How to build | Description |
-| --- | ----------- | -------- | ------------ | ----------- |
-| **Numerical engine (NEngine)** | | | | |
-| MCDS.exe | %BASE%\Analysis Engines\CDS\Engine\ via %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\ |  See below | See below| Distance MCDS NEngine for MCDS and CDS |
-| | Engine\ | | Compaq Visual FORTRAN | Project to compile source code below |
-| | mcds\ | FORTRAN| | Source code checked out from CVS at https://distanceengines.cvs.sourceforge.net:/cvsroot/distanceengines |
-| | | | | |
-| **NEngine host** | | | | |
-| DnnnnNEH.exe | %BASE%\Numerical Server\NEngineHost\DnnnNEH.vbp | VB | ? | Provides an indirect method the Numerical Server can use to call NEngine interfaces so that they run out of process. |
-| | | | | |
-| **Distance for Windows** | | | | |
-| Distance.exe | %BASE%\Interface\Distance.vbp | VB | ? | Distance for Windows GUI and entry point for user |
-| | | | | |
-| **Utilities** | | | | |
-| Ec.exe | %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\ | n/a | As-is. Originates from Compaq Visual Fortran. | Execute program and capture standard output and errors, used to invoke MCDS.exe. |
-| UNWISE.EXE | n/a | | Auto-generated during installation | Wise uninstaller |
+| OCX | Source location (relative to %BASE%) | Description |
+| --- | ------------------------------------ | ----------- |
+| **Numerical engine (NEngine)** | | |
+| MCDS.exe | Analysis Engines\CDS\Engine\ <br/> CVS repository http://distanceengines.cvs.sourceforge.net/ | Distance MCDS NEngine for MCDS and CDS |
+| | | |
+| **NEngine host** | | |
+| DnnnnNEH.exe | Numerical Server\NEngineHost\ | Provides an indirect method the Numerical Server can use to call NEngine interfaces so that they run out of process. |
+| | | |
+| **Distance for Windows** | | |
+| Distance.exe | Interface\ | Distance for Windows GUI and entry point for user |
+| | | |
+| **Utilities** | | |
+| Ec.exe | Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\ | Execute program and capture standard output and errors, used to invoke MCDS.exe. |
+| UNWISE.EXE | Auto-generated during installation | Wise uninstaller |
 
 ----------------------------------------------------------------------
 
 R scripts
 ---------
 
-* Language: R source code.
-* VM location: %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\
-* How to build: Shipped as-is.
-
-| R script | Description |
-| -------- | ----------- |
-| dsm.support.r | Support functions used when Distance calls the dsm library |
-| mrds.support.r | Support functions used when Distance calls the mrds library |
-| support.r | Functions used when Distance interfaces with R |
+| R script | Source location (relative to %BASE%) | Description |
+| -------- | ------------------------------------ | ----------- |
+| dsm.support.r | Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\ | Support functions used when Distance calls the dsm library |
+| mrds.support.r | " | Support functions used when Distance calls the mrds library |
+| support.r | " | Functions used when Distance interfaces with R |
 
 ----------------------------------------------------------------------
 
 Miscellaneous
 -------------
 
-* How to build: Shipped as-is.
-
-| File | VM location | Description |
-| ---- | ----------- | ----------- |
+| R script | Source location | Description |
+| -------- | --------------- | ----------- |
 | DistIni.mdb | %BASE%\Database Engine\DistIni.mdb | Default project settings and settings not unique to specific projects |
-| DistanceProject.ico | %BASE%\Interface\Main\Graphics - Misc and General\ Originates from %BASE%Extras\Graphics\Icons\DistanceProject2.ico | Icon |
-| ReadMe.rtf | %BASE%Extras\Setup\ReadMe.rtf manually composed from %BASE%Extras\Internal documents\Worklist\KnownProblems7.doc, %BASE%Extras\Internal documents\Worklist\ResolvedProblems1.doc, %BASE%Extras\External Documentation\Readme\ReadMeNN.rtf | Release notes |
+| DistanceProject.ico | %BASE%Extras\Graphics\Icons\DistanceProject2.ico | Icon |
+| ReadMe.rtf | %BASE%Extras\External Documentation\Readme\ReadMeNN.rtf <br/> %BASE%Extras\Internal documents\Worklist\KnownProblems7.doc <br/> %BASE%Extras\Internal documents\Worklist\ResolvedProblems1.doc | Release notes |
 | UseAgreement.txt | %BASE%\Interface\Help\ | For Help => About Distance... |
-| INSTALL.LOG | n/a | Log file auto-generated during installation |
+| INSTALL.LOG | Auto-generated during installation | Log file |
 
 Users must have read-write access to `DistIni.mdb`. If not then users can specify an alternative location via registry:
 
@@ -157,10 +148,8 @@ Registry sub-tree search order:
 
 DLLs and related files from third-party components.
 
-Language: n/a - all are used as-is
-
-| File | VM location | Description |
-| ---- | ----------- | ----------- | 
+| File | Location | Description |
+| ---- | -------- | ----------- | 
 | Common Controls Replacement Project (CCRP) | | Fancy folder browser dialog |
 | ccrpbds6.dll | C:\Program Files\CCRP\ccrpbds6-b2\ | |
 | | | |
@@ -225,26 +214,26 @@ Language: n/a - all are used as-is
 `Help` folder
 -------------
 
-| File | VM location | How to build | Description |
-| ---- | ----------- | ------------ | ----------- |
-| **Content for GUI widgets** | | | |
-| Authors.rtf | %BASE%\Interface\Help\ | as-is | For Help => About Distance... |
-| Sponsors.rtf | " | " | For Help => About Distance... |
-| DataEntryFinished.rtf | "  | " | |
-| DataEntryGlobal.rtf | "  | " | |
-| DataEntryIntroduction.rtf | "  | " | |
-| DataEntryObservation.rtf | "  | " | |
-| DataEntrySample.rtf | "  | " | |
-| DataEntryStratum.rtf | "  | " | |
-| DistanceLogo.jpg | %BASE%\Interface\Help\ Originates from %BASE%Extras\Graphics\Splash\DXYZ.mix | Microsoft PhotoDraw | For splash screen and Help => About Distance... |
-| TipOfTheDay.txt | " | " | For tips of the day. One tip per line. |
-| | | | |
-| **Built-in help** | | | |
-| distance.chm | %BASE%\Utilities\Help\ Originates from %BASE%Extras\External Documentation\Documents\HTMLHelp\ | ComponentOne Doc-To-Help | Distance for Windows HTML help |
-| Distance.chw  | n/a | Auto-generated when `.chm` is accessed | Index file |
-| | | | |
-| **Documents** | | | |
-|  distance.pdf | %BASE%\Utilities\Help\ Originates from %BASE%Extras\External Documentation\Documents\ and %BASE%Extras\Graphics\Splash\DXYZ.mix | ComponentOne Doc-To-Help, Microsoft PhotoDraw, Microsoft PowerPoint, Microsoft Word, Adobe Acrobat | User's guide |
+| File | Source location | Description |
+| ---- | --------------- | ----------- |
+| **Content for GUI widgets** | | |
+| Authors.rtf | %BASE%\Interface\Help\ | For Help => About Distance... |
+| Sponsors.rtf | " | For Help => About Distance... |
+| DataEntryFinished.rtf | " | |
+| DataEntryGlobal.rtf | " | |
+| DataEntryIntroduction.rtf | " | |
+| DataEntryObservation.rtf | " | |
+| DataEntrySample.rtf | " | |
+| DataEntryStratum.rtf | " | |
+| DistanceLogo.jpg | %BASE%Extras\Graphics\Splash\DXYZ.mix | For splash screen and Help => About Distance... |
+| TipOfTheDay.txt | " |For tips of the day. One tip per line. |
+| | | |
+| **Built-in help** | | |
+| distance.chm | %BASE%Extras\External Documentation\Documents\ | Distance for Windows compiled HTML help |
+| Distance.chw  |Auto-generated when `.chm` is accessed | Index file |
+| | | |
+| **Documents** | | |
+|  distance.pdf | %BASE%Extras\External Documentation\Documents\ <br/> %BASE%Extras\Graphics\Splash\DXYZ.mix | User's guide |
 
 ----------------------------------------------------------------------
 
@@ -253,19 +242,14 @@ Language: n/a - all are used as-is
 
 R packages used to restore default versions within R library.
 
-* VM location: relative to %BASE%.
-* How to build: Shipped as-is.
-
-| ZIP | VM location |
+| ZIP | Source location |
 | --- | ----------- |
-| dsm_2.2.3.zip | %BASE%\Analysis Engines\DSM\Engine\dsm\ via %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\RPackages\ |
-| | Git repository cloned from http://github.com/DistanceDevelopment/dsm |
-| mrds_2.1.5.zip | %BASE%\Analysis Engines\MRDS\Engine\mrds\ via %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\RPackages\ | | | Git repository cloned from http://github.com/DistanceDevelopment/mrds |
+| dsm_2.2.3.zip | %BASE%\Analysis Engines\DSM\Engine\dsm\ <br/> Git repository http://github.com/DistanceDevelopment/dsm |
+| mrds_2.1.5.zip | %BASE%\Analysis Engines\MRDS\Engine\mrds\ <br/> Git repository http://github.com/DistanceDevelopment/mrds |
 
 Third-party packages:
 
-* VM location: %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\RPackages\
-* How to build: Shipped as-is.
+* Source location: %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\RPackages\
 
 | ZIP |
 | --- |
@@ -310,7 +294,7 @@ These are only used when the **Re-install analysis engine libraries to original 
 
 Sample project file and data folder for use as templates for new projects.
 
-* VM location: %BASE%Extras\Sample Projects Backup\Templates\
+* Source location: %BASE%Extras\Sample Projects Backup\Templates\
 * How to build: Shipped as-is.
 
 | File | Description |
@@ -330,7 +314,7 @@ Sample Distance project files and folders and raw data for the user's guide.
 
 Each `.dst` file has a `.dat\` folder (not shown) containing a `DistData.mdb` file (not shown). Additional files in this `.dat` folder are listed where applicable.
 
-* VM location: %BASE%Extras\Sample Projects Backup\Release\
+* Source location: %BASE%Extras\Sample Projects Backup\Release\
 * How to build: Shipped as-is.
 
 | File | Description |
@@ -397,4 +381,3 @@ Miscellaneous:
 | Desaware | Spyworks | Low-level functions for process manipulation, etc. Allows some of the power of C++ to be implemented in VB. |
 | Polar Software | PolarZip | Compression functions |
 | Zlib | zip | Compression functions. Freeware. Legacy. Plan to switch to PolarZip as it is better at dealing with international character sets. |
-
