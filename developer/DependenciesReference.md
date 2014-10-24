@@ -127,16 +127,16 @@ Notes:
 | | Utilities\DnnnnUtil.vbp |
 | | Database Engine\DnnnnDbEng.vbp |
 | Misc\CodeTimer\CTmr4.vbp | - |
-| Misc\CommonDialog\CDlg3.vbp | - |
-| Misc\CoordSysDesc\CSDesc3.vbp | component |
-| Misc\LabelLine\LLine3.vbp | component |
+| Misc\CommonDialog\CDlg3.vbp | called 'Common dialog wrapper v3' |
+| Misc\CoordSysDesc\CSDesc3.vbp | component, called 'Coordinate System Description 3' |
+| Misc\LabelLine\LLine3.vbp | component, called 'Label line 3.0' |
 | Misc\LogString\LogStr3.vbp | |
 | | Utilities\DnnnnUtil.vbp |
 | Misc\LogWindow\LogWin3.vbp | component |
 | Misc\PrjParams\PrjParams6.vbp | |
 | | Misc\LabelLine\LLine3.vbp |
 | | Utilities\DnnnnUtil.vbp |
-| Misc\SectionList\SList4.vbp | component |
+| Misc\SectionList\SList4.vbp | component, 'Section list v4' |
 | | Utilities\DnnnnUtil.vbp |
 | | Database Engine\DnnnnDbEng.vbp |
 | Numerical Server\NEngineHost\DnnnnNEH.vbp | |
@@ -169,22 +169,3 @@ Notes:
 | | Utilities\DnnnnUtil.vbp |
 | | Database Engine\DnnnnDbEng.vbp |
 | Utilities\DnnnnUtil.vbp | - |
-
-Dependencies in Visual Studio
------------------------------
-
-* To see dependencies:
-  - Select Project => References...
-  - All possibles are shown (more can be added with Browse...)
-  - Project depends on those that are ticked
-* To see component dependencies:
-  - Select Project => Components...
-  - All possibles are shown (more can be added with Browse...)
-  - Project depends on those that are ticked
-  - Beware - if dependant components have not been built then they will not be ticked - Visual Studio will warn you when the project is opened
-* Beware - not all References are prefixed with "Distance" e.g.
-  - Common dialog wrapper v3
-* Beware - not all Components are prefixed with "Distance" e.g.
-  - Coordinate System Description v3
-  - Label line 3.0
-  - Section list v4
