@@ -137,7 +137,9 @@ Notes:
 | ReadMe.rtf | | copy |
 
 Copies
-======
+------
+
+Content that has been manually copied or duplicates a file from elsewhere in Distance, or a Distance repository.
 
 | Copy | Original |
 | ---- | -------- |
