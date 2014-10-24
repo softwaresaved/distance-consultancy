@@ -25,6 +25,7 @@ Other outputs currently being authored:
 Reference](./developer/SourceCodeAndBinariesReference.md)
 * [Distance for Windows - Installed Components
 Reference](./developer/InstalledComponentsReference.md)
+* [Distance for Windows - Visual Basic Project Dependencies](./developer/DependenciesReference.md)
 * [File extensions](./developer/FileExtensions.md)
 * [Distance for Windows and FORTRAN](./developer/ArchitectureFORTRAN.md)
 * [Distance for Windows and R](./developer/ArchitectureR.md)
