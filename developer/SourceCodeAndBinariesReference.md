@@ -113,10 +113,10 @@ Notes:
 | Source/Input | Tooling | Binary/Output |
 | ------------ | ------- | ------------- |
 | **%BASE%Extras\External Documentation\** | | |
-| Documents\distance.d2h <br> Uses Documents\.doc | ComponentOne Doc-To-Help | HTMLHelp\distance.bas |
-| Documents\distance.d2h <br> Uses Documents\.doc | ComponentOne Doc-To-Help | HTMLHelp\distance.chm |
-| Documents\distance.d2h <br> Uses Documents\.doc | ComponentOne Doc-To-Help | Manual\distance-master.doc |
-| Documents\.doc | | |
+| Documents\distance.d2h <br> Uses Documents\\*.doc | ComponentOne Doc-To-Help | HTMLHelp\distance.bas |
+| Documents\distance.d2h <br> Uses Documents\\*.doc | ComponentOne Doc-To-Help | HTMLHelp\distance.chm |
+| Documents\distance.d2h <br> Uses Documents\\*.doc | ComponentOne Doc-To-Help | Manual\distance-master.doc |
+| Documents\\*.doc | | |
 | Documents\Manual\distance-master.doc | Insert %BASE%Extras\External Documentation\Images\TitlePage\TitlePage.wmf <br/> Adobe Acrobat | pdf |
 | Images\TitlePage\TitlePage.ppt | Insert %BASE%Extras\Graphics\Splash\DXYZ.jpg <br/> Microsoft PowerPoint | TitlePage.wmf |
 | ReadMe\ReadMeNN.rtf | Insert %BASE%Extras\Internal documents\Worklist\KnownProblems7.doc <br/> and %BASE%Extras\Internal documents\Worklist\ResolvedProblems1.doc | |
@@ -130,7 +130,7 @@ Notes:
 | ResolvedProblems1.doc | | |
 | | | |
 | **%BASE%Extras\Sample Projects Backup** | | |
-| Release\.dat and .dst | | |
+| Release\\*.dat and \*.dst | | |
 | Templates\SampleTemplate.dat and .dst | | |
 | | | |
 | **%BASE%Extras\Setup** | | |

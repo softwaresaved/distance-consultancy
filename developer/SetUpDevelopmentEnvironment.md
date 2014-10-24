@@ -22,16 +22,16 @@ Virtual machine
 
 A complete development environment is on the Distance virtual machine.
 
-`C:\Application Development\Distancex0`:
+C:\Application Development\Distancex0:
 
 * Code
-* `x` is the major version number e.g. `5` for Distance 5
-* AKA `%BASE%`
+* x is the major version number e.g. 5 for Distance 5
+* AKA %BASE%
 
-`C:\Application Development\Distancex0Extras`:
+C:\Application Development\Distancex0Extras:
 
 * Non-code content
-* AKA `%BASE%Extras`
+* AKA %BASE%Extras
 
 Code development tools
 ----------------------
@@ -42,7 +42,7 @@ Microsoft Visual Basic 6:
 
 Compaq Digital Fortran 6.6 Professional:
 
-* MCDS and CDS analysis engine, `MCDS.exe`
+* MCDS and CDS analysis engine, MCDS.exe
 * Install From Fortran CD - ask Len
 * Update to 6.6C by running CVF-66-66C3.exe in DevCD FORTRAN folder
 * Can optionally install Array Visualizer from a separate CD
@@ -59,7 +59,7 @@ R 2.9.0 (current as of May 2009):
   - http://msdn.microsoft.com/library/en-us/htmlhelp/html/hwmicrosofthtmlhelpdownloads.asp
   - **Rtools are now http://cran.r-project.org/bin/windows/Rtools/. **
 
-Setup programs for most of the software required for developing Distance is in `%BASE%Extras\DistDevCD`.
+Setup programs for most of the software required for developing Distance is in %BASE%Extras\DistDevCD.
 
 Non-code development tools
 --------------------------
@@ -70,9 +70,9 @@ Required:
 * WinZip and WinZip Self Extractor - package setup program.
 * Doc-To-Help - compile user's guide into Microsoft Compiled HTML Help.
 * Microsoft Word - write both internal and external documentation.
-* Microsoft HTML help compiler - compile external documentation in compact HTML (`.chtml`) format. Called from Doc-To-Help
+* Microsoft HTML help compiler - compile external documentation in compact HTML (.chtml) format. Called from Doc-To-Help
 * Adobe Acrobat - create user's guide PDFs
-* Microsoft Image Composer - draw splash screen and convert `.mix` files to `.jpeg`.
+* Microsoft Image Composer - draw splash screen and convert .mix files to .jpeg.
 
 Optional:
 
