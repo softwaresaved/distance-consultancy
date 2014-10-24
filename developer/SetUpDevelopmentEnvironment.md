@@ -52,10 +52,10 @@ R 2.9.0 (current as of May 2009):
 * MRDS and DSM analysis engines
 * From http://www.r-project.org or from the DevCD\R directory.
 * Unix "tools" (required to build libraries). 
-  - For more on what’s required see Appendix E (The Windows Toolset) of R installation and administration.
-  - Get the latest version from http://www.murdoch-sutherland.com/Rtools/. Choose “package authoring installation”
+  - For more on what's required see Appendix E (The Windows Toolset) of R installation and administration.
+  - Get the latest version from http://www.murdoch-sutherland.com/Rtools/. Choose "package authoring installation"
 * Windows HTML Help Workshop
-  - Required to build chm files in libraries, if required – you’ll have it already if you installed Doc-To-Help (see below)
+  - Required to build chm files in libraries, if required - you'll have it already if you installed Doc-To-Help (see below)
   - http://msdn.microsoft.com/library/en-us/htmlhelp/html/hwmicrosofthtmlhelpdownloads.asp
   - **Rtools are now http://cran.r-project.org/bin/windows/Rtools/. **
 
