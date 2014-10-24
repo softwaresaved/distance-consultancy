@@ -7,7 +7,7 @@ An overview of Distance's Visual Basic project dependencies.
 Notes:
 
 * This reference was written using Distance for Windows 6
-* Locations are on the Distance virtual machine relative to C:\Application Development\Distance60
+* Locations are on the Distance virtual machine relative to C:\Application Development\Distance60\ aka %BASE%\Distance60\
 * 'nnnn' denotes the Distance version e.g. 6
 * All dependencies are recorded as References expect for those projects marked component
 
