@@ -304,7 +304,7 @@ TODO
 
 <p/>
 
-Public Const IDH_workingwithdatafiltersandmodeldefinitions = 356 ' &H164
+    Public Const IDH_workingwithdatafiltersandmodeldefinitions = 356 ' &H164
 
   - What VB do I compile? _All_ the projects? 
 
