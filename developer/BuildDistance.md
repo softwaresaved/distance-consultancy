@@ -321,6 +321,8 @@ How to build HTML Help from the command prompt
 
 * Build HTML help:
 
+<p/>
+
     "C:\Program Files\ComponentOne\DocToHelp\C1D2HBatch.exe" -build distance.d2h "distance HTML Help"
 
 How to update title slide with splash screen
@@ -438,10 +440,9 @@ This assumes that:
 
 * Run:
 
-    start /WAIT "" "C:\Program Files (x86)\Microsoft Office\Office11\winword.exe" distance-master.doc /q /n /mFilePrintDefault /mFileSave /mFileExit 
+<p/>
 
-/q - no splash screen
-/n - no new default document
+    start /WAIT "" "C:\Program Files (x86)\Microsoft Office\Office11\winword.exe" distance-master.doc /q /n /mFilePrintDefault /mFileSave /mFileExit 
 
 * Copy PDF:
 
@@ -490,6 +491,8 @@ To see project dependencies within a text editor:
 * Select Open With => Choose Program...
 * Double-click WordPad
 * Dependencies and component dependencies are listed as Reference and Object entries e.g for %BASE%\Map\Mapper\D6Map.vbp:
+
+<p/>
 
       Reference=*\G{...}#2.0#0#..\..\..\..\WINDOWS\system32\stdole2.tlb#OLE Automation
       Object={...}#1.0#0; Vsflex7d.ocx
@@ -550,6 +553,8 @@ How to build all Visual Basic projects
 
 * Run the build script:
 
+<p/>
+
     build_vb_projects.bat
 
 How to remove all Visual Basic binaries
@@ -566,6 +571,8 @@ To remove all ocx, dll and exe files for a complete rebuild:
     chdir %BASE%
 
 * Run the delete script:
+
+<p/>
 
     delete_vb_binaries.bat
 
