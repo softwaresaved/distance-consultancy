@@ -465,7 +465,7 @@ Visual Basic components
 
 To build a VB project requires all its pre-requisite projects to have been built. See:
 
-* [Visual Basic Project Dependencies](./DependenciesReference.md)
+* [Visual Basic Project Dependencies](./VisualBasicProjectDependencies.md)
 * [Visual Basic projects list](../vmscripts/vbprojectlist.txt) - an ordered project list that respects the dependencies.
 
 How to view a Visual Basic project's dependencies
@@ -585,7 +585,7 @@ To set the DLL base address:
 * Select Project => PROJECT Properties... e.g. D6Legend Properties...
 * Click Version tab
 
-[DLL Base Addresses](./DLLAddressReference.md) provides a list of addresses used to date. If you add a new component or change an address, remember to update this list.
+[DLL Base Addresses](./DllBaseAddresses.md) provides a list of addresses used to date. If you add a new component or change an address, remember to update this list.
 
 How to update binary meta-data
 ------------------------------
