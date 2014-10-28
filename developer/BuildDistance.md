@@ -376,6 +376,8 @@ How to create single Microsoft Word user's guide from the command prompt
 
 * Build HTML help:
 
+<p/>
+
     "C:\Program Files\ComponentOne\DocToHelp\C1D2HBatch.exe" -build distance.d2h "distance Manual"
 
 How to update the title page of the Microsoft Word user's guide
