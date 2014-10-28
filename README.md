@@ -34,7 +34,7 @@ Locations on the Distance virtual machine are denoted as follows:
 * [Building Distance Components](./developer/BuildDistance.md)
 * [Source Code and Binaries](./developer/SourceCodeAndBinaries.md)
 * [Installed Components](./developer/InstalledComponents.md)
-* [Visual Basic Project Dependencies](./developer/Dependencies.md)
+* [Visual Basic Project Dependencies](./developer/VisualBasicProjectDependencies.md)
 * [DLL Base Addresses](./developer/DllBaseAddresses.md)
 * [How to set up a development environment](./developer/SetUpDevelopmentEnvironment.md) (work-in-progress)
 * [File extensions](./developer/FileExtensions.md)
