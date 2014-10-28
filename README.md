@@ -19,16 +19,28 @@ The outcomes of the collaboration are:
 
 These outcomes are intended to help the Distance project to reduce the time between developing good theory, and published papers, and delivering usable code into the hands of biologists, conservationists and statisticians.
 
-Developer resources:
+Developer resources
+-------------------
+
+The following resources were written using Distance for Windows 6.2 release and the Distance virtual machine.
+
+Locations on the Distance virtual machine are denoted as follows:
+
+* %BASE% - C:\Application Development\Distance60
+* %BASE%Extras - C:\Application Development\Distance60Extras
+
+'nnnn' denotes the Distance version e.g. 6.
 
 * [Building Distance Components](./developer/BuildingDistance.md)
-* [Distance for Windows - Source Code and Binaries Reference](./developer/SourceCodeAndBinariesReference.md)
-* [Distance for Windows - Installed Components Reference](./developer/InstalledComponentsReference.md)
-* [Distance for Windows - Visual Basic Project Dependencies](./developer/DependenciesReference.md)
-* [DLL Base Addresses](./developer/DLL Address Reference)
-* [File extensions](./developer/FileExtensions.md)
+* [Source Code and Binaries](./developer/SourceCodeAndBinariesReference.md)
+* [Installed Components](./developer/InstalledComponentsReference.md)
+* [Visual Basic Project Dependencies](./developer/DependenciesReference.md)
+* [DLL Base Addresses](./developer/DLLAddressReference.md)
 * [How to set up a development environment](./developer/SetUpDevelopmentEnvironment.md) (work-in-progress)
+* [File extensions](./developer/FileExtensions.md)
 
-Architecture resources:
+Architecture resources
+----------------------
+
 * [Distance for Windows and FORTRAN](./developer/ArchitectureFORTRAN.md)
 * [Distance for Windows and R](./developer/ArchitectureR.md)

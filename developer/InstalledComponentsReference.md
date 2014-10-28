@@ -1,20 +1,9 @@
+Installed Components
+====================
 
-Distance for Windows - Installed Components Reference
-=====================================================
+Distance for Windows components and files installed by the Distance for Windows installer.
 
-An overview of Distance for Windows installed components. 
-
-For an overview of the Distance source code and how these installed components are built from it, see [Distance for Windows - Source Code and Binaries Reference](./SourceCodeAndBinariesReference.md).
-
-
-Notes:
-
-* Locations on the Distance virtual machine:
-  - %BASE% - C:\Application Development\Distance60
-  - %BASE%Extras - C:\Application Development\Distance60Extras
-* 'nnnn' denotes the Distance version e.g. 6.
-* This reference was written using Distance for Windows 6.
-* For file extensions see, [File extensions](./FileExtensions.md).
+For an overview of the Distance source code and how these installed components are built from it, see [Source Code and Binaries](./SourceCodeAndBinariesReference.md).
 
 ----------------------------------------------------------------------
 

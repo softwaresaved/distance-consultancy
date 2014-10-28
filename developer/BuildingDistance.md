@@ -1,10 +1,5 @@
-Distance for Windows - Building Distance Components
-===================================================
-
-Notations:
-
-* %BASE% - C:\Application Development\Distance60
-* %BASE%Extras - C:\Application Development\Distance60Extras
+Building Distance Components
+============================
 
 How to find out versions of tools
 =================================

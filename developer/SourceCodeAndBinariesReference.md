@@ -1,18 +1,9 @@
+Source Code and Binaries
+========================
 
-Distance for Windows - Source Code and Binaries Reference
-=========================================================
+Distance for Windows source code and the binaries, and other resources, built from it.
 
-An overview of the Distance source code and the binaries, and other resources, built from it.
-
-Notes:
-
-* Locations on the Distance virtual machine:
-  - %BASE% - C:\Application Development\Distance60
-  - %BASE%Extras - C:\Application Development\Distance60Extras
-* 'nnnn' denotes the Distance version e.g. 6.
-* This reference was written using Distance for Windows 6.
-* In the Binary/Output column a "copy" entry denotes content that has been manually copied or duplicates a file from elsewhere in Distance, or a Distance repository. See the Copies table.
-* For file extensions see, [File extensions](./FileExtensions.md).
+In the Binary/Output column a "copy" entry denotes content that has been manually copied or duplicates a file from elsewhere in Distance, or a Distance repository. See the Copies table.
 
 %BASE%
 ------

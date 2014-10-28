@@ -1,11 +1,11 @@
-Distance for Windows - DLL Base Addresses
-=========================================
+DLL Base Addresses
+==================
 
-The default DLL base address is &H1100000. This will cause lots of memory re-allocation. Components will load faster if a random number between this and &H80000000 is chosen. 
+DLL base addresses.
 
-DLL addresses used to date in Distance components to date are as follows:
+In Visual Basic, the default DLL base address is &H1100000. This will cause lots of memory re-allocation. Components will load faster if a random number between this and &H80000000 is chosen. 
 
-'nnnn' denotes the Distance version e.g. 6
+DLL addresses used to date in Distance components to date are as follows.
 
 | Component    | Address    |
 | ------------ | ---------- |
