@@ -31,11 +31,11 @@ Locations on the Distance virtual machine are denoted as follows:
 
 'nnnn' denotes the Distance version e.g. 6.
 
-* [Building Distance Components](./developer/BuildingDistance.md)
-* [Source Code and Binaries](./developer/SourceCodeAndBinariesReference.md)
-* [Installed Components](./developer/InstalledComponentsReference.md)
-* [Visual Basic Project Dependencies](./developer/DependenciesReference.md)
-* [DLL Base Addresses](./developer/DLLAddressReference.md)
+* [Building Distance Components](./developer/BuildDistance.md)
+* [Source Code and Binaries](./developer/SourceCodeAndBinaries.md)
+* [Installed Components](./developer/InstalledComponents.md)
+* [Visual Basic Project Dependencies](./developer/Dependencies.md)
+* [DLL Base Addresses](./developer/DllBaseAddresses.md)
 * [How to set up a development environment](./developer/SetUpDevelopmentEnvironment.md) (work-in-progress)
 * [File extensions](./developer/FileExtensions.md)
 
