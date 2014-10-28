@@ -19,15 +19,16 @@ The outcomes of the collaboration are:
 
 These outcomes are intended to help the Distance project to reduce the time between developing good theory, and published papers, and delivering usable code into the hands of biologists, conservationists and statisticians.
 
-Other outputs currently being authored:
+Developer resources:
 
-* [Distance for Windows - Source Code and Binaries
-Reference](./developer/SourceCodeAndBinariesReference.md)
-* [Distance for Windows - Installed Components
-Reference](./developer/InstalledComponentsReference.md)
+* [Building Distance Components](./developer/BuildingDistance.md)
+* [Distance for Windows - Source Code and Binaries Reference](./developer/SourceCodeAndBinariesReference.md)
+* [Distance for Windows - Installed Components Reference](./developer/InstalledComponentsReference.md)
 * [Distance for Windows - Visual Basic Project Dependencies](./developer/DependenciesReference.md)
+* [DLL Base Addresses](./developer/DLL Address Reference)
 * [File extensions](./developer/FileExtensions.md)
+* [How to set up a development environment](./developer/SetUpDevelopmentEnvironment.md) (work-in-progress)
+
+Architecture resources:
 * [Distance for Windows and FORTRAN](./developer/ArchitectureFORTRAN.md)
 * [Distance for Windows and R](./developer/ArchitectureR.md)
-* [How to set up a development 
-environment](./developer/SetUpDevelopmentEnvironment.md)
