@@ -1,20 +1,9 @@
+Installed Components
+====================
 
-Distance for Windows - Installed Components Reference
-=====================================================
+Distance for Windows components and files installed by the Distance for Windows installer.
 
-An overview of Distance for Windows installed components. 
-
-For an overview of the Distance source code and how these installed components are built from it, see [Distance for Windows - Source Code and Binaries Reference](./SourceCodeAndBinariesReference.md).
-
-
-Notes:
-
-* Locations on the Distance virtual machine:
-  - %BASE% - C:\Application Development\Distance60
-  - %BASE%Extras - C:\Application Development\Distance60Extras
-* 'nnnn' denotes the Distance version e.g. 6.
-* This reference was written using Distance for Windows 6.
-* For file extensions see, [File extensions](./FileExtensions.md).
+For an overview of the Distance source code and how these installed components are built from it, see [Source Code and Binaries](./SourceCodeAndBinaries.md).
 
 ----------------------------------------------------------------------
 
@@ -131,20 +120,20 @@ Miscellaneous
 | UseAgreement.txt | %BASE%\Interface\Help\ | For Help => About Distance... |
 | INSTALL.LOG | Auto-generated during installation | Log file |
 
-Users must have read-write access to `DistIni.mdb`. If not then users can specify an alternative location via registry:
+Users must have read-write access to DistIni.mdb. If not then users can specify an alternative location via registry:
 
-* Key `/Software/Distance x/DefaultSettingsDbPath` where `x` is Distance version number
+* Key /Software/Distance x/DefaultSettingsDbPath where x is Distance version number
 * Value to folder name of file location
 
 Registry sub-tree search order: 
 
-* `/HKEY_CURRENT_USER`
-* `/HKEY_LOCAL_MACHINE`
+* /HKEY_CURRENT_USER
+* /HKEY_LOCAL_MACHINE
 
 ----------------------------------------------------------------------
 
-`BACKUP` folder 
----------------
+BACKUP folder 
+-------------
 
 DLLs and related files from third-party components.
 
@@ -211,8 +200,8 @@ DLLs and related files from third-party components.
 
 ----------------------------------------------------------------------
 
-`Help` folder
--------------
+Help folder
+-----------
 
 | File | Source location | Description |
 | ---- | --------------- | ----------- |
@@ -230,15 +219,15 @@ DLLs and related files from third-party components.
 | | | |
 | **Built-in help** | | |
 | distance.chm | %BASE%Extras\External Documentation\Documents\ | Distance for Windows compiled HTML help |
-| Distance.chw  |Auto-generated when `.chm` is accessed | Index file |
+| Distance.chw  | Auto-generated when .chm is accessed | Index file |
 | | | |
 | **Documents** | | |
 |  distance.pdf | %BASE%Extras\External Documentation\Documents\ <br/> %BASE%Extras\Graphics\Splash\DXYZ.mix | User's guide |
 
 ----------------------------------------------------------------------
 
-`RPackages` folder
-------------------
+RPackages folder
+----------------
 
 R packages used to restore default versions within R library.
 
@@ -283,14 +272,14 @@ Third-party packages:
 These are only used when the **Re-install analysis engine libraries to original versions on next run** option is selected within Distance for Windows. That these packages are otherwise not used can be seen by (for example) selecting:
 
 * Help => Online Manuals => MRDS Engine R Help:
-  - This shows 2.1.0 which corresponds to the version in the R library, `C:\Programs\R\R-3.1.0\library\mrds`, and not mrds_2.1.5.zip above.
+  - This shows 2.1.0 which corresponds to the version in the R library, C:\Programs\R\R-3.1.0\library\mrds, and not mrds_2.1.5.zip above.
 * Help => Online Manuals => DSM Engine R Help:
-  - This shows 2.2.5 which corresponds to the version in the R library, `C:\Programs\R\R-3.1.0\library\dsm`, and not dsm_2.2.3.zip above.
+  - This shows 2.2.5 which corresponds to the version in the R library, C:\Programs\R\R-3.1.0\library\dsm, and not dsm_2.2.3.zip above.
 
 ----------------------------------------------------------------------
 
-`Sample Projects\Templates` folder
-----------------------------------
+Sample Projects\Templates folder
+--------------------------------
 
 Sample project file and data folder for use as templates for new projects.
 
@@ -307,12 +296,12 @@ This is the default folder used by Distance for Windows when **Use an existing D
 
 ----------------------------------------------------------------------
 
-`Sample Projects` folder
-------------------------
+Sample Projects folder
+----------------------
 
 Sample Distance project files and folders and raw data for the user's guide. 
 
-Each `.dst` file has a `.dat\` folder (not shown) containing a `DistData.mdb` file (not shown). Additional files in this `.dat` folder are listed where applicable.
+Each .dst file has a .dat\ folder (not shown) containing a DistData.mdb file (not shown). Additional files in this .dat folder are listed where applicable.
 
 * Source location: %BASE%Extras\Sample Projects Backup\Release\
 * How to build: Shipped as-is.
@@ -324,16 +313,16 @@ Each `.dst` file has a `.dat\` folder (not shown) containing a `DistData.mdb` fi
 | Example2.xls - raw data | Raw data |
 | Example2Backup.txt | Raw data |
 | Amakihi.dst | Raw data |
-| Dolphins.dst  | Includes `.dbf`, `.shp`, `.shx` |
+| Dolphins.dst  | Includes .dbf, .shp, .shx |
 | Ducknest.dst | |
 | Golftees.dst | | 
 | House Wren.dst | |
 | Line Transect Example.dst | |
-| LinkingExample.dst | Includes `.mdb`, `.xls`, `.txt`, `.ini`, `.dbf`, `.shp`, `.shx` |
-| Mexico.dst | Includes `.dat` plus `.dbf`, `.prj`, `.sbn`, `.sbx`, `.shp`, `.shx` |
+| LinkingExample.dst | Includes .mdb, .xls, .txt, .ini, .dbf, .shp, .shx |
+| Mexico.dst | Includes .dat plus .dbf, .prj, .sbn, .sbx, .shp, .shx |
 | Point Transect Example.dst | |
 | Songbird.dst | |
-| StAndrewsBay.dst | Includes `.dbf`, `.shp`, `.shx` |
+| StAndrewsBay.dst | Includes .dbf, .shp, .shx |
 | Stratify example.dst | |
 
 ----------------------------------------------------------------------

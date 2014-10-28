@@ -1,18 +1,9 @@
+Source Code and Binaries
+========================
 
-Distance for Windows - Source Code and Binaries Reference
-=========================================================
+Distance for Windows source code and the binaries, and other resources, built from it.
 
-An overview of the Distance source code and the binaries, and other resources, built from it.
-
-Notes:
-
-* Locations on the Distance virtual machine:
-  - %BASE% - C:\Application Development\Distance60
-  - %BASE%Extras - C:\Application Development\Distance60Extras
-* 'nnnn' denotes the Distance version e.g. 6.
-* This reference was written using Distance for Windows 6.
-* In the Binary/Output column a "copy" entry denotes content that has been manually copied or duplicates a file from elsewhere in Distance, or a Distance repository. See the Copies table.
-* For file extensions see, [File extensions](./FileExtensions.md).
+In the Binary/Output column a "copy" entry denotes content that has been manually copied or duplicates a file from elsewhere in Distance, or a Distance repository. See the Copies table.
 
 %BASE%
 ------
@@ -113,10 +104,10 @@ Notes:
 | Source/Input | Tooling | Binary/Output |
 | ------------ | ------- | ------------- |
 | **%BASE%Extras\External Documentation\** | | |
-| Documents\distance.d2h <br> Uses Documents\.doc | ComponentOne Doc-To-Help | HTMLHelp\distance.bas |
-| Documents\distance.d2h <br> Uses Documents\.doc | ComponentOne Doc-To-Help | HTMLHelp\distance.chm |
-| Documents\distance.d2h <br> Uses Documents\.doc | ComponentOne Doc-To-Help | Manual\distance-master.doc |
-| Documents\.doc | | |
+| Documents\distance.d2h <br> Uses Documents\\*.doc | ComponentOne Doc-To-Help | HTMLHelp\distance.bas |
+| Documents\distance.d2h <br> Uses Documents\\*.doc | ComponentOne Doc-To-Help | HTMLHelp\distance.chm |
+| Documents\distance.d2h <br> Uses Documents\\*.doc | ComponentOne Doc-To-Help | Manual\distance-master.doc |
+| Documents\\*.doc | | |
 | Documents\Manual\distance-master.doc | Insert %BASE%Extras\External Documentation\Images\TitlePage\TitlePage.wmf <br/> Adobe Acrobat | pdf |
 | Images\TitlePage\TitlePage.ppt | Insert %BASE%Extras\Graphics\Splash\DXYZ.jpg <br/> Microsoft PowerPoint | TitlePage.wmf |
 | ReadMe\ReadMeNN.rtf | Insert %BASE%Extras\Internal documents\Worklist\KnownProblems7.doc <br/> and %BASE%Extras\Internal documents\Worklist\ResolvedProblems1.doc | |
@@ -130,14 +121,16 @@ Notes:
 | ResolvedProblems1.doc | | |
 | | | |
 | **%BASE%Extras\Sample Projects Backup** | | |
-| Release\.dat and .dst | | |
+| Release\\*.dat and \*.dst | | |
 | Templates\SampleTemplate.dat and .dst | | |
 | | | |
 | **%BASE%Extras\Setup** | | |
 | ReadMe.rtf | | copy |
 
 Copies
-======
+------
+
+Content that has been manually copied or duplicates a file from elsewhere in Distance, or a Distance repository.
 
 | Copy | Original |
 | ---- | -------- |
