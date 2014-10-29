@@ -164,7 +164,7 @@ DLLs and related files from third-party components.
 | TAB32X30.OCX | C:\Program Files\Tabpro30\BIN\ | |
 | | | |
 | Microsoft | C runtime library | |
-| MSVCP60.dll | C:\WINDOWS\system32\ | |
+| MSVCP60.dll | C:\Program Files\ESRI\MapObjects2\Microsoft\ | |
 | MSVCRT.DLL | " |  |
 | | | |
 | Microsoft | DAO | Data access objects |
