@@ -14,33 +14,8 @@ The outcomes of the collaboration are:
 * **Developer experience review**: A report with recommendations as to how the developer experience of Distance can be improved. The report is based upon a review of Distance's online resources, developer's manual, source code and test process, and experiences of setting up a local development/build/test environment for working on Distance's various components. 
  - [Developer experience review](./DeveloperExperienceReview.md): review of resources and documentation from a developer's perspective.
 * **Architecture review**: A report on Distance's architecture with proposed improvements to Distance's maintainability and extensibility and how to decouple its GUI. The report is based on a review of the Distance architecture and discussions with Distance developers and is intended to capture the knowledge of these developers. This includes how the Distance components are assembled into releases. The report is complemented with code examples, where applicable, as to how the recommendations can be implemented.
+ - [Distance for Windows Developers Guide](./developer/README.md)
 * **Governance policy**: Guidelines on how to be a good Distance developer expressed as a code contribution policy and how GitHub issue trackers, and other processes can be used to help manage development.
  - [Governance](./Governance.md) - issues and recommendations relating to governance that have arisen to date. This will be evolved over the next few weeks.
 
 These outcomes are intended to help the Distance project to reduce the time between developing good theory, and published papers, and delivering usable code into the hands of biologists, conservationists and statisticians.
-
-Developer resources
--------------------
-
-The following resources were written using Distance for Windows 6.2 release and the Distance virtual machine.
-
-Locations on the Distance virtual machine are denoted as follows:
-
-* %BASE% - C:\Application Development\Distance60
-* %BASE%Extras - C:\Application Development\Distance60Extras
-
-'nnnn' denotes the Distance version e.g. 6.
-
-* [Building Distance Components](./developer/BuildDistance.md)
-* [Source Code and Binaries](./developer/SourceCodeAndBinaries.md)
-* [Installed Components](./developer/InstalledComponents.md)
-* [Visual Basic Project Dependencies](./developer/VisualBasicProjectDependencies.md)
-* [DLL Base Addresses](./developer/DllBaseAddresses.md)
-* [How to set up a development environment](./developer/SetUpDevelopmentEnvironment.md) (work-in-progress)
-* [File extensions](./developer/FileExtensions.md)
-
-Architecture resources
-----------------------
-
-* [Distance for Windows and FORTRAN](./developer/ArchitectureFORTRAN.md)
-* [Distance for Windows and R](./developer/ArchitectureR.md)

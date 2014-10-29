@@ -1,7 +1,7 @@
 Source Code and Binaries
 ========================
 
-Distance for Windows source code and the binaries, and other resources, built from it.
+Distance for Windows source code locations and the binaries, and other resources, built from it.
 
 In the Binary/Output column a "copy" entry denotes content that has been manually copied or duplicates a file from elsewhere in Distance, or a Distance repository. See the Copies table.
 
