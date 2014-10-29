@@ -39,6 +39,7 @@ File extensions
 | .txt | plain text |
 | .vbp | Visual Basic project |
 | .vbr | Visual Basic automatic registration file - enable clients to use remote applications |
+| .wse | Wise script file |
 | .wmf | Windows meta-file image format |
 | .xls | Microsoft Excel spreadsheet |
 | .zip | zip archive |
