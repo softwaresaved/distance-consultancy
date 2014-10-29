@@ -1,37 +1,37 @@
-"Map\Legend\D6Legend.vbp"
-"Misc\CodeTimer\CTmr4.vbp"
-"Misc\CommonDialog\CDlg3.vbp"
-"Misc\CoordSysDesc\CSDesc3.vbp"
-"Misc\LabelLine\LLine3.vbp"
-"Misc\LogWindow\LogWin3.vbp"
-"Utilities\D6Util.vbp"
-"Misc\LogString\LogStr3.vbp"
-"Misc\PrjParams\PrjParams6.vbp"
-"Database Engine\D6DbEng.vbp"
-"Misc\SectionList\SList4.vbp"
-"Map\Mapper\D6Map.vbp"
-"Numerical Server\TypeLibrary\ID6NEng.vbp"
-"Numerical Server\NEngineHost\D6NEH.vbp"
-"Numerical Server\NServer\D6NSvr.vbp"
-"Design Engine\Details\D6DesDet.vbp"
-"Design Engine\Engine\D6DesEng.vbp"
-"Design Engine\NEngineInterface\D6DesNEI.vbp"
-"Design Engine\Properties\D6DesPrp.vbp"
-"Survey\Details\D6SvyDet.vbp"
-"Survey\NEngineInterface\D6SvyNEI.vbp"
-"Survey\Properties\D6SvyPrp.vbp"
-"Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\D6NEIUtil.vbp"
-"Analysis Engines\CDS\Details\D6CDSDet.vbp"
-"Analysis Engines\CDS\NEngineInterface\D6CDSNEI.vbp"
-"Analysis Engines\CDS\Properties\D6CDSPrp.vbp"
-"Analysis Engines\DSM\Details\D6DSMDet.vbp"
-"Analysis Engines\DSM\NEngineInterface\D6DSMNEI.vbp"
-"Analysis Engines\DSM\Properties\D6DSMPrp.vbp"
-"Analysis Engines\MRDS\Details\D6MRDSDet.vbp"
-"Analysis Engines\MRDS\NEngineInterface\D6MRDSNEI.vbp"
-"Analysis Engines\MRDS\Properties\D6MRDSPrp.vbp"
-"Interface\Properties\Data Filter\D6DFPrp.vbp"
-"Interface\Properties\Model Definition\D6MDPrp.vbp"
-"Interface\Wizards\Import Data\D6IDWiz.vbp"
-"Interface\Wizards\Setup Project\D6SPWiz.vbp"
-"Interface\Distance.vbp"
+Map\Legend\D6Legend.vbp
+Misc\CodeTimer\CTmr4.vbp
+Misc\CommonDialog\CDlg3.vbp
+Misc\CoordSysDesc\CSDesc3.vbp
+Misc\LabelLine\LLine3.vbp
+Misc\LogWindow\LogWin3.vbp
+Utilities\D6Util.vbp
+Misc\LogString\LogStr3.vbp
+Misc\PrjParams\PrjParams6.vbp
+Database Engine\D6DbEng.vbp
+Misc\SectionList\SList4.vbp
+Map\Mapper\D6Map.vbp
+Numerical Server\TypeLibrary\ID6NEng.vbp
+Numerical Server\NEngineHost\D6NEH.vbp
+Numerical Server\NServer\D6NSvr.vbp
+Design Engine\Details\D6DesDet.vbp
+Design Engine\Engine\D6DesEng.vbp
+Design Engine\NEngineInterface\D6DesNEI.vbp
+Design Engine\Properties\D6DesPrp.vbp
+Survey\Details\D6SvyDet.vbp
+Survey\NEngineInterface\D6SvyNEI.vbp
+Survey\Properties\D6SvyPrp.vbp
+Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\D6NEIUtil.vbp
+Analysis Engines\CDS\Details\D6CDSDet.vbp
+Analysis Engines\CDS\NEngineInterface\D6CDSNEI.vbp
+Analysis Engines\CDS\Properties\D6CDSPrp.vbp
+Analysis Engines\DSM\Details\D6DSMDet.vbp
+Analysis Engines\DSM\NEngineInterface\D6DSMNEI.vbp
+Analysis Engines\DSM\Properties\D6DSMPrp.vbp
+Analysis Engines\MRDS\Details\D6MRDSDet.vbp
+Analysis Engines\MRDS\NEngineInterface\D6MRDSNEI.vbp
+Analysis Engines\MRDS\Properties\D6MRDSPrp.vbp
+Interface\Properties\Data Filter\D6DFPrp.vbp
+Interface\Properties\Model Definition\D6MDPrp.vbp
+Interface\Wizards\Import Data\D6IDWiz.vbp
+Interface\Wizards\Setup Project\D6SPWiz.vbp
+Interface\Distance.vbp
