@@ -22,6 +22,11 @@ Work-in-progress:
 
 * [How to set up a development environment](./SetUpDevelopmentEnvironment.md) (work-in-progress)
 
+Releasing Distance
+------------------
+
+* [How to release a minor version of Distance for Windows](./ReleasingDistance.md)
+
 Source and binary references
 ----------------------------
 
