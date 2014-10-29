@@ -88,9 +88,13 @@ To build a project from a command prompt:
 Build all Visual Basic projects
 -------------------------------
 
+* Download the following files into %BASE%\:
+  - [build_vb_projects.bat](../vmscripts/build_vb_projects.bat)
+  - [set_config.bat](../vmscripts/set_config.bat)
+  - [vbprojectlist.txt](../vmscripts/vbprojectlist.txt)
 * Start command prompt:
   - Select Start => All Programs => Accessories => Command Prompt
-* Change into %BASE%\vmscripts
+* Change into %BASE%\
 
 <p/>
 
@@ -107,9 +111,13 @@ Remove all Visual Basic binaries
 
 To remove all ocx, dll and exe files for a complete rebuild:
 
+* Download the following files into %BASE%\:
+  - [delete_vb_binaries.bat](../vmscripts/build_vb_binaries.bat)
+  - [set_config.bat](../vmscripts/set_config.bat)
+  - [vbbinarylist.txt](../vmscripts/vbbinarylist.txt)
 * Start command prompt:
   - Select Start => All Programs => Accessories => Command Prompt
-* Change into %BASE%\vmscripts
+* Change into %BASE%\
 
 <p/>
 
