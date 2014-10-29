@@ -132,7 +132,7 @@ To remove all ocx, dll and exe files for a complete rebuild:
 Set DLL base address
 --------------------
 
-The default DLL base address is &H1100000. This will cause lots of memory re-allocation. Components will load faster if a random number between this and &H80000000 is chosen. It is recommended that you choose:
+The default DLL base address is &H11000000. This will cause lots of memory re-allocation. Components will load faster if a random number between this and &H80000000 is chosen. It is recommended that you choose:
 
 * A 64K boundary (i.e. the rightmost four digits of the address are 0000) is chosen.
 * Ensure an even spread of components out across the addresses.
