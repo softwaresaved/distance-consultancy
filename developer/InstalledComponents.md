@@ -116,7 +116,7 @@ Miscellaneous
 | -------- | --------------- | ----------- |
 | DistIni.mdb | %BASE%\Database Engine\DistIni.mdb | Default project settings and settings not unique to specific projects |
 | DistanceProject.ico | %BASE%Extras\Graphics\Icons\DistanceProject2.ico | Icon |
-| ReadMe.rtf | %BASE%Extras\External Documentation\Readme\ReadMeNN.rtf <br/> %BASE%Extras\Internal documents\Worklist\KnownProblems7.doc <br/> %BASE%Extras\Internal documents\Worklist\ResolvedProblems1.doc | Release notes |
+| ReadMe.rtf | %BASE%Extras\External Documentation\Readme\ReadMe31.rtf <br/> %BASE%Extras\Internal documents\Worklist\KnownProblems7.doc <br/> %BASE%Extras\Internal documents\Worklist\ResolvedProblems1.doc | Release notes |
 | UseAgreement.txt | %BASE%\Interface\Help\ | For Help => About Distance... |
 | INSTALL.LOG | Auto-generated during installation | Log file |
 
@@ -214,7 +214,7 @@ Help folder
 | DataEntryObservation.rtf | " | |
 | DataEntrySample.rtf | " | |
 | DataEntryStratum.rtf | " | |
-| DistanceLogo.jpg | %BASE%Extras\Graphics\Splash\DXYZ.mix | For splash screen and Help => About Distance... |
+| DistanceLogo.jpg | %BASE%Extras\Graphics\Splash\D62release.mix | For splash screen and Help => About Distance... |
 | TipOfTheDay.txt | " |For tips of the day. One tip per line. |
 | | | |
 | **Built-in help** | | |
@@ -222,7 +222,7 @@ Help folder
 | Distance.chw  | Auto-generated when .chm is accessed | Index file |
 | | | |
 | **Documents** | | |
-|  distance.pdf | %BASE%Extras\External Documentation\Documents\ <br/> %BASE%Extras\Graphics\Splash\DXYZ.mix | User's guide |
+|  distance.pdf | %BASE%Extras\External Documentation\Documents\ <br/> %BASE%Extras\Graphics\Splash\D62release.mix | User's guide |
 
 ----------------------------------------------------------------------
 

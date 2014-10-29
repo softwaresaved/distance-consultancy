@@ -37,8 +37,8 @@ Text files used in Distance include:
 
 * %BASE%\Interface\Help - rtf files for built-in help, information and text
   - This includes Authors.rtf and Sponsors.rtf
-* %BASE%Extras\External Documentation\ReadMe
-  - This includes the ReadMe for each release
+* %BASE%Extras\External Documentation\ReadMe\
+  - This includes the ReadMe.rtf for each release
 
 Edit text files with WordPad, not Microsoft Word - Word adds extra characters that can mess up the formatting of the files.
 
@@ -53,11 +53,21 @@ Edit Distance icon
 * Open icon, ico, file in Axialis IconWorkshop:
   - Browse to %BASE%Extras\Graphics\Icons\
   - Double-click DistanceProject2.ico file
+* Create new file:
+  - Select File => Save As...
+  - Browse to %BASE%Extras\Graphics\Icons\
+  - Enter file name e.g. DISTANCE_ICON_FILE.ico
 
 Copy Distance icon for use in Visual Basic and release
 ------------------------------------------------------
 
 Copy file:
+
+<p/>
+
+    copy %BASE%Extras\Graphics\Icons\DISTANCE_ICON_FILE.ico %BASE%\Interface\Main\Graphics - Misc and General\DistanceProject.ico
+
+For example:
 
 <p/>
 
@@ -72,40 +82,39 @@ Edit splash screen
 * Create new file:
   - Select File => Save As...
   - Browse to %BASE%Extras\Graphics\Splash\
-  - Enter file name: DXYZ.mix where X is the major release number, Y the minor release number and Z is either release or beta
+  - For release, enter file name: DMNreleaseR.mix
+  - For beta, enter file name: DMNbetaR.mix
+  - M is the major version number, N is the minor version number, R an (optional) release number.
   - Click Save
 * Update version number:
   - Click 'version 6.2' in image
-  - Edit text in box on right-hand side e.g. 'version X.Y'
+  - Edit text in box on right-hand side e.g. 'version M.N'
 * Update release number:
   - Click 'release 1' in image
-  - Edit text in box on right-hand side e.g. 'release Z' or 'BETA Z'
+  - Edit text in box on right-hand side e.g. 'release R' or 'BETA R'
 * Save mix file:
   - Select File => Save
 * Save mix file as a jpg:
   - Select File => Save As...
   - Select Save as type: JPEG File Interchange Format
   - Browse to %BASE%Extras\Graphics\Splash\
-  - Click Save
-
-TODO
-----
-
-* Naming convention for .mix and .jpg 
-  - DXYZ
-  - X = major version number - 6, 7, ...
-  - Y = minor version number - 1, 2, ...
-  - Z = release or beta
-  - What about if there was a 6.3 release 2? or 6.4 beta 3?
+  - Click Save to save image with name as mix file but with jpg extension
 
 Copy splash screen for use in Visual Basic and release
 ------------------------------------------------------
 
-Copy file:
+Copy file, where M is the major version number, N is the minor version number, R an (optional) release number:
 
 <p/>
 
-    copy %BASE%Extras\Graphics\Splash\Dxyz.jpg %BASE%\Interface\Help\DistanceLogo.jpg
+    copy %BASE%Extras\Graphics\Splash\DMNbetaR.jpg %BASE%\Interface\Help\DistanceLogo.jpg
+    copy %BASE%Extras\Graphics\Splash\DMNreleaseR.jpg %BASE%\Interface\Help\DistanceLogo.jpg
+
+For example:
+
+<p/>
+
+    copy %BASE%Extras\Graphics\Splash\D62release.jpg %BASE%\Interface\Help\DistanceLogo.jpg
 
 Update user guide version number
 --------------------------------
@@ -116,7 +125,9 @@ Update user guide version number
 * Update Distance version number:
   - In properties on left-hand side, click Help Targets
   - Click Name: distance Manual
-  - For Property: Title, update Value: Distance 6.2 Release 1
+  - For release, select Property: Title and update Value: Distance M.N Release R
+  - For beta, select Property: Title and update Value: Distance M.N Beta R
+  - M is the major version number, N is the minor version number, R an (optional) release number.
 
 Build HTML Help
 ---------------
@@ -155,7 +166,7 @@ TODO
 
     Public Const IDH_workingwithdatafiltersandmodeldefinitions = 356 ' &H164
 
-  - What VB do I compile? _All_ the projects? 
+* What VB should be compiled? _All_ the projects? 
 
 Build HTML Help from command prompt
 -----------------------------------
@@ -168,9 +179,7 @@ Build HTML Help from command prompt
 
     chdir %BASE%Extras\External Documentation\Documents
 
-* Build HTML help:[.chm/.bas]
-
-
+* Build HTML Help:
 
 <p/>
 
@@ -185,7 +194,7 @@ Update title slide with splash screen
 * Insert splash screen:
   - Select Insert => Picture => From File...
   - Browse to %BASE%Extras\Graphics\Splash\
-  - Double-click DXYZ.jpg where X is the major release number, Y the minor release number and Z is either release or beta
+  - Double-click DMNreleaseR.jpg or DMNbetaR, where M is the major version number, N is the minor version number, R an (optional) release number.
   - Replace current splash screen image in slide with newly-inserted one
 * Save title slide:
   - Click CTRL-S

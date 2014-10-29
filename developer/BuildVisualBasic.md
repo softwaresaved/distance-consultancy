@@ -171,7 +171,7 @@ To update version number:
 
 * Click Make tab
 * Enter Version Number, Major: e.g. 6
-* Enter Version Number, Minor: e.g. 0
+* Enter Version Number, Minor: e.g. 2
 * Version Number, Revision is automatically incremented if Auto Increment is checked
 
 To update ownership, copyright etc:

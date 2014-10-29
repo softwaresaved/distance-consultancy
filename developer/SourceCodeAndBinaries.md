@@ -109,12 +109,12 @@ In the Binary/Output column a "copy" entry denotes content that has been manuall
 | Documents\distance.d2h <br> Uses Documents\\*.doc | ComponentOne Doc-To-Help | Manual\distance-master.doc |
 | Documents\\*.doc | | |
 | Documents\Manual\distance-master.doc | Insert %BASE%Extras\External Documentation\Images\TitlePage\TitlePage.wmf <br/> Adobe Acrobat | pdf |
-| Images\TitlePage\TitlePage.ppt | Insert %BASE%Extras\Graphics\Splash\DXYZ.jpg <br/> Microsoft PowerPoint | TitlePage.wmf |
-| ReadMe\ReadMeNN.rtf | Insert %BASE%Extras\Internal documents\Worklist\KnownProblems7.doc <br/> and %BASE%Extras\Internal documents\Worklist\ResolvedProblems1.doc | |
+| Images\TitlePage\TitlePage.ppt | Insert %BASE%Extras\Graphics\Splash\D62release.jpg <br/> Microsoft PowerPoint | TitlePage.wmf |
+| ReadMe\ReadMe31.rtf | Insert %BASE%Extras\Internal documents\Worklist\KnownProblems7.doc <br/> and %BASE%Extras\Internal documents\Worklist\ResolvedProblems1.doc | |
 | | | |
 | **%BASE%Extras\Graphics\** | | |
 | Icons\DistanceProject2.ico | | |
-| Splash\D62release.mix | Microsoft PhotoDraw | DXYZ.jpg |
+| Splash\D62release.mix | Microsoft PhotoDraw | D62release.jpg |
 | | | |
 | **%BASE%Extras\Internal Documentation\Worklist** | | |
 | KnownProblems7.doc | | |
@@ -141,10 +141,10 @@ Content that has been manually copied or duplicates a file from elsewhere in Dis
 | %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\MCDS.exe | %BASE%\Analysis Engines\CDS\Engine\MCDS.exe |
 | %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\RPackages\dsm.zip | %BASE%\Analysis Engines\DSM\Engine\dsm.zip |
 | %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\RPackages\mrds.zip |%BASE%\Analysis Engines\MRDS\Engine\mrds.zip |
-| %BASE%\Interface\Help\DistanceLogo.jpg | %BASE%Extras\Graphics\Splash\DXYZ.jpg |
+| %BASE%\Interface\Help\DistanceLogo.jpg | %BASE%Extras\Graphics\Splash\D62release.jpg |
 | %BASE%\Interface\Main\Graphics - Misc and General\DistanceProject.ico | %BASE%Extras\Graphics\Icons\DistanceProject2.ico |
 | %BASE%\Numerical Server\NEngineHost\EC.EXE | Identical to %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Ec.exe <br/> Originates from Compaq Visual Fortran. |
 | %BASE%\Utilities\Help\distance.bas | %BASE%Extras\External Documentation\Documents\HTMLHelp\distance.bas |
 | %BASE%\Utilities\Help\distance.chm | %BASE%Extras\External Documentation\Documents\HTMLHelp\distance.chm |
 | %BASE%\Utilities\Help\distance.pdf | %BASE%Extras\External Documentation\Documents\distance-master.pdf |
-| %BASE%Extras\Setup\ReadMe.rtf | %BASE%Extras\External Documentation\ReadMe\ReadMeNN.rtf |
+| %BASE%Extras\Setup\ReadMe.rtf | %BASE%Extras\External Documentation\ReadMe\ReadMe31.rtf |

@@ -57,8 +57,12 @@ Build R DSM and MRDS analysis engines
 
 <p/>
 
-    R CMD INSTALL --build dsm_X.Y.Z.tar.gz
-    R CMD INSTALL --build mrds_X.Y.Z.tar.gz
+    R CMD INSTALL --build dsm_M.N.R.tar.gz
+    R CMD INSTALL --build mrds_M.N.R.tar.gz
+
+* Major version number (M), minor version number (N), revision number (R) depend on Version value in DESCRIPTION file e.g.
+  - For DSM, `Version: 2.2.3`
+  - For MRDS, `Version: 2.1.5`
 
 Copy R packages for use in Visual Basic and release
 ---------------------------------------------------
@@ -67,8 +71,8 @@ Copy files:
 
 <p/>
 
-    copy %BASE%\Analysis Engines\DSM\Engine\dsm_X.Y.Z.zip %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\RPackages\
-    copy %BASE%\Analysis Engines\MRDS\Engine\mrds\mrds_X.Y.Z.zip %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\RPackages\
+    copy %BASE%\Analysis Engines\DSM\Engine\dsm_M.N.R.zip %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\RPackages\
+    copy %BASE%\Analysis Engines\MRDS\Engine\mrds\mrds_M.N.R.zip %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\RPackages\
 
 TODO
 ----
