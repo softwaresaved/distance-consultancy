@@ -308,7 +308,7 @@ This assumes that:
 Copy user guide PDF for use in Visual Basic and release
 -------------------------------------------------------
 
-* Copy PDF:
+* Copy file:
 
 <p/>
 
