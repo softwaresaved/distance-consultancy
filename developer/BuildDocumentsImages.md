@@ -73,8 +73,8 @@ For example:
 
     copy %BASE%Extras\Graphics\Icons\DistanceProject2.ico %BASE%\Interface\Main\Graphics - Misc and General\DistanceProject.ico
 
-Edit splash screen
-------------------
+Create splash screen for new version
+------------------------------------
 
 * Open Microsoft Image Composer, mix, file, in Microsoft PhotoDraw:
   - Browse to %BASE%Extras\Graphics\Splash\

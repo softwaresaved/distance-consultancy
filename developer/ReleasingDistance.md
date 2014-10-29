@@ -3,6 +3,14 @@ How to release a minor version of Distance for Windows
 
 This section describes the process of making a setup package (or installer) for a new minor version of Distance (e.g. moving from 6.2 to 6.3) using the Wise InstallBuilder.
 
+In what follows:
+
+* M.NreleaseR denotes Distance for Windows M.N release R
+* M.NbetaR denotes Distance for Windows M.N beta release R
+* M - Major version number
+* N - Minor version number
+* R - Revision number
+
 Prepare components
 ------------------
 
@@ -17,8 +25,6 @@ Update authors and sponsors:
 * Update authors in %BASE%\Interface\Help\Authors.rtf
 * Update sponsors in %BASE%\Interface\Help\Sponsors.rtf
 * Use WordPad, not Microsoft Word
-* **TODO**
-* Any other updates needed?
 
 Update known and resolved problems:
 
@@ -29,35 +35,31 @@ Update known and resolved problems:
 
 Create ReadMe:
 
-* Create %BASE%Extras\External Documentation\Readme\ReadMeNN.rtf
+* Create ReadMe in %BASE%Extras\External Documentation\Readme\:
+  - For release, create: DMNreleaseR.rtf
+  - For beta, create: DMNbetaR.rtf
   - Use WordPad, not Microsoft Word
 * Copy in contents of:
   - %BASE%Extras\Internal documents\Worklist\KnownProblems7.doc
   - %BASE%Extras\Internal documents\Worklist\ResolvedProblems1.doc
-* Copy %BASE%Extras\External Documentation\Readme\ReadMeNN.rtf to %BASE%Extras\Setup\ReadMe.rtf
+* Update version number, copyright year and date
+* Copy ReadMe to %BASE%Extras\Setup\ReadMe.rtf
 
-* **TODO**
-* Naming convention for ReadMeNN.rtf. It just seems to go N, N+1, N+2,...
-* Prefer one with major and minor version numbers e.g. 6_1, 6_2,...
-* Any other updates needed?
+Copy Distance icon:
 
-Update Distance icon with current version and release number:
-
-* [Edit Distance icon](./BuildDocumentsImages.md#edit-distance-icon)
 * [Copy Distance icon for use in Visual Basic and release](./BuildDocumentsImages.md#copy-distance-icon-for-use-in-visual-basic-and-release)
 
-Update splash screen with current version and release number:
+Create splash screen:
 
-* [Edit splash screen](./BuildDocumentsImages.md#edit-splash-screen)
+* [Create splash screen for new version](./BuildDocumentsImages.md#create-splash-screen-for-new-version)
 * [Copy splash screen for use in Visual Basic and release](./BuildDocumentsImages.md#copy-splash-screen-for-use-in-visual-basic-and-release)
 
 Update user's guide:
 
-* Check all documents in %BASE%Extras\External Documentation\Documents
+* Update all documents in %BASE%Extras\External Documentation\Documents
+  - Update version number, copyright year and date
+  - Update with contents of ReadMe
 * [Update user guide version number](./BuildDocumentsImages.md#update-user-guide-version-number)
-* **TODO**
-* Are release notes, known problems, resolved problems pasted in here too?
-* Any other updates needed?
 
 Build HTML Help and user guide:
 
@@ -89,14 +91,13 @@ Build R components:
 
 Build Visual Basic components:
 
-* Update %BASE%\Database Engine\D6DbEng.vbp:
-  - Update ProjectSettings class with current release and version number:
-
+* Update %BASE%\Database Engine\D6DbEng.vbp, ProjectSettings class with current release and version number. For example:
+ 
 <p/>
 
     Private Const mstrDISTANCE_LOCAL_APP_FOLDER2 = "Distance 6.2"
 
-  - Check ProjectDatabase class OpenProjectDatabase method has code to handle current and previous versions of project files:  
+* Update %BASE%\Database Engine\D6DbEng.vbp, ProjectDatabase class OpenProjectDatabase method with code to handle current and previous versions of project files. For example:
 
 <p/>
 
@@ -104,23 +105,22 @@ Build Visual Basic components:
         Case "6.2"
             'Nothing to do - that's the current version
         Case "6.1", "6.0"
-            If blnIsBeta Then
-            'If it's marked as being in Beta then change that
-                SetIsBetaSetting
-            End If
         ....
 
-  - Check CModGlobal module gblnIS_BETA variable is correctly set, depending whether or not the release is a beta:
+* Update %BASE%\Database Engine\D6DbEng.vbp, CModGlobal module gblnIS_BETA variable, depending whether or not the release is a beta. For example:
 
 <p/>
 
     'Set to true if this is a beta release
     Global Const gblnIS_BETA = False
 
-* Check %BASE%\Interface\Distance.vbp has the correct major and minor version numbers set.
+* Update %BASE%\Interface\Distance.vbp meta-data:
+  - Major and minor version numbers - these determine App.Major and App.Minor values in-code and are passed on to new projects
+  - File Description - update the version number
+  - Legal Copyright - update the current year
+  - Product Name - update the version number
   - See [Update binary (dll, ocx, exe) meta-data](./BuildVisualBasic.md#update-binary-dll-ocx-exe-meta-data)
-  - These determine App.Major and App.Minor values in-code and are passed on to new projects.
-* Check version numbers of all other projects are correct - see [Update binary (dll, ocx, exe) meta-data](./BuildVisualBasic.md#update-binary-dll-ocx-exe-meta-data)
+* Check meta-data of all other projects is correct
 * [Build all Visual Basic projects](./BuildVisualBasic.md#build-all-visual-basic-projects)
 * **TODO**
 * Any other updates needed?
@@ -129,9 +129,9 @@ Build Visual Basic components:
 
 Check template and sample projects:
 
-* Check that the template and sample projects bundled with a release can be opened and browsed correctly within the newly-built distance.exe.
-* Sample projects are in %BASE%Extras\Sample Projects Backup\Release\
-* Template projects is in %BASE%Extras\Sample Projects Backup\Templates\
+* Check that the template and sample projects bundled with a release can be opened and browsed correctly within the newly-built distance.exe:
+  - Sample projects are in %BASE%Extras\Sample Projects Backup\Release\
+  - Template projects is in %BASE%Extras\Sample Projects Backup\Templates\
 * If you want to create new analysis, take a local copy of the project first.
   - Do **not** create new analyses within the above projects! Even if you subsequently delete them, the internal analysis ID number will be incremented (all analyses etc are unique)
 
@@ -140,18 +140,18 @@ Build Wise installer
 
 * Open Wise installer script:
   - Browse to %BASE%Extras\Setup
-  - Double-click D62Release1.wse
+  - Double-click DMNReleaseR.wse e.g. D62release1.wse
 * Build setup program
   - Select File => Compile...
-  - This creates, for example, D62Release1.exe
+  - This creates, for example, DMNReleaseR.exe e.g. D62release1.exe
 * Create zip file:
   - Right-click in %BASE%Extras\Setup and select New WinZip File
-  - Rename New Winzip File.zip to d62setup.zip - all lower-case is better for downloading
-  - Click ReadMe.rtf and drag into d62setup.zip
-  - Click D62Release1.exe and drag into d62setup.zip
+  - Rename New Winzip File.zip to dMNsetup.zip e.g. d62setup.zip - all lower-case is better for downloading
+  - Click ReadMe.rtf and drag into dMNsetup.zip
+  - Click DMNReleaseR.exe and drag into dMNsetup.zip
   - A named exe, and not a generic setup.exe, is used because if there is a setup.exe in the folder already when the user installs, it will not be overwritten with the new exe and WinZip, below, will run the original exe.
 * Create self-extracting zip file:
-  - Right-click d62setup.zip and select WinZip => Create Self-Extractor (.exe)
+  - Right-click dMNsetup.zip and select WinZip => Create Self-Extractor (.exe)
   - WinZip Self-Extractor appears
   - Click Next
   - What kind of self-extracting Zip file appears
@@ -159,24 +159,24 @@ Build Wise installer
   - Removable disks page appears
   - Click Next
   - Which Zip file page appears
-  - Check that Filename: d62setup.exe
+  - Check that Filename: dMNsetup.exe
   - Click Next
   - Enter message text page appears
   - Click Next
   - Unzip automatically page appears
   - Click Next
   - Command to issue when unzip operation completes page appears
-  - Enter the name of the exe e.g. .\D62Release1.exe
+  - Enter the name of the exe e.g. .\DMNReleaseR.exe
   - Click Next
   - Message for the Software Installation Dialog page appears
   - Click Use text from an existing file
   - Double-click SetupDialog.txt
-  - Update release and version number
+  - Update version number
   - Click Next
   - Display your own "About" box message page appears
   - Click Use text from an existing file
   - Double-click SetupAbout.txt
-  - Update release, version number and copyright date
+  - Update version number, copyright year and date
   - Click Next
   - Display your own icon page appears
   - Click Browse...
@@ -190,7 +190,7 @@ Build Wise installer
 
 * **TODO**
 * "D5Setup6.exe (the last number is arbitrary - I just increment numbers in the .wse scripts on occasion)"
-  - When are the numbers updated?
+  - When are the numbers updated? Why not use a systematic MNR one?
 * Why do WISE automatically add Comdlg32.ocx in vb6.wse?  I don't think I need it.  (They also add mscomctl.ocx, but I do need that one)
 * A problem solved: On vanilla machines, was getting the message "the data binding dll VB5DB.dll could not be loaded".  This file is apparently required for DAO3.5 (and 3.6), but not distributed by DAO setup.  See MS Support Article Q241281 (http://support.microsoft.com/support/kb/articles/Q241/2/81.asp).  Added it to setup (doesn't need registering, but is shared) 19/10/00.
   - 2/11/00 - it is added automatically by the Wise DAO3.5 setup program (which also adds a lot of other stuff you don't need)
@@ -217,11 +217,12 @@ All the releases of Distance are stored in %BASE%Extras\Releases\.
 
 Archive a release:
 
-* Create a new subdirectory %BASE%Extras\Releases\DistanceX.Y\releaseZ\ 
-  - For example %BASE%Extras\Releases\Distance6.2\release1\
-* Copy into %BASE%Extras\Releases\DistanceX.Y\releaseZ\
+* Create a new subdirectory %BASE%Extras\Releases\DistanceM.N e.g. %BASE%Extras\Releases\Distance6.2\
+* For a release, within this create a subdirectory releaseR e.g. release1\
+* For a beta, within this create a subdirectory betaR e.g. beta1\
+* Copy into this subdirectory:
   - %BASE%Extras\Setup\ReadMe.rtf
-  - %BASE%Extras\Setup\d62setup.exe
+  - %BASE%Extras\Setup\dMNsetup.exe e.g. d62setup.exe
 
 Other concerns to resolve
 =========================

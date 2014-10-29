@@ -181,7 +181,7 @@ To update ownership, copyright etc:
   - Company Name: Research Unit for Wildlife Population Assessment, University of St Andrews
   - File Description: Distance 6.2 Executable
   - Legal Copyright: Copyright © 1998-2013 RUWPA
-  - Product name: Distance 6.2
+  - Product Name: Distance 6.2
 
 View version compatibility
 --------------------------
