@@ -112,7 +112,7 @@ Remove all Visual Basic binaries
 To remove all ocx, dll and exe files for a complete rebuild:
 
 * Download the following files into %BASE%\:
-  - [delete_vb_binaries.bat](../vmscripts/build_vb_binaries.bat)
+  - [delete_vb_binaries.bat](../vmscripts/delete_vb_binaries.bat)
   - [set_config.bat](../vmscripts/set_config.bat)
   - [vbbinarylist.txt](../vmscripts/vbbinarylist.txt)
 * Start command prompt:
