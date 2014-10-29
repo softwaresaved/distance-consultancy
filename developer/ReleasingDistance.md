@@ -91,7 +91,7 @@ Build R components:
 
 Build Visual Basic components:
 
-* Update %BASE%\Database Engine\D6DbEng.vbp, ProjectSettings class with current release and version number. For example:
+* Update %BASE%\Database Engine\D6DbEng.vbp, ProjectSettings class with current version number. For example:
  
 <p/>
 
@@ -140,10 +140,10 @@ Build Wise installer
 
 * Open Wise installer script:
   - Browse to %BASE%Extras\Setup
-  - Double-click DMNReleaseR.wse e.g. D62release1.wse
+  - Double-click DMNReleaseR.wse e.g. D62Release1.wse
 * Build setup program
   - Select File => Compile...
-  - This creates, for example, DMNReleaseR.exe e.g. D62release1.exe
+  - This creates, for example, DMNReleaseR.exe e.g. D62Release1.exe
 * Create zip file:
   - Right-click in %BASE%Extras\Setup and select New WinZip File
   - Rename New Winzip File.zip to dMNsetup.zip e.g. d62setup.zip - all lower-case is better for downloading
@@ -184,7 +184,7 @@ Build Wise installer
   - Click Next
   - Ready to create page appears
   - Click Next
-  - d62setup.exe should now build
+  - dMNsetup.exe should now build
   - Uncheck Test self-extracting Zip file now
   - Click Close
 
@@ -222,7 +222,7 @@ Archive a release:
 * For a beta, within this create a subdirectory betaR e.g. beta1\
 * Copy into this subdirectory:
   - %BASE%Extras\Setup\ReadMe.rtf
-  - %BASE%Extras\Setup\dMNsetup.exe e.g. d62setup.exe
+  - %BASE%Extras\Setup\dMNsetup.exe
 
 Other concerns to resolve
 =========================
