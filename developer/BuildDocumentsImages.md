@@ -47,12 +47,21 @@ To edit a file in WordPad:
 * Right-click file name
 * Select Open With => WordPad
 
-Edit icons
-----------
+Edit Distance icon
+------------------
 
 * Open icon, ico, file in Axialis IconWorkshop:
   - Browse to %BASE%Extras\Graphics\Icons\
-  - Double-click .ico file
+  - Double-click DistanceProject2.ico file
+
+Copy Distance icon for use in Visual Basic and release
+------------------------------------------------------
+
+Copy file:
+
+<p/>
+
+    copy %BASE%Extras\Graphics\Icons\DistanceProject2.ico %BASE%\Interface\Main\Graphics - Misc and General\DistanceProject.ico
 
 Edit splash screen
 ------------------
@@ -89,8 +98,17 @@ TODO
   - Z = release or beta
   - What about if there was a 6.3 release 2? or 6.4 beta 3?
 
-Update version number in user's guide
--------------------------------------
+Copy splash screen for use in Visual Basic and release
+------------------------------------------------------
+
+Copy file:
+
+<p/>
+
+    copy %BASE%Extras\Graphics\Splash\Dxyz.jpg %BASE%\Interface\Help\DistanceLogo.jpg
+
+Update user guide version number
+--------------------------------
 
 * Open Doc-To-Help, d2h, file, in ComponentOne Doc-To-Help:
   - Browse to %BASE%Extras\External Documentation\Documents\
@@ -98,7 +116,7 @@ Update version number in user's guide
 * Update Distance version number:
   - In properties on left-hand side, click Help Targets
   - Click Name: distance Manual
-  - Check Property: Title has Value: Distance 6.2 Release 1
+  - For Property: Title, update Value: Distance 6.2 Release 1
 
 Build HTML Help
 ---------------
@@ -111,16 +129,16 @@ Build HTML Help
   - Select Build => Make Target OR Press F5
   - To rebuild everything, select Build => Rebuild Target
 
-Copy HTML Help for use by other Distance components
----------------------------------------------------
+Copy HTML Help for use in Visual Basic and release
+--------------------------------------------------
 
-* Copy compiled HTML help distance.chm:
+* Copy compiled HTML help:
 
 <p/>
 
     copy %BASE%Extras\External Documentation\Documents\HTMLHelp\distance.chm %BASE%\Utilities\Help\
 
-* Copy Visual Basic macro file distance.bas for use by other Distance components:
+* Copy Visual Basic macro file for use in Visual Basic components:
   - This contains a list of constants giving shortcuts to the help pages and is used to provide context-sensitive help.
 
 <p/>
@@ -139,8 +157,8 @@ TODO
 
   - What VB do I compile? _All_ the projects? 
 
-Build HTML Help from the command prompt
----------------------------------------
+Build HTML Help from command prompt
+-----------------------------------
 
 * Start command prompt:
   - Select Start => All Programs => Accessories => Command Prompt
@@ -150,7 +168,9 @@ Build HTML Help from the command prompt
 
     chdir %BASE%Extras\External Documentation\Documents
 
-* Build HTML help:
+* Build HTML help:[.chm/.bas]
+
+
 
 <p/>
 
@@ -170,8 +190,8 @@ Update title slide with splash screen
 * Save title slide:
   - Click CTRL-S
 
-Create title slide Windows Metafile
------------------------------------
+Build title page image
+----------------------
 
 * Start Microsoft PowerPoint:
   - Browse to %BASE%Extras\External Documentation\Images\TitlePage\
@@ -183,8 +203,8 @@ Create title slide Windows Metafile
   - Click Save
   - If asked 'Do you want to export every slide in the presentation or only the current slide?' click Current Slide Only
 
-Create single Microsoft Word user's guide
------------------------------------------
+Build user guide
+----------------
 
 * Open Doc-To-Help, d2h, file, in ComponentOne Doc-To-Help:
   - Browse to %BASE%Extras\External Documentation\Documents\
@@ -194,8 +214,8 @@ Create single Microsoft Word user's guide
   - Select Build => Make Target OR Press F5
   - To rebuild everything, select Build => Rebuild Target
 
-Create single Microsoft Word user's guide from the command prompt
------------------------------------------------------------------
+Build user guide from command prompt
+------------------------------------
 
 * Start command prompt:
   - Select Start => All Programs => Accessories => Command Prompt
@@ -211,8 +231,8 @@ Create single Microsoft Word user's guide from the command prompt
 
     "C:\Program Files\ComponentOne\DocToHelp\C1D2HBatch.exe" -build distance.d2h "distance Manual"
 
-Update the title page of the Microsoft Word user's guide
---------------------------------------------------------
+Add title page image to user guide
+----------------------------------
 
 * Start Microsoft Word:
   - Browse to %BASE%Extras\External Documentation\Documents\Manual\
@@ -227,8 +247,8 @@ Update the title page of the Microsoft Word user's guide
 * Save the document
   - Click CTRL-S
 
-Build user's guide PDF
-----------------------
+Build user guide PDF
+--------------------
 
 * Start Microsoft Word:
   - Browse to %BASE%Extras\External Documentation\Documents\Manual\
@@ -249,8 +269,8 @@ click No
   - Double-click document-master.pdf
   - If the images do not look OK then try again with a higher-quality conversion setting
 
-Build user's guide PDF from the command prompt
-----------------------------------------------
+Build user guide PDF from command prompt
+----------------------------------------
 
 This assumes that:
 
@@ -285,8 +305,8 @@ This assumes that:
 
 **Note that using this means cross-references are not hyperlinked.**
 
-Copy user's guide PDF for use by other Distance components
-----------------------------------------------------------
+Copy user guide PDF for use in Visual Basic and release
+-------------------------------------------------------
 
 * Copy PDF:
 

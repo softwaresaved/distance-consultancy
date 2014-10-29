@@ -22,17 +22,17 @@ Build MCDS analysis engine
   - Select Build => Build MCDS.exe OR Press F7
   - To rebuild everything, select Build => Rebuild All
 
-Copy MCDS.exe for use by other Distance components
---------------------------------------------------
+Copy MCDS.exe for use in Visual Basic and release
+-------------------------------------------------
 
-* Copy exe file:
+* Copy file:
 
 <p/>
 
     copy %BASE%\Analysis Engines\CDS\Engine\DEBUG\MCDS.exe %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\
 
-Create a MCDS analysis engine NMake file
-----------------------------------------
+Build MCDS analysis engine NMake file
+-------------------------------------
 
 * Open MCDS project in Compaq Visual Fortran:
   - Browse to %BASE%\Analysis Engines\CDS\Engine\Engine\
@@ -40,8 +40,8 @@ Create a MCDS analysis engine NMake file
 * Export NMake file
   - Select Project => Export Makefile
 
-Build MCDS analysis engine using NMake file from the command prompt
--------------------------------------------------------------------
+Build MCDS analysis engine from command prompt using NMake file
+---------------------------------------------------------------
 
 * Start command prompt:
   - Select Start => All Programs => Accessories => Command Prompt

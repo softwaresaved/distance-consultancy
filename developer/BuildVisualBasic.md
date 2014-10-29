@@ -9,8 +9,8 @@ Microsoft Visual Basic:
 * Help => About Microsoft Visual Basic...
 * Microsoft Visual Basic 6.0 (SP6) For 32-bit Windows Development
 
-View a Visual Basic project's dependencies
-------------------------------------------
+View Visual Basic project dependencies
+--------------------------------------
 
 To build a project requires all its pre-requisite projects to have been built. See:
 
@@ -52,8 +52,8 @@ To see project dependencies within a text editor:
       Object={...}#1.0#0; CSDesc3.ocx
       Object={...}#1.0#0; D6Legend.ocx
 
-Build a single Visual Basic project
------------------------------------
+Build single Visual Basic project
+---------------------------------
 
 To build a project within the VB GUI:
 

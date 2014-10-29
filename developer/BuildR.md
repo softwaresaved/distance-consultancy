@@ -60,10 +60,10 @@ Build R DSM and MRDS analysis engines
     R CMD INSTALL --build dsm_X.Y.Z.tar.gz
     R CMD INSTALL --build mrds_X.Y.Z.tar.gz
 
-Copy R packages for use by other Distance components
-----------------------------------------------------
+Copy R packages for use in Visual Basic and release
+---------------------------------------------------
 
-Copy zip files:
+Copy files:
 
 <p/>
 
