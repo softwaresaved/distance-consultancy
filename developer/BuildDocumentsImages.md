@@ -139,6 +139,9 @@ Build HTML Help
   - In menu-bar drop-down build targets list, select distance HTML Help
   - Select Build => Make Target OR Press F5
   - To rebuild everything, select Build => Rebuild Target
+* Check HTML Help:
+  - Browse to %BASE%Extras\External Documentation\Documents\HTMLHelp\
+  - Double-click distance.chm
 
 Copy HTML Help for use in Visual Basic and release
 --------------------------------------------------
@@ -185,6 +188,10 @@ Build HTML Help from command prompt
 
     "C:\Program Files\ComponentOne\DocToHelp\C1D2HBatch.exe" -build distance.d2h "distance HTML Help"
 
+* Check HTML Help:
+  - Browse to %BASE%Extras\External Documentation\Documents\HTMLHelp\
+  - Double-click distance.chm
+
 Update title slide with splash screen
 -------------------------------------
 
@@ -222,6 +229,9 @@ Build user guide
   - In menu-bar drop-down build targets list, select distance Manual
   - Select Build => Make Target OR Press F5
   - To rebuild everything, select Build => Rebuild Target
+* Check Microsoft Word Document:
+  - Browse to %BASE%Extras\External Documentation\Documents\Manual\
+  - Double-click distance-master.doc
 
 Build user guide from command prompt
 ------------------------------------
@@ -239,6 +249,10 @@ Build user guide from command prompt
 <p/>
 
     "C:\Program Files\ComponentOne\DocToHelp\C1D2HBatch.exe" -build distance.d2h "distance Manual"
+
+* Check Microsoft Word Document:
+  - Browse to %BASE%Extras\External Documentation\Documents\Manual\
+  - Double-click distance-master.doc
 
 Add title page image to user guide
 ----------------------------------
@@ -277,9 +291,14 @@ click No
   - Browse to %BASE%Extras\External Documentation\Documents\Manual\
   - Double-click document-master.pdf
   - If the images do not look OK then try again with a higher-quality conversion setting
+* Check user guide PDF:
+  - Browse to %BASE%Extras\External Documentation\Documents\Manual\
+  - Double-click distance-master.pdf
 
 Build user guide PDF from command prompt
 ----------------------------------------
+
+**Note that using this approach results in non-hyperlinked cross-references.**
 
 This assumes that:
 
@@ -312,7 +331,9 @@ This assumes that:
 
     copy "%userprofile%\My Documents" %BASE%Extras\External Documentation\Documents\Manual\distance-master.pdf
 
-**Note that using this means cross-references are not hyperlinked.**
+* Check user guide PDF:
+  - Browse to %BASE%Extras\External Documentation\Documents\Manual\
+  - Double-click distance-master.pdf
 
 Copy user guide PDF for use in Visual Basic and release
 -------------------------------------------------------
