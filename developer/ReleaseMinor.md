@@ -114,6 +114,7 @@ Build Visual Basic components:
 
     'Set to true if this is a beta release
     Global Const gblnIS_BETA = False
+
 * Rebuild B6DBEng.vbp - see [Build single Visual Basic project](./BuildVisualBasid.md#build-single-visual-basic-project)
 * Update %BASE%\Interface\Distance.vbp meta-data:
   - Major and minor version numbers - these determine App.Major and App.Minor values in-code and are passed on to new projects
@@ -133,25 +134,17 @@ Build Visual Basic components:
 * Developer guide comments that "Some info here about binary and project level compatibility, and how to deal with when building new versions of Distance."
 * Provide more information.
 
-Check Distance: 
+Check Distance (optional)
 
 * Double-click %BASE%\Interface\Distance.exe
 * Distance Internal Error - Distance.ModGlobal.RestoreSampleProjects appears
+  - This is expected
   - Click OK
-* Welcome to Distance M.N - Tip of the Day should appear
-* Click OK
-* Check About Distance:
-  - Select Help => About Distance
-  - Check splash screen shows M.N RELEASE R
-  - Check copyright at bottom of dialog box shows correct year
-  - Click Sponsors and check it is correct
-  - Click Authors and check it is correct
-  - Click Program Files and check Distance.exe is only one
-* Check Distance Help
-  - Select Help => Distance Help
-  - Check Welcome page shows "Welcome to Distance M.N release R"
+* Follow the Distance M.N checks listed below under [Check setup package](#check-setup-package)
+* Note that the following operations will fail:
+  - Select Help => Online Manuals => User's Guide (pdf)
+  - Select Help => Release Notes
 * **TODO**
-* What else?
 
 Check template and sample projects:
 
@@ -174,6 +167,22 @@ Build Wise installer
   - Browse to %BASE%Extras\Setup
   - For release, enter File Name: DMNreleaseR.wse
   - For beta, enter File Name: DMNbetaR.wse
+* Update installer script for Distance M.N:
+  - Replace all occurrences of Distance 6.2 and replace with M.N
+  - Double-click on each line
+  - Find the value that states 6.2 and replace with M.N
+  - Click OK
+  - The occurrences are:
+
+<p/>
+
+    Set Variable APPTITLE to Distance 6.2
+    Create Shortcut from %MAINDIR%\Distance.exe to %GROUP%\Distance 6.2.lnk
+    Create Shortcut from %MAINDIR%\ReadMe.rtf to %GROUP%\Distance 6.2 ReadMe.lnk
+    Create Shortcut from %MAINDIR%\Help\distance.chm to %GROUP%\Distance 6.2 Help.lnk
+    Create Shortcut from %MAINDIR%\Help\distance.pdf to %GROUP%\Distance 6.2 User Guide.lnk
+    Add Icon "Distance 6.2 Users Guide" to Program Manager Group "%GROUP%"
+
 * Build setup program
   - Select File => Compile...
   - This creates, for example, DMNReleaseR.exe e.g. D62Release1.exe
@@ -220,108 +229,95 @@ Build Wise installer
   - dMNsetup.exe should now build
   - Click Close
 
-Test release using VMWare virtual machine
------------------------------------------
+Check setup package
+-------------------
 
-Make sure you use a vanilla virtual machine upon which no Distance installation has already been tested.
+Check the setup package using a VMWare virtual machine:
 
-Download and install:
+* Adobe Acrobat Reader, R and RStudio should be installed
+* Distance for Windows and Distance's R components should never have been installed on it
+ 
+Check install:
 
-* Download Distance
-* Double-click `d62setup.exe`
-* Click About
+* On each page check it says Distance M.N release (or beta) R
+* Double-click dMNsetup.exe
+* WinZIP Self-Extractor page
+  - Click About
+* About page
+  - Check it has correct copyright year
+  - Click OK
+* WinZIP Self-Extractor page
+  - Click Setup
+* Welcome page
+  - Click Next
+* ReadMe File page
+  - Click I agree
+* Choose Destination Location page
+  - Click Next
+* Backup Replaced Files page
+  - Click Next
+* Select Program Manager Group page
+  - Click Next
+* Start Installation page
+  - Click Next
+* Installing page
+  - Click Next
+* Install Windows Script page
+  - Select Yes
+  - Click Next
+* Windows Script 5.6 dialog 
+  - Click Yes
+* Windows Script 5.6 licence
+  - Click Yes
+* Windows Script 5.6 is now installed dialog 
+  - Click OK
+* Windows Script 5.6 restart your computer dialog
+  - Click No
+* Install R
+  - Click Next
+* Installation Complete
+  - Click View ReadMe
+  - Check ReadMe.rtf opens
+  - Check ReadMe.rtf shows Distance M.N release (or beta) R
+  - Click Finish
+
+Check Start Menu:
+
+* Select Start Menu => All Programs => Distance
+* Check menu contains:
+  - Distance M.N Users Guide
+  - Distance M.N
+  - Distance M.N Help
+  - Distance M.N ReadMe
+* Invoke each of the above and check that the relevant documents open
+
+Check Distance M.N:
+
+* Select Start Menu => All Programs => Distance => Distance M.N
+* Welcome to Distance M.N - Tip of the Day should appear
 * Click OK
-* Click Setup
-* Click Next
-* Click I agree
-* Select Destination Folder: `C:\Program Files (x86)\Distance 6` (or `C\Programs\Distance6`)
-* Click Next
-* Select Backup File Destination Folder: `C:\Program Files (x86)\Distance BACKUP` (or `C\Programs\Distance6\BACKUP`)
-* Click Next
-* Select Program Manager Group
- - Enter `Distance`
- - Select Common group (all users)
-* Click Next
-* Click Next
-* Click Next
-* Click Finish
-
-Check:
-
-* Click Start Menu
-* Click Distance 6.2
-
-Create shortcut:
-
-* Browse to `C:\Program Files (x86)\Distance 6` (or `C:\Programs\Distance6`)
-* Right-click `Distance.exe`
-* Select Create shortcut 
-
-Select default project folder (optional):
-
-* Start Distance
-* Select Tools => Preferences...
-* Click General
-* Enter Default project folder `C:\Users\you\Local Documents\DISTANCE\My Distance Projects`
-* Click OK
-
-* Start R i386 3.1.0 icon on desktop
-* RGui (32-bit) appears.
-* Run:
-
-<p/>
-
-    install.packages("mrds")
-    install.packages("Distance")
-    install.packages("dsm")  
-    install.packages("DSsim")
-
-    packageVersion("mrds")
-    packageVersion("Distance")
-    packageVersion("dsm")
-    packageVersion("DSsim")
-
-Set R:
-
-* Select Tools => Preferences...
-* Click Analysis
-* Enter Folder containing R: `C:\Program Files\R\R-3.1.0` (or `C:\Programs\R\R-3.1.0`)
-* Click OK
-
-Check:
-
-* File=>Open Project...
-* Select `Golftees.dst`
-* Click Analyses in Project Browser
-* Select FI - MR dist
-* Click Show details for selected analysis
-* Click Run
-* Select Logs tab
-* Check there are R commands.
-* Select Help => MRDS Engine R help (html)
-* Check that an HTML help page appears.
-
-Run:
-
-* Select File => Open File...
-* Select `golftees-MRDS.Rmd`
-* Click OK
-* Click Knit HTML
-* Install Required Packages appears
-* Click Yes
-
-Check:
-
-* Check that an HTML page appears.
+* Check About Distance:
+  - Select Help => About Distance
+  - Check splash screen shows M.N release (or BETA) R
+  - Check copyright at bottom of dialog box shows correct year
+  - Click Sponsors and check it is correct
+  - Click Authors and check it is correct
+* Check Distance Help
+  - Select Help => Distance Help
+  - Check Welcome page shows Distance M.N release (or beta) R
+  - Select Help => Online Manuals => User's Guide (pdf)
+  - Check distance.pdf opens
+  - Check distance.pdf shows Distance M.N release (or beta) R
+  - Select Help => Release Notes
+  - Check ReadMe.rtf opens
+  - Check ReadMe.rtf shows Distance M.N release (or beta) R
 
 * **TODO**
-* What is release process?
-* Does it ensure consistency between web site, user guide, release notes, Distance for Windows, Distance R packages, MCDS?
-* Is each Distance for Windows example worked through?
-* Is each command, screen shot etc visually inspected for consistency?
-* Are the R fragments in the user doc worked through? 
-  - Exporting CDS Results from Analysis Details Results p115
-  - Exporting MCDS Results p144
+* What else?
+
+Check installation directory:
+
+* Browse to C:\Program Files\Distance M
 
 Archive release
 ---------------
