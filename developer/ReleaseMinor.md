@@ -91,6 +91,7 @@ Build R components:
 
 Build Visual Basic components:
 
+* [Build all Visual Basic projects](./BuildVisualBasic.md#build-all-visual-basic-projects)
 * Update %BASE%\Database Engine\D6DbEng.vbp, ProjectSettings class with current version number. For example:
  
 <p/>
@@ -113,19 +114,44 @@ Build Visual Basic components:
 
     'Set to true if this is a beta release
     Global Const gblnIS_BETA = False
-
+* Rebuild B6DBEng.vbp - see [Build single Visual Basic project](./BuildVisualBasid.md#build-single-visual-basic-project)
 * Update %BASE%\Interface\Distance.vbp meta-data:
   - Major and minor version numbers - these determine App.Major and App.Minor values in-code and are passed on to new projects
-  - File Description - update the version number
+  - Application, Title - update the version name and number
+  - Company Name - update the name if required
+  - File Description - update the version name and number
   - Legal Copyright - update the current year
-  - Product Name - update the version number
+  - Product Name - update the version name and number
   - See [Update binary (dll, ocx, exe) meta-data](./BuildVisualBasic.md#update-binary-dll-ocx-exe-meta-data)
-* Check meta-data of all other projects is correct
-* [Build all Visual Basic projects](./BuildVisualBasic.md#build-all-visual-basic-projects)
+  - Rebuild Distance.vbp - see [Build single Visual Basic project](./BuildVisualBasid.md#build-single-visual-basic-project)
+  - [View binary (dll, ocx, exe) meta-data](./BuildVisualBasic.md#view-binary-dll-ocx-exe-meta-data)) for Distance.exe
+* Update meta-data of all other projects:
+  - Optional
+  - [Build all Visual Basic projects](./BuildVisualBasic.md#build-all-visual-basic-projects)
 * **TODO**
 * Any other updates needed?
 * Developer guide comments that "Some info here about binary and project level compatibility, and how to deal with when building new versions of Distance."
 * Provide more information.
+
+Check Distance: 
+
+* Double-click %BASE%\Interface\Distance.exe
+* Distance Internal Error - Distance.ModGlobal.RestoreSampleProjects appears
+  - Click OK
+* Welcome to Distance M.N - Tip of the Day should appear
+* Click OK
+* Check About Distance:
+  - Select Help => About Distance
+  - Check splash screen shows M.N RELEASE R
+  - Check copyright at bottom of dialog box shows correct year
+  - Click Sponsors and check it is correct
+  - Click Authors and check it is correct
+  - Click Program Files and check Distance.exe is only one
+* Check Distance Help
+  - Select Help => Distance Help
+  - Check Welcome page shows "Welcome to Distance M.N release R"
+* **TODO**
+* What else?
 
 Check template and sample projects:
 
@@ -166,7 +192,7 @@ Build Wise installer
   - Removable disks page appears
   - Click Next
   - Which Zip file page appears
-  - Check that Filename: dMNsetup.exe
+  - Check that Filename: dMNsetup.zip
   - Click Next
   - Enter message text page appears
   - Click Next
@@ -192,7 +218,6 @@ Build Wise installer
   - Ready to create page appears
   - Click Next
   - dMNsetup.exe should now build
-  - Uncheck Test self-extracting Zip file now
   - Click Close
 
 Test release using VMWare virtual machine
