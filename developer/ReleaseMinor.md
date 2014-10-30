@@ -312,6 +312,31 @@ Check Distance M.N:
   - Check ReadMe.rtf opens
   - Check ReadMe.rtf shows Distance M.N release (or beta) R
 
+Check Distance M.N and R:
+
+* Select Start => All Programs => R => R i386 3.1.0
+* Run:
+
+<p/>
+
+    install.packages("dsm")  
+    packageVersion("dsm")
+    install.packages("mrds")
+    packageVersion("mrds")
+
+* Select File => Open Project...
+* Select Sample Projects\Golftees.dst
+* Click Analyses in Project Browser
+* Select FI - MR dist
+* Click Show details for selected analysis
+* Click Run
+* Select Logs tab
+* Check there are R commands.
+* Select Help => MRDS Engine R help (html)
+  - Check that MRDS HTML help page appears
+* Select Help => DSM Engine R help (html)
+  - Check that dSM HTML help page appears
+
 * **TODO**
 * What else?
 
