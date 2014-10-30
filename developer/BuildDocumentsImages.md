@@ -298,7 +298,7 @@ This assumes that:
 
 <p/>
 
-    chdir %BASE%Extras\External Documentation\Documents\Manual
+    chdir %BASE%Extras\External Documentation\Documents\Manual\
 
 * Run:
 
@@ -310,7 +310,7 @@ This assumes that:
 
 <p/>
 
-    copy "%userprofile%\My Documents" %BASE%Extras\External Documentation\Documents\distance-master.pdf
+    copy "%userprofile%\My Documents" %BASE%Extras\External Documentation\Documents\Manual\distance-master.pdf
 
 **Note that using this means cross-references are not hyperlinked.**
 
@@ -321,4 +321,4 @@ Copy user guide PDF for use in Visual Basic and release
 
 <p/>
 
-    copy %BASE%Extras\External Documentation\Documents\distance-master.pdf %BASE%\Utilities\Help\distance.pdf
+    copy %BASE%Extras\External Documentation\Documents\Manual\distance-master.pdf %BASE%\Utilities\Help\distance.pdf

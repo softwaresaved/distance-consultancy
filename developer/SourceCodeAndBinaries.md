@@ -146,5 +146,5 @@ Content that has been manually copied or duplicates a file from elsewhere in Dis
 | %BASE%\Numerical Server\NEngineHost\EC.EXE | Identical to %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Ec.exe <br/> Originates from Compaq Visual Fortran. |
 | %BASE%\Utilities\Help\distance.bas | %BASE%Extras\External Documentation\Documents\HTMLHelp\distance.bas |
 | %BASE%\Utilities\Help\distance.chm | %BASE%Extras\External Documentation\Documents\HTMLHelp\distance.chm |
-| %BASE%\Utilities\Help\distance.pdf | %BASE%Extras\External Documentation\Documents\distance-master.pdf |
+| %BASE%\Utilities\Help\distance.pdf | %BASE%Extras\External Documentation\Documents\Manual\distance-master.pdf |
 | %BASE%Extras\Setup\ReadMe.rtf | %BASE%Extras\External Documentation\ReadMe\ReadMe31.rtf |
