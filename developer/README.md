@@ -25,7 +25,7 @@ Work-in-progress:
 Releasing Distance
 ------------------
 
-* [How to release a minor version of Distance for Windows](./ReleasingDistance.md)
+* [How to release a minor version of Distance for Windows](./ReleaseMinor.md)
 
 Source and binary references
 ----------------------------
