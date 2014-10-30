@@ -140,7 +140,14 @@ Build Wise installer
 
 * Open Wise installer script:
   - Browse to %BASE%Extras\Setup
-  - Double-click DMNReleaseR.wse e.g. D62Release1.wse
+  - Double-click D62Release1.wse
+* Create new Wise installer script:
+  - For release, enter Title: Distance M.N release R installation
+  - For beta, enter Title: Distance M.N beta R installation
+  - Select File => Save As...
+  - Browse to %BASE%Extras\Setup
+  - For release, enter File Name: DMNreleaseR.wse
+  - For beta, enter File Name: DMNbetaR.wse
 * Build setup program
   - Select File => Compile...
   - This creates, for example, DMNReleaseR.exe e.g. D62Release1.exe
@@ -188,18 +195,99 @@ Build Wise installer
   - Uncheck Test self-extracting Zip file now
   - Click Close
 
-* **TODO**
-* "D5Setup6.exe (the last number is arbitrary - I just increment numbers in the .wse scripts on occasion)"
-  - When are the numbers updated? Why not use a systematic MNR one?
-* Why do WISE automatically add Comdlg32.ocx in vb6.wse?  I don't think I need it.  (They also add mscomctl.ocx, but I do need that one)
-* A problem solved: On vanilla machines, was getting the message "the data binding dll VB5DB.dll could not be loaded".  This file is apparently required for DAO3.5 (and 3.6), but not distributed by DAO setup.  See MS Support Article Q241281 (http://support.microsoft.com/support/kb/articles/Q241/2/81.asp).  Added it to setup (doesn't need registering, but is shared) 19/10/00.
-  - 2/11/00 - it is added automatically by the Wise DAO3.5 setup program (which also adds a lot of other stuff you don't need)
-> some details here about how the Wise Install Builder works, in more detail than the summary info above.  E.g., how I worked out what info was required for the DAO install.  The Dialogs, etc 
-
 Test release using VMWare virtual machine
 -----------------------------------------
 
 Make sure you use a vanilla virtual machine upon which no Distance installation has already been tested.
+
+Download and install:
+
+* Download Distance
+* Double-click `d62setup.exe`
+* Click About
+* Click OK
+* Click Setup
+* Click Next
+* Click I agree
+* Select Destination Folder: `C:\Program Files (x86)\Distance 6` (or `C\Programs\Distance6`)
+* Click Next
+* Select Backup File Destination Folder: `C:\Program Files (x86)\Distance BACKUP` (or `C\Programs\Distance6\BACKUP`)
+* Click Next
+* Select Program Manager Group
+ - Enter `Distance`
+ - Select Common group (all users)
+* Click Next
+* Click Next
+* Click Next
+* Click Finish
+
+Check:
+
+* Click Start Menu
+* Click Distance 6.2
+
+Create shortcut:
+
+* Browse to `C:\Program Files (x86)\Distance 6` (or `C:\Programs\Distance6`)
+* Right-click `Distance.exe`
+* Select Create shortcut 
+
+Select default project folder (optional):
+
+* Start Distance
+* Select Tools => Preferences...
+* Click General
+* Enter Default project folder `C:\Users\you\Local Documents\DISTANCE\My Distance Projects`
+* Click OK
+
+* Start R i386 3.1.0 icon on desktop
+* RGui (32-bit) appears.
+* Run:
+
+<p/>
+
+    install.packages("mrds")
+    install.packages("Distance")
+    install.packages("dsm")  
+    install.packages("DSsim")
+
+    packageVersion("mrds")
+    packageVersion("Distance")
+    packageVersion("dsm")
+    packageVersion("DSsim")
+
+Set R:
+
+* Select Tools => Preferences...
+* Click Analysis
+* Enter Folder containing R: `C:\Program Files\R\R-3.1.0` (or `C:\Programs\R\R-3.1.0`)
+* Click OK
+
+Check:
+
+* File=>Open Project...
+* Select `Golftees.dst`
+* Click Analyses in Project Browser
+* Select FI - MR dist
+* Click Show details for selected analysis
+* Click Run
+* Select Logs tab
+* Check there are R commands.
+* Select Help => MRDS Engine R help (html)
+* Check that an HTML help page appears.
+
+Run:
+
+* Select File => Open File...
+* Select `golftees-MRDS.Rmd`
+* Click OK
+* Click Knit HTML
+* Install Required Packages appears
+* Click Yes
+
+Check:
+
+* Check that an HTML page appears.
 
 * **TODO**
 * What is release process?
@@ -223,30 +311,3 @@ Archive a release:
 * Copy into this subdirectory:
   - %BASE%Extras\Setup\ReadMe.rtf
   - %BASE%Extras\Setup\dMNsetup.exe
-
-Other concerns to resolve
-=========================
-
-Do GREP:
-
-%BASE%\Interface\Sample Projects\New Project.dat
-%BASE%\Interface\Sample Projects\New Project.dst
-
-* Is this used in a release? If so add to ComponentReference.md
-
-%BASE%\Misc\GenerateLicenseKey\GenerateLicenseKey.vbp
-
-* Is this used in a release? If so add to ComponentReference.md
-
-%BASE%\Interface\About\About.rtf
-
-* Is this used in a release? If so add to ComponentReference.md
-
-Windows Script 5.6
-
-* Mentioned in user's guide
-
-> The installation program contains a copy of the English language verion of Windows Script 5.6, and you have the option to install this as part of the program setup... If you have already installed the appropriate version of Windows Script on your computer, then you should say "No" when the Distance setup program asks you if you want to install it's version." 
-
-* Mentioned in developer's manual  Utilities e.g. regular expression searching, easy Windows file system manipulation
-* Windows Script is not mentioned anywhere in the installer.
