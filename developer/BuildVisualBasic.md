@@ -147,6 +147,12 @@ To set the DLL base address:
 
 [DLL Base Addresses](./DllBaseAddresses.md) provides a list of addresses used to date. If you add a new component or change an address, remember to update this list.
 
+View binary (dll, ocx, exe) meta-data
+-------------------------------------
+
+* Right-click file and select Properties
+* Click Version tab
+
 Update binary (dll, ocx, exe) meta-data
 ---------------------------------------
 
@@ -182,6 +188,12 @@ To update ownership, copyright etc:
   - File Description: Distance 6.2 Executable
   - Legal Copyright: Copyright © 1998-2013 RUWPA
   - Product Name: Distance 6.2
+
+View binary (dll, ocx, exe) meta-data
+-------------------------------------
+
+* Right-click file and select Properties
+* Click Version tab
 
 View version compatibility
 --------------------------
