@@ -333,18 +333,10 @@ Check Distance M.N and R:
     install.packages("mrds")
     packageVersion("mrds")
 
-* Select File => Open Project...
-* Select Sample Projects\Golftees.dst
-* Click Analyses in Project Browser
-* Select FI - MR dist
-* Click Show details for selected analysis
-* Click Run
-* Select Logs tab
-* Check there are R commands.
 * Select Help => MRDS Engine R help (html)
   - Check that MRDS HTML help page appears
 * Select Help => DSM Engine R help (html)
-  - Check that dSM HTML help page appears
+  - Check that DSM HTML help page appears
 
 * **TODO**
 * What else?
@@ -361,6 +353,9 @@ Check installation directory:
 * When installing on XP it only contained scripten.exe.
   - Installer prompted for Windows Script 5.6
   - BACKUP only had scripten.exe
+
+* **TODO**
+* Add sample CDS/MCDS/DSM/MRDS analysis
 
 Archive release
 ---------------
