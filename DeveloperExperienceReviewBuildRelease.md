@@ -139,7 +139,7 @@ Document what checks need to be done.
 Document purpose of BACKUP directory in an installation
 -------------------------------------------------------
 
-When installing Distance on Windows 7 the installation's BACKUP directory contained a number of libraries - see [Installed Components](./InstalledComponents.md). However, when installing on Windows XP it only contained scripten.exe. Document that this BACKUP directory does.
+When installing Distance on Windows 7 the installation's BACKUP directory contained a number of libraries - see [Installed Components](./developer/InstalledComponents.md). However, when installing on Windows XP it only contained scripten.exe. Document that this BACKUP directory does.
 
 Provide DLL base addresses
 --------------------------
