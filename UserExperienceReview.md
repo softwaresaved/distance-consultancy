@@ -283,7 +283,7 @@ p1-2 has a section, Windows Script 5.6, which states that:
 > ...
 > If you have already installed the appropriate version of Windows Script on your computer, then you should say "No" when the Distance setup program asks you if you want to install it's version.
 
-Windows Script is not mentioned anywhere in the installer. If this information is now out of date for Distance 6.2 then remove it.
+The Distance for Windows installer asks the user if they wish to install Windows Script 5.6 if they are installing on Windows XP but not if they are installing on Windows 7. The user guide should be updated to reflect this.
 
 p3 states that:
 
