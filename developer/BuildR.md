@@ -25,11 +25,11 @@ Build R DSM and MRDS analysis engines
     chdir %BASE%\Analysis Engines\DSM\Engine\
     chdir %BASE%\Analysis Engines\MRDS\Engine\mrds\
 
-* Check package:
+* Check package (--no-manual suppresses an attempt to build a PDF of the manual):
 
 <p/>
-    R CMD check dsm
-    R CMD check mrds
+    R CMD --no-manual check dsm
+    R CMD --no-manual check mrds
 
 * Check package for CRAN compliance:
 
