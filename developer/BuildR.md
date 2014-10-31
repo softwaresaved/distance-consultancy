@@ -101,4 +101,3 @@ TODO
   - Is there a way to avoid this? 
 * Is the copy needed for release only or for day-to-day development of the associated VB components?
 * What about 'how to download and make the R package.txt' which differs a lot?
-* Can build be done via a batch script, including the copy of .zip? Yes
