@@ -347,14 +347,9 @@ Check installation directory:
 * Check the directory contents match those in [Installed Components](./InstalledComponents.md)
 
 * **TODO**
-* When installing on Windows 7 
-  - Installer did not prompt for Windows Script 5.6
-  - BACKUP was full of DLLs
-* When installing on XP it only contained scripten.exe.
-  - Installer prompted for Windows Script 5.6
-  - BACKUP only had scripten.exe
-
-* **TODO**
+* Clarify:
+  - When installing on Windows 7  BACKUP was full of DLLs
+  - When installing on XP it only contained scripten.exe
 * Add sample CDS/MCDS/DSM/MRDS analysis
 
 Archive release
