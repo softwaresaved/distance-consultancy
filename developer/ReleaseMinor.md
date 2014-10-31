@@ -155,8 +155,7 @@ Build Wise installer
 --------------------
 
 * Open Wise installer script:
-  - Browse to %BASE%Extras\Setup
-  - Double-click D62Release1.wse
+  - Double-click %BASE%Extras\Setup\D62Release1.wse
 * Create new Wise installer script:
   - For release, enter Title: Distance M.N release R installation
   - For beta, enter Title: Distance M.N beta R installation
@@ -342,6 +341,4 @@ Archive a release:
 * Create a new subdirectory %BASE%Extras\Releases\DistanceM.N e.g. %BASE%Extras\Releases\Distance6.2\
 * For a release, within this create a subdirectory releaseR e.g. release1\
 * For a beta, within this create a subdirectory betaR e.g. beta1\
-* Copy into this subdirectory:
-  - %BASE%Extras\Setup\ReadMe.rtf
-  - %BASE%Extras\Setup\dMNsetup.exe
+* Copy %BASE%Extras\Setup\ReadMe.rtf and %BASE%Extras\Setup\dMNsetup.exe to this subdirectory.

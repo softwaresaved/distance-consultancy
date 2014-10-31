@@ -15,8 +15,7 @@ Build MCDS analysis engine
 --------------------------
 
 * Open MCDS project in Compaq Visual Fortran:
-  - Browse to %BASE%\Analysis Engines\CDS\Engine\Engine\
-  - Double-click MCDS.DSW
+  - Double-clicl %BASE%\Analysis Engines\CDS\Engine\Engine\MCDS.DSW
   - Compaq Visual Fortran runs alongside Microsoft Visual C++ under Microsoft Developer Studio.
 * Build MCDS.exe:
   - Select Build => Build MCDS.exe OR Press F7
@@ -25,18 +24,13 @@ Build MCDS analysis engine
 Copy MCDS.exe for use in Visual Basic and release
 -------------------------------------------------
 
-* Copy file:
-
-<p/>
-
-    copy %BASE%\Analysis Engines\CDS\Engine\DEBUG\MCDS.exe %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\
+Copy %BASE%\Analysis Engines\CDS\Engine\DEBUG\MCDS.exe to %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\
 
 Build MCDS analysis engine NMake file
 -------------------------------------
 
 * Open MCDS project in Compaq Visual Fortran:
-  - Browse to %BASE%\Analysis Engines\CDS\Engine\Engine\
-  - Double-click MCDS.DSW
+  - Double-click %BASE%\Analysis Engines\CDS\Engine\Engine\MCDS.DSW
 * Export NMake file
   - Select Project => Export Makefile
 

@@ -51,8 +51,7 @@ Edit Distance icon
 ------------------
 
 * Open icon, ico, file in Axialis IconWorkshop:
-  - Browse to %BASE%Extras\Graphics\Icons\
-  - Double-click DistanceProject2.ico file
+  - Double-click %BASE%Extras\Graphics\Icons\DistanceProject2.ico
 * Create new file:
   - Select File => Save As...
   - Browse to %BASE%Extras\Graphics\Icons\
@@ -61,24 +60,13 @@ Edit Distance icon
 Copy Distance icon for use in Visual Basic and release
 ------------------------------------------------------
 
-Copy file:
-
-<p/>
-
-    copy %BASE%Extras\Graphics\Icons\DISTANCE_ICON_FILE.ico %BASE%\Interface\Main\Graphics - Misc and General\DistanceProject.ico
-
-For example:
-
-<p/>
-
-    copy %BASE%Extras\Graphics\Icons\DistanceProject2.ico %BASE%\Interface\Main\Graphics - Misc and General\DistanceProject.ico
+Copy %BASE%Extras\Graphics\Icons\DISTANCE_ICON_FILE.ico (for example %BASE%Extras\Graphics\Icons\DistanceProject2.ico) to %BASE%\Interface\Main\Graphics - Misc and General\DistanceProject.ico
 
 Create splash screen for new version
 ------------------------------------
 
 * Open Microsoft Image Composer, mix, file, in Microsoft PhotoDraw:
-  - Browse to %BASE%Extras\Graphics\Splash\
-  - Double-click D62release.mix
+  - Double-click %BASE%Extras\Graphics\Splash\D62release.mix
 * Create new file:
   - Select File => Save As...
   - Browse to %BASE%Extras\Graphics\Splash\
@@ -103,25 +91,13 @@ Create splash screen for new version
 Copy splash screen for use in Visual Basic and release
 ------------------------------------------------------
 
-Copy file, where M is the major version number, N is the minor version number, R an (optional) release number:
-
-<p/>
-
-    copy %BASE%Extras\Graphics\Splash\DMNbetaR.jpg %BASE%\Interface\Help\DistanceLogo.jpg
-    copy %BASE%Extras\Graphics\Splash\DMNreleaseR.jpg %BASE%\Interface\Help\DistanceLogo.jpg
-
-For example:
-
-<p/>
-
-    copy %BASE%Extras\Graphics\Splash\D62release.jpg %BASE%\Interface\Help\DistanceLogo.jpg
+Copy %BASE%Extras\Graphics\Splash\DMNbetaR.jpg or %BASE%Extras\Graphics\Splash\DMNreleaseR.jpg to %BASE%\Interface\Help\DistanceLogo.jpg, where M is the major version number, N is the minor version number, R an (optional) release number.
 
 Update user guide version number
 --------------------------------
 
 * Open Doc-To-Help, d2h, file, in ComponentOne Doc-To-Help:
-  - Browse to %BASE%Extras\External Documentation\Documents\
-  - Double-click distance.d2h
+  - Double-click %BASE%Extras\External Documentation\Documents\distance.d2h
 * Update Distance version number:
   - In properties on left-hand side, click Help Targets
   - Click Name: distance Manual
@@ -133,31 +109,22 @@ Build HTML Help
 ---------------
 
 * Open Doc-To-Help, d2h, file, in ComponentOne Doc-To-Help:
-  - Browse to %BASE%Extras\External Documentation\Documents\
-  - Double-click distance.d2h
+  - Double-click %BASE%Extras\External Documentation\Documents\distance.d2h
 * Build HTML Help:
   - In menu-bar drop-down build targets list, select distance HTML Help
   - Select Build => Make Target OR Press F5
   - To rebuild everything, select Build => Rebuild Target
-* Check HTML Help:
-  - Browse to %BASE%Extras\External Documentation\Documents\HTMLHelp\
-  - Double-click distance.chm
+* Check:
+  - Double-click %BASE%Extras\External Documentation\Documents\HTMLHelp\distance.chm
 
 Copy HTML Help for use in Visual Basic and release
 --------------------------------------------------
 
 * Copy compiled HTML help:
-
-<p/>
-
-    copy %BASE%Extras\External Documentation\Documents\HTMLHelp\distance.chm %BASE%\Utilities\Help\
-
+  - Copy %BASE%Extras\External Documentation\Documents\HTMLHelp\distance.chm to %BASE%\Utilities\Help\
 * Copy Visual Basic macro file for use in Visual Basic components:
   - This contains a list of constants giving shortcuts to the help pages and is used to provide context-sensitive help.
-
-<p/>
-
-    copy %BASE%Extras\External Documentation\Documents\HTMLHelp\distance.bas %BASE%\Utilities\Help\
+  - Copy %BASE%Extras\External Documentation\Documents\HTMLHelp\distance.bas to %BASE%\Utilities\Help\
 
 Build HTML Help from command prompt
 -----------------------------------
@@ -176,20 +143,17 @@ Build HTML Help from command prompt
 
     "C:\Program Files\ComponentOne\DocToHelp\C1D2HBatch.exe" -build distance.d2h "distance HTML Help"
 
-* Check HTML Help:
-  - Browse to %BASE%Extras\External Documentation\Documents\HTMLHelp\
-  - Double-click distance.chm
+* Check:
+  - Double-click %BASE%Extras\External Documentation\Documents\HTMLHelp\distance.chm
 
 Update title slide with splash screen
 -------------------------------------
 
 * Start Microsoft PowerPoint:
-  - Browse to %BASE%Extras\External Documentation\Images\TitlePage\
-  - Double-click TitlePage.ppt
+  - Double-click %BASE%Extras\External Documentation\Images\TitlePage\TitlePage.ppt
 * Insert splash screen:
   - Select Insert => Picture => From File...
-  - Browse to %BASE%Extras\Graphics\Splash\
-  - Double-click DMNreleaseR.jpg or DMNbetaR, where M is the major version number, N is the minor version number, R an (optional) release number.
+  - Double-click %BASE%Extras\Graphics\Splash\DMNreleaseR.jpg or %BASE%Extras\Graphics\Splash\DMNbetaR, where M is the major version number, N is the minor version number, R an (optional) release number.
   - Replace current splash screen image in slide with newly-inserted one
 * Save title slide:
   - Click CTRL-S
@@ -198,8 +162,7 @@ Build title page image
 ----------------------
 
 * Start Microsoft PowerPoint:
-  - Browse to %BASE%Extras\External Documentation\Images\TitlePage\
-  - Double-click TitlePage.ppt
+  - Double-click %BASE%Extras\External Documentation\Images\TitlePage\TitlePage.ppt
 * Save as Windows Metafile, wmf:
   - Select File => Save As...
   - Select Save as type: Windows Metafile (*.wmf)
@@ -211,15 +174,13 @@ Build user guide
 ----------------
 
 * Open Doc-To-Help, d2h, file, in ComponentOne Doc-To-Help:
-  - Browse to %BASE%Extras\External Documentation\Documents\
-  - Double-click distance.d2h
+  - Double-click %BASE%Extras\External Documentation\Documents\distance.d2h
 * Build Microsoft Word document:
   - In menu-bar drop-down build targets list, select distance Manual
   - Select Build => Make Target OR Press F5
   - To rebuild everything, select Build => Rebuild Target
-* Check Microsoft Word Document:
-  - Browse to %BASE%Extras\External Documentation\Documents\Manual\
-  - Double-click distance-master.doc
+* Check:
+  - Double-click %BASE%Extras\External Documentation\Documents\Manual\distance-master.doc
 
 Build user guide from command prompt
 ------------------------------------
@@ -238,20 +199,17 @@ Build user guide from command prompt
 
     "C:\Program Files\ComponentOne\DocToHelp\C1D2HBatch.exe" -build distance.d2h "distance Manual"
 
-* Check Microsoft Word Document:
-  - Browse to %BASE%Extras\External Documentation\Documents\Manual\
-  - Double-click distance-master.doc
+* Check:
+  - Double-click %BASE%Extras\External Documentation\Documents\Manual\distance-master.doc
 
 Add title page image to user guide
 ----------------------------------
 
 * Start Microsoft Word:
-  - Browse to %BASE%Extras\External Documentation\Documents\Manual\
-  - Double-click distance-master.doc
+  - Double-click %BASE%Extras\External Documentation\Documents\Manual\distance-master.doc
 * Insert title page image:
   - Select Insert => Picture => From File...
-  - Browse to %BASE%Extras\External Documentation\Images\TitlePage\
-  - Double-click TitlePage.wmf
+  - Double-click %BASE%Extras\External Documentation\Images\TitlePage\TitlePage.wmf
 * Resize image so it is the same width as the black-bordered place-holder on the front-page
 * Select the image and press CTRL-X (cut)
 * Select the place-holder and press CTRL-V (paste)
@@ -262,8 +220,7 @@ Build user guide PDF
 --------------------
 
 * Start Microsoft Word:
-  - Browse to %BASE%Extras\External Documentation\Documents\Manual\
-  - Double-click distance-master.doc
+  - Double-click %BASE%Extras\External Documentation\Documents\Manual\distance-master.doc
 * Check conversion settings:
   - Select Adobe PDF => Change Conversion Settings
   - Check Conversion Settings: Standard
@@ -276,12 +233,8 @@ Build user guide PDF
 click No
   - This can take a long time!
 * Check:
-  - Browse to %BASE%Extras\External Documentation\Documents\Manual\
-  - Double-click document-master.pdf
+  - Double-click %BASE%Extras\External Documentation\Documents\Manual\document-master.pdf
   - If the images do not look OK then try again with a higher-quality conversion setting
-* Check user guide PDF:
-  - Browse to %BASE%Extras\External Documentation\Documents\Manual\
-  - Double-click distance-master.pdf
 
 Build user guide PDF from command prompt
 ----------------------------------------
@@ -313,21 +266,16 @@ This assumes that:
 
     start /WAIT "" "C:\Program Files (x86)\Microsoft Office\Office11\winword.exe" distance-master.doc /q /n /mFilePrintDefault /mFileSave /mFileExit 
 
-* Copy PDF:
+* Copy file:
 
 <p/>
 
     copy "%userprofile%\My Documents" %BASE%Extras\External Documentation\Documents\Manual\distance-master.pdf
 
-* Check user guide PDF:
-  - Browse to %BASE%Extras\External Documentation\Documents\Manual\
-  - Double-click distance-master.pdf
+* Check:
+  - Double-click %BASE%Extras\External Documentation\Documents\Manual\distance-master.pdf
 
 Copy user guide PDF for use in Visual Basic and release
 -------------------------------------------------------
 
-* Copy file:
-
-<p/>
-
-    copy %BASE%Extras\External Documentation\Documents\Manual\distance-master.pdf %BASE%\Utilities\Help\distance.pdf
+Copy %BASE%Extras\External Documentation\Documents\Manual\distance-master.pdf to %BASE%\Utilities\Help\distance.pdf

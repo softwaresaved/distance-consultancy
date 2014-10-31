@@ -61,8 +61,7 @@ Build single Visual Basic project
 To build a project within the VB GUI:
 
 * Open project in Visuual Basic:
-  - Browse to project folder under %BASE%\ e.g. Map\Legend\
-  - Double-click vbp file e.g. D6Legend.vbp
+  - Double-click vbp file in project folder e.g. %BASE%\Map\Legend\D6Legend.vbp
 * Build:
   - Select File => Make PROJECT e.g. Make D6Legend.ocx...
 
@@ -143,8 +142,7 @@ The default DLL base address is &H11000000. This will cause lots of memory re-al
 To set the DLL base address:
 
 * Open project in Visual Basic:
-  - Browse to project folder under %BASE%\ e.g. Map\Legend\
-  - Double-click vbp file e.g. D6Legend.vbp
+  - Double-click vbp file in project folder e.g. %BASE%\Map\Legend\D6Legend.vbp
 * Select Project => PROJECT Properties... e.g. D6Legend Properties...
 * Click Version tab
 
@@ -160,8 +158,7 @@ Update binary (dll, ocx, exe) meta-data
 ---------------------------------------
 
 * Open project in Visual Basic:
-  - Browse to project folder under %BASE%\ e.g. Map\Legend\
-  - Double-click vbp file e.g. D6Legend.vbp
+  - Double-click vbp file in project folder e.g. %BASE%\Map\Legend\D6Legend.vbp
 * Select Project => PROJECT Properties... e.g. D6Legend Properties...
 
 To update project name and description:
@@ -208,8 +205,7 @@ For Distance, original versions of dll and ocx files are stored within %BASE%\Co
 To see the original version of a binary that is used by a project:
 
 * Open project in Visual Basic:
-  - Browse to project folder under %BASE%\ e.g. Map\Legend\
-  - Double-click vbp file e.g. D6Legend.vbp
+  - Double-click vbp file in project folder e.g. %BASE%\Map\Legend\D6Legend.vbp
 * Select Project => PROJECT Properties... e.g. D6Legend Properties...
 * Click Component tab
 * If Version Compatibility, Project Compatibility is enabled for the project then there will be an associated link e.g. ..\..\Compatibility\D6Legend.ocx
