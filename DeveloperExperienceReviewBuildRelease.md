@@ -97,7 +97,7 @@ The developer's manual, Chapter 12, states:
 Clarify whether all the VB code needs to be compiled
 ----------------------------------------------------
 
-...or just that which may use new help pages.
+...or just those projects which depend upon distance.bas.
 
 %BASE%\BuildAll is missing
 --------------------------
