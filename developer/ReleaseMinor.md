@@ -17,8 +17,6 @@ Prepare components
 Check database:
 
 * Ask yourself if there's any reason why %BASE%\DatabaseEngine\DistIni.mdb might be out of date
-* **TODO**
-* Provide more information.
 
 Update authors and sponsors:
 
@@ -76,8 +74,6 @@ Build FORTRAN components:
 
 * [Build MCDS analysis engine](./BuildFortran.md#build-mcds-analysis-engine)
 * [Copy MCDS.exe for use in Visual Basic and release](./BuildFortran.md#copy-mcdsexe-for-use-in-visual-basic-and-release)
-* **TODO**
-* Any other updates needed?
 
 Build R components:
 
@@ -86,8 +82,6 @@ Build R components:
 * Check that %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\RPackages:
   - Contains all the dependencies needed.
   - Does not contain multiple versions of any library.
-* **TODO**
-* Any other updates needed?
 
 Build Visual Basic components:
 
@@ -130,10 +124,6 @@ Build Visual Basic components:
 * Update meta-data of all other projects:
   - Optional
   - [Build all Visual Basic projects](./BuildVisualBasic.md#build-all-visual-basic-projects)
-* **TODO**
-* Any other updates needed?
-* Developer guide comments that "Some info here about binary and project level compatibility, and how to deal with when building new versions of Distance."
-* Provide more information.
 
 Check Distance (optional)
 
@@ -145,7 +135,6 @@ Check Distance (optional)
 * Note that the following operations will fail:
   - Select Help => Online Manuals => User's Guide (pdf)
   - Select Help => Release Notes
-* **TODO**
 
 Update template and sample projects:
 
@@ -338,19 +327,10 @@ Check Distance M.N and R:
 * Select Help => DSM Engine R help (html)
   - Check that DSM HTML help page appears
 
-* **TODO**
-* What else?
-
 Check installation directory:
 
 * Browse to C:\Program Files\Distance M
 * Check the directory contents match those in [Installed Components](./InstalledComponents.md)
-
-* **TODO**
-* Clarify:
-  - When installing on Windows 7  BACKUP was full of DLLs
-  - When installing on XP it only contained scripten.exe
-* Add sample CDS/MCDS/DSM/MRDS analysis
 
 Archive release
 ---------------
