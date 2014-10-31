@@ -45,6 +45,21 @@ Build R DSM and MRDS analysis engines
     R CMD INSTALL --build dsm
     R CMD INSTALL --build mrds
 
+* The above installs the package into the R library. To install one elsewhere run e.g.
+
+<p/>
+
+    mkdir local
+    R CMD INSTALL -l local --build dsm
+    R CMD INSTALL -l local --build mrds
+
+* The zip files will be named:
+
+<p/>
+
+    dsm_M.N.R.zip
+    mrds_M.N.R.zip
+
 * Major version number (M), minor version number (N), revision number (R) depend on Version value in DESCRIPTION file e.g.
   - For DSM, `Version: 2.2.3`
   - For MRDS, `Version: 2.1.5`
@@ -67,7 +82,6 @@ Alternatively, one can build a .tar.gz package:
 
     R CMD INSTALL --build dsm_M.N.R.tar.gz
     R CMD INSTALL --build mrds_M.N.R.tar.gz
-
 
 Copy R packages for use in Visual Basic and release
 ---------------------------------------------------
