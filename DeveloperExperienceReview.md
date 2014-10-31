@@ -619,6 +619,7 @@ There are a number of issues with the process:
 * Some products, notably the Wise Installation System have been discontinued (in this case as the company no longer trades).
 
 This provides a major challenge to bringing on board new developers. The Distance team are aware of these challenges and are exploring alternatives. It is for this reason that a VMWare virtual machine, with the tool-set already installed, is provided to new Distance developers within St. Andrews. 
+
 Provide a "clean" virtual machine
 ---------------------------------
 
