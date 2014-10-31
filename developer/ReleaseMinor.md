@@ -114,10 +114,11 @@ Build Visual Basic components:
 
     'Set to true if this is a beta release
     Global Const gblnIS_BETA = False
-
-* Rebuild B6DBEng.vbp - see [Build single Visual Basic project](./BuildVisualBasid.md#build-single-visual-basic-project)
+* Update %BASE%\Database Engine\D6DbEng.vbp meta-data
+  - Major and minor version numbers. These are accessed in-code (in %BASE%\Database Engine\Classes\ProjectDatabase.cls) and determine the version of new Distance project (.dst) files. If you don't up these then Distance will pop up an Upgrade Distance OLDM.OLDN Project File dialog when you try and create a new project
+* Rebuild D6DBEng.vbp - see [Build single Visual Basic project](./BuildVisualBasid.md#build-single-visual-basic-project)
 * Update %BASE%\Interface\Distance.vbp meta-data:
-  - Major and minor version numbers - these determine App.Major and App.Minor values in-code and are passed on to new projects
+  - Major and minor version numbers. These are accessed in-code (in %BASE%\Interface\Project.cls) and are passed on to new projects
   - Application, Title - update the version name and number
   - Company Name - update the name if required
   - File Description - update the version name and number
@@ -146,8 +147,15 @@ Check Distance (optional)
   - Select Help => Release Notes
 * **TODO**
 
-Check template and sample projects:
+Update template and sample projects:
 
+* Sample projects are in %BASE%Extras\Sample Projects Backup\Release\
+* Template projects is in %BASE%Extras\Sample Projects Backup\Templates\
+* Update project (.dst) files version:
+  - Right-click .dst and select Open With => Choose Program...
+  - Select Microsoft Access
+  - Double-click Project Settings
+  - Set General row, Setting value: M.N
 * Check that the template and sample projects bundled with a release can be opened and browsed correctly within the newly-built distance.exe:
   - Sample projects are in %BASE%Extras\Sample Projects Backup\Release\
   - Template projects is in %BASE%Extras\Sample Projects Backup\Templates\
@@ -201,7 +209,7 @@ Build Wise installer
   - Removable disks page appears
   - Click Next
   - Which Zip file page appears
-  - Check that Filename: dMNsetup.zip
+  - Check Filename: dMNsetup.zip
   - Click Next
   - Enter message text page appears
   - Click Next
@@ -263,6 +271,7 @@ Check install:
 * Installing page
   - Click Next
 * Install Windows Script page
+  - Windows Script pages appear for Windows XP but not for Windows 7
   - Select Yes
   - Click Next
 * Windows Script 5.6 dialog 
@@ -343,6 +352,15 @@ Check Distance M.N and R:
 Check installation directory:
 
 * Browse to C:\Program Files\Distance M
+* Check the directory contents match those in [Installed Components](./InstalledComponents.md)
+
+* **TODO**
+* When installing on Windows 7 
+  - Installer did not prompt for Windows Script 5.6
+  - BACKUP was full of DLLs
+* When installing on XP it only contained scripten.exe.
+  - Installer prompted for Windows Script 5.6
+  - BACKUP only had scripten.exe
 
 Archive release
 ---------------
