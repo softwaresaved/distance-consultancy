@@ -159,18 +159,6 @@ Copy HTML Help for use in Visual Basic and release
 
     copy %BASE%Extras\External Documentation\Documents\HTMLHelp\distance.bas %BASE%\Utilities\Help\
 
-TODO
-----
-
-* "If you're going to be releasing a new version of Distance, it's also worth coping the distance.bas VB macro file into the \Utilities\Help directory. Ater you've done this, you'll need to replace all the Const in this with Public Const, and then recompile all the VB code. You only need to do all this if you've created any new pages of help, etc."
-  - distance.bas already has Public Const e.g.
-
-<p/>
-
-    Public Const IDH_workingwithdatafiltersandmodeldefinitions = 356 ' &H164
-
-* What VB should be compiled? _All_ the projects? 
-
 Build HTML Help from command prompt
 -----------------------------------
 

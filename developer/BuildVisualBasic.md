@@ -210,15 +210,3 @@ To see the original version of a binary that is used by a project:
 * Select Project => PROJECT Properties... e.g. D6Legend Properties...
 * Click Component tab
 * If Version Compatibility, Project Compatibility is enabled for the project then there will be an associated link e.g. ..\..\Compatibility\D6Legend.ocx
-
-TODO clarify
-------------
-
-* 'The batch file %BASE%BuildAll registers the VB Projects that don't have dependencies and then builds the VB Projects that do have dependencies. So, on a new machine, with all the right software in place, it should be possible just to run this one batch file and then be able to run Distance.exe.
-  - There is no such file now.
-* What is Distance.vbg for? Is it needed? All it does is:
-
-<p/>
-
-    BGROUP 5.0
-    StartupProject=Interface\Distance.vbp

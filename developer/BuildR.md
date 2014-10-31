@@ -74,30 +74,3 @@ Copy files:
     copy %BASE%\Analysis Engines\DSM\Engine\dsm_M.N.R.zip %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\RPackages\
     copy %BASE%\Analysis Engines\MRDS\Engine\mrds\mrds_M.N.R.zip %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\RPackages\
 
-TODO
-----
-
-* How to resolve?
-
-<p/>
-
-    R CMD check dsm
-
-      checking package dependencies ... ERROR
-    Packages suggested but not available: 'maptools' 'Distance'
-
-* Should --compile-both be used, to compile for both 32- and 64-bit?
-* Is Rcmd.exe still needed?
-  - http://stackoverflow.com/questions/3412911/r-exe-rcmd-exe-rscript-exe-and-rterm-exe-whats-the-difference
-  - Rcmd.exe is a historical left-over as back in the day, you could not do R CMD something on Windows but needed the special executable Rcmd.exe something. That is no longer the case, yet it is provided for backwards compatibility.
-  - R CMD BATCH is a clutch that was needed in the days before littler and Rscript.exe, and similarly lingering from old docs and habits..
-* When running INSTALL the output includes:
-
-<p/>
-
-    installing to library 'C:/Program Files/R/R-3.1.0/library'
-    installing *source* package 'dsm' ...
-
-  - Is there a way to avoid this? 
-* Is the copy needed for release only or for day-to-day development of the associated VB components?
-* What about 'how to download and make the R package.txt' which differs a lot?
