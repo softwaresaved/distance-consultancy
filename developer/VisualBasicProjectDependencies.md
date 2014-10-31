@@ -5,14 +5,14 @@ Dependencies of Distance's Visual Basic projects.
 
 All locations are relative to %BASE%.
 
-Description is taken from the Visual Basic project and occurs in the References and Components information for other projects.
+Description is taken from the Visual Basic project and are either Reference or Component or Module dependencies on other projects.
 
-All dependencies are recorded in Visual Basic as References except for those projects marked 'component'.
+All dependencies are recorded in Visual Basic as References except for those projects marked 'component' or 'module'.
 
 | Visual Basic Project | Description / Depends on... |
 | -------------------- | --------------------------- |
 | Analysis Engines\CDS\Details\DnnnnCDSDet.vbp | Distance nnnn CDS Engine Details Interface |
-| | Misc\LogWindow\LogWin3.vbp | 
+| | Misc\LogWindow\LogWin3.vbp (component) |
 | | Utilities\DnnnnUtil.vbp |
 | | Database Engine\DnnnnDbEng.vbp |
 | | |
@@ -26,12 +26,12 @@ All dependencies are recorded in Visual Basic as References except for those pro
 | | |
 | Analysis Engines\CDS\Properties\DnnnnCDSPrp.vbp | Distance nnnn CDS Engine Properties Interface |
 | | Misc\CommonDialog\CDlg3.vbp |
-| | Misc\LabelLine\LLine3.vbp |
+| | Misc\LabelLine\LLine3.vbp (component) |
 | | Utilities\DnnnnUtil.vbp |
 | | Database Engine\DnnnnDbEng.vbp |
 | | |
 | Analysis Engines\DSM\Details\DnnnnDSMDet.vbp | Distance nnnn DSM Engine Details Interface |
-| | Misc\LogWindow\LogWin3.vbp | 
+| | Misc\LogWindow\LogWin3.vbp (component) |
 | | Utilities\DnnnnUtil.vbp |
 | | Database Engine\DnnnnDbEng.vbp |
 | | |
@@ -45,12 +45,12 @@ All dependencies are recorded in Visual Basic as References except for those pro
 | | |
 | Analysis Engines\DSM\Properties\DnnnnDSMPrp.vbp | Distance nnnn DSM Engine Properties Interface |
 | | Misc\CommonDialog\CDlg3.vbp |
-| | Misc\LabelLine\LLine3.vbp |
+| | Misc\LabelLine\LLine3.vbp (component) |
 | | Utilities\DnnnnUtil.vbp |
 | | Database Engine\DnnnnDbEng.vbp |
 | | |
 | Analysis Engines\MRDS\Details\DnnnnMRDSDet.vbp | Distance nnnn MRDS Engine Details Interface |
-| | Misc\LogWindow\LogWin3.vbp | 
+| | Misc\LogWindow\LogWin3.vbp (component) |
 | | Utilities\DnnnnUtil.vbp |
 | | Database Engine\DnnnnDbEng.vbp |
 | | |
@@ -64,7 +64,7 @@ All dependencies are recorded in Visual Basic as References except for those pro
 | | |
 | Analysis Engines\MRDS\Properties\DnnnnMRDSPrp.vbp | Distance nnnn MRDS Engine Properties Interface |
 | | Misc\CommonDialog\CDlg3.vbp |
-| | Misc\LabelLine\LLine3.vbp |
+| | Misc\LabelLine\LLine3.vbp (component) |
 | | Utilities\DnnnnUtil.vbp |
 | | Database Engine\DnnnnDbEng.vbp |
 | | |
@@ -78,10 +78,10 @@ All dependencies are recorded in Visual Basic as References except for those pro
 | | Utilities\DnnnnUtil.vbp |
 | | |
 | Design Engine\Details\DnnnnDesDet.vbp | Distance nnnn Design Details Interface |
-| | Misc\LogWindow\LogWin3.vbp | 
+| | Misc\LogWindow\LogWin3.vbp (component) |
 | | Utilities\DnnnnUtil.vbp |
 | | Database Engine\DnnnnDbEng.vbp |
-| | Map\Mapper\DnnnnMap.vbp |
+| | Map\Mapper\DnnnnMap.vbp (component) |
 | | |
 | Design Engine\Engine\DnnnnDesEng.vbp | Distance nnnn Design Engine |
 | | Database Engine\DnnnnDbEng.vbp |
@@ -97,27 +97,28 @@ All dependencies are recorded in Visual Basic as References except for those pro
 | | Design Engine\Engine\DnnnnDesEng.vbp |
 | | |
 | Design Engine\Properties\DnnnnDesPrp.vbp | Distance nnnn Design Engine Properties Interfzce|
-| | Misc\LabelLine\LLine3.vbp |
+| | Misc\LabelLine\LLine3.vbp (component) |
 | | Utilities\DnnnnUtil.vbp |
 | | Misc\PrjParams\PrjParams6.vbp |
 | | Database Engine\DnnnnDbEng.vbp |
 | | |
 | Interface\Distance.vbp | Distance 6 Interface |
 | | Misc\CommonDialog\CDlg3.vbp |
-| | Misc\CoordSysDesc\CSDesc3.vbp |
-| | Misc\LabelLine\LLine3.vbp |
+| | Misc\CoordSysDesc\CSDesc3.vbp (component) |
+| | Misc\LabelLine\LLine3.vbp (component) |
 | | Utilities\DnnnnUtil.vbp |
+| | Utilities\Help\distance.bas (module) |
 | | Misc\LogString\LogStr3.vbp |
 | | Misc\PrjParams\PrjParams6.vbp |
 | | Database Engine\DnnnnDbEng.vbp |
-| | Misc\SectionList\SList4.vbp |
-| | Map\Mapper\DnnnnMap.vbp |
+| | Misc\SectionList\SList4.vbp (component) |
+| | Map\Mapper\DnnnnMap.vbp (component) |
 | | Numerical Server\NServer\DnnnnNSvr.vbp |
 | | Interface\Wizards\Import Data\DnnnnIDWiz.vbp |
 | | Interface\Wizards\Setup Project\DnnnnSPWiz.vbp |
 | | |
 | Interface\Properties\Data Filter\DnnnnDFPrp.vbp | Distance nnnn Data Filter Properties Interface |
-| | Misc\LabelLine\LLine3.vbp |
+| | Misc\LabelLine\LLine3.vbp (component) |
 | | Utilities\DnnnnUtil.vbp |
 | | Database Engine\DnnnnDbEng.vbp |
 | | |
@@ -128,21 +129,23 @@ All dependencies are recorded in Visual Basic as References except for those pro
 | Interface\Wizards\Import Data\DnnnnIDWiz.vbp | Distance nnnn Import Data Wizard|
 | | Misc\CommonDialog\CDlg3.vbp |
 | | Utilities\DnnnnUtil.vbp |
+| | Utilities\Help\distance.bas (module) |
 | | Database Engine\DnnnnDbEng.vbp |
 | | |
 | Interface\Wizards\Setup Project\DnnnnSPWiz.vbp | distance nnnn Setup Project Wizard |
 | | Misc\CommonDialog\CDlg3.vbp |
 | | Utilities\DnnnnUtil.vbp |
+| | Utilities\Help\distance.bas (module) |
 | | Database Engine\DnnnnDbEng.vbp |
-| | Misc\SectionList\SList4.vbp |
+| | Misc\SectionList\SList4.vbp (component) |
 | | Numerical Server\NServer\DnnnnNSvr.vbp |
 | | |
-| Map\Legend\DnnnnLegend.vbp | Distance nnnn Mapper Legend control |
+| Map\Legend\DnnnnLegend.vbp | Distance nnnn Mapper Legend control (component) |
 | | |
 | Map\Mapper\DnnnnMap.vbp | Distance nnnn Map Component (component) |
-| | Map\Legend\DnnnnLegend.vbp | 
-| | Misc\CoordSysDesc\CSDesc3.vbp |
-| | Misc\LabelLine\LLine3.vbp |
+| | Map\Legend\DnnnnLegend.vbp (component) | 
+| | Misc\CoordSysDesc\CSDesc3.vbp (component) |
+| | Misc\LabelLine\LLine3.vbp (component) |
 | | Utilities\DnnnnUtil.vbp |
 | | Database Engine\DnnnnDbEng.vbp |
 | | |
@@ -152,7 +155,7 @@ All dependencies are recorded in Visual Basic as References except for those pro
 | | |
 | Misc\CoordSysDesc\CSDesc3.vbp | Coordinate System Description v3 (component) |
 | | |
-| Misc\LabelLine\LLine3.vbp | Label line 3.0 |
+| Misc\LabelLine\LLine3.vbp | Label line 3.0 (component) |
 | | |
 | Misc\LogString\LogStr3.vbp | Log String class v3 ... |
 | | Utilities\DnnnnUtil.vbp |
@@ -160,10 +163,11 @@ All dependencies are recorded in Visual Basic as References except for those pro
 | Misc\LogWindow\LogWin3.vbp | Distance nnnn Log Window (component) |
 | | |
 | Misc\PrjParams\PrjParams6.vbp | PrjParams6 ... |
-| | Misc\LabelLine\LLine3.vbp |
+| | Misc\LabelLine\LLine3.vbp (component) |
 | | Utilities\DnnnnUtil.vbp |
+| | Utilities\Help\distance.bas (module) |
 | | |
-| Misc\SectionList\SList4.vbp | Section list v4 ... |
+| Misc\SectionList\SList4.vbp | Section list v4 ... (component) |
 | | Utilities\DnnnnUtil.vbp |
 | | Database Engine\DnnnnDbEng.vbp |
 | | |
@@ -185,10 +189,10 @@ All dependencies are recorded in Visual Basic as References except for those pro
 | | Database Engine\DnnnnDbEng.vbp |
 | | |
 | Survey\Details\DnnnnSvyDet.vbp | Distance nnnn Survey Details Interface |
-| | Misc\LogWindow\LogWin3.vbp | 
+| | Misc\LogWindow\LogWin3.vbp (component) |
 | | Utilities\DnnnnUtil.vbp |
 | | Database Engine\DnnnnDbEng.vbp |
-| | Map\Mapper\DnnnnMap.vbp |
+| | Map\Mapper\DnnnnMap.vbp (component) |
 | | |
 | Survey\NEngineInterface\DnnnnSvyNEI.vbp | Distance nnnn Survey Numerical Engine Interface |
 | | Misc\CodeTimer\CTmr4.vbp |
@@ -198,7 +202,7 @@ All dependencies are recorded in Visual Basic as References except for those pro
 | | Numerical Server\NEngineHost\DnnnnNEH.vbp |
 | | |
 | Survey\Properties\DnnnnSvyPrp.vbp | Distance nnnn Survey Properties Interface |
-| | Misc\LabelLine\LLine3.vbp |
+| | Misc\LabelLine\LLine3.vbp (component) |
 | | Utilities\DnnnnUtil.vbp |
 | | Database Engine\DnnnnDbEng.vbp |
 | | |

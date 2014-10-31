@@ -35,15 +35,16 @@ To see project dependencies within a text editor:
 * Right-click vbp file name
 * Select Open With => Choose Program...
 * Double-click WordPad
-* Dependencies and component dependencies are listed as Reference and Object entries e.g for %BASE%\Map\Mapper\D6Map.vbp:
+* Dependencies and component dependencies are listed as Reference, Object and Module entries e.g:
 
 <p/>
 
       Reference=*\G{...}#2.0#0#..\..\..\..\WINDOWS\system32\stdole2.tlb#OLE Automation
-      Object={...}#1.0#0; Vsflex7d.ocx
-      Object={...}#2.0#0; Actbar2.ocx
       Reference=*\G{...}#2.0#0#..\..\Database Engine\D6DbEng.dll#Distance 6 Database Engine
       Reference=*\G{...}#1.0#0#..\..\Utilities\D6Util.dll#Distance 6 Utilities - Shared enumerations, properties and methods
+
+      Object={...}#1.0#0; Vsflex7d.ocx
+      Object={...}#2.0#0; Actbar2.ocx
       Object={...}#2.0#0; SPLITTER.OCX
       Object={...}#2.0#0; mo20.ocx
       Object={...}#1.2#0; comdlg32.ocx
@@ -51,6 +52,8 @@ To see project dependencies within a text editor:
       Object={...}#2.0#0; mscomct2.ocx
       Object={...}#1.0#0; CSDesc3.ocx
       Object={...}#1.0#0; D6Legend.ocx
+
+      Module=CModHelp; ..\..\Utilities\Help\distance.b
 
 Build single Visual Basic project
 ---------------------------------
