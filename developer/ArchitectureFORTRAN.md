@@ -10,7 +10,7 @@ Analysis engines:
 * For full details of usage and input/output file formats, see Appendix - MCDS Engine Reference, user's guide, p307-344
 
 Distance for Windows <=> FORTRAN interface
-------------------------------------------
+==========================================
 
 * Create:
   - Command file
@@ -51,6 +51,8 @@ Ec.exe
        y      Toggle display of consoles
        v      Display program version number
        ?      Display this help message
+
+See Visual Basic <=> Fortran interface below for more details.
 
 How to capture input files
 --------------------------
@@ -107,7 +109,6 @@ Command file structure:
     ...estimation options
     END;
 
-
 Output files:
 
 * Correspond to command file header values
@@ -151,8 +152,51 @@ Exit codes
 * 4 - file errors e.g. could not find the specified command file
 * N - major error
 
-Implementation
---------------
+Visual Basic <=> FORTRAN interface
+==================================
+
+Microsoft Jet database, DistIni.mdb, settings:
+
+* Table: Project Settings Memo
+* Section: AnalysisEngine
+* Field: Setting - value ';' delimited entries of form 'Name=Value'
+* Entries of note are as follows:
+
+| Key | PackageName | SupportFileName | PrgProgId | EngIntProgId | LogPropId | ResProgId | 
+| --- | ----------- | --------------- | --------- | ------------ | --------- | --------- |
+| Key | ExeName | PrgProgId | EngIntProgId | LogPropId | ResProgId | 
+| --- | ------- | --------- | ------------ | --------- | --------- |
+| CDS | MCDS.exe | D6CDSPrp.CDSProperties | D6CDSNEI.CDSNEngineInterface | D6CDSDet.CDSLog | D6CDSDet.CDSResults |
+| MCDS | MCDS.exe | D6CDSPrp.CDSProperties | D6CDSNEI.CDSNEngineInterface | D6CDSDet.CDSLog | D6CDSDet.CDSResults |
+
+Analysis Engines\CDS\NEngineInterface\Classes\InputFileMaker.cls:
+
+* Function Makefile - Creates CDS input files
+
+Analysis Engines\CDS\NEngineInterface\Classes\CDSNEngineInterface.cls:
+
+* Function RunItem:
+  - Creates D6NEIUtil.CDSProcess
+  - Invokes CDSProcess.EngineName(IsMCDS) to get engine file name
+  - Invokes CDSProcess.RunEngine(IsMCDS) to run engine on input files
+
+Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Classes\CDSProcess.cls:
+
+* Property Get EngineName
+  - Invokes GetEngineName as a property
+* Function GetEngineName:
+  - Gets Project Settings Memo table, AnalysisEngine section, Setting value for Key=CDS|MCDS
+  - Parses Name=Value pairs in Setting value to get ExeName
+  - ExeName is assumed to be in App.Path, same directory as D6NEIUtil.dll
+* Sub RunEngine:
+  - If Windows NT and EC usage required, invokes:
+  - `PATH\ec "PATH\MCDS.exe MODE INPUT_FILE \options 2>COMMAND_FILE"`
+  - Otherwise invokes:
+  - `PATH\MCDS.exe MODE INPUT_FILE \options 2>COMMAND_FILE`
+  - MODE is 0|1
+
+Miscellaneous MCDS implementation details
+=========================================
 
 Random numbers:
 
@@ -160,3 +204,5 @@ Random numbers:
 * Seeded from clock or a user-defined value
 * Bootstrap resampling
 * Two congruential generators - see L'Ecuyer 1988 or Visual Fortran manual for more details
+
+
