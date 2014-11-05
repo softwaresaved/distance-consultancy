@@ -4,7 +4,17 @@
 # using a set of input files and known-correct output files for these
 # input files.
 #
-# To run this script also needs:
+# It provides examples of:
+# - Using R's system2 command to run MCDS.exe from the command-line
+# - Testing the return code
+# - Testing for existence of output files
+# - Testing that an output file contains the same data as a
+#   known-correct output file, for the same inputs, to within a given
+#   tolerance. 
+# - Naively testing for file equality, via use of system2 to invoke
+#   DOS fc command.
+#
+# To run this script needs:
 # - MCDS.exe in the current directory or available in %PATH%.
 # - data/ directory: 
 #   test_command.txt - command file
