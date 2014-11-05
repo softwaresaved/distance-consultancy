@@ -32,6 +32,7 @@ Source and binary references
 
 * [Source Code and Binaries](./SourceCodeAndBinaries.md) - Distance for Windows source code locations and the binaries, and other resources, built from it.
 * [Installed Components](./InstalledComponents.md) - Distance for Windows components and files installed by the Distance for Windows installer, and the source locations they originate from.
+* [Third-party Components](./ThirdPartyComponents.md) - third-party components used to build Distance for Windows and/or are shipped with Distance for Windows.
 * [Visual Basic Project Dependencies](./VisualBasicProjectDependencies.md) - Dependencies of Distance's Visual Basic projects.
 * [DLL Base Addresses](./DllBaseAddresses.md) - DLL addresses used to date in Distance components.
 * [File extensions](./FileExtensions.md) - Commonly-occurring file extensions.
