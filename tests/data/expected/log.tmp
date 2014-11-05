@@ -1,0 +1,33 @@
+ This is mcds.exe version 6.2.0     
+ Options;                                                                      
+ Type=Point;                                                                   
+ Distance=Radial /Measure='Meter';                                             
+ Area /Units='Hectare';                                                        
+ Object=Cluster;                                                               
+ SF=1;                                                                         
+ Selection=Sequential;                                                         
+ Lookahead=1;                                                                  
+ Maxterms=5;                                                                   
+ Confidence=95;                                                                
+ Print=Selection;                                                              
+ End;                                                                          
+ Data /Structure=Flat;                                                         
+ Fields=STR_LABEL, STR_AREA, SMP_LABEL, SMP_EFFORT, DISTANCE, SIZE;            
+ Infile=C:\Users\mjj\Local Documents\DISTANCE\mcds-dst-tmp-files\dstA6A6.tmp /NoEcho;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+ Data will be input from file - [...]MCDS-DST-TMP-FILES\DSTA6A6.TMP
+ End;                                                                          
+ Dataset has been stored.
+ Estimate;                                                                     
+ Distance;                                                                     
+ Density=All;                                                                  
+ Encounter=All;                                                                
+ Detection=All;                                                                
+ Size=All;                                                                     
+ Estimator /Key=HN /Adjust=CO /Criterion=AIC;                                  
+ Monotone=Strict;                                                              
+ Pick=AIC;                                                                     
+ GOF;                                                                          
+ Cluster /Bias=GXLOG;                                                          
+ VarN=Empirical;                                                               
+ End;                                                                          
+** Warning: only   500 out of a total of  1995 observations will be shown on the qq plot. **

@@ -1,0 +1,642 @@
+	Estimation Options Listing	
+
+ Parameter Estimation Specification
+ ----------------------------------
+ Encounter rate for all data combined
+ Detection probability for all data combined
+ Expected cluster size for all data combined
+ Density for all data combined
+
+ Distances:
+ ----------
+ Analysis based on exact distances
+ Width: use largest measurement/last interval endpoint
+
+ Clusters:
+ ---------
+ Analysis based on exact sizes
+ Expected value of cluster size computed by: regression of log(s(i)) on g(x(i))
+
+ Estimators:
+ -----------
+ Estimator  1
+ Key: Half-normal
+ Adjustments - Function                 : Cosines
+             - Term selection mode      : Sequential
+             - Term selection criterion : Akaike Information Criterion (AIC)
+             - Distances scaled by      : W (right truncation distance)
+
+ Estimator selection: Choose estimator with minimum  AIC
+ Estimation functions: constrained to be nearly monotone non-increasing
+
+ Variances:
+ ----------
+ Variance of n: Empirical estimate from sample
+                (design-derived estimator R2/P2)
+ Variance of f(0): MLE estimate
+
+ Goodness of fit:
+ ----------------
+ Cut points chosen by program
+
+
+
+ Glossary of terms
+ -----------------
+
+ Data items:
+ n    - number of observed objects (single or clusters of animals)
+ L    - total length of transect line(s) 
+ k    - number of samples
+ K    - point transect effort, typically K=k
+ T    - length of time searched in cue counting
+ ER   - encounter rate (n/L or n/K or n/T)
+ W    - width of line transect or radius of point transect
+ x(i) - distance to i-th observation
+ s(i) - cluster size of i-th observation
+ r-p  - probability for regression test
+ chi-p- probability for chi-square goodness-of-fit test
+
+
+ Parameters or functions of parameters:
+ m    - number of parameters in the model
+ A(I) - i-th parameter in the estimated probability density function(pdf)
+ f(0) - 1/u = value of pdf at zero for line transects
+ u    - W*p = ESW, effective detection area for line transects
+ h(0) - 2*PI/v
+ v    - PI*W*W*p, is the effective detection area for point transects
+ p    - probability of observing an object in defined area
+ ESW  - for line transects, effective strip width = W*p
+ EDR  - for point transects, effective detection radius  = W*sqrt(p)
+ rho  - for cue counts, the cue rate
+ DS   - estimate of density of clusters
+ E(S) - estimate of expected value of cluster size
+ D    - estimate of density of animals
+ N    - estimate of number of animals in specified area
+	Detection Fct/Global/Model Fitting	
+
+
+ Effort        :    767.0000    
+ # samples     :   767
+ Width         :    100.0000    
+ # observations:  1995
+
+
+
+ Model  1
+    Half-normal key, k(y) = Exp(-y**2/(2*A(1)**2))
+       Results:
+       Convergence was achieved with   13 function evaluations.
+       Final Ln(likelihood) value =  -8623.7627    
+       Akaike information criterion =   17249.525    
+       Bayesian information criterion =   17255.123    
+       AICc =   17249.527    
+       Final parameter values:   25.038994    
+
+
+ Model  2
+    Half-normal key, k(y) = Exp(-y**2/(2*A(1)**2))
+    Cosine adjustments of order(s) :  2
+       Results:
+       Convergence was achieved with   23 function evaluations.
+       Final Ln(likelihood) value =  -8529.3987    
+       Akaike information criterion =   17062.797    
+       Bayesian information criterion =   17073.994    
+       AICc =   17062.803    
+       Final parameter values:   27.359646     0.48173648    
+
+    Likelihood ratio test between models  1 and  2
+       Likelihood ratio test value    =   188.7279
+       Probability of a greater value =   0.000000
+ *** Model  2 selected over model  1 based on minimum AIC              
+
+
+ Model  3
+    Half-normal key, k(y) = Exp(-y**2/(2*A(1)**2))
+    Cosine adjustments of order(s) :  2, 3
+       Results:
+       Convergence was achieved with   16 function evaluations.
+       Final Ln(likelihood) value =  -8527.7031    
+       Akaike information criterion =   17061.406    
+       Bayesian information criterion =   17078.201    
+       AICc =   17061.418    
+       Final parameter values:   27.088734     0.45279098     0.62819265E-01
+
+    Likelihood ratio test between models  2 and  3
+       Likelihood ratio test value    =     3.3912
+       Probability of a greater value =   0.065544
+ *** Model  3 selected over model  2 based on minimum AIC              
+
+
+ Model  4
+    Half-normal key, k(y) = Exp(-y**2/(2*A(1)**2))
+    Cosine adjustments of order(s) :  2, 3, 4
+       Results:
+       Convergence was achieved with   31 function evaluations.
+       Final Ln(likelihood) value =  -8508.9346    
+       Akaike information criterion =   17025.869    
+       Bayesian information criterion =   17048.264    
+       AICc =   17025.889    
+       Final parameter values:   27.793468     0.64070022    -0.71954548E-01 0.22535835    
+
+
+    Likelihood ratio test between models  3 and  4
+       Likelihood ratio test value    =    37.5371
+       Probability of a greater value =   0.000000
+ *** Model  4 selected over model  3 based on minimum AIC              
+
+
+ Model  5
+    Half-normal key, k(y) = Exp(-y**2/(2*A(1)**2))
+    Cosine adjustments of order(s) :  2, 3, 4, 5
+       Results:
+       Convergence was achieved with   43 function evaluations.
+       Final Ln(likelihood) value =  -8508.4375    
+       Akaike information criterion =   17026.875    
+       Bayesian information criterion =   17054.867    
+       AICc =   17026.904    
+       Final parameter values:   27.892166     0.64847040    -0.96759677E-01 0.24317138    
+                                -0.33341300E-01
+
+    Likelihood ratio test between models  4 and  5
+       Likelihood ratio test value    =     0.9942
+       Probability of a greater value =   0.318712
+ *** Model  4 selected over model  5 based on minimum AIC              
+	Detection Fct/Global/Parameter Estimates	
+
+
+ Effort        :    767.0000    
+ # samples     :   767
+ Width         :    100.0000    
+ # observations:  1995
+
+ Model
+    Half-normal key, k(y) = Exp(-y**2/(2*A(1)**2))
+    Cosine adjustments of order(s) :  2, 3, 4
+
+
+              Point        Standard    Percent Coef.        95 Percent
+  Parameter   Estimate       Error      of Variation     Confidence Interval
+  ---------  -----------  -----------  --------------  ----------------------
+    A( 1)      27.79       0.3506    
+    A( 2)     0.6407       0.3918E-01
+    A( 3)    -0.7195E-01   0.3169E-01
+    A( 4)     0.2254       0.3317E-01
+    h(0)     0.27712E-02  0.11412E-03       4.12      0.25562E-02  0.30042E-02
+    p        0.72172E-01  0.29722E-02       4.12      0.66574E-01  0.78240E-01
+    EDR       26.865      0.55318           2.06       25.802       27.972    
+  ---------  -----------  -----------  --------------  ----------------------
+
+
+ Sampling Correlation of Estimated Parameters
+
+
+         A( 1)   A( 2)   A( 3)   A( 4)
+ A( 1)  1.000   0.495  -0.363   0.178
+ A( 2)  0.495   1.000  -0.513   0.583
+ A( 3) -0.363  -0.513   1.000  -0.487
+ A( 4)  0.178   0.583  -0.487   1.000
+	Detection Fct/Global/Plot: Qq-plot	
+	Detection Fct/Global/K-S GOF Test	
+
+
+ Kolmogorov-Smirnov test
+ -----------------------
+
+ D_n                      = 0.0133                 p  = 0.8701
+
+
+ Cramer-von Mises family tests
+ -----------------------------
+
+ W-sq (uniform weighting) = 0.0305          0.900 < p <= 1.000
+   Relevant critical values:
+     W-sq crit(alpha=0.900) = 0.0000
+
+ C-sq (cosine weighting)  = 0.0222          0.900 < p <= 1.000
+   Relevant critical values:
+     C-sq crit(alpha=0.900) = 0.0000
+	Detection Fct/Global/Plot: Detection Probability 1	
+            |+-+--------+-+------+-+------+-+------+-+------+-+------+-+------+|
+     1.4725 +                                                                  +
+            |                                                                  |
+            |                                                                  |
+            |                                                                  |
+            |***                                                               |
+     1.2930 +* *                                                               +
+            |* *                                                               |
+            |* *                                                               |
+            |* *                                                               |
+            |* *                                                               |
+ D   1.1134 +* *                                                               +
+ e          |* *                                                               |
+ t          |* *                                                               |
+ e          |*f*                                                               |
+ c          |* ff                                                              |
+ t   0.9338 +* **f                                                             +
+ i          |* * *f                                                            |
+ o          |* * *                                                             |
+ n          |* * * f                                                           |
+            |* * *  f                                                          |
+ P   0.7542 +* * *  ***                                                        +
+ r          |* * ****f*                                                        |
+ o          |* * *  * f                                                        |
+ b          |* * *  * *                                                        |
+ a          |* * *  * *f                                                       |
+ b   0.5746 +* * *  * ***                                                      +
+ i          |* * *  * * f                                                      |
+ l          |* * *  * * *f*                                                    |
+ i          |* * *  * * * *                                                    |
+ t          |* * *  * * * f                                                    |
+ y   0.3951 +* * *  * * * *f                                                   +
+            |* * *  * * * **f*                                                 |
+            |* * *  * * * *  f**                                               |
+            |* * *  * * * *  *f*                                               |
+            |* * *  * * * *  * f                                               |
+     0.2155 +* * *  * * * *  * *ff                                             +
+            |* * *  * * * *  * * *ff                                           |
+            |* * *  * * * *  * * * *fff**                                      |
+            |* * *  * * * *  * * * *  *ffff                                    |
+            |* * *  * * * *  * * * *  * ***ffff*                               |
+     0.0359 +* * *  * * * *  * * * *  * * * *  fffffffff                       +
+            |                                        ***fffffffffffffffffffffff|
+            |+-+--------+-+------+-+------+-+------+-+------+-+------+-+------+|
+          0.000       20.690   34.483   48.276   62.069   75.862   89.655       
+            3.448   17.241   31.034   44.828   58.621   72.414   86.207  100.000
+
+                                Radial distance in meters          
+	Detection Fct/Global/Plot: Pdf 1	
+            |+-+--------+-+------+-+------+-+------+-+------+-+------+-+------+|
+     0.0297 +                                                                  +
+            |                                                                  |
+            |                                                                  |
+            |                                                                  |
+            |           ***                                                    |
+     0.0261 +          ff *                                                    +
+            |       **f *f*                                                    |
+            |       *f*** f                                                    |
+            |       * * * *f                                                   |
+            |       f * * *  ***                                               |
+     0.0225 +       * * * * f* *                                               +
+            |       * * * ***f *                                               |
+ P          |      f* * * *  * *                                               |
+ r          |       * * * *  *f*                                               |
+ o          |       * * * *  * f                                               |
+ b   0.0189 +     f * * * *  * *                                               +
+ a          |       * * * *  * *f                                              |
+ b          |    **** * * *  * * f                                             |
+ i          |    *  * * * *  * ***f*                                           |
+ l          |    f  * * * *  * * * f                                           |
+ i   0.0152 +    *  * * * *  * * * *f                                          +
+ t          |    *  * * * *  * * * **f***                                      |
+ y          |  ***  * * * *  * * * *  f *                                      |
+            |  * *  * * * *  * * * *  *ff                                      |
+ D          |  *f*  * * * *  * * * *  * *f                                     |
+ e   0.0116 +  * *  * * * *  * * * *  * * f                                    +
+ n          |  * *  * * * *  * * * *  * * *f*                                  |
+ s          |  * *  * * * *  * * * *  * *** f                                  |
+ i          |  * *  * * * *  * * * *  * * * *f                                 |
+ t          |  f *  * * * *  * * * *  * * * **f*                               |
+ y   0.0080 +  * *  * * * *  * * * *  * * * *  f                               +
+            |  * *  * * * *  * * * *  * * * *  *f***                           |
+            |*** *  * * * *  * * * *  * * * *  * f *                           |
+            |* * *  * * * *  * * * *  * * * *  * *f*                           |
+            |* * *  * * * *  * * * *  * * * *  * * f                           |
+     0.0044 +*f* *  * * * *  * * * *  * * * *  * * *f*                         +
+            |* * *  * * * *  * * * *  * * * *  * * * ff                        |
+            |* * *  * * * *  * * * *  * * * *  * * * **ffff****                |
+            |* * *  * * * *  * * * *  * * * *  * * * *  ***ffffffff         ***|
+            |* * *  * * * *  * * * *  * * * *  * * * *  * * * *  * ffffff   * *|
+     0.0007 +* * *  * * * *  * * * *  * * * *  * * * *  * * * *  ********ffffff+
+            |                                                                  |
+            |+-+--------+-+------+-+------+-+------+-+------+-+------+-+------+|
+          0.000       20.690   34.483   48.276   62.069   75.862   89.655       
+            3.448   17.241   31.034   44.828   58.621   72.414   86.207  100.000
+
+                                Radial distance in meters          
+	Detection Fct/Global/Chi-sq GOF Test 1	
+
+  Cell           Cut           Observed     Expected   Chi-square
+   i            Points          Values       Values       Values
+ -----------------------------------------------------------------
+   1     0.000        3.45           44       32.45        4.108
+   2      3.45        6.90           93       92.52        0.003
+   3      6.90        10.3          120      139.36        2.690
+   4      10.3        13.8          173      168.12        0.142
+   5      13.8        17.2          172      178.33        0.225
+   6      17.2        20.7          186      173.51        0.899
+   7      20.7        24.1          149      159.41        0.680
+   8      24.1        27.6          161      141.97        2.550
+   9      27.6        31.0          113      125.59        1.262
+  10      31.0        34.5          114      112.28        0.026
+  11      34.5        37.9          102      101.86        0.000
+  12      37.9        41.4          101       92.85        0.715
+  13      41.4        44.8           69       83.61        2.552
+  14      44.8        48.3           74       73.17        0.010
+  15      48.3        51.7           61       61.58        0.005
+  16      51.7        55.2           49       49.73        0.011
+  17      55.2        58.6           52       38.83        4.467
+  18      58.6        62.1           29       29.90        0.027
+  19      62.1        65.5           19       23.43        0.837
+  20      65.5        69.0           17       19.28        0.269
+  21      69.0        72.4           19       16.86        0.271
+  22      72.4        75.9           20       15.43        1.356
+  23      75.9        79.3           13       14.28        0.115
+  24      79.3        82.8            6       12.98        3.752
+  25      82.8        86.2            7       11.35        1.666
+  26      86.2        89.7            7        9.44        0.633
+  27      89.7        93.1            7        7.44        0.026
+  28      93.1        96.6            5        5.54        0.053
+  29      96.6        100.           13        3.90       21.274
+ -----------------------------------------------------------------
+ Total Chi-square value =    50.6238  Degrees of Freedom = 24.00
+
+Probability of a greater chi-square value, P = 0.00118
+
+ The program has limited capability for pooling.  The user should
+ judge the necessity for pooling and if necessary, do pooling by hand.
+	Detection Fct/Global/Plot: Detection Probability 2	
+            |+-+--------+-+------+-+-------+--+-----+---+----+---+------+-+----|
+     1.5758 +                                                                  +
+            |                                                                  |
+            |                                                                  |
+            |                                                                  |
+            |***                                                               |
+     1.3837 +* *                                                               +
+            |* *                                                               |
+            |* *                                                               |
+            |* *                                                               |
+            |* *                                                               |
+ D   1.1915 +* *                                                               +
+ e          |* *                                                               |
+ t          |* *                                                               |
+ e          |* *                                                               |
+ c          |* *                                                               |
+ t   0.9993 +*f*                                                               +
+ i          |* ff                                                              |
+ o          |* **f                                                             |
+ n          |* * *f                                                            |
+            |* * * f                                                           |
+ P   0.8071 +* * *                                                             +
+ r          |* * ***f                                                          |
+ o          |* * *  *f*                                                        |
+ b          |* * *  * *                                                        |
+ a          |* * *  * f                                                        |
+ b   0.6150 +* * *  * *f*                                                      +
+ i          |* * *  * * *                                                      |
+ l          |* * *  * * f**                                                    |
+ i          |* * *  * * *f*                                                    |
+ t          |* * *  * * * f                                                    |
+ y   0.4228 +* * *  * * * *                                                    +
+            |* * *  * * * *f*                                                  |
+            |* * *  * * * * f                                                  |
+            |* * *  * * * * *f*                                                |
+            |* * *  * * * * * ff                                               |
+     0.2306 +* * *  * * * * * **f*                                             +
+            |* * *  * * * * * *  ff*                                           |
+            |* * *  * * * * * *  * fff**                                       |
+            |* * *  * * * * * *  * * *ffff                                     |
+            |* * *  * * * * * *  * * * ***fffff                                |
+     0.0384 +* * *  * * * * * *  * * * * * *  *ffffffff                        +
+            |                                         *ffffffffffffffffffffffff|
+            |+-+--------+-+------+-+-------+--+-----+---+----+---+------+-+----|
+          0.000       20.000   33.333     50.000    66.667   80.000   93.333    
+            3.333   16.667   30.000    46.667   60.000   73.333     90.000      
+
+                                Radial distance in meters          
+	Detection Fct/Global/Plot: Pdf 2	
+            |+-+--------+-+------+-+-------+--+-----+---+----+---+------+-+----|
+     0.0293 +                                                                  +
+            |                                                                  |
+            |                                                                  |
+            |                                                                  |
+            |           ***                                                    |
+     0.0257 +         ffff*                                                    +
+            |        f* * f                                                    |
+            |       *** * *                                                    |
+            |       f * * *f                                                   |
+            |       * * * * f**                                                |
+     0.0221 +       * * * *** *                                                +
+            |      f* * * * *f*                                                |
+ P          |       * * * * * f                                                |
+ r          |       * * * * * *                                                |
+ o          |       * * * * * *f**                                             |
+ b   0.0186 +     f * * * * * * f*                                             +
+ a          |    **** * * * * *  *                                             |
+ b          |    *  * * * * * *  f   ***                                       |
+ i          |    *  * * * * * *  *f*** *                                       |
+ l          |    f  * * * * * *  * f * *                                       |
+ i   0.0150 +    *  * * * * * *  ***f* *                                       +
+ t          |    *  * * * * * *  * * ff*                                       |
+ y          |    *  * * * * * *  * * * f                                       |
+            |  ***  * * * * * *  * * * *f                                      |
+ D          |  *f*  * * * * * *  * * * * f                                     |
+ e   0.0114 +  * *  * * * * * *  * * * *  f****                                +
+ n          |  * *  * * * * * *  * * * * **f  *                                |
+ s          |  * *  * * * * * *  * * * * * *f *                                |
+ i          |  * *  * * * * * *  * * * *** * f*                                |
+ t          |  f *  * * * * * *  * * * * * *  f                                |
+ y   0.0079 +  * *  * * * * * *  * * * * * *  *f***                            +
+            |  * *  * * * * * *  * * * * * *  * f *                            |
+            |*** *  * * * * * *  * * * * * *  * *f*                            |
+            |* * *  * * * * * *  * * * * * *  *** f**                          |
+            |* * *  * * * * * *  * * * * * *  * * *f*                          |
+     0.0043 +*f* *  * * * * * *  * * * * * *  * * * ff                         +
+            |* * *  * * * * * *  * * * * * *  * * * **ff                       |
+            |* * *  * * * * * *  * * * * * *  * * * * **fff* ***               |
+            |* * *  * * * * * *  * * * * * *  * * * * * *  ffffffff         ***|
+            |* * *  * * * * * *  * * * * * *  * * * * * *  * * * **ffffff** * *|
+     0.0007 +* * *  * * * * * *  * * * * * *  * * * * * *  * * * * ******ffffff+
+            |                                                                  |
+            |+-+--------+-+------+-+-------+--+-----+---+----+---+------+-+----|
+          0.000       20.000   33.333     50.000    66.667   80.000   93.333    
+            3.333   16.667   30.000    46.667   60.000   73.333     90.000      
+
+                                Radial distance in meters          
+	Detection Fct/Global/Chi-sq GOF Test 2	
+
+  Cell           Cut           Observed     Expected   Chi-square
+   i            Points          Values       Values       Values
+ -----------------------------------------------------------------
+   1     0.000        3.33           44       30.35        6.138
+   2      3.33        6.67           86       86.81        0.008
+   3      6.67        10.0          121      131.62        0.857
+   4      10.0        13.3          161      160.27        0.003
+   5      13.3        16.7          170      171.99        0.023
+   6      16.7        20.0          177      169.46        0.335
+   7      20.0        23.3          148      157.52        0.575
+   8      23.3        26.7          150      141.49        0.512
+   9      26.7        30.0          128      125.62        0.045
+  10      30.0        33.3          101      112.26        1.129
+  11      33.3        36.7          109      101.74        0.518
+  12      36.7        40.0          112       93.04        3.864
+  13      40.0        43.3           62       84.65        6.062
+  14      43.3        46.7           69       75.44        0.549
+  15      46.7        50.0           78       65.04        2.582
+  16      50.0        53.3           38       53.95        4.715
+  17      53.3        56.7           54       43.14        2.732
+  18      56.7        60.0           39       33.66        0.846
+  19      60.0        63.3           23       26.22        0.394
+  20      63.3        66.7           20       21.00        0.048
+  21      66.7        70.0           17       17.74        0.031
+  22      70.0        73.3           14       15.84        0.214
+  23      73.3        76.7           17       14.63        0.384
+  24      76.7        80.0           13       13.56        0.023
+  25      80.0        83.3            8       12.28        1.493
+  26      83.3        86.7            4       10.71        4.202
+  27      86.7        90.0            7        8.90        0.408
+  28      90.0        93.3            8        7.03        0.132
+  29      93.3        96.7            4        5.27        0.306
+  30      96.7        100.           13        3.74       22.913
+ -----------------------------------------------------------------
+ Total Chi-square value =    62.0421  Degrees of Freedom = 25.00
+
+Probability of a greater chi-square value, P = 0.00005
+
+ The program has limited capability for pooling.  The user should
+ judge the necessity for pooling and if necessary, do pooling by hand.
+	Cluster size/Global/Estimates	
+
+
+ Effort        :    767.0000    
+ # samples     :   767
+ Width         :    100.0000    
+ # observations:  1995
+
+
+
+ Expected cluster size estimated based on regression of: log(s(i)) on g(x(i))
+
+
+ Regression Estimates
+ --------------------
+ Slope      =   -0.371105E-01   Std error   =    0.210351E-01
+ Intercept  =    0.106141       Std error   =    0.101389E-01
+ Correlation=   -0.0395         Students-t  =    -1.76422    
+ Df         =   1993            Pr(T < t)   =    0.389238E-01
+
+
+ Expected cluster size =   1.1145     Standard error    =  0.71390E-02
+
+ Mean cluster size     =   1.1579     Standard error    =  0.12274E-01
+	Cluster size/Global/Regression plot	
+            |+----+----+----+----+----+----+----+----+----+----+----+----+----+|
+     1.9848 +                                                                  +
+            |            o            o                                        |
+            |                                                                  |
+            |                                                                  |
+            |o     o                  o                                        |
+     1.7428 +                                                                  +
+            |                                                                  |
+            |                                                                  |
+            |       o     o o                                                  |
+            |                                                                  |
+ L   1.5007 +                                                                  +
+ o          |                                                                  |
+ g          |ooo    o  o    o o o        o o  o    o         o             o   |
+            |                                                                  |
+ o          |                                                                  |
+ f   1.2587 +                                                                  +
+            |                                                                  |
+ c          |                                                                  |
+ l          |oooo   oooo   oo  oo       o o      oo   oo  o          o  o      |
+ u          |                                                                  |
+ s   1.0166 +                                                                  +
+ t          |                                                                  |
+ e          |                                                                  |
+ r          |                                                                  |
+            |                                                                  |
+ s   0.7746 +                                                                  +
+ i          |                                                                  |
+ z          |oooooooooooooo ooo oooo  ooooooooo ooo  ooooo oooo oooooo  o oooo |
+ e          |                                                                  |
+            |                                                                  |
+     0.5325 +                                                                  +
+            |                                                                  |
+            |                                                                  |
+            |                                                                  |
+            |                                                                  |
+     0.2905 +                                                                  +
+            |                                                                  |
+            |                                                                  |
+            |                                                                  |
+            |** *** **** *** *** **** *** *** **** *** *** **** *** ***        |
+     0.0484 +                                                           **** * +
+            |ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo |
+            |+----+----+----+----+----+----+----+----+----+----+----+----+----+|
+           0.000     0.157     0.314     0.471     0.628     0.785     0.942    
+               0.078     0.235     0.392     0.549     0.706     0.863     1.020
+
+                                 Detection Probability (g(x))      
+	Density Estimates/Global	
+
+
+ Effort        :    767.0000    
+ # samples     :   767
+ Width         :    100.0000    
+ # observations:  1995
+
+ Model  4
+    Half-normal key, k(y) = Exp(-y**2/(2*A(1)**2))
+    Cosine adjustments of order(s) :  2, 3, 4
+
+
+              Point        Standard    Percent Coef.        95% Percent
+  Parameter   Estimate       Error      of Variation     Confidence Interval
+  ---------  -----------  -----------  --------------  ----------------------
+    DS        11.472      0.53240           4.64       10.474       12.564    
+    E(S)      1.1145      0.71390E-02       0.64       1.1006       1.1286    
+    D         12.785      0.59899           4.68       11.664       14.015    
+  ---------  -----------  -----------  --------------  ----------------------
+
+ Measurement Units                
+ ---------------------------------
+ Density: Numbers/hectares       
+     EDR: meters         
+
+ Component Percentages of Var(D)
+ -------------------------------
+ Detection probability   :  77.3
+ Encounter rate          :  20.9
+ Cluster size            :   1.9
+	Estimation Summary - Encounter rates         	
+
+                         Estimate      %CV     df     95% Confidence Interval
+                        ------------------------------------------------------
+                 n       1995.0    
+                 k       767.00    
+                 K       767.00    
+                 n/K     2.6010        2.14   766.00  2.4941       2.7126    
+                 Left    0.0000
+                 Width   100.00    
+	Estimation Summary - Detection probability   	
+
+                         Estimate      %CV     df     95% Confidence Interval
+                        ------------------------------------------------------
+ Half-normal/Cosine     
+                 m       4.0000    
+                 LnL    -8508.9    
+                 AIC     17026.    
+                 AICc    17026.    
+                 BIC     17048.    
+                 Chi-p  0.54359E-04
+                 h(0)   0.27712E-02    4.12  1991.00 0.25562E-02  0.30042E-02
+                 p      0.72172E-01    4.12  1991.00 0.66574E-01  0.78240E-01
+                 EDR     26.865        2.06  1991.00  25.802       27.972    
+	Estimation Summary - Expected cluster size   	
+
+                         Estimate      %CV     df     95% Confidence Interval
+                        ------------------------------------------------------
+ Average cluster size   
+                         1.1579        1.06  1994.00  1.1341       1.1822    
+ Half-normal/Cosine     
+                 r     -0.39488E-01
+                 r-p    0.38924E-01
+                 E(S)    1.1145        0.64  1993.00  1.1006       1.1286    
+	Estimation Summary - Density&Abundance       	
+
+                         Estimate      %CV     df     95% Confidence Interval
+                        ------------------------------------------------------
+ Half-normal/Cosine     
+                 DS      11.472        4.64  2699.69  10.474       12.564    
+                 D       12.785        4.68  2802.15  11.664       14.015    
