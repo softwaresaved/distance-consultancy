@@ -7,7 +7,7 @@ Analysis engines:
 * DSM fits density surface models to spatially-referenced distance sampling data
 
 Distance for Windows <=> R interface
-------------------------------------
+====================================
 
 * Create input files.
 * Invoke R e.g.:
@@ -18,6 +18,8 @@ Distance for Windows <=> R interface
 
 * Wait for results
 * Read results
+
+See Visual Basic <=> R interface below for more details.
 
 Input files
 -----------
@@ -148,8 +150,93 @@ From Exporting MCDS Results, user's guide, p144:
     lines(forplot$C3, forplot$C4, lty=2)
     lines(forplot$C5, forplot$C6, lty=3)
 
-Implementation
---------------
+Visual Basic <=> R interface
+============================
+
+Microsoft Jet database, DistIni.mdb, settings:
+
+* Table: ProjectSettingsMemo
+* Section: AnalysisEngine
+* Field: Setting - value ';' delimited entries of form 'Name=Value'
+* Entries of note are as follows:
+
+| Key | PackageName | SupportFileName | PrgProgId | EngIntProgId | LogPropId | ResProgId | 
+| --- | ----------- | --------------- | --------- | ------------ | --------- | --------- |
+| DSM | dsm | dsm.support.r | D6DSMPrp.DSMProperties | D6DSMNEI.DSMNEngineInterface | D6DSMDet.DSMLog;Log | D6DSMDet.DSMResults
+| MRDS | mrds | mrds.support.r | D6MRDSPrp.MRDSProperties | D6MRDSNEI.MRDSNEngineInterface | D6MRDSDet.MRDSLog | D6MRDSDet.MRDSResults |
+
+* Table: ProjectSettingsBoolean
+* Section: R
+* Keys: ForceLoadLibrary, UpdateFromCRAN
+
+Analysis Engines\DSM\NEngineInterface\Classes\InputFileMaker.cls:
+
+* Function Makefile 
+  - Creates DSM input files
+* Function AppendLinkDSMLibraryString:
+  - Calls D6NEIUtil.GetRSupportFileName("") to get R support file name
+  - Calls D6NEIUtil.GetRSupportFileName("DSM") to get DSM R support file name
+  - Gets database, ProjectSettingsBoolean table, R section, value for Key="ForceLoadLibrary"
+  - Gets database, ProjectSettingsBoolean table, R section, value for Key="UpdateFromCRAN"
+  - If selected, CRAN updates are done using http://cran.r-project.org
+  - Calls D6NEIUtil.GetRPackageName("DSM") DSM R package name
+  - Calls D6NEIUtil.GetRPackagePath to get package path
+
+Analysis Engines\DSM\NEngineInterface\Classes\DSMNEngineInterface.cls:
+
+* Function RunItem:
+  - Calls RProcess.EngineName to get engine file name
+  - Calls RProcess.RunEngine(engine file name, current directory, input file, log file)
+
+Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Classes\RProcess.cls
+
+* Property Get EngineName
+  - Invokes GetEngineName as a property
+* Function GetEngineName:
+  - Gets database, ProjectSettingsMemo table, R section, value for Key=Path
+  - If not found then gets D6Util.GetRInstallPath and sets database value
+  - Adds executable name, gstrRCMD, to path
+* Sub RunEngine
+  - Invokes `PATH\bin\i386\Rcmd.exe" gstrBATCH INPUT_FILE LOG_FILE`
+
+Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Classes\InputFileMakerUtils.cls:
+
+* Function GetRPackageName:
+  - Gets database, ProjectSettingsMemo table, AnalysisEngine section, Setting value for Key=="DSM"|"MRDS" and parses Name=Value pairs in Setting value to get PackageName
+  - Returns full path to ZIP file or package name only depending on boolean argument
+* Function GetRPackagePath:
+  - Calls D6Util.RPath to convert App.Path\RPackages\ to R-compliant format
+* Function GetRSupportFileName
+  - If argument Key=="" then file name is set to getstrR_SUPPORT_FILE
+  - Else gets database, ProjectSettingsMemo table, AnalysisEngine section, Setting value for Key=="DSM"|"MRDS" and parses Name=Value pairs in Setting value to get SupportFileName
+  - Returns file name prefixed with App.Path\ depending on boolean argument
+
+Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Modules\Global.bas:
+
+* Global Const gstrR_SUPPORT_FILE = "support.r"
+* Global Const gstrRCMD = "\bin\i386\Rcmd.exe"
+* Global Const gstrBATCH = "BATCH"
+
+Utilities\Classes\StringHandling.cls:
+
+* Function RPath
+  - Returns string with '\' replaced by '\\'
+
+Utilities\Classes\Misc.cls:
+
+* Function GetRInstallPath
+  - Searches Windows registry for R path
+  - Get value of HKEY_LOCAL_MACHINE\Software\R-core\R\Current Version
+  - If found, get value of HKEY_LOCAL_MACHINE\Software\R-core\R\CURRENT_VERSION\InstallPath
+  - Else get value of HKEY_CURRENT_USER\Software\R-core\R\Current Version
+  - If found, get value of HKEY_CURRENT_USER\Software\R-core\R\CURRENT_VERSION\InstallPath
+  - Else, for older R versions, get value of HKEY_LOCAL_MACHINE\Software\R-core\R\Current Version
+  - If found, get value of HKEY_LOCAL_MACHINE, Software\R-core\R\InstallPath
+
+MRDS is similar.
+
+Miscellaneous DSM and MRDS implementation details
+=================================================
 
 Random numbers:
 

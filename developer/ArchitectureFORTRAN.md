@@ -157,7 +157,7 @@ Visual Basic <=> FORTRAN interface
 
 Microsoft Jet database, DistIni.mdb, settings:
 
-* Table: Project Settings Memo
+* Table: ProjectSettingsMemo
 * Section: AnalysisEngine
 * Field: Setting - value ';' delimited entries of form 'Name=Value'
 * Entries of note are as follows:
@@ -171,28 +171,25 @@ Microsoft Jet database, DistIni.mdb, settings:
 
 Analysis Engines\CDS\NEngineInterface\Classes\InputFileMaker.cls:
 
-* Function Makefile - Creates CDS input files
+* Function Makefile 
+  - Creates CDS input files
 
 Analysis Engines\CDS\NEngineInterface\Classes\CDSNEngineInterface.cls:
 
 * Function RunItem:
-  - Creates D6NEIUtil.CDSProcess
-  - Invokes CDSProcess.EngineName(IsMCDS) to get engine file name
-  - Invokes CDSProcess.RunEngine(IsMCDS) to run engine on input files
+  - Calls CDSProcess.EngineName(IsMCDS=True|False) to get engine file name
+  - Calls CDSProcess.RunEngine(engine file name, IsMCDS=True|False, input file name, command file name)
 
 Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Classes\CDSProcess.cls:
 
 * Property Get EngineName
   - Invokes GetEngineName as a property
 * Function GetEngineName:
-  - Gets Project Settings Memo table, AnalysisEngine section, Setting value for Key=CDS|MCDS
-  - Parses Name=Value pairs in Setting value to get ExeName
+  - Gets database, ProjectSettingsMemo table, AnalysisEngine section, Setting value for Key=="MCDS" if IsMCDS flag is True) else Key=="CDS" and parses Name=Value pairs in Setting value to get ExeName
   - ExeName is assumed to be in App.Path, same directory as D6NEIUtil.dll
 * Sub RunEngine:
-  - If Windows NT and EC usage required, invokes:
-  - `PATH\ec "PATH\MCDS.exe MODE INPUT_FILE \options 2>COMMAND_FILE"`
-  - Otherwise invokes:
-  - `PATH\MCDS.exe MODE INPUT_FILE \options 2>COMMAND_FILE`
+  - If Windows NT and EC usage required, invokes`PATH\ec "PATH\MCDS.exe MODE INPUT_FILE \options 2>COMMAND_FILE"`
+  - Otherwise invokes `PATH\MCDS.exe MODE INPUT_FILE \options 2>COMMAND_FILE`
   - MODE is 0|1
 
 Miscellaneous MCDS implementation details
