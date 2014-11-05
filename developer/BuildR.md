@@ -92,3 +92,70 @@ Copy files:
 
     copy %BASE%\Analysis Engines\DSM\Engine\dsm_M.N.R.zip %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\RPackages\
     copy %BASE%\Analysis Engines\MRDS\Engine\mrds\mrds_M.N.R.zip %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\RPackages\
+
+How to write tests
+------------------
+
+Distance's R tests are written in [testthat](http://cran.r-project.org/web/packages/testthat). For more information see:
+
+* [Testing](http://r-pkgs.had.co.nz/tests.html)
+* [testthat: Get Started with Testing](http://journal.r-project.org/archive/2011-1/RJournal_2011-1_Wickham.pdf)
+* Distance tests in [dsm\tests](https://github.com/DistanceDevelopment/dsm/tree/master/tests) and [mrds\tests](https://github.com/DistanceDevelopment/mrds/tree/master/tests)
+
+How to run tests from within R
+------------------------------
+
+* Start R
+* Load the testthat library:
+
+<p/>
+
+    library(testthat)
+
+* Load your package, e.g.:
+
+<p/>
+
+    library(dsm)
+
+* Change into the package's directory using setwd.
+* To run all the tests in a file do, e.g.:
+
+<p/>
+
+    test_file("tests/testthat/test_input.R")
+
+* To run all the tests in a directory do, e.g.:
+
+<p/>
+
+    test_file("tests/testthat/")
+
+* To display only a '.' for passed tests and 'E' for failed tests add a 'minimal' argument, e.g.:
+
+<p/>
+
+    test_file("tests/testthat/test_input.R", "minimal")
+
+How to run tests from outwith R
+-------------------------------
+
+* Within the package's tests directory, write a testthat.R file with the content:
+
+<p/>
+
+    library(testthat)
+    library(PACKAGENAME)
+    test_check("PACKAGENAME")
+
+* From a command prompt, change into the tests directory, e.g.
+
+<p/>
+
+    chdir dsm\tests\
+
+* Run:
+
+<p/>
+
+    R -file testthat.R
