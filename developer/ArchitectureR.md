@@ -220,7 +220,7 @@ Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Modules\Global.bas:
 Utilities\Classes\StringHandling.cls:
 
 * Function RPath
-  - Returns string with '\' replaced by '\\'
+  - Returns string with '\' replaced by '\\\'
 
 Utilities\Classes\Misc.cls:
 

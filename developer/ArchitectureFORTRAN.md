@@ -164,8 +164,6 @@ Microsoft Jet database, DistIni.mdb, settings:
 
 | Key | PackageName | SupportFileName | PrgProgId | EngIntProgId | LogPropId | ResProgId | 
 | --- | ----------- | --------------- | --------- | ------------ | --------- | --------- |
-| Key | ExeName | PrgProgId | EngIntProgId | LogPropId | ResProgId | 
-| --- | ------- | --------- | ------------ | --------- | --------- |
 | CDS | MCDS.exe | D6CDSPrp.CDSProperties | D6CDSNEI.CDSNEngineInterface | D6CDSDet.CDSLog | D6CDSDet.CDSResults |
 | MCDS | MCDS.exe | D6CDSPrp.CDSProperties | D6CDSNEI.CDSNEngineInterface | D6CDSDet.CDSLog | D6CDSDet.CDSResults |
 
