@@ -9,8 +9,10 @@ The scripts in this directory were executed using AutoHotkey 1.1.16.05.
 To run:
 
 * Check the path in the script points to your Distance.exe.
-* If testing Distance.exe in a Distance for Windows installation (and not one built directly by Distance.vbp) 
-then comment out the `Send {Enter}` in the lines:
+* Check other paths are valid for your local environment.
+* If testing Distance.exe built directly by Distance.vbp for the first time then uncomment:
 
-    ; Accept Warning - comment this out if using a Distance installation
-    Send {Enter}
+<p/>
+
+    ; Send {Enter} ; Accept Warning - comment this out if using a Distance installation - only appears once
+
