@@ -4,6 +4,7 @@
 #Include Config.ahk
 #Include Utilities.ahk
 
+
 OpenLog(LogFile)
 
 ;;; Start Distance
@@ -67,7 +68,131 @@ Send !n  ; Click Next
 ; Step 6: Finished
 Send !f  ; Click Finish
 
+WinWaitActive Distance - %ProjectName%
+
+WinGetActiveTitle, Title
+
+BlockInput On
+
+Sleep 500
+MouseGetPos, X, Y, Win, Con
+AppendLog(LogFile, "Mouse: " X " " Y " " Win " " Con " " Title)
+
+;CoordMode, Mouse, Relative 
+;WinActivate Analyses
+;Click 793, 145 ; From Window Spy In Active Window
+;MouseMove, 800, 140, 100
+;Sleep 500
+
+MouseGetPos, X, Y, Win, Con
+AppendLog(LogFile, "Mouse: " X " " Y " " Win " " Con)
+MouseMove, 800, 140, 100 ; In Active Window
+MouseMove, 800, 140, 100 ; In Active Window
+MouseMove, 800, 140, 100 ; In Active Window
+MouseMove, 800, 140, 100 ; In Active Window
+MouseMove, 800, 140, 100 ; In Active Window
+Sleep 500
+MouseGetPos, X, Y, Win, Con
+AppendLog(LogFile, "Mouse: " X " " Y " " Win " " Con)
+Click down
+Click up
+Click 2
+Click 840, 150
+Send {Click 840, 150}
+
+;MouseMove, 1315, 306 ; On Screen
+; CoordMode, Mouse, Relative 
+;MouseMove, 800, 140, 100 ; In Active Window
+;Sleep 500
+;MouseGetPos, X, Y, Win, Con
+;AppendLog(LogFile, "Mouse: " X " " Y " " Win " " Con)
+;Click 840, 150
+;Send {Click 840, 150}
+;MouseGetPos, X, Y, Win, Con
+;AppendLog(LogFile, "Mouse: " X " " Y " " Win " " Con)
+
+BlockInput Off
+
+
+; Send {F1}
+
 ;;; TODO 
+
+; Example 1 - Running the first analysis
+;
+; Click Analyses
+; Analysis Browser appears
+; Double-click grey ball
+; Analysis 1 appears
+; In Model definition, Click Properties...
+; Model Definition Properties appears
+; Click Detection Function tab
+; Click OK
+; In Analysis, click Run
+; Ball turns green
+; Results tab gains focus and is coloured green.
+; Click Next 14 times to go through results.
+; Click X to close window.
+;
+; Example 1 - Creating a new analysis
+;
+;
+; Click Analyses tabs
+; Click New Analysis button
+; Double-click on New Analysis 1 and enter: Untruncated hr+poly
+; Double-click on New Analysis and enter: Untruncated hn+cos
+; Double-click grey ball
+; Analysis 2 appears
+; In Model definition, Click New...
+; Click Detection Function tab
+; Click Models
+; Double-click under Key function, select Hazard-rate
+; Double-click under Series expansion, select Simple polynomial
+; Enter Name: hr_poly
+; Click OK
+; Select Default Model Definition
+; Click Properties...
+; Enter Name: hn+cos
+; Click OK
+; In Analysis, click Run
+; Ball turns green
+; Results tab gains focus and is coloured green.
+; Click Next 14 times to go through results.
+;
+; Example 1 - Further investigations
+;
+; Click New Analysis button
+; Double-click on Untruncated hr+poly 1 and enter: 19m trunc hn+cos
+; Double-click grey ball
+; Analysis 2 appears
+; In Model definition, Click New...
+; Click Detection Function tab
+; Click Models
+; Double-click grey ball
+; Analysis 3 appears
+; In Data Filter, Click New...
+; Click Truncation tab
+; Select Discard all observations, enter 19
+; Enter Name: 19m truncation
+; Click OK
+; In Data filter, select 19m truncation
+; In Model definition, hn+cos
+;
+; Click Project Browser title bar
+; Double-click on 19m trunc hn+cos enter: 19m trunc hr+poly
+; Double-click grey ball
+; Analysis 4 appears
+; In Data filter, select 19m truncation
+; In Model definition, hr+poly
+;
+; Click Project Browser title bar
+; Click 19m trunc hn+cos
+; Press CTRL and click 19m trunc hr+poly
+; Click Run Analysis
+;
+; Select View => Analysis Components
+; Analysis Components appears
+
 
 Exit
 
