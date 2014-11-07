@@ -10,9 +10,5 @@ To run:
 
 * Check the path in the script points to your Distance.exe.
 * Check other paths are valid for your local environment.
-* If testing Distance.exe built directly by Distance.vbp for the first time then uncomment:
-
-<p/>
-
-    ; Send {Enter} ; Accept Warning - comment this out if using a Distance installation - only appears once
-
+* If testing Distance.exe built directly by Distance.vbp open it up manually for the first time and 
+  accept the warning dialog box. Subsequent invocations will not show this warning dialog box.
