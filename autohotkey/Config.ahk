@@ -8,5 +8,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 DistanceExe = C:\Application Development\Distance60\Interface\Distance.exe
 ProjectDir = C:\Application Development\
 LogFile = C:\Application Development\distance-consultancy\autohotkey\log.txt
+Example1Txt = C:\Application Development\Distance60Extras\Sample Projects Backup\Release\Example1Backup.txt
 ProjectName = %A_TickCount%
 ProjectFile = %ProjectDir%%ProjectName%
