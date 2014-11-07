@@ -8,7 +8,6 @@ OpenLog(LogFile)
 AppendLog(LogFile, "Starting Distance")
 Run %DistanceExe%
 WinWait Distance
-WinActivate Distance
 WinWaitActive Welcome  ; Welcome to Distance - Tip of the Day
 Send !o  ; Click OK
 
