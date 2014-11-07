@@ -1,61 +1,54 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-; #Warn  ; Enable warnings to assist with detecting common errors.
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+﻿;;; AutoHotkey script - Create a new Distance project
 
-DistanceExe = C:\Application Development\Distance60\Interface\Distance.exe
-ProjectDir = C:\Application Development\
-LogFile = C:\Application Development\distance-consultancy\autohotkey\log.txt
-ProjectName = %A_TickCount%
-ProjectFile = %ProjectDir%%ProjectName%
+#Include Config.ahk
+#Include Utilities.ahk
 
-FileDelete, %LogFile%
-FileAppend, 
-(
-Log stated at: %A_Now%
-Project directory: %ProjectDir%
-Project name: %ProjectName%`n
-), %LogFile%
+OpenLog(LogFile)
 
-; Start Distance
+;;; Start Distance
+AppendLog(LogFile, "Starting Distance")
 Run %DistanceExe%
 WinWait Distance
-WinActivate
-; Send {Enter} ; Accept Warning - comment this out if using a Distance installation - only appears once
-WinWaitActive Welcome
-Send {Enter} ; Accept Tip of the day
+WinActivate Distance
+WinWaitActive Welcome  ; Welcome to Distance - Tip of the Day
+Send !o  ; Click OK
 
-FileAppend, Create Project (Design a new survey) %ProjectName%.dst`n, %LogFile%
-Send !f!n ; File=>New... ALT-fn (or CTRL-N ^n)
-WinWait Create Project
+AppendLog(LogFile, "Create Project (Design a new survey)")
+AppendLog(LogFile, "Project directory: " ProjectDir)
+AppendLog(LogFile, "Project name: " ProjectName)
+Send !f!n  ; Select File=>New...
+WinWaitActive Create Project
 Send %ProjectFile%
-Send !c ; Create
-WinWait New Project
+Send !c  ; Click Create
+WinWaitActive New Project
+; Step 1: Type of Project
 Send !d ; Design a new survey
-Send !n ; Next
+Send !n  ; Click Next
 Send !f ; Finish
+
+WinWaitActive Distance - %ProjectName%
+
 IfNotExist, %ProjectFile%.dst 
 {
-  FileAppend, Project file: %ProjectFile%.dst cannot be found...Exiting`n, %LogFile%
+  AppendLog(LogFile, "Project file: " ProjectFile ".dst cannot be found...Exiting")
   Exit
 }
 IfNotExist, %ProjectDir%\%ProjectName%.dat 
 {
-  FileAppend, Project directory: %ProjectFile%.dat cannot be found...Exiting`n, %LogFile%
+  AppendLog(LogFile, "Project directory: " ProjectFile ".dat cannot be found...Exiting")
   Exit
 }
 
-WinGetActiveTitle, Title
-FileAppend, Active window: %Title%`n, %LogFile%
-Sleep 500
-WinGetActiveTitle, Title
-FileAppend, Active window: %Title%`n, %LogFile%
+WinActivate Distance - %ProjectName%
 
-FileAppend, File => Exit`n, %LogFile%
-Send !f!x ; File=>Exit... ALT-fx (or CTRL-X ^x)
-Send {Enter} ; Yes
-; Clean up
+AppendLog(LogFile, "Exiting Distance")
+Send !f!x  ; Select File=>Exit...
+WinWaitActive Distance Confirmation
+Send !y  ; Click Yes
+
+;;; Clean up
 Sleep 500
 FileDelete, %ProjectFile%.dst
 FileRemoveDir, %ProjectFile%.dat, 1
-FileAppend, Finished!`n, %LogFile%
+CloseLog(LogFile)
+

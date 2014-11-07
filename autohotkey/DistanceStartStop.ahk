@@ -1,16 +1,17 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-; #Warn  ; Enable warnings to assist with detecting common errors.
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+﻿;;; AutoHotkey script - Start and stop Distance
 
-DistanceExe = C:\Application Development\Distance60\Interface\Distance.exe
+#Include Config.ahk
+#Include Utilities.ahk
 
-; Start Distance
+OpenLog(LogFile)
+
+AppendLog(LogFile, "Starting Distance")
 Run %DistanceExe%
 WinWait Distance
-WinActivate
-; Send {Enter} ; Accept Warning - comment this out if using a Distance installation - only appears once
-WinWaitActive Welcome
-Send {Enter} ; Accept Tip of the day
-Sleep 500
-Send !f!x ; File=>Exit... ALT-fx (or CTRL-X ^x)
+WinActivate Distance
+WinWaitActive Welcome  ; Welcome to Distance - Tip of the Day
+Send !o  ; Click OK
+
+AppendLog(LogFile, "Exiting Distance")
+Send !f!x  ; File=>Exit...
+CloseLog(LogFile)

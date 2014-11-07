@@ -1,34 +1,22 @@
-﻿;;; AutoHotkey script
-;;; Distance 6.2 Release 1 User's Guide Example 1: Using Distance to Analyze Simple Data
+﻿;;; AutoHotkey script - Distance 6.2 Release 1 User's Guide Example 1
+;;; Using Distance to Analyze Simple Data
 
-#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-; #Warn  ; Enable warnings to assist with detecting common errors.
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+#Include Config.ahk
+#Include Utilities.ahk
 
-DistanceExe = C:\Application Development\Distance60\Interface\Distance.exe
-ProjectDir = C:\Application Development\
-LogFile = C:\Application Development\distance-consultancy\autohotkey\log.txt
-ProjectName = %A_TickCount%
-ProjectFile = %ProjectDir%%ProjectName%
-
-;;; Initialise
-FileDelete, %LogFile%
-FileAppend, 
-(
-Log stated at: %A_Now%
-Project directory: %ProjectDir%
-Project name: %ProjectName%`n
-), %LogFile%
+OpenLog(LogFile)
 
 ;;; Start Distance
+AppendLog(LogFile, "Starting Distance")
 Run %DistanceExe%
 WinWait Distance
 WinActivate Distance
 WinWaitActive Welcome  ; Welcome to Distance - Tip of the Day
 Send !o  ; Click OK
 
-FileAppend, Create Project (Design a new survey) %ProjectName%.dst`n, %LogFile%
+AppendLog(LogFile, "Create Project (Design a new survey)")
+AppendLog(LogFile, "Project directory: " ProjectDir)
+AppendLog(LogFile, "Project name: " ProjectName)
 Send !f!n  ; Select File=>New...
 WinWaitActive Create Project
 Send %ProjectFile%
@@ -57,7 +45,7 @@ Send {TAB 15}  ; Tab to Destinations radiobuttons
 Send {Down}  ; Switch radiobutton to Proceed to Data Import Wizard
 Send !f  ; Click Finish
 
-FileAppend, Import Data Wizard`n, %LogFile%
+AppendLog(LogFile, "Import Data Wizard")
 WinWaitActive Import Data Wizard
 ; Step 1: Introduction
 Send !n  ; Click Next
@@ -79,33 +67,19 @@ Send !n  ; Click Next
 ; Step 6: Finished
 Send !f  ; Click Finish
 
-
+;;; TODO 
 
 Exit
 
-Send !f ; Finish
-IfNotExist, %ProjectFile%.dst 
-{
-  FileAppend, Project file: %ProjectFile%.dst cannot be found...Exiting`n, %LogFile%
-  Exit
-}
-IfNotExist, %ProjectDir%\%ProjectName%.dat 
-{
-  FileAppend, Project directory: %ProjectFile%.dat cannot be found...Exiting`n, %LogFile%
-  Exit
-}
+WinActivate Distance - %ProjectName%
 
-WinGetActiveTitle, Title
-FileAppend, Active window: %Title%`n, %LogFile%
-Sleep 500
-WinGetActiveTitle, Title
-FileAppend, Active window: %Title%`n, %LogFile%
+AppendLog(LogFile, "Exiting Distance")
+Send !f!x  ; Select File=>Exit...
+WinWaitActive Distance Confirmation
+Send !y  ; Click Yes
 
-FileAppend, File => Exit`n, %LogFile%
-Send !f!x ; File=>Exit... ALT-fx (or CTRL-X ^x)
-Send {Enter} ; Yes
-; Clean up
+;;; Clean up
 Sleep 500
 FileDelete, %ProjectFile%.dst
 FileRemoveDir, %ProjectFile%.dat, 1
-FileAppend, Finished!`n, %LogFile%
+CloseLog(LogFile)
