@@ -1,4 +1,7 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+﻿;;; AutoHotkey script
+;;; Distance 6.2 Release 1 User's Guide Example 1: Using Distance to Analyze Simple Data
+
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
@@ -9,6 +12,7 @@ LogFile = C:\Application Development\distance-consultancy\autohotkey\log.txt
 ProjectName = %A_TickCount%
 ProjectFile = %ProjectDir%%ProjectName%
 
+;;; Initialise
 FileDelete, %LogFile%
 FileAppend, 
 (
@@ -17,64 +21,65 @@ Project directory: %ProjectDir%
 Project name: %ProjectName%`n
 ), %LogFile%
 
-; Start Distance
+;;; Start Distance
 Run %DistanceExe%
 WinWait Distance
-WinActivate
-; Send {Enter} ; Accept Warning - comment this out if using a Distance installation - only appears once
-WinWaitActive Welcome
-Send {Enter} ; Accept Tip of the day
+WinActivate Distance
+WinWaitActive Welcome  ; Welcome to Distance - Tip of the Day
+Send !o  ; Click OK
 
 FileAppend, Create Project (Design a new survey) %ProjectName%.dst`n, %LogFile%
-Send !f!n ; File=>New... ALT-fn (or CTRL-N ^n)
-WinWait Create Project
+Send !f!n  ; Select File=>New...
+WinWaitActive Create Project
 Send %ProjectFile%
-Send !c ; Create
-WinWait New Project
+Send !c  ; Click Create
+WinWaitActive New Project
 ; Step 1: Type of Project
-Send !a ; Analyse a survey that has been completed
-Send !n ; Next
+Send !a  ; Select Analyse a survey that has been completed
+Send !n  ; Click Next
 ; Step 2: Setup for Analyzing a Survey
-Send !n ; Next
+Send !n  ; Click Next
 ; Step 3: Survey methods 
-Send {TAB 6} ; Tab to Observations radiobuttons
-Send {Down}; Switch radiobutton to Clusters of objects
-Send !n ; Next
+Send {TAB 6}  ; Tab to Observations radiobuttons
+Send {Down}  ; Switch radiobutton to Clusters of objects
+Send !n  ; Click Next
 ; Step 4: Measurement Units
-Send {TAB 8} ; Tab to Distance list
-Send {Down} ; Move down Distance list from Meter to Metre
-Send {TAB}
-Send {Down} ; Move down Transect length list from Kilometer to Kilometre
-Send {TAB}
-Send {Down 7} ; Move down Area list from Hectare to Square Kilometre
-Send !n ; Next
+Send {TAB 8}  ; Tab to Distance list
+Send {Down}  ; Move down list from Meter to Metre
+Send {TAB}  ; Tab to Transect length list
+Send {Down}  ; Move down list from Kilometer to Kilometre
+Send {TAB}  ; Tab to Area list
+Send {Down 7}  ; Move down list from Hectare to Square Kilometre
+Send !n  ; Click Next
 ; Step 5: Multipliers
-Send !n ; Next
-Send {TAB 15} ; Tab to Destinations radiobuttons
-Send {Down}; Switch radiobutton to Proceed to Data Import Wizard
-Send !f ; Finish
+Send !n  ; Click Next
+Send {TAB 15}  ; Tab to Destinations radiobuttons
+Send {Down}  ; Switch radiobutton to Proceed to Data Import Wizard
+Send !f  ; Click Finish
 
-WinWait Import Data Wizard
+FileAppend, Import Data Wizard`n, %LogFile%
+WinWaitActive Import Data Wizard
 ; Step 1: Introduction
-Send !n ; Next
+Send !n  ; Click Next
 ; Step 2: Data Source
+Send %A_ScriptDir%\Example1.txt
+Send !o  ; Click OK
+; Step 3: Data Destination
+Send !n  ; Click Next
+; Step 4: Data File Format
+WinWaitActive Import Data Wizard - Step 4
+Send {TAB 14}  ; Tab to Ignore rows checkbox
+Send {Space} ; Set Do not import first row
+Send !n  ; Click Next
+; Step 5: Data File Structure
+WinWaitActive Import Data Wizard - Step 5
+Send {TAB 14}  ; Tab to Shortcuts 
+Send {Space} ; Set Columns are in the same order as they will appear in the data sheet
+Send !n  ; Click Next
+; Step 6: Finished
+Send !f  ; Click Finish
 
-; Select Example1.txt
-; Click OK
-; Step 3: Data Destination appears
-; Click Next
-; Step 4: Data File Format appears
-; Select Do not import first row
-; Click Next
-; Step 5: Data File Structure appears
-; Select 'Columns are in the same order as they will appear in the data sheet'
-; Set column 6 manually:
-;  Double click on column 6 
- ; Layer name, select Observation
- ; Field name, select Cluster size
- ; Field type, select Decimal
-; Click Next
-; Click Finish
+
 
 Exit
 
