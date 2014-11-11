@@ -16,3 +16,9 @@ CloseLog(LogFile)
   Text = Log closed at: %A_Now%
   AppendLog(LogFile, "Log closed at: " A_Now)
 }
+
+ReactivateDistance(ProjectName)
+{
+  WinActivate, Distance - %ProjectName%
+  WinWaitActive, Distance - %ProjectName%
+}
