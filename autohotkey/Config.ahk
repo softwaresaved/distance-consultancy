@@ -11,3 +11,4 @@ LogFile = C:\Application Development\distance-consultancy\autohotkey\log.txt
 Example1Txt = C:\Application Development\Distance60Extras\Sample Projects Backup\Release\Example1Backup.txt
 ProjectName = %A_TickCount%
 ProjectFile = %ProjectDir%%ProjectName%
+PauseTime = 1000
