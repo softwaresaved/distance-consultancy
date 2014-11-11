@@ -3,13 +3,18 @@
 #Include Config.ahk
 #Include Utilities.ahk
 
+SetWinDelay, %PauseTime%  ; Recommend 1000 (milliseconds) at least
+
 OpenLog(LogFile)
 
+;;;
 ;;; Start Distance
+;;;
+
 AppendLog(LogFile, "Starting Distance")
 Run %DistanceExe%
 WinWait Distance
-WinWaitActive Welcome  ; Welcome to Distance - Tip of the Day
+WinWaitActive Welcome  ; Welcome to Distance
 Send !o  ; Click OK
 
 AppendLog(LogFile, "Create Project (Design a new survey)")
@@ -40,14 +45,20 @@ IfNotExist, %ProjectDir%\%ProjectName%.dat
 
 WinActivate Distance - %ProjectName%
 
+;;;
+;;; Exit
+;;;
+
 AppendLog(LogFile, "Exiting Distance")
 Send !f!x  ; Select File=>Exit...
 WinWaitActive Distance Confirmation
 Send !y  ; Click Yes
+Sleep %PauseTime%  ; Wait extra time for exit
 
+;;;
 ;;; Clean up
-Sleep 500
+;;;
+
 FileDelete, %ProjectFile%.dst
 FileRemoveDir, %ProjectFile%.dat, 1
 CloseLog(LogFile)
-
