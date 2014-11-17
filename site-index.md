@@ -8,6 +8,6 @@ root: .
 
 {% for page in sorted_pages %}
  {% if page.title %}
-  [{{ page.title }}]({{ page.url }})
+  [{{ page.title }}]({{ site.baseurl }}{{ page.url }})
  {% endif %}
 {% endfor %}
