@@ -1,7 +1,7 @@
 # Site settings
 title: Distance Developers Guide
 email: distance-sampling@googlegroups.com
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: /distance-consultancy # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 github_username:  DistanceDevelopment
 
