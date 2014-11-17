@@ -1,5 +1,8 @@
-Source Code and Binaries
-========================
+---
+layout: page
+root: ..
+title: Source Code and Binaries
+---
 
 Distance for Windows source code locations and the binaries, and other resources, built from it.
 

@@ -1,5 +1,8 @@
-File extensions
-===============
+---
+layout: page
+root: ..
+title: File extensions
+---
 
 | Extension | File type |
 | --------- | --------- |

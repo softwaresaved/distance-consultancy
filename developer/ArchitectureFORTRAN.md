@@ -1,5 +1,8 @@
-Distance for Windows and FORTRAN
-================================
+---
+layout: page
+root: ..
+title: Distance for Windows and FORTRAN
+---
 
 Analysis engines:
 

@@ -1,5 +1,8 @@
-Third-party Components
-======================
+---
+layout: page
+root: ..
+title: Third-party Components
+---
 
 Third-party components used to build Distance for Windows and/or are shipped with Distance for Windows.
 

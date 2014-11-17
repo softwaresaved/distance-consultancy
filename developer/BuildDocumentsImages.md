@@ -1,5 +1,8 @@
-How to build documents and images
-=================================
+---
+layout: page
+root: ..
+title: How to build documents and images
+---
 
 Find out tool versions
 ----------------------

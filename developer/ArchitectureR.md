@@ -1,5 +1,8 @@
-Distance for Windows and R
-==========================
+---
+layout: page
+root: ..
+title: Distance for Windows and R
+---
 
 Analysis engines:
 

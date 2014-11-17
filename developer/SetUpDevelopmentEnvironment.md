@@ -1,6 +1,8 @@
-
-How to set up a development environment
-=======================================
+---
+layout: page
+root: ..
+title: How to set up a development environment
+---
 
 Required knowledge
 ------------------

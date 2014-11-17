@@ -1,5 +1,8 @@
-How to build R components
-=========================
+---
+layout: page
+root: ..
+title: How to build R components
+---
 
 Find out tool versions
 ----------------------

@@ -1,5 +1,8 @@
-How to release a minor version of Distance for Windows
-======================================================
+---
+layout: page
+root: ..
+title: How to release a minor version of Distance for Windows
+---
 
 This section describes the process of making a setup package (or installer) for a new minor version of Distance (e.g. moving from 6.2 to 6.3) using the Wise InstallBuilder.
 

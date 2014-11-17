@@ -1,5 +1,8 @@
-How to build Fortran components
-===============================
+---
+layout: page
+root: ..
+title: How to build Fortran components
+---
 
 Find out tool versions
 ----------------------

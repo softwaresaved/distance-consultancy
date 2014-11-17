@@ -1,5 +1,8 @@
-Installed Components
-====================
+---
+layout: page
+root: ..
+title: Installed Components
+---
 
 Distance for Windows components and files installed by the Distance for Windows installer, and the source locations they originate from.
 

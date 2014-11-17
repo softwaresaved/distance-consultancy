@@ -1,5 +1,8 @@
-How to build Visual Basic components
-====================================
+---
+layout: page
+root: ..
+title: How to build Visual Basic components
+---
 
 Find out tool versions
 ----------------------
@@ -186,7 +189,7 @@ To update ownership, copyright etc:
 * Select Type: and enter Value: to set specific values e.g.
   - Company Name: Research Unit for Wildlife Population Assessment, University of St Andrews
   - File Description: Distance 6.2 Executable
-  - Legal Copyright: Copyright © 1998-2013 RUWPA
+  - Legal Copyright: Copyright (c) 1998-2013 RUWPA
   - Product Name: Distance 6.2
 
 View binary (dll, ocx, exe) meta-data

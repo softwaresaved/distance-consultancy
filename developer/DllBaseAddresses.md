@@ -1,5 +1,8 @@
-DLL Base Addresses
-==================
+---
+layout: page
+root: ..
+title: DLL Base Addresses
+---
 
 In Visual Basic, the default DLL base address is &H11000000. This will cause lots of memory re-allocation. Components will load faster if a random number between this and &H80000000 is chosen. 
 

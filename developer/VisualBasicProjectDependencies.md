@@ -1,5 +1,8 @@
-Visual Basic Project Dependencies
-=================================
+---
+layout: page
+root: ..
+title: Visual Basic Project Dependencies
+---
 
 Dependencies of Distance's Visual Basic projects.
 
