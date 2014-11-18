@@ -1,10 +1,19 @@
 # Site settings
 title: Distance Developers Guide
 email: distance-sampling@googlegroups.com
-baseurl: /distance-consultancy # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-github_username:  DistanceDevelopment
+project_site: http://distancesampling.org/
+
+baseurl: /distance-consultancy # gh-pages site subpath
+
+description: Distance Sampling project developer's guide
+
+github_username: DistanceDevelopment
+github_url: https://github.com/softwaresaved/distance-consultancy/
+
 distance_vmscripts: https://github.com/softwaresaved/distance-consultancy/tree/master/vmscripts
+
+theme_name: orderedlist
+theme_url: https://github.com/orderedlist
 
 # Build settings
 markdown: kramdown
