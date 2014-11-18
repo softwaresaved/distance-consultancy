@@ -1,7 +1,7 @@
 ---
 layout: page
 root: .
-title: Distance for Windows Developers Guide
+title: Distance Developers Guide
 ---
 
 The pages in this guide were written using Distance for Windows 6.2 release and the Distance virtual machine.
