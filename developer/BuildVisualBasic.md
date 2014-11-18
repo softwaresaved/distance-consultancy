@@ -18,7 +18,7 @@ View Visual Basic project dependencies
 To build a project requires all its pre-requisite projects to have been built. See:
 
 * [Visual Basic Project Dependencies](./VisualBasicProjectDependencies.html)
-* [Visual Basic projects list](../vmscripts/vbprojectlist.txt) - an ordered project list that respects the dependencies.
+* [Visual Basic projects list]({{ site.distance_vmscripts }}/vbprojectlist.txt) - an ordered project list that respects the dependencies.
 
 To see project dependencies within Visual Basic:
 
@@ -94,9 +94,9 @@ Build all Visual Basic projects
 -------------------------------
 
 * Download the following files into %BASE%\:
-  - [build_vb_projects.bat](../vmscripts/build_vb_projects.bat)
-  - [set_config.bat](../vmscripts/set_config.bat)
-  - [vbprojectlist.txt](../vmscripts/vbprojectlist.txt)
+  - [build_vb_projects.bat]({{ site.distance_vmscripts }}/build_vb_projects.bat)
+  - [set_config.bat]({{ site.distance_vmscripts }}/set_config.bat)
+  - [vbprojectlist.txt]({{ site.distance_vmscripts }}/vbprojectlist.txt)
 * Start command prompt:
   - Select Start => All Programs => Accessories => Command Prompt
 * Change into %BASE%\
@@ -117,9 +117,9 @@ Remove all Visual Basic binaries
 To remove all ocx, dll and exe files for a complete rebuild:
 
 * Download the following files into %BASE%\:
-  - [delete_vb_binaries.bat](../vmscripts/delete_vb_binaries.bat)
-  - [set_config.bat](../vmscripts/set_config.bat)
-  - [vbbinarylist.txt](../vmscripts/vbbinarylist.txt)
+  - [delete_vb_binaries.bat]({{ site.distance_vmscripts }}/delete_vb_binaries.bat)
+  - [set_config.bat]({{ site.distance_vmscripts }}/set_config.bat)
+  - [vbbinarylist.txt]({{ site.distance_vmscripts }}/vbbinarylist.txt)
 * Start command prompt:
   - Select Start => All Programs => Accessories => Command Prompt
 * Change into %BASE%\
