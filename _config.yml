@@ -1,10 +1,10 @@
 # Site settings
 title: Distance Developers Guide
 email: distance-sampling@googlegroups.com
+project_name: Distance
 project_site: http://distancesampling.org/
 
 baseurl: /distance-consultancy # gh-pages site subpath
-
 description: Distance Sampling project developer's guide
 
 github_username: DistanceDevelopment
