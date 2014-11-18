@@ -6,7 +6,7 @@ title: Installed Components
 
 Distance for Windows components and files installed by the Distance for Windows installer, and the source locations they originate from.
 
-For an overview of the Distance source code and how these installed components are built from it, see [Source Code and Binaries](./SourceCodeAndBinaries.md).
+For an overview of the Distance source code and how these installed components are built from it, see [Source Code and Binaries](./SourceCodeAndBinaries.html).
 
 ----------------------------------------------------------------------
 

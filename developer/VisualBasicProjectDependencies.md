@@ -6,7 +6,7 @@ title: Visual Basic Project Dependencies
 
 Dependencies of Distance's Visual Basic projects.
 
-All locations are relative to %BASE% except for [third-party components](./ThirdPartyComponents.md).
+All locations are relative to %BASE% except for [third-party components](./ThirdPartyComponents.html).
 
 Description is taken from the Visual Basic project and are either Reference or Component or Module dependencies on other projects.
 

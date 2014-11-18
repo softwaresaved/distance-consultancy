@@ -48,47 +48,47 @@ Create ReadMe:
 
 Copy Distance icon:
 
-* [Copy Distance icon for use in Visual Basic and release](./BuildDocumentsImages.md#copy-distance-icon-for-use-in-visual-basic-and-release)
+* [Copy Distance icon for use in Visual Basic and release](./BuildDocumentsImages.html#copy-distance-icon-for-use-in-visual-basic-and-release)
 
 Create splash screen:
 
-* [Create splash screen for new version](./BuildDocumentsImages.md#create-splash-screen-for-new-version)
-* [Copy splash screen for use in Visual Basic and release](./BuildDocumentsImages.md#copy-splash-screen-for-use-in-visual-basic-and-release)
+* [Create splash screen for new version](./BuildDocumentsImages.html#create-splash-screen-for-new-version)
+* [Copy splash screen for use in Visual Basic and release](./BuildDocumentsImages.html#copy-splash-screen-for-use-in-visual-basic-and-release)
 
 Update user's guide:
 
 * Update all documents in %BASE%Extras\External Documentation\Documents
   - Update version number, copyright year and date
   - Update with contents of ReadMe
-* [Update user guide version number](./BuildDocumentsImages.md#update-user-guide-version-number)
+* [Update user guide version number](./BuildDocumentsImages.html#update-user-guide-version-number)
 
 Build HTML Help and user guide:
 
-* [Build HTML Help](./BuildDocumentsImages.md#build-html-help)
-* [Copy HTML Help for use in Visual Basic and release](./BuildDocumentsImages.md#copy-html-help-for-use-in-visual-basic-and-release)
-* [Update title slide with splash screen](./BuildDocumentsImages.md#update-title-slide-with-splash-screen)
-* [Build title page image](./BuildDocumentsImages.md#build-title-page-image)
-* [Build user guide](./BuildDocumentsImages.md#build-user-guide)
-* [Add title page to user guide](./BuildDocumentsImages.md#add-title-page-image-to-user-guide)
-* [Build user guide PDF](./BuildDocumentsImages.md#build-user-guide-pdf)
-* [Copy use guide PDF for use in Visual Basic and release](./BuildDocumentsImages.md#copy-user-guide-pdf-for-use-in-visual-basic-and-release)
+* [Build HTML Help](./BuildDocumentsImages.html#build-html-help)
+* [Copy HTML Help for use in Visual Basic and release](./BuildDocumentsImages.html#copy-html-help-for-use-in-visual-basic-and-release)
+* [Update title slide with splash screen](./BuildDocumentsImages.html#update-title-slide-with-splash-screen)
+* [Build title page image](./BuildDocumentsImages.html#build-title-page-image)
+* [Build user guide](./BuildDocumentsImages.html#build-user-guide)
+* [Add title page to user guide](./BuildDocumentsImages.html#add-title-page-image-to-user-guide)
+* [Build user guide PDF](./BuildDocumentsImages.html#build-user-guide-pdf)
+* [Copy use guide PDF for use in Visual Basic and release](./BuildDocumentsImages.html#copy-user-guide-pdf-for-use-in-visual-basic-and-release)
 
 Build FORTRAN components:
 
-* [Build MCDS analysis engine](./BuildFortran.md#build-mcds-analysis-engine)
-* [Copy MCDS.exe for use in Visual Basic and release](./BuildFortran.md#copy-mcdsexe-for-use-in-visual-basic-and-release)
+* [Build MCDS analysis engine](./BuildFortran.html#build-mcds-analysis-engine)
+* [Copy MCDS.exe for use in Visual Basic and release](./BuildFortran.html#copy-mcdsexe-for-use-in-visual-basic-and-release)
 
 Build R components:
 
-* [Build R DSM and MRDS analysis engines](./BuildR.md#build-r-dsm-and-mrds-analysis-engines)
-* [Copy R packages for use in Visual Basic and release](./BuildR.md#copy-r-packages-for-use-in-visual-basic-and-release)
+* [Build R DSM and MRDS analysis engines](./BuildR.html#build-r-dsm-and-mrds-analysis-engines)
+* [Copy R packages for use in Visual Basic and release](./BuildR.html#copy-r-packages-for-use-in-visual-basic-and-release)
 * Check that %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\RPackages:
   - Contains all the dependencies needed.
   - Does not contain multiple versions of any library.
 
 Build Visual Basic components:
 
-* [Build all Visual Basic projects](./BuildVisualBasic.md#build-all-visual-basic-projects)
+* [Build all Visual Basic projects](./BuildVisualBasic.html#build-all-visual-basic-projects)
 * Update %BASE%\Database Engine\D6DbEng.vbp, ProjectSettings class with current version number. For example:
  
 <p/>
@@ -113,7 +113,7 @@ Build Visual Basic components:
     Global Const gblnIS_BETA = False
 * Update %BASE%\Database Engine\D6DbEng.vbp meta-data
   - Major and minor version numbers. These are accessed in-code (in %BASE%\Database Engine\Classes\ProjectDatabase.cls) and determine the version of new Distance project (.dst) files. If you don't up these then Distance will pop up an Upgrade Distance OLDM.OLDN Project File dialog when you try and create a new project
-* Rebuild D6DBEng.vbp - see [Build single Visual Basic project](./BuildVisualBasid.md#build-single-visual-basic-project)
+* Rebuild D6DBEng.vbp - see [Build single Visual Basic project](./BuildVisualBasid.html#build-single-visual-basic-project)
 * Update %BASE%\Interface\Distance.vbp meta-data:
   - Major and minor version numbers. These are accessed in-code (in %BASE%\Interface\Project.cls) and are passed on to new projects
   - Application, Title - update the version name and number
@@ -121,12 +121,12 @@ Build Visual Basic components:
   - File Description - update the version name and number
   - Legal Copyright - update the current year
   - Product Name - update the version name and number
-  - See [Update binary (dll, ocx, exe) meta-data](./BuildVisualBasic.md#update-binary-dll-ocx-exe-meta-data)
-  - Rebuild Distance.vbp - see [Build single Visual Basic project](./BuildVisualBasid.md#build-single-visual-basic-project)
-  - [View binary (dll, ocx, exe) meta-data](./BuildVisualBasic.md#view-binary-dll-ocx-exe-meta-data)) for Distance.exe
+  - See [Update binary (dll, ocx, exe) meta-data](./BuildVisualBasic.html#update-binary-dll-ocx-exe-meta-data)
+  - Rebuild Distance.vbp - see [Build single Visual Basic project](./BuildVisualBasid.html#build-single-visual-basic-project)
+  - [View binary (dll, ocx, exe) meta-data](./BuildVisualBasic.html#view-binary-dll-ocx-exe-meta-data)) for Distance.exe
 * Update meta-data of all other projects:
   - Optional
-  - [Build all Visual Basic projects](./BuildVisualBasic.md#build-all-visual-basic-projects)
+  - [Build all Visual Basic projects](./BuildVisualBasic.html#build-all-visual-basic-projects)
 
 Check Distance (optional)
 
@@ -332,7 +332,7 @@ Check Distance M.N and R:
 Check installation directory:
 
 * Browse to C:\Program Files\Distance M
-* Check the directory contents match those in [Installed Components](./InstalledComponents.md)
+* Check the directory contents match those in [Installed Components](./InstalledComponents.html)
 
 Archive release
 ---------------
