@@ -98,3 +98,45 @@ Edit pages
     git push origin gh-pages
 
 * Create a pull request from your fork on GitHub to this repository
+
+Hints and tips
+--------------
+
+* Pages can be written in HTML or MarkDown.
+* MarkDown pages should have a header of the form:
+
+<p/>
+
+    ---
+    layout: page
+    title: TITLE
+    root: PATH_TO_ROOT_DIRECTORY
+    ---
+
+<p/>
+
+    ---
+    layout: page
+    title: Example Page
+    root: .
+    ---
+
+* Relative links between MarkDown pages are allowed but use a .html suffix e.g.
+
+<p/>
+
+    [How to build R components](./developer/BuildR.html)
+
+* Site-wide configuration properties are in [_config.yml](./config.yml).
+* A configuration property, NAME, can be referenced in a page using:
+
+<p/>
+
+    {{ site.NAME }}
+
+<p/>
+
+    For support, contact {{ site.email }}.
+
+* Project-specific properties can be defined.
+* [_config.yml](./config.yml) baseurl holds the sub-path of the web site. This should match the name of the GitHub project hosting the web site e.g. distance-consultancy.
