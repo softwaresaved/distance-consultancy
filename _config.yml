@@ -4,7 +4,7 @@ email: distance-sampling@googlegroups.com
 baseurl: /distance-consultancy # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 github_username:  DistanceDevelopment
-distance_vmscripts: https://github.com/softwaresaved/distance-consultancy/tree/master
+distance_vmscripts: https://github.com/softwaresaved/distance-consultancy/tree/master/vmscripts
 
 # Build settings
 markdown: kramdown
