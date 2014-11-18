@@ -21,10 +21,6 @@ Developing Distance HOW-TOs
 * [How to build Visual Basic components](./developer/BuildVisualBasic.html)
 * [How to build documents and images](./developer/BuildDocumentsImages.html)
 
-Work-in-progress:
-
-* [How to set up a development environment](./developer/SetUpDevelopmentEnvironment.html) (work-in-progress)
-
 Releasing Distance
 ------------------
 
