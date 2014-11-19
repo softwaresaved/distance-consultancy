@@ -6,6 +6,8 @@ title: Third-party Components
 
 Third-party components used to build Distance for Windows and/or are shipped with Distance for Windows.
 
+These have been written by others, for which we usually do not have access to the source code, and which we are not responsible for maintaining. They need to be installed by developers and shipped with Distance for Windows.
+
 * "VB" denotes components explicity mentioned in Visual Basic projects - see [Visual Basic Project Dependencies](./VisualBasicProjectDependencies.html).
 * "Install" denotes components arising within a Distance for Windows installation - see [Installed Components](./InstalledComponents.html).
 
