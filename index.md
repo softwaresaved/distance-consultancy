@@ -13,19 +13,23 @@ Locations on the Distance virtual machine are denoted as follows:
 
 'nnnn' denotes the Distance version e.g. 6.
 
-Developing Distance HOW-TOs
----------------------------
+Developing Distance
+-------------------
 
 * [How to build R components](./developer/BuildR.html)
 * [How to build Fortran components](./developer/BuildFortran.html)
 * [How to build Visual Basic components](./developer/BuildVisualBasic.html)
 * [How to build documents and images](./developer/BuildDocumentsImages.html)
+
 * [Visual Basic coding conventions](./developer/VisualBasicCodingConventions.html)
+
+* [How to set up a development environment](./developer/SetUpDevelopmentEnvironment.html)
 
 Releasing Distance
 ------------------
 
 * [How to release a minor version of Distance for Windows](./developer/ReleaseMinor.html)
+* [Distance for Windows quick start setup](./developer/QuickStartSetup.html): summary of commands to install Distance for Windows, Distance R packages, R and RStudio which can help when testing Distance for Windows installers.
 
 Source and binary references
 ----------------------------
