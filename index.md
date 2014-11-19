@@ -20,6 +20,7 @@ Developing Distance HOW-TOs
 * [How to build Fortran components](./developer/BuildFortran.html)
 * [How to build Visual Basic components](./developer/BuildVisualBasic.html)
 * [How to build documents and images](./developer/BuildDocumentsImages.html)
+* [Visual Basic coding conventions](./developer/VisualBasicCodingConventions.html)
 
 Releasing Distance
 ------------------
