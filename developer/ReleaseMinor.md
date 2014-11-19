@@ -73,7 +73,7 @@ Build HTML Help and user guide:
 * [Build user guide PDF](./BuildDocumentsImages.html#build-user-guide-pdf)
 * [Copy use guide PDF for use in Visual Basic and release](./BuildDocumentsImages.html#copy-user-guide-pdf-for-use-in-visual-basic-and-release)
 
-Build FORTRAN components:
+Build Fortran components:
 
 * [Build MCDS analysis engine](./BuildFortran.html#build-mcds-analysis-engine)
 * [Copy MCDS.exe for use in Visual Basic and release](./BuildFortran.html#copy-mcdsexe-for-use-in-visual-basic-and-release)

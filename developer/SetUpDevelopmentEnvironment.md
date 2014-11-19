@@ -11,7 +11,7 @@ To develop Distance you need to have a working knowledge of the following:
 
 * Microsoft Component Object Model (COM) i.e. ActiveX, etc.
 * Visual Basic 6.0, including Data Access Objects (DAO)
-* FORTRAN, mostly 77, a little 90
+* Fortran, mostly 77, a little 90
 * R
 * ESRI Shapefiles. See ESRI Shapefile Technical Description ([PDF](http://distancesampling.org/downloads/shapefile.pdf)), a white paper produced by ESRI describing the internal format of a shapefile
   - You may also find  Martin Wegmann's Spatial data handling in R cheatsheet ([PDF](https://github.com/wegmann/RSdocs/blob/master/Cheatsheet/AniMove_refcard.pdf?raw=true)) useful.
@@ -46,7 +46,7 @@ Compaq Digital Fortran 6.6 Professional:
 
 * MCDS and CDS analysis engine, MCDS.exe
 * Install From Fortran CD - ask Len
-* Update to 6.6C by running CVF-66-66C3.exe in DevCD FORTRAN folder
+* Update to 6.6C by running CVF-66-66C3.exe in DevCD Fortran folder
 * Can optionally install Array Visualizer from a separate CD
 
 R 2.9.0 (current as of May 2009):

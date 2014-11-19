@@ -17,7 +17,7 @@ title: File extensions
 | .dll | Dynamic Link Library |
 | .doc | Microsoft Word document |
 | .dst | Distance project file - Microsoft Jet database |
-| .dsw | Visual C++ / Compaq Visual FORTRAN workspace |
+| .dsw | Visual C++ / Compaq Visual Fortran workspace |
 | .exe | executable |
 | .exp | Visual Basic export file - used by linker to build DLLs that contain exports |
 | .ico | ICO image |

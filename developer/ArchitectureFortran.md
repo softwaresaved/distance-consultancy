@@ -1,7 +1,7 @@
 ---
 layout: page
 root: ..
-title: Distance for Windows and FORTRAN
+title: Distance for Windows and Fortran
 ---
 
 Analysis engines:
@@ -12,7 +12,7 @@ Analysis engines:
 * Stand-alone application, MCDS.exe
 * For full details of usage and input/output file formats, see Appendix - MCDS Engine Reference, user's guide, p307-344
 
-Distance for Windows <=> FORTRAN interface
+Distance for Windows <=> Fortran interface
 ==========================================
 
 * Create:
@@ -27,7 +27,7 @@ Distance for Windows <=> FORTRAN interface
 * Wait for results:
   - Exits with success
   - Shut down with Internal Error message
-  - Crash with FORTRAN runtime error - rare
+  - Crash with Fortran runtime error - rare
 
 Ec.exe 
 
@@ -142,7 +142,7 @@ Occur in output and log files:
 * Errors
 * Internal errors
 
-FORTRAN debugging output:
+Fortran debugging output:
 
 * Dumped onto the command-line / standard output
 
@@ -155,7 +155,7 @@ Exit codes
 * 4 - file errors e.g. could not find the specified command file
 * N - major error
 
-Visual Basic <=> FORTRAN interface
+Visual Basic <=> Fortran interface
 ==================================
 
 Microsoft Jet database, DistIni.mdb, settings:
