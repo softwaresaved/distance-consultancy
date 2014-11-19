@@ -1,10 +1,10 @@
 ---
 layout: page
 root: ..
-title: Installed Components
+title: Components
 ---
 
-Distance for Windows components and files installed by the Distance for Windows installer, and the source locations they originate from.
+Distance for Windows components and files. These are installed by the Distance for Windows installer, and the source locations they originate from.
 
 For an overview of the Distance source code and how these installed components are built from it, see [Source Code and Binaries](./SourceCodeAndBinaries.html).
 
@@ -22,7 +22,7 @@ DLLs
 | DnnnnNSvr.dll | Numerical Server\NServer\ | Manages NEngine runs |
 | | | |
 | **Numerical engine (NEngine)** | | |
-| DnnnnDesEng.dll | Design Engine\Engine\ | Design and survey engine |
+| DnnnnDesEng.dll | Design Engine\Engine\ | Design and survey numerical engine |
 | | | |
 | **Numerical engine interfaces (NEI)** | | One per NEngine |
 | IDnnnnNEng.dll | Numerical Server\TypeLibrary\ | NEI type library - implemented by all NEIs |
@@ -33,7 +33,7 @@ DLLs
 | DnnnnMRDSNEI.dll | Analysis Engines\MRDS\NEngineInterface\ | MRDS NEI |
 | DnnnnNEIUtil.dll | Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\ | NEI utilities |
 | | | |
-| **Wizards** | | |
+| **Wizards** | | Additional GUI components |
 | DnnnnIDWiz.dll | Interface\Wizards\Setup Project\ | Import Data wizard |
 | DnnnnSPWiz.dll | Interface\Wizards\Import Data\ | Setup Project wizard |
 | | | |
@@ -53,7 +53,7 @@ Widgets for display and interaction in the GUI. These are plugged-into Distance 
 
 | OCX | Source location (relative to %BASE%) | Description |
 | --- | ------------------------------------ | ----------- |
-| **Properties dialogs** | | Specifying options - one per NEngine plus others |
+| **Properties dialogs** | | Pluggable GUI components to allow users to specify options - one per NEngine plus others |
 | DnnnnDesPrp.ocx | Design Engine\Properties\ | Design properties | 
 | DnnnnSvyPrp.ocx | Survey\Properties\ | Survey properties |
 | DnnnnDFPrp.ocx | Interface\Properties\Data Filter\ | Data filter properties |
@@ -62,7 +62,7 @@ Widgets for display and interaction in the GUI. These are plugged-into Distance 
 | DnnnnMRDSPrp.ocx | Analysis Engines\MRDS\Properties\ | MRDS analysis engine properties |
 | DnnnnDSMPrp.ocx | Analysis Engines\DSM\Properties\ | DSM analysis engine properties |
 | | | |
-| **Details pages** | | Viewing logs and results of runs - one per NEngine plus others |
+| **Details pages** | | Pluggable GUI components to allow users to view logs and results of runs - one per NEngine plus others |
 | DnnnnDesDet.ocx | Design Engine\Details\ | Design details |
 | DnnnnSvyDet.ocx | Survey\Details\ | Survey details |
 | DnnnnCDSDet.ocx | Analysis Engines\CDS\Details\ | CDS analysis engine details |
@@ -70,8 +70,8 @@ Widgets for display and interaction in the GUI. These are plugged-into Distance 
 | DnnnnMRDSDet.ocx | Analysis Engines\MRDS\Details\ | MRDS analysis engine details |
 | | | |
 | **GIS** | | |
-| DnnnnMap.ocx | Map\Mapper\ | Map display control |
-| DnnnnLegend.ocx | Map\Legend\ | Map legend control |
+| DnnnnMap.ocx | Map\Mapper\ | GIS map display control |
+| DnnnnLegend.ocx | Map\Legend\ | GIS map legend control |
 | | | |
 | **Miscellaneous** | | |
 | CSDesc3.ocx | Misc\CoordSysDesc\ | Co-ordinate system description |
