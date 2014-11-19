@@ -11,19 +11,19 @@ Third-party components used to build Distance for Windows and/or are shipped wit
 
 | File | Location | Description | VB | Install |
 | ---- | -------- | ----------- |----| ------- |
-| Common Controls Replacement Project (CCRP) | | Freeware fancy folder browser dialog | | |
+| **Common Controls Replacement Project (CCRP)** | | Freeware fancy folder browser dialog | | |
 | ccrpbds6.dll | C:\Program Files\CCRP\ccrpbds6-b2\ | | Y | Y |
 | | | | | |
-| ComponentOne | VSFlex | Spreadsheet functionality | | |
+| **ComponentOne** | **VSFlex** | Spreadsheet functionality | | |
 | VSFLEX7D.OCX | C:\WINDOWS\system32\ | | Y | Y |
 | | | | | |
-| Data Dynamics | ActiveBar | Toolbar functionality | | |
+| **Data Dynamics** | **ActiveBar** | Toolbar functionality | | |
 | Actbar2.ocx | C:\Program Files\Common Files\Data Dynamics\ActiveBar2\ | | Y | Y |
 | | | | | |
-| Desaware | SpyWorks | Low-level functions for process manipulation. Allows some of the power of C++ to be implemented in VB. | | |
+| **Desaware** | **SpyWorks** | Low-level functions for process manipulation. Allows some of the power of C++ to be implemented in VB. | | |
 | dwAXExtn.dll | C:\Application Development\Distance60Extras\DistanceDevCD\SpyWorks63\System32\ | | Y | Y |
 | | | | | |
-| ESRI | MapObjects | ESRI shapefiles I/O. GIS and spatial functionality (e.g. projections, spatial selection etc) | |
+| **ESRI** | **MapObjects** | ESRI shapefiles I/O. GIS and spatial functionality (e.g. projections, spatial selection etc) | |
 | AF20.dll | C:\Program Files\Common Files\ESRI\ | | | Y |
 | JetTable20.dll | " | | | Y |
 | Mo20.ocx | " | | Y | Y |
@@ -32,33 +32,33 @@ Third-party components used to build Distance for Windows and/or are shipped wit
 | sg81.dll | " | | | Y |
 | Shape20.dll | " | | | Y |
 | | | | | |
-| Farpoint | Tabpro | Tabs used within widgets | | |
+| **Farpoint** | **Tabpro** | Tabs used within widgets | | |
 | TAB32X30.OCX | C:\Program Files\Tabpro30\BIN\ | |Y | Y |
 | | | | | |
-| Microsoft | C runtime library | | | |
+| **Microsoft** | **C runtime library** | | | |
 | MSVCP60.dll | C:\Program Files\ESRI\MapObjects2\Microsoft\ | | | Y |
 | MSVCRT.DLL | " |  | | Y |
 | | | | | | 
-| Microsoft | DAO | Data access objects. Powers database engine and provides in-code access to Microsoft Jet databases | | |
+| **Microsoft** | **DAO** | Data access objects. Powers database engine and provides in-code access to Microsoft Jet databases | | |
 | DAO2535.tlb | C:\Program Files\Common Files\Microsoft Shared\DAO\ | | | Y |
 | DAO350.dll | " | DAO 3.51 Object Library | Y | Y |
 | | | | | |
-| Microsoft | Jet 3.51 | Database | | |
+| **Microsoft** | **Jet 3.51** | Database | | |
 | MSJET35.DLL | C:\WINDOWS\system32\ | | | Y |
 | MSJINT35.DLL | " | | | Y |
 | MSJTER35.dll | " | Errors | | Y |
 | | | | | |
-| Microsoft | Jet 3.51 IISAM drivers | Installable Indexed Sequential Access Method | | |
+| **Microsoft** | **Jet 3.51 IISAM drivers** | Installable Indexed Sequential Access Method | | |
 | MSEXCL35.DLL | " | Microsoft Excel 3.0-8.0 spreadsheets | | Y |
 | MSRD2X35.dll | " | Native Microsoft Access 97 and earlier databases | | Y |
 | MSTEXT35.DLL | " | Tabular text files | | Y |
 | | | | | |
-| Microsoft Windows | Windows Script | Utilities e.g. regular expression searching, easy Windows file system manipulation |
+| **Microsoft** | **Windows Script** | Utilities e.g. regular expression searching, easy Windows file system manipulation |
 | scrrun.dll | C:\WINDOWS\system32\ | Windows Scripting Runtime | Y | |
 | stdole2.tlb | C:\WINDOWS\system32\ | Standard OLE types | Y | |
 | vbscript.dll | C:\WINDOWS\system32\ | VBScript Regular Expressions | Y | |
 | | | | |
-| Microsoft | Visual Basic 5 and 6 |  Chart, Rich Text Box, Windows Common Controls etc | | Y |
+| **Microsoft** | **Visual Basic 5 and 6** |  Chart, Rich Text Box, Windows Common Controls etc | | Y |
 | COMCTL32.OCX | C:\WINDOWS\system32\ | Windows Common Controls ActiveX Control Module | Y | Y |
 | comdlg32.ocx | C:\WINDOWS\system32\ | Windows Common Dialog | Y | |
 | MSChrt20.ocx | " | Chart | Y | Y |
@@ -66,14 +66,14 @@ Third-party components used to build Distance for Windows and/or are shipped wit
 | RichTx32.ocx | " | Rich Text OLE Control | Y | Y |
 | VB5DB.dll | " | Visual Basic ICursor interface library | | Y |
 | | | | | |
-| Polar Software | PolarZIP | Compression functions | | Y |
+| **Polar Software** | **PolarZIP** | Compression functions | | Y |
 | PolarZIP.ocx | C:\Program Files\Polar ZIP\Redistribution\ | | Y | Y |
 | PolarZipSpan.dll | " | | | Y |
 | | | | | |
-| Sheridan Software | ActiveThreed | Split-window functionality | | |
+| **Sheridan Software** | **ActiveThreed** | Split-window functionality | | |
 | SPLITTER.OCX | C:\Program Files\ActiveThreed\ | | Y | Y |
 | | | | | |
-| Zlib | Zip | Freeware compression functions - for legacy purposes only - used for compression but deprecated by PolarZIP. | | |
+| **Zlib** | **Zip** | Freeware compression functions - for legacy purposes only - used for compression but deprecated by PolarZIP. | | |
 | DstZip.dll | C:\Application Development\Distance60Extras\DistanceDevCD\Zlib\ | | | Y |
 
 Others:
