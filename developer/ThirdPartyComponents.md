@@ -11,7 +11,7 @@ Third-party components used to build Distance for Windows and/or are shipped wit
 
 | File | Location | Description | VB | Install |
 | ---- | -------- | ----------- |----| ------- |
-| Common Controls Replacement Project (CCRP) | | Fancy folder browser dialog | | |
+| Common Controls Replacement Project (CCRP) | | Freeware fancy folder browser dialog | | |
 | ccrpbds6.dll | C:\Program Files\CCRP\ccrpbds6-b2\ | | Y | Y |
 | | | | | |
 | ComponentOne | VSFlex | Spreadsheet functionality | | |
@@ -23,7 +23,7 @@ Third-party components used to build Distance for Windows and/or are shipped wit
 | Desaware | SpyWorks | Low-level functions for process manipulation. Allows some of the power of C++ to be implemented in VB. | | |
 | dwAXExtn.dll | C:\Application Development\Distance60Extras\DistanceDevCD\SpyWorks63\System32\ | | Y | Y |
 | | | | | |
-| ESRI | MapObjects - interface to GIS shapefile I/O and manipulation | | | |
+| ESRI | MapObjects | ESRI shapefiles I/O. GIS and spatial functionality (e.g. projections, spatial selection etc) | |
 | AF20.dll | C:\Program Files\Common Files\ESRI\ | | | Y |
 | JetTable20.dll | " | | | Y |
 | Mo20.ocx | " | | Y | Y |
@@ -32,14 +32,14 @@ Third-party components used to build Distance for Windows and/or are shipped wit
 | sg81.dll | " | | | Y |
 | Shape20.dll | " | | | Y |
 | | | | | |
-| Farpoint | Tabpro | Tabs | | |
+| Farpoint | Tabpro | Tabs used within widgets | | |
 | TAB32X30.OCX | C:\Program Files\Tabpro30\BIN\ | |Y | Y |
 | | | | | |
 | Microsoft | C runtime library | | | |
 | MSVCP60.dll | C:\Program Files\ESRI\MapObjects2\Microsoft\ | | | Y |
 | MSVCRT.DLL | " |  | | Y |
 | | | | | | 
-| Microsoft | DAO | Data access objects Powers database engine and provides in-code access to Microsoft Jet databases | | |
+| Microsoft | DAO | Data access objects. Powers database engine and provides in-code access to Microsoft Jet databases | | |
 | DAO2535.tlb | C:\Program Files\Common Files\Microsoft Shared\DAO\ | | | Y |
 | DAO350.dll | " | DAO 3.51 Object Library | Y | Y |
 | | | | | |
@@ -73,7 +73,7 @@ Third-party components used to build Distance for Windows and/or are shipped wit
 | Sheridan Software | ActiveThreed | Split-window functionality | | |
 | SPLITTER.OCX | C:\Program Files\ActiveThreed\ | | Y | Y |
 | | | | | |
-| Zlib | Zip | Compression functions - for legacy purposes only | | |
+| Zlib | Zip | Freeware compression functions - for legacy purposes only - used for compression but deprecated by PolarZIP. | | |
 | DstZip.dll | C:\Application Development\Distance60Extras\DistanceDevCD\Zlib\ | | | Y |
 
 Others:
