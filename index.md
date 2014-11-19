@@ -34,11 +34,20 @@ Releasing Distance
 Architecture
 ------------
 
-Distance is very modular - it is made up of a large number of semi-independent components written in a variety of programming languages. Distance consists of both components developed by the team and those developed by third-parties:
+Distance consists of in-house and third-party components:
+
+* [Components](./developer/Components.html) - Distance components.
+* [Third-party Components](./developer/ThirdPartyComponents.html) - third-party components written by others and which are needed to build Distance for Windows and/or are shipped with Distance for Windows. 
+
+Distance source code:
+
+* [Source Code and Binaries](./developer/SourceCodeAndBinaries.html) - Distance for Windows source code locations and the binaries, and other resources, built from it.
+
+Distance installation:
 
 * [Installed Components](./developer/InstalledComponents.html) - Distance for Windows components and files. These are installed by the Distance for Windows installer.
-* [Third-party Components](./developer/ThirdPartyComponents.html) - third-party components written by others and which are needed to build Distance for Windows and/or are shipped with Distance for Windows. 
-* [Source Code and Binaries](./developer/SourceCodeAndBinaries.html) - Distance for Windows source code locations and the binaries, and other resources, built from it.
+
+Architecture:
 
 * [Distance for Windows and Fortran](./developer/ArchitectureFortran.html)
 * [Distance for Windows and R](./developer/ArchitectureR.html)
