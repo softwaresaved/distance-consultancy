@@ -203,4 +203,27 @@ Random numbers:
 * Bootstrap resampling
 * Two congruential generators - see L'Ecuyer 1988 or Visual Fortran manual for more details
 
+Covariates:
+
+* Set in PARAMS.INC
+* MAXFACS is the number of factor levels per covariate:
+
+<p/>
+
+    PARAMETER (SMALL1=1.0E-3, SMALL2=1.0E-10, SMALL3=1.0E-12,
+    ...
+    $          MAXFACS=200,MAXCV=MAXCOVS*(MAXFACS-1))
+
+* Default is 200.
+* One developer has tried with 50 factors which seems to work.
+
+Stack size:
+
+| Hexadecimal | Decimal   | MB  |
+| ----------- | --------- | --- |
+|   800 000   |   8388608 |   8 |
+| 1 000 000   |  16777216 |  16 |
+| 1 400 000   |  20971520 |  20 |
+| 2 800 000   |  41943040 |  40 |
+| 6 400 000   | 104857600 | 100 |
 
