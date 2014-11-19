@@ -44,5 +44,5 @@ Source and binary references
 Architecture
 ------------
 
-* [Distance for Windows and FORTRAN](./developer/ArchitectureFORTRAN.html)
+* [Distance for Windows and Fortran](./developer/ArchitectureFortran.html)
 * [Distance for Windows and R](./developer/ArchitectureR.html)
