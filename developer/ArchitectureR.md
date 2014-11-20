@@ -205,13 +205,13 @@ Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Classes\RProcess.cls
 Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Classes\InputFileMakerUtils.cls:
 
 * Function GetRPackageName:
-  - Gets database, ProjectSettingsMemo table, AnalysisEngine section, Setting value for Key=="DSM"|"MRDS" and parses Name=Value pairs in Setting value to get PackageName
+  - Gets database, ProjectSettingsMemo table, AnalysisEngine section, Setting value for Key=="DSM"\|"MRDS" and parses Name=Value pairs in Setting value to get PackageName
   - Returns full path to ZIP file or package name only depending on boolean argument
 * Function GetRPackagePath:
   - Calls D6Util.RPath to convert App.Path\RPackages\ to R-compliant format
 * Function GetRSupportFileName
   - If argument Key=="" then file name is set to getstrR_SUPPORT_FILE
-  - Else gets database, ProjectSettingsMemo table, AnalysisEngine section, Setting value for Key=="DSM"|"MRDS" and parses Name=Value pairs in Setting value to get SupportFileName
+  - Else gets database, ProjectSettingsMemo table, AnalysisEngine section, Setting value for Key=="DSM"\|"MRDS" and parses Name=Value pairs in Setting value to get SupportFileName
   - Returns file name prefixed with App.Path\ depending on boolean argument
 
 Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Modules\Global.bas:
