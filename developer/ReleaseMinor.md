@@ -332,7 +332,7 @@ Check Distance M.N and R:
 Check installation directory:
 
 * Browse to C:\Program Files\Distance M
-* Check the directory contents match those in [Installed Components](./InstalledComponents.html)
+* Check the directory contents match those in [Release Structure](./ReleaseStructure.html).
 
 Archive release
 ---------------

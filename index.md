@@ -34,18 +34,19 @@ Releasing Distance
 Architecture
 ------------
 
-Distance consists of in-house and third-party components:
+Distance components:
 
-* [Components](./developer/Components.html) - Distance components.
+* [Code Components](./developer/CodeComponents.html) - Code-based components.
+* [Non-code Components](./developer/NonCodeComponents.html) - Non-code components.
 * [Third-party Components](./developer/ThirdPartyComponents.html) - third-party components written by others and which are needed to build Distance for Windows and/or are shipped with Distance for Windows. 
 
 Distance source code:
 
 * [Source Code and Binaries](./developer/SourceCodeAndBinaries.html) - Distance for Windows source code locations and the binaries, and other resources, built from it.
 
-Distance installation:
+Distance release:
 
-* [Installed Components](./developer/InstalledComponents.html) - Distance for Windows components and files. These are installed by the Distance for Windows installer.
+* [Release Structure](./developer/ReleaseStructure.html) - Distance for Windows release structure after installation.
 
 Architecture:
 

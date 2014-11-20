@@ -151,3 +151,82 @@ Content that has been manually copied or duplicates a file from elsewhere in Dis
 | %BASE%\Utilities\Help\distance.chm | %BASE%Extras\External Documentation\Documents\HTMLHelp\distance.chm |
 | %BASE%\Utilities\Help\distance.pdf | %BASE%Extras\External Documentation\Documents\Manual\distance-master.pdf |
 | %BASE%Extras\Setup\ReadMe.rtf | %BASE%Extras\External Documentation\ReadMe\ReadMe31.rtf |
+
+Third-party
+-----------
+
+* "VB" denotes components explicity mentioned in Visual Basic projects - see [Visual Basic Project Dependencies](./VisualBasicProjectDependencies.html).
+* "Release" denotes components arising within a Distance for Windows release - see [Release Structure](./ReleaseStructure.html).
+
+| File | Location | VB | Install |
+| ---- | -------- | -- | ------- |
+| **Common Controls Replacement Project (CCRP)** | | | |
+| ccrpbds6.dll | C:\Program Files\CCRP\ccrpbds6-b2\ | Y | Y |
+| | | | |
+| **Compaq Visual Fortran Professional** | | | |
+| Ec.exe | %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Ec.exe <br/> %BASE%\Numerical Server\NEngineHost\EC.EXE | n/a | Y |
+| | | | |
+| **ComponentOne VSFlex** | | | |
+| VSFLEX7D.OCX | C:\WINDOWS\system32\ | Y | Y |
+| | | | |
+| **Data Dynamics ActiveBar** | | | |
+| Actbar2.ocx | C:\Program Files\Common Files\Data Dynamics\ActiveBar2\ | Y | Y |
+| | | | |
+| **Desaware SpyWorks** | | | |
+| dwAXExtn.dll | C:\Application Development\Distance60Extras\DistanceDevCD\SpyWorks63\System32\ | Y | Y |
+| | | | |
+| **ESRI MapObjects** | | | |
+| AF20.dll | C:\Program Files\Common Files\ESRI\ | | Y |
+| JetTable20.dll | " | | Y |
+| Mo20.ocx | " | Y | Y |
+| mtch.dll | " | | Y |
+| pe81.dll | " | | Y |
+| sg81.dll | " | | Y |
+| Shape20.dll | " | | Y |
+| | | | |
+| **Farpoint Tabpro** | | | |
+| TAB32X30.OCX | C:\Program Files\Tabpro30\BIN\ | Y | Y |
+| | | | |
+| **IMSL Numerical routines** | | | |
+| n/a | Compiled into Distance's MCDS.exe | n/a | Y |
+| | | | |
+| **Microsoft C runtime library** | | | |
+| MSVCP60.dll | C:\Program Files\ESRI\MapObjects2\Microsoft\ | | Y |
+| MSVCRT.DLL | " |  | Y |
+| | | | |
+| **Microsoft DAO** | | | |
+| DAO2535.tlb | C:\Program Files\Common Files\Microsoft Shared\DAO\ | | Y |
+| DAO350.dll | " | Y | Y |
+| | | | |
+| **Microsoft Jet 3.51** | Database | | |
+| MSJET35.DLL | C:\WINDOWS\system32\ | | Y |
+| MSJINT35.DLL | " | | Y |
+| MSJTER35.dll | " | | Y |
+| | | | |
+| **Microsoft Jet 3.51 IISAM drivers** | | | |
+| MSEXCL35.DLL | " | | Y |
+| MSRD2X35.dll | " | | Y |
+| MSTEXT35.DLL | " | | Y |
+| | | | |
+| **Microsoft Windows Script** | | | |
+| scrrun.dll | C:\WINDOWS\system32\ | Y | |
+| stdole2.tlb | C:\WINDOWS\system32\ | Y | |
+| vbscript.dll | C:\WINDOWS\system32\ | Y | |
+| | | | |
+| **Microsoft Visual Basic 5 and 6** | | | |
+| COMCTL32.OCX | C:\WINDOWS\system32\ | Y | Y |
+| comdlg32.ocx | C:\WINDOWS\system32\ | Y | |
+| MSChrt20.ocx | " | Y | Y |
+| MSComCt2.ocx | " | Y | Y |
+| RichTx32.ocx | " | Y | Y |
+| VB5DB.dll | " | | Y |
+| | | | |
+| **Polar Software PolarZIP** | | | |
+| PolarZIP.ocx | C:\Program Files\Polar ZIP\Redistribution\ | Y | Y |
+| PolarZipSpan.dll | " | | Y |
+| | | | |
+| **Sheridan Software ActiveThreed** | | | |
+| SPLITTER.OCX | C:\Program Files\ActiveThreed\ | Y | Y |
+| | | | |
+| **Zlib Zip** | | | |
+| DstZip.dll | C:\Application Development\Distance60Extras\DistanceDevCD\Zlib\ | | Y |
