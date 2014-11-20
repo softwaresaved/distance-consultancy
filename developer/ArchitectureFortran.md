@@ -170,6 +170,16 @@ Microsoft Jet database, DistIni.mdb, settings:
 | CDS | MCDS.exe | D6CDSPrp.CDSProperties | D6CDSNEI.CDSNEngineInterface | D6CDSDet.CDSLog | D6CDSDet.CDSResults |
 | MCDS | MCDS.exe | D6CDSPrp.CDSProperties | D6CDSNEI.CDSNEngineInterface | D6CDSDet.CDSLog | D6CDSDet.CDSResults |
 
+Analysis Engines\CDS\NEngineInterface\ classes implement the following design:
+
+* Call reset to delete current results, if there are any
+  - This is necessary if, for example, the analysis engine has changed and the data are stored in a completely different format
+* Set lock on data, if appropriate
+* Make data file
+* Make input file
+* Run analysis
+* Read in results
+
 Analysis Engines\CDS\NEngineInterface\Classes\InputFileMaker.cls:
 
 * Function Makefile 
@@ -178,8 +188,8 @@ Analysis Engines\CDS\NEngineInterface\Classes\InputFileMaker.cls:
 Analysis Engines\CDS\NEngineInterface\Classes\CDSNEngineInterface.cls:
 
 * Function RunItem:
-  - Calls CDSProcess.EngineName(IsMCDS=True|False) to get engine file name
-  - Calls CDSProcess.RunEngine(engine file name, IsMCDS=True|False, input file name, command file name)
+  - Calls CDSProcess.EngineName(IsMCDS=True\|False) to get engine file name
+  - Calls CDSProcess.RunEngine(engine file name, IsMCDS=True\|False, input file name, command file name)
 
 Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Classes\CDSProcess.cls:
 
@@ -191,7 +201,7 @@ Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Classes\CDSProcess.cls:
 * Sub RunEngine:
   - If Windows NT and EC usage required, invokes`PATH\ec "PATH\MCDS.exe MODE INPUT_COMMAND_FILE \options 2>LOG_FILE"`
   - Otherwise invokes `PATH\MCDS.exe MODE INPUT_COMMAND_FILE \options 2>LOG_FILE`
-  - MODE is 0|1
+  - MODE is 0\|1
 
 Miscellaneous MCDS implementation details
 =========================================
