@@ -21,14 +21,20 @@ The pages in this guide were written using Distance for Windows 6.2 release and 
 Developing Distance
 -------------------
 
+Source code access and management:
+
 * [MCDS Fortran source code](./developer/McdsSourceCode.html)
 * [DSM and MRDS R source code](./developer/DsmMrdsSourceCode.html)
+
+Day-to-day development:
 
 * [How to set up a development environment](./developer/SetUpDevelopmentEnvironment.html)
 * [How to build R components](./developer/BuildR.html)
 * [How to build Fortran components](./developer/BuildFortran.html)
 * [How to build Visual Basic components](./developer/BuildVisualBasic.html)
 * [How to build documents and images](./developer/BuildDocumentsImages.html)
+
+Project coding conventions:
 
 * [Visual Basic coding conventions](./developer/VisualBasicCodingConventions.html)
 
@@ -41,28 +47,28 @@ Releasing Distance
 Architecture
 ------------
 
-Distance components:
+Components:
 
-* [Code Components](./developer/CodeComponents.html) - Code-based components.
-* [Non-code Components](./developer/NonCodeComponents.html) - Non-code components.
-* [Third-party Components](./developer/ThirdPartyComponents.html) - third-party components written by others and which are needed to build Distance for Windows and/or are shipped with Distance for Windows. 
+* [Code Components](./developer/CodeComponents.html): code-based components.
+* [Non-code Components](./developer/NonCodeComponents.html): non-code components.
+* [Third-party Components](./developer/ThirdPartyComponents.html): third-party components written by others and which are needed to build Distance and/or are shipped with Distance.
 
-Distance source code:
+Directory structures:
 
-* [Source Code and Binaries](./developer/SourceCodeAndBinaries.html) - Distance for Windows source code locations and the binaries, and other resources, built from it.
+* [Source Code and Binaries](./developer/SourceCodeAndBinaries.html): expected source code, document and other locations and the binaries, and other resources, built from these.
+* [Release Structure](./developer/ReleaseStructure.html): Distance for Windows directory and file structure.
 
-Distance release:
+Dependencies:
 
-* [Release Structure](./developer/ReleaseStructure.html) - Distance for Windows release structure after installation.
+* [Source Code and Binaries](./developer/SourceCodeAndBinaries.html): documents relationship between source code, documents, images and binaries, PDFs and compiled HTML help, and how the latter relates to the former.
+* [Visual Basic Project Dependencies](./developer/VisualBasicProjectDependencies.html): Visual Basic project inter-dependencies.
 
-Architecture:
-
-* [Distance for Windows and Fortran](./developer/ArchitectureFortran.html)
-* [Distance for Windows and R](./developer/ArchitectureR.html)
-* [Visual Basic Project Dependencies](./developer/VisualBasicProjectDependencies.html) - Dependencies of Distance's Visual Basic projects.
-
-Miscellaneous
--------------
+Miscellaneous:
 
 * [DLL Base Addresses](./developer/DllBaseAddresses.html) - DLL addresses used to date in Distance components.
 * [File extensions](./developer/FileExtensions.html) - Commonly-occurring file extensions.
+
+Interfaces:
+
+* [Distance for Windows and Fortran](./developer/ArchitectureFortran.html): interface between Visual Basic and Fortran (for MCDS)
+* [Distance for Windows and R](./developer/ArchitectureR.html): interface between Visual Basic and R (for DSM and MRDS)
