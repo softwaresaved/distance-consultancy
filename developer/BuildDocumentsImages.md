@@ -128,6 +128,7 @@ Copy HTML Help for use in Visual Basic and release
 * Copy Visual Basic macro file for use in Visual Basic components:
   - This contains a list of constants giving shortcuts to the help pages and is used to provide context-sensitive help.
   - Copy %BASE%Extras\External Documentation\Documents\HTMLHelp\distance.bas to %BASE%\Utilities\Help\
+* Note that compiled HTML help is not usable from the Help menu within development versions, but it is usable in release versions.
 
 Build HTML Help from command prompt
 -----------------------------------
@@ -281,4 +282,5 @@ This assumes that:
 Copy user guide PDF for use in Visual Basic and release
 -------------------------------------------------------
 
-Copy %BASE%Extras\External Documentation\Documents\Manual\distance-master.pdf to %BASE%\Utilities\Help\distance.pdf
+* Copy %BASE%Extras\External Documentation\Documents\Manual\distance-master.pdf to %BASE%\Utilities\Help\distance.pdf
+* Note that compiled HTML help is not usable from the Help menu within development versions, but it is usable in release versions.
