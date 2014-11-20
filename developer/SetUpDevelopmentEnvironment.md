@@ -37,6 +37,11 @@ C:\Application Development\Distancex0Extras:
 * Non-code content
 * AKA %BASE%Extras
 
+Logical drives
+--------------
+
+Windows XP (and possibly other OSs) have the facility to map a logical drive as a directory. This is useful as it means that C:\Application Development can actually be a separate drive, making de-fragmentation, backing up, etc useful. 
+
 Code development tools
 ----------------------
 
