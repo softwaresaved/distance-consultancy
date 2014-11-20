@@ -19,6 +19,8 @@ To develop Distance you need to have a working knowledge of the following:
 Development environment
 =======================
 
+**Important!** Do not do development and test Distance setup packages or install Distance releases on the same machine. This results in the Distance executable and support components being in two places on the computer, which may get confusing!
+
 Virtual machine
 ---------------
 
