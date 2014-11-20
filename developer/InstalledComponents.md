@@ -115,7 +115,7 @@ R scripts
 Miscellaneous
 -------------
 
-| R script | Source location | Description |
+| File | Source location | Description |
 | -------- | --------------- | ----------- |
 | DistIni.mdb | %BASE%\Database Engine\DistIni.mdb | Default project settings and settings not unique to specific projects |
 | DistanceProject.ico | %BASE%Extras\Graphics\Icons\DistanceProject2.ico | Icon |
