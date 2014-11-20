@@ -10,8 +10,8 @@ These components have been written by us, for which we have access to the source
 
 All these components form part of a Distance for Windows installation - see [Installed Components](./InstalledComponents.html).
 
-Component types
----------------
+Code-based components
+---------------------
 
 Distance components fall into one of three types:
 
@@ -20,9 +20,6 @@ Distance components fall into one of three types:
 * R libraries - MRDS and DSM analysis engines.
 
 In what follows, all components are VB6 unless otherwise stated.
-
-Components
-----------
 
 | File | Source location (relative to %BASE%) | Description |
 | ---- | ------------------------------------ | ----------- |
@@ -93,3 +90,38 @@ Components
 | LLine3.ocx | Misc\LabelLine\ | Labels with 3D lines |
 | LogWin3.ocx | Misc\LogWindow\ | Log window |
 | SList4.ocx | Misc\SectionList\ | Section list - efficient drop-down combo box for long lists |
+
+Non-code components
+-------------------
+
+| File | Source location | Description |
+| ---- | --------------- | ----------- |
+| **Help** | | |
+| Authors.rtf | %BASE%\Interface\Help\ | Help => About Distance... |
+| Sponsors.rtf | " | Help => About Distance... |
+| DataEntryFinished.rtf | " | |
+| DataEntryGlobal.rtf | " | |
+| DataEntryIntroduction.rtf | " | |
+| DataEntryObservation.rtf | " | |
+| DataEntrySample.rtf | " | |
+| DataEntryStratum.rtf | " | |
+| DistanceLogo.jpg | %BASE%Extras\Graphics\Splash\D62release.mix | Splash screen and Help => About Distance... |
+| TipOfTheDay.txt | " | Tips of the day. One tip per line. |
+| UseAgreement.txt | %BASE%\Interface\Help\ | Help => About Distance... |
+| distance.chm | %BASE%Extras\External Documentation\Documents\ | Compiled HTML help. <br/> Produced by ComponentOne Doc-to-Help from Microsoft Word documents. |
+| | | |
+| **User's guide** | | |
+| distance.pdf | %BASE%Extras\External Documentation\Documents\ <br/> %BASE%Extras\Graphics\Splash\D62release.mix  | User's guide. <br/> Produced by ComponentOne Doc-to-Help from Microsoft Word documents (as used for chm above) with Adobe Acrobat used to create the PDF. <br/> Microsoft PhotoDraw mix image file used as front page image. |
+| ReadMe.rtf | %BASE%Extras\External Documentation\Readme\ReadMe31.rtf <br/> %BASE%Extras\Internal documents\Worklist\KnownProblems7.doc <br/> %BASE%Extras\Internal documents\Worklist\ResolvedProblems1.doc | Release notes |
+| | | |
+| **Project settings** | | |
+| DistIni.mdb | %BASE%\Database Engine\DistIni.mdb | Default project settings and settings not unique to specific projects |
+| | |  |
+| **Project icon** | | |
+| DistanceProject.ico | %BASE%Extras\Graphics\Icons\DistanceProject2.ico | Icon |
+| | |  |
+| **Sample projects** | | |
+| Sample Template.dat | %BASE%Extras\Sample Projects Backup\Templates\ | Distance project file |
+| Sample Template.dst\ | " | Distance data folder |
+| *.dat | %BASE%Extras\Sample Projects Backup\Release\ | Sample project files |
+| *.dst\ | " | Sample data folders |
