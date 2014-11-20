@@ -4,14 +4,19 @@ root: .
 title: Distance Developers Guide
 ---
 
+Welcome to the Distance developer's guide.
+
+Introduction
+------------
+
+Some compilers and other software store file locations using an absolute path, rather than a relative path. This means that, when moving Distance source code, project files etc. from one machine to another, either it must be placed in the same folder on the new machine or all the relevant source code, project files etc. must be updated. As the former is easier than the latter, we have converged upon the following locations for Distance's files where "nnnn" is the major version number:
+
+| Location | Example | Short-hand in this guide |
+| -------- | ------- | ------------------------ |
+| C:\Application Development\Distancennnn0 | C:\Application Development\Distance60 | %BASE% |
+| C:\Application Development\Distancennnn0Extras | C:\Application Development\Distance60Extras | %BASE%Extras |
+
 The pages in this guide were written using Distance for Windows 6.2 release and the Distance virtual machine.
-
-Locations on the Distance virtual machine are denoted as follows:
-
-* %BASE% - C:\Application Development\Distance60
-* %BASE%Extras - C:\Application Development\Distance60Extras
-
-'nnnn' denotes the Distance version e.g. 6.
 
 Developing Distance
 -------------------
