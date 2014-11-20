@@ -14,6 +14,21 @@ Compaq Visual Fortran:
 * Visual C++ 6.0
 * Compaq Visual Fortran Professional Edition 6.6.c
 
+Get the MCDS source code
+------------------------
+
+* Using your preferred CVS client, checkout the CVS repository
+  - For example, using the Free Software Foundation CVS client:
+
+<p/>
+
+    set HOME=%BASE%\Analysis Engines\CDS\Engine\
+    chdir HOME=%BASE%\Analysis Engines\CDS\Engine\
+    cvs -d:pserver:anonymous@distanceengines.cvs.sourceforge.net:/cvsroot/distanceengines/ co mcds
+
+* If working with Distance for Windows and Visual Basic, checkout the repository under the following directory:
+  - %BASE%\Analysis Engines\CDS\Engine\
+
 Build MCDS analysis engine
 --------------------------
 
