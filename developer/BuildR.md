@@ -89,12 +89,17 @@ Alternatively, one can build a .tar.gz package:
 Copy R packages for use in Visual Basic and release
 ---------------------------------------------------
 
-Copy files:
+* Copy files:
 
 <p/>
 
     copy %BASE%\Analysis Engines\DSM\Engine\dsm_M.N.R.zip %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\RPackages\
     copy %BASE%\Analysis Engines\MRDS\Engine\mrds\mrds_M.N.R.zip %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\RPackages\
+
+* The following Visual Basic components depend on finding these files in this directory:
+  - %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Classes\RProcess.cls
+  - %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Classes\InputFileMakerUtils.cls
+  - These are bundled in DnnnnNEIUtil.dll
 
 How to write tests
 ------------------

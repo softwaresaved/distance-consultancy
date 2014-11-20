@@ -27,7 +27,10 @@ Build MCDS analysis engine
 Copy MCDS.exe for use in Visual Basic and release
 -------------------------------------------------
 
-Copy %BASE%\Analysis Engines\CDS\Engine\DEBUG\MCDS.exe to %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\
+* Copy %BASE%\Analysis Engines\CDS\Engine\DEBUG\MCDS.exe to %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\
+* The following Visual Basic components depend on finding these files in this directory:
+  - %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Classes\CDSProcess.cls
+  - This is bundled in DnnnnNEIUtil.dll
 
 Build MCDS analysis engine NMake file
 -------------------------------------
