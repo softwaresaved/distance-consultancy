@@ -16,21 +16,6 @@ R:
     R --version
     R version 3.1.0 (2014-04-10) -- "Spring Dance"
 
-Get the DSM and MRDS source code
---------------------------------
-
-* Start Git Bash, or your preferred Git client
-* Clone the Git repositories e.g.:
-
-<p/>
-
-    git clone https://github.com/DistanceDevelopment/dsm.git
-    git clone https://github.com/DistanceDevelopment/mrds.git
-
-* If working with Distance for Windows and Visual Basic, clone the repositories under the following directories:
-  - %BASE%\Analysis Engines\DSM\Engine\
-  - %BASE%\Analysis Engines\MRDS\Engine\mrds\
-
 Build R DSM and MRDS analysis engines
 -------------------------------------
 
