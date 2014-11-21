@@ -12,8 +12,11 @@ To develop Distance you need to have a working knowledge of the following:
 * Visual Basic 6.0, including Data Access Objects (DAO)
 * Fortran, mostly 77, a little 90
 * R
-* ESRI Shapefiles. See ESRI Shapefile Technical Description ([PDF](http://distancesampling.org/downloads/shapefile.pdf)), a white paper produced by ESRI describing the internal format of a shapefile
+* ESRI Shapefiles. 
+  - See ESRI Shapefile Technical Description ([PDF](http://distancesampling.org/downloads/shapefile.pdf)), a white paper produced by ESRI describing the internal format of a shapefile
   - You may also find  Martin Wegmann's Spatial data handling in R cheatsheet ([PDF](https://github.com/wegmann/RSdocs/blob/master/Cheatsheet/AniMove_refcard.pdf?raw=true)) useful.
+* Geographic coordinate systems and projections. 
+  - See "Appendix B: Geographic Coordinates Systems & Map Projections" ([PDF](http://distancesampling.org/downloads/appendixbprojections.pdf)) from Strindberg, S. (2001) Optimized Automated Survey Design in Wildlife Population  Assessment. Unpublished PhD Thesis. University of St. Andrews.
 
 ---
 
