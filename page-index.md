@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Site Index
+title: Page Index
 root: .
 ---
 

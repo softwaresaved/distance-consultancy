@@ -4,44 +4,17 @@ root: ..
 title: How to set up a development environment
 ---
 
-## Required knowledge
-
-To develop Distance you need to have a working knowledge of the following:
-
-* Microsoft Component Object Model (COM) i.e. ActiveX, etc.
-* Visual Basic 6.0, including Data Access Objects (DAO)
-* Fortran, mostly 77, a little 90
-* R
-* ESRI Shapefiles. 
-  - See ESRI Shapefile Technical Description ([PDF](http://distancesampling.org/downloads/shapefile.pdf)), a white paper produced by ESRI describing the internal format of a shapefile
-  - You may also find  Martin Wegmann's Spatial data handling in R cheatsheet ([PDF](https://github.com/wegmann/RSdocs/blob/master/Cheatsheet/AniMove_refcard.pdf?raw=true)) useful.
-* Geographic coordinate systems and projections. 
-  - See "Appendix B: Geographic Coordinates Systems & Map Projections" ([PDF](http://distancesampling.org/downloads/appendixbprojections.pdf)) from Strindberg, S. (2001) Optimized Automated Survey Design in Wildlife Population  Assessment. Unpublished PhD Thesis. University of St. Andrews.
+**Important!** Do not do development and test Distance setup packages or install Distance releases on the same machine. This results in the Distance executable and support components being in two places on the computer, which may get confusing!
 
 ---
 
-## Development environment
-
-**Important!** Do not do development and test Distance setup packages or install Distance releases on the same machine. This results in the Distance executable and support components being in two places on the computer, which may get confusing!
-
-### Virtual machine
+## Virtual machine
 
 A complete development environment is on the Distance virtual machine.
 
-C:\Application Development\Distancex0:
+---
 
-* Code
-* x is the major version number e.g. 5 for Distance 5
-* AKA %BASE%
-
-C:\Application Development\Distancex0Extras:
-
-* Non-code content
-* AKA %BASE%Extras
-
-### Logical drives
-
-Windows XP (and possibly other OSs) have the facility to map a logical drive as a folder. This is useful as it means that C:\Application Development can actually be a separate drive, making de-fragmentation, backing up, etc useful. 
+## Required tools
 
 ### Code development tools
 
@@ -88,3 +61,9 @@ Optional:
 * VMWare - an emulator - used as a convenient way to maintain a suite of testing machines.
 * Microsoft Access - edit Distance project and data files outwith Distance.
 * ESRI ArcGIS - view and edit ESRI shapefiles from geographic projects.
+
+---
+
+## Logical drives
+
+Windows XP (and possibly other OSs) have the facility to map a logical drive as a folder. This is useful as it means that C:\Application Development can actually be a separate drive, making de-fragmentation, backing up, etc useful. 

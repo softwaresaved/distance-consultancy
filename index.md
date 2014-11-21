@@ -19,8 +19,7 @@ The pages in this guide were written using Distance for Windows 6.2 release and 
 
 ## Developing Distance
 
-Preparing to develop Distance:
-
+* [Required Knowledge](./develop/RequiredKnowledge.html)
 * [How to set up a development environment](./develop/SetUpDevelopmentEnvironment.html)
 
 Source code access and management:
@@ -35,9 +34,9 @@ Day-to-day development:
 * [How to build Visual Basic components](./develop/BuildVisualBasic.html)
 * [How to build documents and images](./develop/BuildDocumentsImages.html)
 
-Project coding conventions:
+## Coding conventions
 
-* [Visual Basic coding conventions](./develop/VisualBasicCodingConventions.html)
+* [Visual Basic coding conventions](./conventions/VisualBasicCodingConventions.html)
 
 ## Releasing Distance
 
@@ -63,12 +62,13 @@ Dependencies:
 * [Source Code and Binaries](./architecture/SourceCodeAndBinaries.html): summary of the sources of code and non-code components that make up Distance, and the tools used to create the Distance for Windows components. 
 * [Visual Basic Project Dependencies](./architecture/VisualBasicProjectDependencies.html): Visual Basic project inter-dependencies.
 
-Miscellaneous:
-
-* [DLL Base Addresses](./reference/DllBaseAddresses.html): DLL addresses used to date in Distance components.
-* [File extensions](./reference/FileExtensions.html): Commonly-occurring file extensions.
-
 Interfaces:
 
 * [Distance for Windows and Fortran](./architecture/ArchitectureFortran.html): interface between Visual Basic and Fortran (for MCDS)
 * [Distance for Windows and R](./architecture/ArchitectureR.html): interface between Visual Basic and R (for DSM and MRDS)
+
+## Reference
+
+* [DLL Base Addresses](./reference/DllBaseAddresses.html): DLL addresses used to date in Distance components.
+* [File extensions](./reference/FileExtensions.html): Commonly-occurring file extensions.
+* [Page index](./page-index.html)
