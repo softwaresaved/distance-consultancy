@@ -29,17 +29,22 @@ Using your preferred CVS client, export the CVS repository. This exports all the
 
 ### Export via Free Software Foundation CVS client
 
+Run:
+
 <p/>
 
     set HOME=%cd%\
     cvs -d:pserver:anonymous@distanceengines.cvs.sourceforge.net:/cvsroot/distanceengines/ export -DNOW -d mcds_MN_rR_source mcds
 
-<p/>
+Or, if you have a SourceForge account and write access to the repository:
+
+    set HOME=%cd%\
+    cvs -d:ext:USERNAME@distanceengines.cvs.sourceforge.net:/cvsroot/distanceengines/ export -DNOW -d mcds_MN_rR_source mcds
 
 ### Export via TortoiseCVS
 
 * Right-click where you want the code to be exported to and select CVS Checkout...
-* If more than one CVSROOT Module combination is present in the Previous CVSROOTs table, then select :server:anonymous@distanceengines.cvs.sourceforge.net:/cvsroot/distanceengines/ mcds
+* If more than one CVSROOT Module combination is present in the Previous CVSROOTs table, then select the one for distanceengines.cvs.sourceforge.net with CVSROOT /cvsroot/distanceengines/ and module mcds
 * Click Options tab
 * Under Purpose of checkout, select Export - for making a software release
 * Under Name of folder to create, select Enter your own folder name

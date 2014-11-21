@@ -22,20 +22,29 @@ The source code can be browsed via:
 
 ### Get via Free Software Foundation CVS client
 
+Run:
+
 <p/>
 
     set HOME=%cd%\
     cvs -d:pserver:anonymous@distanceengines.cvs.sourceforge.net:/cvsroot/distanceengines/ co mcds
 
-<p/>
+Or, if you have a SourceForge account and write access to the repository:
+
+    set HOME=%cd%\
+    cvs -d:ext:USERNAME@distanceengines.cvs.sourceforge.net:/cvsroot/distanceengines/ co mcds
 
 ### Get via TortoiseCVS
 
 * Right-click and select CVS Checkout...
-* Enter Protocol: Password server (:pserver:)
+* Enter Protocol: 
+  - If doing an anonymous check out, select Password server (:pserver:)
+  - If you have a SourceForge account and write access to the repository, select Secure shell (:ext:)
 * Enter Server: distanceengines.cvs.sourceforge.net
 * Enter Repository folder: /cvsroot/distanceengines/
-* Enter User name: anonymous
+* Enter User name: 
+  - If doing an anonymous check out, enter: anonymous
+  - If you have a SourceForge account and write access to the repository, enter your user name
 * Next to Module, Click Fetch list...
 * Select Module: mcds
 * Click OK
