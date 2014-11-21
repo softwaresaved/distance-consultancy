@@ -6,8 +6,9 @@ title: Release Structure
 
 Distance for Windows components and files. These are installed by the Distance for Windows installer, and the source locations they originate from.
 
-Main folder
------------
+---
+
+## Main folder
 
 | DLL |
 | --- |
@@ -96,8 +97,9 @@ Registry sub-tree search order:
 * /HKEY_CURRENT_USER
 * /HKEY_LOCAL_MACHINE
 
-BACKUP folder 
--------------
+---
+
+## BACKUP folder 
 
 | DLLs or related file from third-party components |
 | ------------------------------------------------ |
@@ -147,8 +149,9 @@ BACKUP folder
 | **Zlib Zip** |
 | DstZip.dll |
 
-Help folder
------------
+---
+
+## Help folder
 
 | File |
 | ---- |
@@ -169,8 +172,9 @@ Help folder
 | **Documents** |
 |  distance.pdf |
 
-RPackages folder
-----------------
+---
+
+## RPackages folder
 
 | ZIP |
 | --- |
@@ -212,21 +216,9 @@ These are only used when the **Re-install analysis engine libraries to original 
 * Help => Online Manuals => DSM Engine R Help:
   - This shows 2.2.5 which corresponds to the version in the R library, C:\Programs\R\R-3.1.0\library\dsm, and not dsm_2.2.3.zip above.
 
-Sample Projects\Templates folder
---------------------------------
+---
 
-Sample project file and data folder for use as templates for new projects.
-
-| File |
-| ---- |
-| Sample Template.dat |
-| Sample Template.dst\ |
-| Sample Template.dst\DistData.mdb |
-
-This is the default folder used by Distance for Windows when **Use an existing Distance project as template** is selected.
-
-Sample Projects folder
-----------------------
+## Sample Projects folder
 
 Sample Distance project files and folders and raw data for the user's guide. 
 
@@ -250,3 +242,17 @@ Each .dst file has a corresponding .dat\ folder (not shown).
 | Songbird.dst |
 | StAndrewsBay.dst |
 | Stratify example.dst |
+
+---
+
+## Sample Projects\Templates folder
+
+Sample project file and data folder for use as templates for new projects.
+
+| File |
+| ---- |
+| Sample Template.dat |
+| Sample Template.dst\ |
+| Sample Template.dst\DistData.mdb |
+
+This is the default folder used by Distance for Windows when **Use an existing Distance project as template** is selected.

@@ -4,8 +4,7 @@ root: ..
 title: How to set up a development environment
 ---
 
-Required knowledge
-==================
+## Required knowledge
 
 To develop Distance you need to have a working knowledge of the following:
 
@@ -16,13 +15,13 @@ To develop Distance you need to have a working knowledge of the following:
 * ESRI Shapefiles. See ESRI Shapefile Technical Description ([PDF](http://distancesampling.org/downloads/shapefile.pdf)), a white paper produced by ESRI describing the internal format of a shapefile
   - You may also find  Martin Wegmann's Spatial data handling in R cheatsheet ([PDF](https://github.com/wegmann/RSdocs/blob/master/Cheatsheet/AniMove_refcard.pdf?raw=true)) useful.
 
-Development environment
-=======================
+---
+
+## Development environment
 
 **Important!** Do not do development and test Distance setup packages or install Distance releases on the same machine. This results in the Distance executable and support components being in two places on the computer, which may get confusing!
 
-Virtual machine
----------------
+### Virtual machine
 
 A complete development environment is on the Distance virtual machine.
 
@@ -37,13 +36,11 @@ C:\Application Development\Distancex0Extras:
 * Non-code content
 * AKA %BASE%Extras
 
-Logical drives
---------------
+### Logical drives
 
 Windows XP (and possibly other OSs) have the facility to map a logical drive as a folder. This is useful as it means that C:\Application Development can actually be a separate drive, making de-fragmentation, backing up, etc useful. 
 
-Code development tools
-----------------------
+### Code development tools
 
 Microsoft Visual Basic 6:
 
@@ -70,8 +67,7 @@ R 2.9.0 (current as of May 2009):
 
 Setup programs for most of the software required for developing Distance is in %BASE%Extras\DistDevCD.
 
-Non-code development tools
---------------------------
+### Non-code development tools
 
 Required:
 

@@ -4,16 +4,19 @@ root: ..
 title: Distance for Windows and Fortran
 ---
 
-Analysis engines:
+The following analyses are done via Fortran:
 
 * Conventional distance sampling (CDS)
 * Multiple covariate distance sampling (MCDS)
 
+The same analysis engine is used for both:
+
 * Stand-alone application, MCDS.exe
 * For full details of usage and input/output file formats, see Appendix - MCDS Engine Reference, user's guide, p307-344
 
-Distance for Windows <=> Fortran interface
-==========================================
+---
+
+## Distance for Windows <=> Fortran interface
 
 * Create:
   - Command file
@@ -57,8 +60,7 @@ Ec.exe
 
 See Visual Basic <=> Fortran interface below for more details.
 
-How to capture input files
---------------------------
+### How to capture input files
 
 * Select Tools => Preferences...
 * Click Analysis tab
@@ -66,15 +68,13 @@ How to capture input files
 
 If reusing files elsewhere check to ensure that any paths within the files are updated.
 
-How to capture output
----------------------
+### How to capture output
 
 * Select Tools => Preferences...
 * Click Analysis tab
 * Check Capture command line output from CDS and MCDS engines in WinNT
 
-How to run stand-alone
-----------------------
+### How to run stand-alone
 
 At command prompt:
 
@@ -88,8 +88,7 @@ Example using files in C:\Users\mjj\Local Documents\DISTANCE\mcds-dst-tmp-files:
     mcds.exe 0 dstA705.tmp
     2
 
-Input and output files
-----------------------
+### Input and output files
 
 Command file structure:
 
@@ -133,8 +132,7 @@ Output files:
   - Empty until bootstrapping starts
   - 3-digit integer between 000...100 - percentage of way through bootstrap
 
-Error and warning messages
---------------------------
+### Error and warning messages
 
 Occur in output and log files:
 
@@ -146,8 +144,7 @@ Fortran debugging output:
 
 * Dumped onto the command-line / standard output
 
-Exit codes
-----------
+### Exit codes
 
 * 1 - analysis ran OK
 * 2 - warnings, see log file for details
@@ -155,8 +152,9 @@ Exit codes
 * 4 - file errors e.g. could not find the specified command file
 * N - major error
 
-Visual Basic <=> Fortran interface
-==================================
+---
+
+## Visual Basic <=> Fortran interface
 
 Microsoft Jet database, DistIni.mdb, settings:
 
@@ -203,8 +201,9 @@ Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Classes\CDSProcess.cls:
   - Otherwise invokes `PATH\MCDS.exe MODE INPUT_COMMAND_FILE \options 2>LOG_FILE`
   - MODE is 0\|1
 
-Miscellaneous MCDS implementation details
-=========================================
+---
+
+## Miscellaneous MCDS implementation details
 
 Random numbers:
 
@@ -236,4 +235,3 @@ Stack size:
 | 1 400 000   |  20971520 |  20 |
 | 2 800 000   |  41943040 |  40 |
 | 6 400 000   | 104857600 | 100 |
-

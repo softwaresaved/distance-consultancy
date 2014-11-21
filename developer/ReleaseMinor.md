@@ -14,8 +14,11 @@ In what follows:
 * N - Minor version number
 * R - Revision number
 
-Prepare components
-------------------
+---
+
+## Prepare components
+
+### Prepare non-code components
 
 Check database:
 
@@ -72,6 +75,8 @@ Build HTML Help and user guide:
 * [Add title page to user guide](./BuildDocumentsImages.html#add-title-page-image-to-user-guide)
 * [Build user guide PDF](./BuildDocumentsImages.html#build-user-guide-pdf)
 * [Copy use guide PDF for use in Visual Basic and release](./BuildDocumentsImages.html#copy-user-guide-pdf-for-use-in-visual-basic-and-release)
+
+### Prepare code components
 
 Build Fortran components:
 
@@ -139,6 +144,8 @@ Check Distance (optional)
   - Select Help => Online Manuals => User's Guide (pdf)
   - Select Help => Release Notes
 
+### Prepare projects
+
 Update template and sample projects:
 
 * Sample projects are in %BASE%Extras\Sample Projects Backup\Release\
@@ -154,8 +161,9 @@ Update template and sample projects:
 * If you want to create new analysis, take a local copy of the project first.
   - Do **not** create new analyses within the above projects! Even if you subsequently delete them, the internal analysis ID number will be incremented (all analyses etc are unique)
 
-Build Wise installer
---------------------
+---
+
+## Build Wise installer
 
 * Open Wise installer script:
   - Double-click %BASE%Extras\Setup\D62Release1.wse
@@ -228,8 +236,9 @@ Build Wise installer
   - dMNsetup.exe should now build
   - Click Close
 
-Check setup package
--------------------
+---
+
+## Check setup package on a virtual machine
 
 **Important!** Do not check the setup package on the machine you are using for development. This results in the Distance executable and support components being in two places on the computer, which may get confusing! Test it on a vanilla machine (see below) upon which Distance has not been installed to more accurately mimic a new user's experience.
 
@@ -336,8 +345,9 @@ Check installation folder:
 * Browse to C:\Program Files\Distance M
 * Check the folder contents match those in [Release Structure](./ReleaseStructure.html).
 
-Archive release
----------------
+---
+
+## Archive release
 
 All the releases of Distance are stored in %BASE%Extras\Releases\.
 

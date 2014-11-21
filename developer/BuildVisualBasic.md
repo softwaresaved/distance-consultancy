@@ -4,16 +4,16 @@ root: ..
 title: How to build Visual Basic components
 ---
 
-Find out tool versions
-----------------------
+## Find out tool versions
 
 Microsoft Visual Basic:
 
 * Help => About Microsoft Visual Basic...
 * Microsoft Visual Basic 6.0 (SP6) For 32-bit Windows Development
 
-View Visual Basic project dependencies
---------------------------------------
+---
+
+## View Visual Basic project dependencies
 
 To build a project requires all its pre-requisite projects to have been built. See:
 
@@ -58,8 +58,9 @@ To see project dependencies within a text editor:
 
       Module=CModHelp; ..\..\Utilities\Help\distance.b
 
-Build single Visual Basic project
----------------------------------
+---
+
+## Build single Visual Basic project
 
 To build a project within the VB GUI:
 
@@ -90,8 +91,9 @@ To build a project from a command prompt:
 
     start /wait "VB6" "C:\program files\microsoft visual studio\vb98\vb6.exe" /make "C:\Application Development\Distance60\Map\Legend\D6Legend.vbp
 
-Build all Visual Basic projects
--------------------------------
+---
+
+## Build all Visual Basic projects
 
 * Download the following files into %BASE%\:
   - [build_vb_projects.bat]({{ site.distance_vmscripts }}/build_vb_projects.bat)
@@ -111,8 +113,9 @@ Build all Visual Basic projects
 
     build_vb_projects.bat
 
-Remove all Visual Basic binaries
---------------------------------
+---
+
+## Remove all Visual Basic binaries
 
 To remove all ocx, dll and exe files for a complete rebuild:
 
@@ -134,8 +137,9 @@ To remove all ocx, dll and exe files for a complete rebuild:
 
     delete_vb_binaries.bat
 
-Set DLL base address
---------------------
+---
+
+## Set DLL base address
 
 The default DLL base address is &H11000000. This will cause lots of memory re-allocation. Components will load faster if a random number between this and &H80000000 is chosen. It is recommended that you choose:
 
@@ -151,14 +155,16 @@ To set the DLL base address:
 
 [DLL Base Addresses](./DllBaseAddresses.html) provides a list of addresses used to date. If you add a new component or change an address, remember to update this list.
 
-View binary (dll, ocx, exe) meta-data
--------------------------------------
+---
+
+## View binary (dll, ocx, exe) meta-data
 
 * Right-click file and select Properties
 * Click Version tab
 
-Update binary (dll, ocx, exe) meta-data
----------------------------------------
+---
+
+## Update binary (dll, ocx, exe) meta-data
 
 * Open project in Visual Basic:
   - Double-click vbp file in project folder e.g. %BASE%\Map\Legend\D6Legend.vbp
@@ -192,14 +198,16 @@ To update ownership, copyright etc:
   - Legal Copyright: Copyright (c) 1998-2013 RUWPA
   - Product Name: Distance 6.2
 
-View binary (dll, ocx, exe) meta-data
--------------------------------------
+---
+
+## View binary (dll, ocx, exe) meta-data
 
 * Right-click file and select Properties
 * Click Version tab
 
-View version compatibility
---------------------------
+---
+
+## View version compatibility
 
 Visual Basic's compatibility mode allows for checks to be done to ensure that libraries or components do not change their interfaces in a way that can break compatibility with older versions.
 

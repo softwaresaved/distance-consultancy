@@ -4,8 +4,7 @@ root: ..
 title: How to build R components
 ---
 
-Find out tool versions
-----------------------
+## Find out tool versions
 
 R:
 
@@ -16,8 +15,9 @@ R:
     R --version
     R version 3.1.0 (2014-04-10) -- "Spring Dance"
 
-Build R DSM and MRDS analysis engines
--------------------------------------
+---
+
+## Build R DSM and MRDS analysis engines
 
 * Start command prompt:
   - Select Start => All Programs => Accessories => Command Prompt
@@ -67,8 +67,9 @@ Build R DSM and MRDS analysis engines
   - For DSM, `Version: 2.2.3`
   - For MRDS, `Version: 2.1.5`
 
-Install source package and build zip via package
-------------------------------------------------
+---
+
+## Install source package and build zip via package
 
 Alternatively, one can build a .tar.gz package:
 
@@ -86,8 +87,9 @@ Alternatively, one can build a .tar.gz package:
     R CMD INSTALL --build dsm_M.N.R.tar.gz
     R CMD INSTALL --build mrds_M.N.R.tar.gz
 
-Copy R packages for use in Visual Basic and release
----------------------------------------------------
+---
+
+## Copy R packages for use in Visual Basic and release
 
 * Copy files:
 
@@ -101,8 +103,9 @@ Copy R packages for use in Visual Basic and release
   - %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Classes\InputFileMakerUtils.cls
   - These are bundled in DnnnnNEIUtil.dll
 
-How to write tests
-------------------
+---
+
+## How to write tests
 
 Distance's R tests are written in [testthat](http://cran.r-project.org/web/packages/testthat). For more information see:
 
@@ -110,8 +113,9 @@ Distance's R tests are written in [testthat](http://cran.r-project.org/web/packa
 * [testthat: Get Started with Testing](http://journal.r-project.org/archive/2011-1/RJournal_2011-1_Wickham.pdf)
 * Distance tests in [dsm\tests](https://github.com/DistanceDevelopment/dsm/tree/master/tests) and [mrds\tests](https://github.com/DistanceDevelopment/mrds/tree/master/tests)
 
-How to run tests from within R
-------------------------------
+---
+
+## How to run tests from within R
 
 * Start R
 * Load the testthat library:
@@ -145,8 +149,9 @@ How to run tests from within R
 
     test_file("tests/testthat/test_input.R", "minimal")
 
-How to run tests from outwith R
--------------------------------
+---
+
+## How to run tests from outwith R
 
 * Within the package's tests folder, write a testthat.R file with the content:
 

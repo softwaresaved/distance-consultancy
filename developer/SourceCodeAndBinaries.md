@@ -6,8 +6,9 @@ title: Source Code and Binaries
 
 Summary of the sources of code and non-code components that make up Distance, and the tools used to create the Distance for Windows components. This includes the location of scripts used to compile the user's guide and build the Distance for Windows installer. This page also documents the folder structures currently assumed by Distance's scripts and project files.
 
-%BASE%
-------
+---
+
+## %BASE%
 
 | Source | Tooling | Output |
 | ------ | ------- | ------ |
@@ -101,8 +102,9 @@ Summary of the sources of code and non-code components that make up Distance, an
 
 Many of the Visual Basic project folders have Graphics\ sub-folders with icons, bitmaps and other images used within the GUI.
 
-%BASE%Extras
-------------
+---
+
+## %BASE%Extras
 
 | Source | Tooling | Output |
 | ------ | ------- | ------ |
@@ -140,8 +142,9 @@ Many of the Visual Basic project folders have Graphics\ sub-folders with icons, 
 | dMNsetup.exe <br/> From: Setup\ | |
 | ReadMe.rtf <br/> From: Setup\ | |
 
-Source code repositories
-------------------------
+---
+
+## Source code repositories
 
 | Repository | Type | Local Folder |
 | ---------- | ---- | ------------ |
@@ -149,8 +152,9 @@ Source code repositories
 | [https://github.com/DistanceDevelopment/dsm](https://github.com/DistanceDevelopment/dsm) | Git | %BASE%\Analysis Engines\DSM\Engine\dsm\ |
 | [https://github.com/DistanceDevelopment/mrds](https://github.com/DistanceDevelopment/mrds) | Git | %BASE%\Analysis Engines\MRDS\Engine\mrds\mrds\ |
 
-Third-party
------------
+---
+
+## Third-party components
 
 * Locations are those expected by the Wise Installer.
 * "VB" denotes components explicity mentioned in Visual Basic projects - see [Visual Basic Project Dependencies](./VisualBasicProjectDependencies.html).

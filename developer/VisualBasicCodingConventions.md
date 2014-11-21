@@ -8,11 +8,9 @@ title: Visual Basic Coding Conventions
 
 ---
 
-Class Naming Conventions
-========================
+## Class Naming Conventions
 
-General
--------
+### General
 
 All classes should have a 3 letter prefix, with the initial letter capitalized, that indicates the kind of class. For example, DlgModelDefinition says that the Model Definition class is a dialog (Dlg) form. The 3 letter prefixes are listed in the following sections.
 
@@ -36,8 +34,7 @@ In addition, some classes which are very closely associated with another class (
 
 When saving classes to file, drop the prefix e.g. form DlgABColumnManager becomes ColumnManager.frm. See Form and Module Filenames below for more details.
 
-Declaring Classes
------------------
+### Declaring Classes
 
 All classes that are not standard VB classes and are not user-defined should be fully qualififed. For example:
 
@@ -45,8 +42,7 @@ All classes that are not standard VB classes and are not user-defined should be 
     Dim mofldTemp As MapObjects.Field
     Dim flxGrid As New vsFlexLib.vsFlexArray
 
-Prefixes for Form Modules
--------------------------
+### Prefixes for Form Modules
 
 | Form type | Explanation | Prefix | Example |
 | --------- | ----------- | ------ | ------- |
@@ -57,22 +53,19 @@ Prefixes for Form Modules
 | Single instance form | Child form of the MDI parent where only one can be shown at once | Sif | SifDataExplorer |
 | Other (general) form | Anything else - should be very few of these! | Frm | FrmDialogStorage |
 
-Prefixes for Code Modules
--------------------------
+### Prefixes for Code Modules
 
 Database-specific code modules are prefixed with Dbe, for Database Engine.
 
 All other code modules are prefixed with Mod e.g. ModMain. 
 
-Prefixes for Class Modules
--------------------------
+### Prefixes for Class Modules
 
 Class modules are prefixed with Cls e.g. ClsAnalysisServerInterface. 
 
 Classes that are collections have pluralized names e.g. the Analysis Server Interface collection is ClsAnalysisServerInterfaces.
 
-Prefixes for User Control Modules
----------------------------------
+### Prefixes for User Control Modules
 
 In general, user controls have the prefix Ctl e.g. CtlLabelLine.
 
@@ -83,11 +76,9 @@ However, there are two special subsets of the users controls:
 
 ---
 
-Object Naming Conventions
-=========================
+## Object Naming Conventions
 
-Prefixes for Controls (mapping controls excluded) and other classes
--------------------------------------------------------------------
+### Prefixes for Controls (mapping controls excluded) and other classes
 
 Other classes include, for example, StringBuilder.
 
@@ -180,15 +171,13 @@ Collection objects should have an 's' added to the prefix, and the variable name
     Dim nodMember As Node
     Dim nodsMembers As Nodes
 
-Choosing Prefixes for Other Controls
-------------------------------------
+### Choosing Prefixes for Other Controls
 
 For controls not listed above, standardize on a unique two or three character prefix. Use more than three characters only if needed for clarity. 
 
 **Once you decide on a new prefix, add it to the table above, write in the date, and notify the development team of the update.**
 
-Prefixes for ESRI MapObjects
-----------------------------
+### Prefixes for ESRI MapObjects
 
 Prefix for the Control:
 
@@ -242,8 +231,7 @@ Prefixes for Collections:
 | | Points | pnts |
 | Utility | Strings | mostrs |
 
-Prefixes for Data Access Objects (DAO)
---------------------------------------
+### Prefixes for Data Access Objects (DAO)
 
 | Database object | Prefix | Example |
 | --------------- | ------ | ------- |
@@ -273,8 +261,7 @@ Some examples:
     ' Create the new Recordset object.
     Set recPubsInNY = db.OpenRecordset(strSQLStmt, _ dbReadOnly)
 
-Prefixes for User-defined Class Instances
------------------------------------------
+### Prefixes for User-defined Class Instances
 
 Includes Class, Form, Code and User control Modules.
 
@@ -289,8 +276,7 @@ An exception to this is the user control LabelLine, which is used widely as a ge
 
 ---
 
-Constant and Variable Coding Conventions
-========================================
+## Constant and Variable Coding Conventions
 
 In addition to objects, constants and variables also require well-formed naming conventions. This section lists recommended conventions for constants and variables supported by Visual Basic. It also discusses the issues of identifying data type and scope.
 
@@ -310,8 +296,7 @@ It is good coding practice to write modular code whenever possible. For example,
 
 With the exception of global variables (which should not be passed), procedures and functions should operate only on objects passed to them. Global variables that are used in procedures should be identified in the declaration section at the beginning of the procedure.
 
-Variables
----------
+### Variables
 
 Declaring all variables saves programming time by reducing the number of bugs caused by typos (for example, aUserNameTmp vs. sUserNameTmp vs. sUserNameTemp). 
 
@@ -319,8 +304,7 @@ Declaring all variables saves programming time by reducing the number of bugs ca
 
 Variables should be prefixed to indicate their data type. The prefix should also be extended to indicate the scope of the variable (see following section).
 
-Variable Data Types
--------------------
+### Variable Data Types
 
 Use the following prefixes to indicate a variable's data type.
 
@@ -343,8 +327,7 @@ Use the following prefixes to indicate a variable's data type.
 
 The only exception to the above is for simple looping variables in For loops, which are always integers (see below).
 
-Variable Scope Prefixes
------------------------
+### Variable Scope Prefixes
 
 As project size grows, so does the value of recognizing variable scope quickly. A one-letter scope prefix preceding the type prefix provides this, without greatly increasing the size of variable names.
 
@@ -358,8 +341,7 @@ A variable has global scope if it is declared Public in a standard module or a f
 
 **Note** Consistency is crucial to the productive use of this technique - the syntax checker in Visual Basic will not catch module-level variables that begin with "p."
 
-Constants
----------
+### Constants
 
 The body of constant names should be all upper case. In addition, use the same prefix rules as for variables. For example:
 
@@ -368,8 +350,7 @@ The body of constant names should be all upper case. In addition, use the same p
     gstrNEW_LINE 'New Line character
                  '(string, global to application)
 
-Enumerated constants
---------------------
+### Enumerated constants
 
 These are all given the prefix dst (for Distance). For example:
 
@@ -381,8 +362,7 @@ These are all given the prefix dst (for Distance). For example:
 
 Enumerations should be used in place of constants wherever possible, as they then appear in the drop down list when you are typing, reducing typing errors.
 
-User-Defined Types
-------------------
+### User-Defined Types
 
 In a large project with many user-defined types, it is often useful to give each such type a three-character prefix of its own. If these prefixes begin with "u" they will still be easy to recognize quickly when you are working with a user-defined type. For example, "ucli" could be used as the prefix for variables of a user-defined Client type.
 
@@ -392,8 +372,7 @@ The following is a list of user defined types:
 | --------- | ------ | ------- | ---------- |
 | none yet | none yet | none yet | none yet |
 
-Descriptive Variable, Constant and Procedure Names
---------------------------------------------------
+### Descriptive Variable, Constant and Procedure Names
 
 The body of a variable or procedure name should use mixed case and should be as long as necessary to describe its purpose. In addition, function names should begin with a verb, such as InitNameArray or CloseDialog.
 
@@ -409,18 +388,15 @@ The following is the current list of abbreviations:
 | --- | ------------ | ------- | ---------- |
 | Looping variable (note - this is the only time no prefix is required) | i, j, k | i | 2/2/98 |
 
-Array Lower Bounds
-------------------
+### Array Lower Bounds
 
 Use base 0 wherever possible, and put Option Base 0 at the beginning of all modules, so it is the default.
 
 ---
 
-Structured Coding Conventions
-=============================
+## Structured Coding Conventions
 
-Structure of Forms and Modules
-------------------------------
+### Structure of Forms and Modules
 
 All forms and code modules should have the same basic structure:
 
@@ -438,8 +414,7 @@ Separate each of these sections with a dashed line
 
 See the Distance code for examples.
 
-Code Commenting Conventions
----------------------------
+### Code Commenting Conventions
 
 All procedures and functions should begin with a brief comment describing the purpose and functional characteristics of the procedure (what it does), unless it is extrememly obvious. This description should not describe the implementation details (how it does it) because these often change over time, resulting in unnecessary comment maintenance work, or worse yet, erroneous comments. The code itself and any necessary inline comments will describe the implementation. However, for procedures that implement complex algorithms or use tricky programming, some brief implementation notes can be useful, so long as they are clearly delimited from the rest of the text (see table below).
 
@@ -467,8 +442,7 @@ Remember the following points:
 * At the start of the .bas module that contains the project's Visual Basic generic constant declarations (usually public.bas), you should include an overview that describes the application, enumerating primary data objects, procedures, algorithms, dialogs, databases, and system dependencies. Sometimes a piece of pseudocode describing the algorithm can be helpful. This can be written near the end of the project development cycle.
 * Too many comments are better than too few, especially because other people will be working with the code we write!
 
-Formatting Code
----------------
+### Formatting Code
 
 Because many programmers still use VGA displays, screen space should be conserved as much as possible while still allowing code formatting to reflect logic structure and nesting. Here are a few pointers:
 
@@ -500,14 +474,12 @@ Because many programmers still use VGA displays, screen space should be conserve
     Loop
     End Function
 
-Grouping Constants
-------------------
+### Grouping Constants
 
 Defined constants at the module level should be grouped by function and placed at the beginning of the module to which they refer. Modules used in more than one form should do in ModGlobal. Where there is any
 doubt, put it in ModGlobal!
 
-& and + Operators
------------------
+### & and + Operators
 
 Always use the & operator when linking strings and the + operator when working with numerical values. Using the + operator to concatenate may cause problems when operating on two variants. For example:
 
@@ -516,8 +488,7 @@ Always use the & operator when linking strings and the + operator when working w
     vntResult = vntVar1 + vntVar2 'vntResult = 21.01
     vntResult = vntVar1 & vntVar2 'vntResult = 10.0111
 
-Creating Strings for MsgBox, InputBox and SQL Queries
------------------------------------------------------
+### Creating Strings for MsgBox, InputBox and SQL Queries
 
 When creating a long string, use the underscore line-continuation character to create multiple lines of code so that you can read or debug the string easily. This technique is particularly useful when displaying a message box (MsgBox) or input box (InputBox) or when creating an SQL string. For example:
 
@@ -535,8 +506,7 @@ When creating a long string, use the underscore line-continuation character to c
     & " WHERE [Year Published] > 1988"
     TitlesQry.SQL = strQuery
 
-Form and Module Filenames
--------------------------
+### Form and Module Filenames
 
 The filename should be the same as the form or module name, minus the prefix. The file extension is the standard .frm for Forms, .mod for Modules, .cls for Classes and .ctl for User Controls. Examples:
 

@@ -6,8 +6,9 @@ title: How to write a new numerical engine
 
 There follows an example of how to write a new numerical engine, called DHT, which uses R scripts to carry out the analysis.
 
-Create a new folder structure
------------------------------
+---
+
+## Create a new folder structure
 
 * Create a new folder in %BASE%\Analysis Engines. e.g. C:\Application Development\Distance60\Analysis Engines\DHT
 * Create four sub-folders: 
@@ -19,8 +20,9 @@ Create a new folder structure
   - For example, in the case of DHT could copy the DSM engine as it also runs under R and is a small engine.
 * In what follows, it is assumed you copied an existing project.
 
-Update Properties pages
------------------------
+---
+
+## Update Properties pages
 
 Open the Properties project, \Properties\DHT.vbp:
 
@@ -80,16 +82,18 @@ Get the properties project tester goig:
 * Add the  new Prp project (e.g., D6DHTPrp.vbp) (File | Add project...)
 * Put the new properties control onto the tester form.
 
-Update Engine
--------------
+---
+
+## Update Engine
 
 * Create a "hello world" R function in a script called "dht.test.r"
   - The function can be very simple at the outset e.g. a "hello world" R function.
 * Put this script into \NEngineInterface
 * The NEngineInterface will source this code.
 
-Update NEngineInterface
------------------------
+---
+
+## Update NEngineInterface
 
 Following a process similar to Properties above:
 
@@ -107,8 +111,9 @@ Following a process similar to Properties above:
   - Run the new analysis engine and see if it runs OK
   - Look at the results in the .dst file - we can't actually see them yet as the details pages aren't done, on which note...
 
-Update Details pages
---------------------
+---
+
+## Update Details pages
 
 Following a process similar to Properties above:
 
@@ -126,8 +131,9 @@ Following a process similar to Properties above:
   - Run the new analysis engine and see if it runs OK
   - See if the results are displayed OK
 
-Update Documentation
---------------------
+---
+
+## Update Documentation
 
 * Update the developer's guide to document the new components, Visual Basic projects, R scripts, DLLs and OCXs.
   - Pick a new base address and enter it here - see [DLL Base Addresses](./DllBaseAddresses.html) and pick an unused one

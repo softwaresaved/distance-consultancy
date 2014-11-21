@@ -21,12 +21,13 @@ In what follows:
 | Binary ZIP | mcds_MN_rR.zip | mcds_50_r2.zip |
 | SourceForge folder | mcds M.N release R | mcds 5.0 release 2 |
 
-Export MCDS from CVS
---------------------
+---
+
+## Export MCDS from CVS
 
 Using your preferred CVS client, export the CVS repository. This exports all the files for CVS but omits CVS-specific folders, version histories etc. 
 
-**Export via Free Software Foundation CVS client**
+### Export via Free Software Foundation CVS client
 
 <p/>
 
@@ -35,7 +36,7 @@ Using your preferred CVS client, export the CVS repository. This exports all the
 
 <p/>
 
-**Export via TortoiseCVS**
+### Export via TortoiseCVS
 
 * Right-click where you want the code to be exported to and select CVS Checkout...
 * If more than one CVSROOT Module combination is present in the Previous CVSROOTs table, then select :server:anonymous@distanceengines.cvs.sourceforge.net:/cvsroot/distanceengines/ mcds
@@ -46,13 +47,14 @@ Using your preferred CVS client, export the CVS repository. This exports all the
 * Click OK
 * In Finished checkout, click OK
 
-**ZIP exported folder**
+### ZIP exported folder
 
 * Right-click mcds_MN_rR_source and select Send to => Compressed (zipped) Folder 
 * This will create mcds_MN_rR_source.zip
 
-Prepare binary bundle
----------------------
+---
+
+## Prepare binary bundle
 
 * [Build MCDS analysis engine](./BuildFortran.html#build-mcds-analysis-engine)
 * Right-click, select New => Folder
@@ -61,8 +63,9 @@ Prepare binary bundle
 * Right-click mcds_MN_rR and select Send to => Compressed (zipped) Folder 
 * This will create mcds_MN_rR.zip
 
-Release on SourceForge
-----------------------
+---
+
+## Release on SourceForge
 
 Create a new release folder on SourceForge:
 

@@ -8,8 +8,9 @@ This page provides a summary of the commands needed to install Distance for Wind
 
 As there can be problems with spaces in paths, non-space alternatives for paths are given in brackets.
 
-Distance
---------
+---
+
+## Distance for Windows
 
 Download and install:
 
@@ -51,8 +52,9 @@ Select default project folder (optional):
 * Enter Default project folder C:\Users\you\Local Documents\DISTANCE\My Distance Projects
 * Click OK
 
-R
--
+---
+
+## R
 
 Download and install:
 
@@ -126,8 +128,9 @@ If you experience problems with installing libraries into the default library lo
 * Click OK
 * Click OK
 
-RStudio
--------
+---
+
+## RStudio
 
 Download and install:
 
@@ -139,8 +142,9 @@ Check:
 
 * Double-click RStudio
 
-Distance R packages
--------------------
+---
+
+## Distance R packages
 
 Install:
 
@@ -160,8 +164,9 @@ Install:
     packageVersion("dsm")
     packageVersion("DSsim")
 
-Distance for Windows and R
---------------------------
+---
+
+## Configure Distance for Windows and R
 
 Set R:
 
@@ -183,8 +188,9 @@ Check:
 * Select Help => MRDS Engine R help (html)
 * Check that an HTML help page appears.
 
-Distance R MarkDown files
--------------------------
+---
+
+## Run Distance R MarkDown files
 
 Run:
 
@@ -199,8 +205,9 @@ Check:
 
 * Check that an HTML page appears.
 
-Examples of paths with spaces causing problems
-----------------------------------------------
+---
+
+## Examples of paths with spaces causing problems
 
 Distance 6, in log tab:
 

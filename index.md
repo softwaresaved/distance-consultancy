@@ -6,8 +6,7 @@ title: Distance Developers Guide
 
 Welcome to the Distance developer's guide.
 
-Introduction
-------------
+## Introduction
 
 Some compilers and other software store file locations using an absolute path, rather than a relative path. This means that, when moving Distance source code, project files etc. from one machine to another, either it must be placed in the same folder on the new machine or all the relevant source code, project files etc. must be updated. As the former is easier than the latter, we have converged upon the following locations for Distance's files where "nnnn" is the major version number:
 
@@ -18,17 +17,19 @@ Some compilers and other software store file locations using an absolute path, r
 
 The pages in this guide were written using Distance for Windows 6.2 release and the Distance virtual machine.
 
-Developing Distance
--------------------
+## Developing Distance
+
+Preparing to develop Distance:
+
+* [How to set up a development environment](./developer/SetUpDevelopmentEnvironment.html)
 
 Source code access and management:
 
-* [MCDS Fortran source code](./developer/McdsSourceCode.html)
-* [DSM and MRDS R source code](./developer/DsmMrdsSourceCode.html)
+* [How to get MCDS Fortran source code](./developer/McdsSourceCode.html)
+* [How to get DSM and MRDS R source code](./developer/DsmMrdsSourceCode.html)
 
 Day-to-day development:
 
-* [How to set up a development environment](./developer/SetUpDevelopmentEnvironment.html)
 * [How to build R components](./developer/BuildR.html)
 * [How to build Fortran components](./developer/BuildFortran.html)
 * [How to build Visual Basic components](./developer/BuildVisualBasic.html)
@@ -38,15 +39,13 @@ Project coding conventions:
 
 * [Visual Basic coding conventions](./developer/VisualBasicCodingConventions.html)
 
-Releasing Distance
-------------------
+## Releasing Distance
 
 * [How to release a minor version of Distance for Windows](./developer/ReleaseMinor.html)
 * [Distance for Windows quick start setup](./developer/QuickStartSetup.html): summary of commands to install Distance for Windows, Distance R packages, R and RStudio which can help when testing Distance for Windows installers.
 * [How to release MCDS on SourceForge](./developer/ReleaseMcds.html)
 
-Architecture
-------------
+## Architecture
 
 Components:
 

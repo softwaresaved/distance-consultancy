@@ -1,7 +1,7 @@
 ---
 layout: page
 root: ..
-title: DSM and MRDS R Source Code
+title: How to get DSM and MRDS R Source Code
 ---
 
 DSM and MRDS source code is written in R and is hosted on GitHub:
@@ -11,8 +11,9 @@ DSM and MRDS source code is written in R and is hosted on GitHub:
 
 The source code can be browsed above.
 
-Get the DSM and MRDS source code
---------------------------------
+---
+
+## Get the DSM and MRDS source code
 
 * DSM and MRDS source code can be clonsed anonymously
 * Start Git Bash, or your preferred Git client

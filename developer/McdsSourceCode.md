@@ -1,7 +1,7 @@
 ---
 layout: page
 root: ..
-title: MCDS Fortran Source Code
+title: How to get MCDS Fortran Source Code
 ---
 
 MCDS source code is written in Fortran and is hosted on SourceForge at:
@@ -12,14 +12,15 @@ The source code can be browsed via:
 
 * [http://distanceengines.cvs.sourceforge.net/viewvc/distanceengines/mcds/](http://distanceengines.cvs.sourceforge.net/viewvc/distanceengines/mcds/)
 
-Get the MCDS source code
-------------------------
+---
+
+## Get the MCDS source code
 
 * MCDS source code can be checked out anonymously
 * If working with Distance for Windows and Visual Basic, check out the repository under the folder: %BASE%\Analysis Engines\CDS\Engine\
 * Using your preferred CVS client, check out the CVS repository:
 
-**Get via Free Software Foundation CVS client**
+### Get via Free Software Foundation CVS client
 
 <p/>
 
@@ -28,7 +29,7 @@ Get the MCDS source code
 
 <p/>
 
-**Get via TortoiseCVS**
+### Get via TortoiseCVS
 
 * Right-click and select CVS Checkout...
 * Enter Protocol: Password server (:pserver:)
