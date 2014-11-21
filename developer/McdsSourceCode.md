@@ -16,14 +16,26 @@ Get the MCDS source code
 ------------------------
 
 * MCDS source code can be checked out anonymously
-* Using your preferred CVS client, checkout the CVS repository
-  - For example, using the Free Software Foundation CVS client:
+* If working with Distance for Windows and Visual Basic, check out the repository under the folder: %BASE%\Analysis Engines\CDS\Engine\
+* Using your preferred CVS client, check out the CVS repository:
+
+**Get via Free Software Foundation CVS client**
 
 <p/>
 
-    set HOME=%BASE%\Analysis Engines\CDS\Engine\
-    chdir HOME=%BASE%\Analysis Engines\CDS\Engine\
+    set HOME=%cd%\
     cvs -d:pserver:anonymous@distanceengines.cvs.sourceforge.net:/cvsroot/distanceengines/ co mcds
 
-* If working with Distance for Windows and Visual Basic, checkout the repository under the following directory:
-  - %BASE%\Analysis Engines\CDS\Engine\
+<p/>
+
+**Get via TortoiseCVS**
+
+* Right-click and select CVS Checkout...
+* Enter Protocol: Password server (:pserver:)
+* Enter Server: distanceengines.cvs.sourceforge.net
+* Enter Repository folder: /cvsroot/distanceengines/
+* Enter User name: anonymous
+* Next to Module, Click Fetch list...
+* Select Module: mcds
+* Click OK
+* In Finished checkout, click OK
