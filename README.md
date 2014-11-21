@@ -140,3 +140,9 @@ Hints and tips
 
 * Project-specific properties can be defined.
 * [_config.yml](./config.yml) baseurl holds the sub-path of the web site. This should match the name of the GitHub project hosting the web site e.g. distance-consultancy.
+* Jekyll does not like non-UTF-8 characters. These can be stripped out on Windows using Git Bash, via:
+
+    # Purge the characters.
+    iconv -f utf-8 -t utf-8 -c before.md > after.md
+    # Compare the files to see what was replaced.
+    diff before.md after.md
