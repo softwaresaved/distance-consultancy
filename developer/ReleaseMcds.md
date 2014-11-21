@@ -24,7 +24,7 @@ In what follows:
 Export MCDS from CVS
 --------------------
 
-Using your preferred CVS client, export the CVS repository. This exports all the files for CVS but omits CVS-specific directories, version histories etc. 
+Using your preferred CVS client, export the CVS repository. This exports all the files for CVS but omits CVS-specific folders, version histories etc. 
 
 **Export via Free Software Foundation CVS client**
 

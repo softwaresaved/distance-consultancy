@@ -21,7 +21,7 @@ Build R DSM and MRDS analysis engines
 
 * Start command prompt:
   - Select Start => All Programs => Accessories => Command Prompt
-* Change into R package directory:
+* Change into R package folder:
 
 <p/>
 
@@ -96,7 +96,7 @@ Copy R packages for use in Visual Basic and release
     copy %BASE%\Analysis Engines\DSM\Engine\dsm_M.N.R.zip %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\RPackages\
     copy %BASE%\Analysis Engines\MRDS\Engine\mrds\mrds_M.N.R.zip %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\RPackages\
 
-* The following Visual Basic components depend on finding these files in this directory:
+* The following Visual Basic components depend on finding these files in this folder:
   - %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Classes\RProcess.cls
   - %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Classes\InputFileMakerUtils.cls
   - These are bundled in DnnnnNEIUtil.dll
@@ -126,14 +126,14 @@ How to run tests from within R
 
     library(dsm)
 
-* Change into the package's directory using setwd.
+* Change into the package's folder using setwd.
 * To run all the tests in a file do, e.g.:
 
 <p/>
 
     test_file("tests/testthat/test_input.R")
 
-* To run all the tests in a directory do, e.g.:
+* To run all the tests in a folder do, e.g.:
 
 <p/>
 
@@ -148,7 +148,7 @@ How to run tests from within R
 How to run tests from outwith R
 -------------------------------
 
-* Within the package's tests directory, write a testthat.R file with the content:
+* Within the package's tests folder, write a testthat.R file with the content:
 
 <p/>
 
@@ -156,7 +156,7 @@ How to run tests from outwith R
     library(PACKAGENAME)
     test_check("PACKAGENAME")
 
-* From a command prompt, change into the tests directory, e.g.
+* From a command prompt, change into the tests folder, e.g.
 
 <p/>
 

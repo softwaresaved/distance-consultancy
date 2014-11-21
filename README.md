@@ -58,7 +58,7 @@ It is useful to set up Jekyll on your computer so you can preview your changes b
   - The download page specifies the recommended version (currently tdm-32-4.5.2 for Ruby 1.8.6 to 1.9.3)
   - Double-click exe (e.g. DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe) to unpack the self-extracting archive
   - Select Start => All Programs => Ruby 1.9.3-p550 => Start Command Prompt With Ruby  
-  - Change into the Ruby Development Kit directory
+  - Change into the Ruby Development Kit folder
   - Run:
 
     <p/>
@@ -69,7 +69,7 @@ It is useful to set up Jekyll on your computer so you can preview your changes b
 
 * Install Ruby gh-pages gem:
   - Select Start => All Programs => Ruby 1.9.3-p550 => Start Command Prompt With Ruby  
-  - Change into the directory with your clone of this repository
+  - Change into the folder with your clone of this repository
   - Run:
 
     <p/>
@@ -82,7 +82,7 @@ Edit pages
 * Edit pages using your favourite editor
 * Preview how the pages will look on the web site, within the Ruby command prompt, 
   - Select Start => All Programs => Ruby 1.9.3-p550 => Start Command Prompt With Ruby  
-  - Change into the directory with your clone of this repository
+  - Change into the folder with your clone of this repository
   - Run:
 
     <p/>
@@ -110,7 +110,7 @@ Hints and tips
     ---
     layout: page
     title: TITLE
-    root: PATH_TO_ROOT_DIRECTORY
+    root: PATH_TO_ROOT_FOLDER
     ---
 
 <p/>

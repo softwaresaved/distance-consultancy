@@ -54,10 +54,10 @@ Components:
 * [Non-code Components](./developer/NonCodeComponents.html): non-code components.
 * [Third-party Components](./developer/ThirdPartyComponents.html): third-party components written by others and which are needed to build Distance and/or are shipped with Distance.
 
-Directory structures:
+Folder structures:
 
-* [Source Code and Binaries](./developer/SourceCodeAndBinaries.html): directory structure of sources of code and non-code components and scripts.
-* [Release Structure](./developer/ReleaseStructure.html): Distance for Windows directory and file structure.
+* [Source Code and Binaries](./developer/SourceCodeAndBinaries.html): folder structure of sources of code and non-code components and scripts.
+* [Release Structure](./developer/ReleaseStructure.html): Distance for Windows folder and file structure.
 
 Dependencies:
 

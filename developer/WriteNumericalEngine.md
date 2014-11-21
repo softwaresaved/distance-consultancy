@@ -6,16 +6,16 @@ title: How to write a new numerical engine
 
 There follows an example of how to write a new numerical engine, called DHT, which uses R scripts to carry out the analysis.
 
-Create a new directory structure
---------------------------------
+Create a new folder structure
+-----------------------------
 
-* Create a new directory in %BASE%\Analysis Engines. e.g. C:\Application Development\Distance60\Analysis Engines\DHT
-* Create four sub-directories: 
+* Create a new folder in %BASE%\Analysis Engines. e.g. C:\Application Development\Distance60\Analysis Engines\DHT
+* Create four sub-folders: 
   - \Properties
   - \Details
   - \Engine
   - \NEngineInterface
-* One way to do this is to copy these directories and their contents from a similar analysis engine that already exists. 
+* One way to do this is to copy these folders and their contents from a similar analysis engine that already exists. 
   - For example, in the case of DHT could copy the DSM engine as it also runs under R and is a small engine.
 * In what follows, it is assumed you copied an existing project.
 
@@ -27,9 +27,9 @@ Open the Properties project, \Properties\DHT.vbp:
 * Rename Public UserControl that exposes the properties pages:
   - e.g. rename DSMProperties to DHTProperties
   - Save as DHTProperties.ctl
-  - Delete the old .ctl file, using Windows Explorer, under the Main Control sub-directory.
+  - Delete the old .ctl file, using Windows Explorer, under the Main Control sub-folder.
 * Rename the resource file:
-  - Outside of VB, rename the resource file in the Resource File sub-directory e.g. rename D6DSM.res to D6DHT.res
+  - Outside of VB, rename the resource file in the Resource File sub-folder e.g. rename D6DSM.res to D6DHT.res
   - Inside VB look under related documents in the list of files attached to the project, remove the old .res file and add the new one.
 * Rename the project:
   - e.g. rename D6DSMPrp to D6DHTPrp
@@ -98,7 +98,7 @@ Following a process similar to Properties above:
 * Rename the project
 * Go through the project properties
 * Compile the project with no compatibility
-* Copy the DLL to the \Compatibility directory
+* Copy the DLL to the \Compatibility folder
 * Compile again with project compatibility
 * Fix the Tester project
 * Test:
@@ -117,7 +117,7 @@ Following a process similar to Properties above:
 * Rename the project
 * Go through the project properties
 * Compile the project with no compatibility
-* Copy the OCX to the \Compatibility directory
+* Copy the OCX to the \Compatibility folder
 * Compile again with project compatibility
 * Create a new License key for both the log and results pages and put these into %BASE%\Database Engine\DistIni.Setup.mdb
 * Test:

@@ -23,7 +23,7 @@ Get the DSM and MRDS source code
     git clone https://github.com/DistanceDevelopment/dsm.git
     git clone https://github.com/DistanceDevelopment/mrds.git
 
-* If working with Distance for Windows and Visual Basic, clone the repositories under the following directories:
+* If working with Distance for Windows and Visual Basic, clone the repositories under the following folders:
   - %BASE%\Analysis Engines\DSM\Engine\
   - %BASE%\Analysis Engines\MRDS\Engine\mrds\
 

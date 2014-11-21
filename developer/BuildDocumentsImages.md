@@ -135,7 +135,7 @@ Build HTML Help from command prompt
 
 * Start command prompt:
   - Select Start => All Programs => Accessories => Command Prompt
-* Change into HTML Help directory:
+* Change into HTML Help folder:
 
 <p/>
 
@@ -191,7 +191,7 @@ Build user guide from command prompt
 
 * Start command prompt:
   - Select Start => All Programs => Accessories => Command Prompt
-* Change into HTML Help directory:
+* Change into HTML Help folder:
 
 <p/>
 
@@ -258,7 +258,7 @@ This assumes that:
 
 * Start command prompt:
   - Select Start => All Programs => Accessories => Command Prompt
-* Change into Manual directory:
+* Change into Manual folder:
 
 <p/>
 

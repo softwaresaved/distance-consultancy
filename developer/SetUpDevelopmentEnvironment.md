@@ -40,7 +40,7 @@ C:\Application Development\Distancex0Extras:
 Logical drives
 --------------
 
-Windows XP (and possibly other OSs) have the facility to map a logical drive as a directory. This is useful as it means that C:\Application Development can actually be a separate drive, making de-fragmentation, backing up, etc useful. 
+Windows XP (and possibly other OSs) have the facility to map a logical drive as a folder. This is useful as it means that C:\Application Development can actually be a separate drive, making de-fragmentation, backing up, etc useful. 
 
 Code development tools
 ----------------------
@@ -59,7 +59,7 @@ Compaq Digital Fortran 6.6 Professional:
 R 2.9.0 (current as of May 2009):
 
 * MRDS and DSM analysis engines
-* From http://www.r-project.org or from the DevCD\R directory.
+* From http://www.r-project.org or from the DevCD\R folder.
 * Unix "tools" (required to build libraries). 
   - For more on what's required see Appendix E (The Windows Toolset) of R installation and administration.
   - Get the latest version from http://www.murdoch-sutherland.com/Rtools/. Choose "package authoring installation"

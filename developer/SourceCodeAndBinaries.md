@@ -4,7 +4,7 @@ root: ..
 title: Source Code and Binaries
 ---
 
-Summary of the sources of code and non-code components that make up Distance, and the tools used to create the Distance for Windows components. This includes the location of scripts used to compile the user's guide and build the Distance for Windows installer. This page also documents the directory structures currently assumed by Distance's scripts and project files.
+Summary of the sources of code and non-code components that make up Distance, and the tools used to create the Distance for Windows components. This includes the location of scripts used to compile the user's guide and build the Distance for Windows installer. This page also documents the folder structures currently assumed by Distance's scripts and project files.
 
 %BASE%
 ------
@@ -99,7 +99,7 @@ Summary of the sources of code and non-code components that make up Distance, an
 | Help\distance.chm <br/> From: %BASE%Extras\External Documentation\Documents\HTMLHelp\ | | |
 | Help\distance.pdf <br/> From: %BASE%Extras\External Documentation\Documents\Manual\distance-master.pdf | | |
 
-Many of the Visual Basic project directories have Graphics\ sub-directories with icons, bitmaps and other images used within the GUI.
+Many of the Visual Basic project folders have Graphics\ sub-folders with icons, bitmaps and other images used within the GUI.
 
 %BASE%Extras
 ------------
@@ -143,8 +143,8 @@ Many of the Visual Basic project directories have Graphics\ sub-directories with
 Source code repositories
 ------------------------
 
-| Repository | Type | Local Directory |
-| ---------- | ---- | --------------- |
+| Repository | Type | Local Folder |
+| ---------- | ---- | ------------ |
 | [http://distanceengines.cvs.sourceforge.net](http://distanceengines.cvs.sourceforge.net) | CVS | %BASE%\Analysis Engines\CDS\Engine\mcds\ |
 | [https://github.com/DistanceDevelopment/dsm](https://github.com/DistanceDevelopment/dsm) | Git | %BASE%\Analysis Engines\DSM\Engine\dsm\ |
 | [https://github.com/DistanceDevelopment/mrds](https://github.com/DistanceDevelopment/mrds) | Git | %BASE%\Analysis Engines\MRDS\Engine\mrds\mrds\ |

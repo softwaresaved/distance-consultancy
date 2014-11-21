@@ -197,7 +197,7 @@ Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Classes\CDSProcess.cls:
   - Invokes GetEngineName as a property
 * Function GetEngineName:
   - Gets database, ProjectSettingsMemo table, AnalysisEngine section, Setting value for Key=="MCDS" if IsMCDS flag is True) else Key=="CDS" and parses Name=Value pairs in Setting value to get ExeName
-  - ExeName is assumed to be in App.Path, same directory as D6NEIUtil.dll
+  - ExeName is assumed to be in App.Path, same folder as D6NEIUtil.dll
 * Sub RunEngine:
   - If Windows NT and EC usage required, invokes`PATH\ec "PATH\MCDS.exe MODE INPUT_COMMAND_FILE \options 2>LOG_FILE"`
   - Otherwise invokes `PATH\MCDS.exe MODE INPUT_COMMAND_FILE \options 2>LOG_FILE`

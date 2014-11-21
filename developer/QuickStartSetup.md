@@ -14,18 +14,18 @@ Distance
 Download and install:
 
 * Download Distance
-* Double-click `d62setup.exe`
+* Double-click d62setup.exe
 * Click About
 * Click OK
 * Click Setup
 * Click Next
 * Click I agree
-* Select Destination Folder: `C:\Program Files (x86)\Distance 6` (or `C\Programs\Distance6`)
+* Select Destination Folder: C:\Program Files (x86)\Distance 6 (or C\Programs\Distance6)
 * Click Next
-* Select Backup File Destination Folder: `C:\Program Files (x86)\Distance BACKUP` (or `C\Programs\Distance6\BACKUP`)
+* Select Backup File Destination Folder: C:\Program Files (x86)\Distance BACKUP (or C\Programs\Distance6\BACKUP)
 * Click Next
 * Select Program Manager Group
- - Enter `Distance`
+ - Enter Distance
  - Select Common group (all users)
 * Click Next
 * Click Next
@@ -39,8 +39,8 @@ Check:
 
 Create shortcut:
 
-* Browse to `C:\Program Files (x86)\Distance 6` (or `C:\Programs\Distance6`)
-* Right-click `Distance.exe`
+* Browse to C:\Program Files (x86)\Distance 6 (or C:\Programs\Distance6)
+* Right-click Distance.exe
 * Select Create shortcut 
 
 Select default project folder (optional):
@@ -48,7 +48,7 @@ Select default project folder (optional):
 * Start Distance
 * Select Tools => Preferences...
 * Click General
-* Enter Default project folder `C:\Users\you\Local Documents\DISTANCE\My Distance Projects`
+* Enter Default project folder C:\Users\you\Local Documents\DISTANCE\My Distance Projects
 * Click OK
 
 R
@@ -57,12 +57,12 @@ R
 Download and install:
 
 * Download R
-* Double-click `R-3.1.0-win.exe`
+* Double-click R-3.1.0-win.exe
 * Select English
 * Click OK
 * Click Next
 * Click Next
-* Select `C:\Program Files\R\R-3.1.0` (or `C:\Programs\R\R-3.1.0`)
+* Select C:\Program Files\R\R-3.1.0 (or C:\Programs\R\R-3.1.0)
 * Click Next
 * Select:
  * Core Files
@@ -86,42 +86,42 @@ Check:
 * Double-click R i386 3.1.0
 * Double-click R x64 3.1.0
 
-Update `PATH` (optional):
+Update PATH (optional):
 
 * Select Start => Control Panel
-* Enter `environment` in the search box and press RETURN
+* Enter 'environment' in the search box and press RETURN
 * Click Edit the system environment variables
 * Click Advanced tab
 * Click Environment Variables...
 * Under User variables select PATH
 * Click Edit...
-* Add `;C:\Program Files\R\R-3.1.0\bin\i386` (or `;C:\Programs\R\R-3.1.0\bin\i386`) to end of Variable value, taking care to remove trailing spaces
+* Add ;C:\Program Files\R\R-3.1.0\bin\i386 (or ;C:\Programs\R\R-3.1.0\bin\i386) to end of Variable value, taking care to remove trailing spaces
 * Click OK
 * Click OK
 * Click OK
 * Right-click on desktop
 * Select New => Shortcut
-* In Type the location of the item, enter `Rterm`
+* In Type the location of the item, enter 'Rterm'
 * Click Next
-* In Type a name for this shortcut, enter `Rterm i386`
+* In Type a name for this shortcut, enter 'Rterm i386'
 * Click Finish
 
 Check:
 
 * Double-click Rterm i386
 
-If you experience problems with installing libraries into the default library location, `library`, under your R installation directory, then set library path (optional):
+If you experience problems with installing libraries into the default library location, library, under your R installation folder, then set library path (optional):
 
-* Create a library directory e.g. `C:\Users\you\My Documents\R\win-library`
+* Create a library folder e.g. C:\Users\you\My Documents\R\win-library
 * Select Start => Control Panel
-* Enter `environment` in the search box and press RETURN
+* Enter 'environment' in the search box and press RETURN
 * Click Edit the system environment variables
 * Click Advanced tab
 * Click Environment Variables...
 * Under User variables, Click New...
 * In New User Variable, enter
- - Variable name: `R_LIBS`
- - Variable value: e.g. `C:\Users\you\My Documents\R\win-library`
+ - Variable name: R_LIBS
+ - Variable value: e.g. C:\Users\you\My Documents\R\win-library
 * Click OK
 * Click OK
 * Click OK
@@ -132,8 +132,8 @@ RStudio
 Download and install:
 
 * Download RStudio
-* Double-click `RStudio-0.98.1062.exe`
-* Select Destination Folder: `C:\Program Files\RStudio` (or `C:\Programs\RStudio`)
+* Double-click RStudio-0.98.1062.exe
+* Select Destination Folder: C:\Program Files\RStudio (or C:\Programs\RStudio)
 
 Check:
 
@@ -167,13 +167,13 @@ Set R:
 
 * Select Tools => Preferences...
 * Click Analysis
-* Enter Folder containing R: `C:\Program Files\R\R-3.1.0` (or `C:\Programs\R\R-3.1.0`)
+* Enter Folder containing R: C:\Program Files\R\R-3.1.0 (or C:\Programs\R\R-3.1.0)
 * Click OK
 
 Check:
 
 * File=>Open Project...
-* Select `Golftees.dst`
+* Select Golftees.dst
 * Click Analyses in Project Browser
 * Select FI - MR dist
 * Click Show details for selected analysis
@@ -189,7 +189,7 @@ Distance R MarkDown files
 Run:
 
 * Select File => Open File...
-* Select `golftees-MRDS.Rmd`
+* Select golftees-MRDS.Rmd
 * Click OK
 * Click Knit HTML
 * Install Required Packages appears

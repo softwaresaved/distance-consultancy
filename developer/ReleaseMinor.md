@@ -331,10 +331,10 @@ Check Distance M.N and R:
 * Select Help => DSM Engine R help (html)
   - Check that DSM HTML help page appears
 
-Check installation directory:
+Check installation folder:
 
 * Browse to C:\Program Files\Distance M
-* Check the directory contents match those in [Release Structure](./ReleaseStructure.html).
+* Check the folder contents match those in [Release Structure](./ReleaseStructure.html).
 
 Archive release
 ---------------
@@ -343,7 +343,7 @@ All the releases of Distance are stored in %BASE%Extras\Releases\.
 
 Archive a release:
 
-* Create a new subdirectory %BASE%Extras\Releases\DistanceM.N e.g. %BASE%Extras\Releases\Distance6.2\
-* For a release, within this create a subdirectory releaseR e.g. release1\
-* For a beta, within this create a subdirectory betaR e.g. beta1\
-* Copy %BASE%Extras\Setup\ReadMe.rtf and %BASE%Extras\Setup\dMNsetup.exe to this subdirectory.
+* Create a new sub-folder %BASE%Extras\Releases\DistanceM.N e.g. %BASE%Extras\Releases\Distance6.2\
+* For a release, within this create a sub-folder releaseR e.g. release1\
+* For a beta, within this create a sub-folder betaR e.g. beta1\
+* Copy %BASE%Extras\Setup\ReadMe.rtf and %BASE%Extras\Setup\dMNsetup.exe to this sub-folder.

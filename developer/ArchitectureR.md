@@ -89,7 +89,7 @@ How to capture input files
 * Select Tools => Preferences...
 * Click Analysis tab
 * Check Debug mode (create command files but don't run engine)
-* Check Temp directory
+* Check Temp folder
 
 If reusing files elsewhere check to ensure that any paths within the files are updated.
 
@@ -189,7 +189,7 @@ Analysis Engines\DSM\NEngineInterface\Classes\DSMNEngineInterface.cls:
 
 * Function RunItem:
   - Calls RProcess.EngineName to get engine file name
-  - Calls RProcess.RunEngine(engine file name, current directory, input file, log file)
+  - Calls RProcess.RunEngine(engine file name, current folder, input file, log file)
 
 Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Classes\RProcess.cls
 
