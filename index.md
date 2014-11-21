@@ -43,6 +43,7 @@ Releasing Distance
 
 * [How to release a minor version of Distance for Windows](./developer/ReleaseMinor.html)
 * [Distance for Windows quick start setup](./developer/QuickStartSetup.html): summary of commands to install Distance for Windows, Distance R packages, R and RStudio which can help when testing Distance for Windows installers.
+* [How to release MCDS on SourceForge](./developer/ReleaseMcds.html)
 
 Architecture
 ------------
