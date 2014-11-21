@@ -44,7 +44,7 @@ Open the Properties project, \Properties\DHT.vbp:
   - Set Application title e.g. D6DHTPrp
   - Check the various parts of the version information are OK e.g. File Description, Product Name, Copyright, etc
   - Select Compile tab
-  - Pick a new base address and enter it here - see [DLL Base Addresses](./DllBaseAddresses.html) and pick an unused one
+  - Pick a new base address and enter it here - see [DLL Base Addresses](../reference/DllBaseAddresses.html) and pick an unused one
   - Select Component tab
   - Check no compatibility
 * Compile under the new name:
@@ -136,4 +136,4 @@ Following a process similar to Properties above:
 ## Update Documentation
 
 * Update the developer's guide to document the new components, Visual Basic projects, R scripts, DLLs and OCXs.
-  - Pick a new base address and enter it here - see [DLL Base Addresses](./DllBaseAddresses.html) and pick an unused one
+  - Pick a new base address and enter it here - see [DLL Base Addresses](../reference/DllBaseAddresses.html) and pick an unused one

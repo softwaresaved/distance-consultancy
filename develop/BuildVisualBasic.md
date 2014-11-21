@@ -17,7 +17,7 @@ Microsoft Visual Basic:
 
 To build a project requires all its pre-requisite projects to have been built. See:
 
-* [Visual Basic Project Dependencies](./VisualBasicProjectDependencies.html)
+* [Visual Basic Project Dependencies](../architecture/VisualBasicProjectDependencies.html)
 * [Visual Basic projects list]({{ site.distance_vmscripts }}/vbprojectlist.txt) - an ordered project list that respects the dependencies.
 
 To see project dependencies within Visual Basic:
@@ -153,7 +153,7 @@ To set the DLL base address:
 * Select Project => PROJECT Properties... e.g. D6Legend Properties...
 * Click Version tab
 
-[DLL Base Addresses](./DllBaseAddresses.html) provides a list of addresses used to date. If you add a new component or change an address, remember to update this list.
+[DLL Base Addresses](../reference/DllBaseAddresses.html) provides a list of addresses used to date. If you add a new component or change an address, remember to update this list.
 
 ---
 

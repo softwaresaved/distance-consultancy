@@ -125,7 +125,7 @@ Hints and tips
 
 <p/>
 
-    [How to build R components](./developer/BuildR.html)
+    [How to build R components](./develop/BuildR.html)
 
 * Site-wide configuration properties are in [_config.yml](./config.yml).
 * A configuration property, NAME, can be referenced in a page using:
