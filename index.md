@@ -65,8 +65,8 @@ Dependencies:
 
 Miscellaneous:
 
-* [DLL Base Addresses](./reference/DllBaseAddresses.html) - DLL addresses used to date in Distance components.
-* [File extensions](./reference/FileExtensions.html) - Commonly-occurring file extensions.
+* [DLL Base Addresses](./reference/DllBaseAddresses.html): DLL addresses used to date in Distance components.
+* [File extensions](./reference/FileExtensions.html): Commonly-occurring file extensions.
 
 Interfaces:
 

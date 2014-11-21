@@ -238,7 +238,7 @@ Update template and sample projects:
 
 ---
 
-## Check setup package on a virtual machine
+## Check setup package
 
 **Important!** Do not check the setup package on the machine you are using for development. This results in the Distance executable and support components being in two places on the computer, which may get confusing! Test it on a vanilla machine (see below) upon which Distance has not been installed to more accurately mimic a new user's experience.
 
