@@ -4,52 +4,48 @@ root: ..
 title: Source Code and Binaries
 ---
 
-Distance for Windows source code locations and the binaries, and other resources, built from it.
-
-In the Binary/Output column a "copy" entry denotes content that has been manually copied or duplicates a file from elsewhere in Distance, or a Distance repository. See the Copies table.
+Summary of the sources of code and non-code components that make up Distance, and the tools used to create the Distance for Windows components. This includes the location of scripts used to compile the user's guide and build the Distance for Windows installer. This page also documents the directory structures currently assumed by Distance's scripts and project files.
 
 %BASE%
 ------
 
-| Source/Input | Tooling | Binary/Output |
-| ------------ | ------- | ------------- |
-| **%BASE%\Analysis Engines\** | | |
+| Source | Tooling | Output |
+| ------ | ------- | ------ |
+| **Analysis Engines\\** | | |
 | CDS\Details\DnnnnCDSDet.vbp | VB | ocx |
-| CDS\Engine\Engine\MCDS.DSW <br/> Uses mcds\ | Compaq Visual Fortran | MCDS.exe | 
-| CDS\Engine\mcds\ | | copy |
+| CDS\Engine\Engine\MCDS.DSW | Compaq Visual Fortran | MCDS.exe <br/> To: Shared Stuff\NEngineInterfaceUtilities\ |
+| CDS\Engine\mcds\ <br/> From: CVS checkout from http://distanceengines.cvs.sourceforge.net | | MCDS.exe via above |
 | CDS\NEngineInterface\DnnnnCDSNEI.vbp | VB | dll |
 | CDS\Properties\DnnnnCDSPrp.vbp | VB | ocx |
 | DSM\Details\DnnnnDSMDet.vbp | VB | ocx |
-| DSM\Engine\dsm | R CMD | zip |
-| | | copy |
+| DSM\Engine\dsm\ <br/> From: Git repository cloned from http://github.com/DistanceDevelopment/dsm/ | R CMD | zip <br/> To: Shared Stuff\NEngineInterfaceUtilities\RPackages\ |
 | DSM\NEngineInterface\DnnnnDSMNEI.vbp | VB | dll |
 | DSM\Properties\DnnnnDSMPrp.vbp | VB | ocx |
 | MRDS\Details\DnnnnMRDSDet.vbp | VB | ocx |
-| MRDS\Engine\mrds | R CMD | zip | 
-| | | copy |
+| MRDS\Engine\mrds\mrds\ <br/> From: Git repository cloned from http://github.com/DistanceDevelopment/mrds/ | R CMD | zip <br/> To: Shared Stuff\NEngineInterfaceUtilities\RPackages\ |
 | MRDS\NEngineInterface\DnnnnMRDSNEI.vbp | VB | dll |
 | MRDS\Properties\DnnnnMRDSPrp.vbp | VB | ocx |
 | Shared Stuff\NEngineInterfaceUtilities\DnnnnNEIUtil.vbp | VB | dll |
-| Shared Stuff\NEngineInterfaceUtilities\Ec.exe | | copy |
-| Shared Stuff\NEngineInterfaceUtilities\MCDS.exe | | copy |
+| Shared Stuff\NEngineInterfaceUtilities\Ec.exe <br/> From: Compaq Visual Fortran | | |
+| Shared Stuff\NEngineInterfaceUtilities\MCDS.exe <br/> From: CDS\Engine\Engine\ | | |
 | Shared Stuff\NEngineInterfaceUtilities\dsm.support.r | | |
 | Shared Stuff\NEngineInterfaceUtilities\mrds.support.r | | |
 | Shared Stuff\NEngineInterfaceUtilities\support.r | | |
 | Shared Stuff\NEngineInterfaceUtilities\RPackages\.zip | | |
-| Shared Stuff\NEngineInterfaceUtilities\RPackages\dsm.zip | | copy |
-| Shared Stuff\NEngineInterfaceUtilities\RPackages\mrds.zip | | copy |
+| Shared Stuff\NEngineInterfaceUtilities\RPackages\dsm.zip <br/> From: DSM\Engine\dsm\ | | |
+| Shared Stuff\NEngineInterfaceUtilities\RPackages\mrds.zip <br/> From: MRDS\Engine\mrds\mrds\ | | |
 | | | |
-| **%BASE%\Database Engine\** | | |
+| **Database Engine\\** | | |
 | DnnnnDbEng.vbp | VB | dll |
 | DistIni.mdb | | |
 | | | |
-| **%BASE%\Design Engine\** | | |
+| **Design Engine\\** | | |
 | Details\DnnnnDesDet.vbp | VB | ocx |
 | Engine\DnnnnDesEng.vbp | VB | dll |
 | NEngineInterface\DnnnnDesNEI.vbp | VB | dll |
 | Properties\DnnnnDesPrp.vbp | VB | ocx |
 | | | |
-| **%BASE%\Interface\** | | |
+| **Interface\\** | | |
 | Distance.vbp | VB | exe |
 | | | |
 | Help\Authors.rtf | | |
@@ -59,22 +55,24 @@ In the Binary/Output column a "copy" entry denotes content that has been manuall
 | Help\DataEntryObservation.rtf | | |
 | Help\DataEntrySample.rtf | | |
 | Help\DataEntryStratum.rtf | | |
-| Help\DistanceLogo.jpg | | copy |
+| Help\DistanceLogo.jpg <br/> From: %BASE%Extras\Graphics\Splash\D62release.jpg | | |
 | Help\Sponsors.rtf | | |
 | Help\TipOfTheDay.txt | | |
 | Help\UseAgreement.txt | | |
 | | | |
-| Main\Graphics - Misc and General\DistanceProject.ico | | copy |
+| Main\Graphics - Misc and General\DistanceProject.ico <br/> From: %BASE%Extras\Graphics\Icons\DistanceProject2.ico | | |
+| | | |
 | Properties\Data Filter\DnnnnDFPrp.vbp | VB | ocx |
 | Properties\Model Definition\DnnnnMDPrp.vbp | VB | ocx |
+| | | |
 | Wizards\Import Data\DnnnnIDWiz.vbp | VB | dll |
 | Wizards\Setup Project\DnnnnSPWiz.vbp | VB | dll |
 | | | |
-| **%BASE%\Map\** | | |
+| **Map\\** | | |
 | Legend\DnnnnLegend.vbp | VB | ocx |
 | Mapper\DnnnnMap.vbp | VB | ocx |
 | | | |
-| **%BASE%\Misc\** | | |
+| **Misc\\** | | |
 | CodeTimer\CTmr4.vbp | VB | dll |
 | CommonDialog\CDlg3.vbp | VB | dll |
 | CoordSysDesc\CSDesc3.vbp | VB | ocx |
@@ -84,77 +82,77 @@ In the Binary/Output column a "copy" entry denotes content that has been manuall
 | PrjParams\PrjParamsnnnn.vbp | VB | dll |
 | SectionList\SList4.vbp | VB | ocx |
 | | | |
-| **%BASE%\Numerical Server\** | | |
+| **Numerical Server\\** | | |
 | NEngineHost\DnnnnNEH.vbp | VB | exe |
-| NEngineHost\EC.EXE | | copy |
+| NEngineHost\EC.EXE From: Compaq Visual Fortran | | |
 | NServer\DnnnnNSvr.vbp | VB | dll |
 | TypeLibrary\IDnnnnNEng.vbp | VB | dll |
 | | | |
-| **%BASE%\Survey\** | | |
+| **Survey\\** | | |
 | Details\DnnnnSvyDet.vbp | VB | ocx |
 | NEngineInterface\DnnnnSvyNEI.vbp | VB | dll |
 | Properties\DnnnnSvyPrp.vbp | VB | ocx |
 | | | |
-| **%BASE%\Utilities\** | | |
+| **Utilities\\** | | |
 | DnnnnUtil.vbp | VB | dll |
-| Help\distance.bas | | copy |
-| Help\distance.chm | | copy |
-| Help\distance.pdf | | copy |
+| Help\distance.bas <br/> From: %BASE%Extras\External Documentation\Documents\HTMLHelp\ | | |
+| Help\distance.chm <br/> From: %BASE%Extras\External Documentation\Documents\HTMLHelp\ | | |
+| Help\distance.pdf <br/> From: %BASE%Extras\External Documentation\Documents\Manual\distance-master.pdf | | |
+
+Many of the Visual Basic project directories have Graphics\ sub-directories with icons, bitmaps and other images used within the GUI.
 
 %BASE%Extras
 ------------
 
-| Source/Input | Tooling | Binary/Output |
-| ------------ | ------- | ------------- |
-| **%BASE%Extras\External Documentation\** | | |
-| Documents\distance.d2h <br> Uses Documents\\*.doc | ComponentOne Doc-To-Help | HTMLHelp\distance.bas |
-| Documents\distance.d2h <br> Uses Documents\\*.doc | ComponentOne Doc-To-Help | HTMLHelp\distance.chm |
-| Documents\distance.d2h <br> Uses Documents\\*.doc | ComponentOne Doc-To-Help | Manual\distance-master.doc |
-| Documents\\*.doc | | |
-| Documents\Manual\distance-master.doc | Insert %BASE%Extras\External Documentation\Images\TitlePage\TitlePage.wmf <br/> Adobe Acrobat | pdf |
-| Images\TitlePage\TitlePage.ppt | Insert %BASE%Extras\Graphics\Splash\D62release.jpg <br/> Microsoft PowerPoint | TitlePage.wmf |
-| ReadMe\ReadMe31.rtf | Insert %BASE%Extras\Internal documents\Worklist\KnownProblems7.doc <br/> and %BASE%Extras\Internal documents\Worklist\ResolvedProblems1.doc | |
+| Source | Tooling | Output |
+| ------ | ------- | ------ |
+| **External Documentation\\** | **User's guide and compiled HTML help** | |
+| Documents\\*.doc (user's guide chapters) | | |
+| Documents\distance.d2h | ComponentOne Doc-To-Help <br/> Uses Documents\\*.doc | Documents\HTMLHelp\distance.bas <br/> To: %BASE%\Utilities\Help\ |
+| Documents\distance.d2h | ComponentOne Doc-To-Help <br> Uses Documents\\*.doc | Documents\HTMLHelp\distance.chm <br/> To: %BASE%\Utilities\Help\ |
+| Documents\distance.d2h | ComponentOne Doc-To-Help <br> Uses Documents\\*.doc | Documents\Manual\distance-master.doc |
+| Documents\Manual\distance-master.doc | Manually insert External Documentation\Images\TitlePage\TitlePage.wmf <br/> Adobe Acrobat | pdf <br/> To: %BASE%\Utilities\Help\distance.pdf |
+| Images\TitlePage\TitlePage.ppt (title page image) | Manually insert Graphics\Splash\D62release.jpg <br/> Microsoft PowerPoint | TitlePage.wmf |
 | | | |
-| **%BASE%Extras\Graphics\** | | |
-| Icons\DistanceProject2.ico | | |
-| Splash\D62release.mix | Microsoft PhotoDraw | D62release.jpg |
+| **Graphics\\** | | |
+| Icons\DistanceProject2.ico (icon) | | To: %BASE%\Interface\Main\Graphics - Misc and General\DistanceProject.ico |
+| Splash\D62release.mix (splash screen) | Microsoft PhotoDraw | D62release.jpg <br/> To: %BASE%\Interface\Help\DistanceLogo.jpg |
 | | | |
-| **%BASE%Extras\Internal Documentation\Worklist** | | |
-| KnownProblems7.doc | | |
-| ResolvedProblems1.doc | | |
+| **Internal Documentation\Worklist\\** | **Known and resolved problems** | |
+| KnownProblems7.doc | Manually insert | ReadMe\DMNreleaseR.rtf or DMNbetaR.rtf <br/> To: Setup\ReadMe.rtf |
+| ResolvedProblems1.doc | Manually insert | ReadMe\DMNreleaseR.rtf or DMNbetaR.rtf <br/> To: Setup\ReadMe.rtf |
 | | | |
-| **%BASE%Extras\Sample Projects Backup** | | |
+| **Sample Projects Backup\\** | **Sample projects for releases** | |
 | Release\\*.dat and \*.dst | | |
 | Templates\SampleTemplate.dat and .dst | | |
 | | | |
-| **%BASE%Extras\Setup** | | |
-| ReadMe.rtf | | copy |
+| **Setup\\** | **Scripts to create releases** | |
+| ReadMe.rtf <br/> From: External Documentation\ReadMe\ | | To: Releases\DistanceM.N\release1\ or beta1\ |
+| DMNreleaseR.wse or BMNbetaR.wse | Wise installer | DMNreleaseR.exe or DMNbetaR.exe (Distance for Windows installer) |
+| DAOLen1.wse <br/> Imported by .wse files above | | | 
+| - | WinZip <br/> Manually insert DMNreleaseR.exe or DMNbetaR.exe, <br/> ReadMe.rtf | dMNsetup.zip (Distance for Windows ZIP) |
+| dMNsetup.zip | WinZip <br/> Manually insert SetupAbout.txt, <br/> SetupDialog, <br/> setup.ico | dMNsetup.exe Distance for Windows self-extracting installer <br/> To: Releases\DistanceM.N\release1\ or beta1\ |
+| SetupAbout.txt | | |
+| SetupDialog.txt | | |
+| setup.ico | | |
+| | | |
+| **Releases\DistanceM.N\release1\ or beta1\\** | **Release archive** | |
+| dMNsetup.exe <br/> From: Setup\ | |
+| ReadMe.rtf <br/> From: Setup\ | |
 
-Copies
-------
+Source code repositories
+------------------------
 
-Content that has been manually copied or duplicates a file from elsewhere in Distance, or a Distance repository.
-
-| Copy | Original |
-| ---- | -------- |
-| %BASE%\Analysis Engines\CDS\Engine\mcds\ | CVS checkout from http://distanceengines.cvs.sourceforge.net |
-| %BASE%\Analysis Engines\DSM\Engine\dsm | Git repository cloned from http://github.com/DistanceDevelopment/dsm/ |
-| %BASE%\Analysis Engines\MRDS\Engine\mrds | Git repository cloned from http://github.com/DistanceDevelopment/mrds/ |
-| %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Ec.exe | Identical to %BASE%\Numerical Server\NEngineHost\EC.EXE <br/> Originates from Compaq Visual Fortran. |
-| %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\MCDS.exe | %BASE%\Analysis Engines\CDS\Engine\MCDS.exe |
-| %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\RPackages\dsm.zip | %BASE%\Analysis Engines\DSM\Engine\dsm.zip |
-| %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\RPackages\mrds.zip |%BASE%\Analysis Engines\MRDS\Engine\mrds.zip |
-| %BASE%\Interface\Help\DistanceLogo.jpg | %BASE%Extras\Graphics\Splash\D62release.jpg |
-| %BASE%\Interface\Main\Graphics - Misc and General\DistanceProject.ico | %BASE%Extras\Graphics\Icons\DistanceProject2.ico |
-| %BASE%\Numerical Server\NEngineHost\EC.EXE | Identical to %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Ec.exe <br/> Originates from Compaq Visual Fortran. |
-| %BASE%\Utilities\Help\distance.bas | %BASE%Extras\External Documentation\Documents\HTMLHelp\distance.bas |
-| %BASE%\Utilities\Help\distance.chm | %BASE%Extras\External Documentation\Documents\HTMLHelp\distance.chm |
-| %BASE%\Utilities\Help\distance.pdf | %BASE%Extras\External Documentation\Documents\Manual\distance-master.pdf |
-| %BASE%Extras\Setup\ReadMe.rtf | %BASE%Extras\External Documentation\ReadMe\ReadMe31.rtf |
+| Repository | Type | Local Directory |
+| ---------- | ---- | --------------- |
+| [http://distanceengines.cvs.sourceforge.net](http://distanceengines.cvs.sourceforge.net) | CVS | %BASE%\Analysis Engines\CDS\Engine\mcds\ |
+| [https://github.com/DistanceDevelopment/dsm](https://github.com/DistanceDevelopment/dsm) | Git | %BASE%\Analysis Engines\DSM\Engine\dsm\ |
+| [https://github.com/DistanceDevelopment/mrds](https://github.com/DistanceDevelopment/mrds) | Git | %BASE%\Analysis Engines\MRDS\Engine\mrds\mrds\ |
 
 Third-party
 -----------
 
+* Locations are those expected by the Wise Installer.
 * "VB" denotes components explicity mentioned in Visual Basic projects - see [Visual Basic Project Dependencies](./VisualBasicProjectDependencies.html).
 * "Release" denotes components arising within a Distance for Windows release - see [Release Structure](./ReleaseStructure.html).
 
