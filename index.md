@@ -55,12 +55,12 @@ Components:
 
 Directory structures:
 
-* [Source Code and Binaries](./developer/SourceCodeAndBinaries.html): expected source code, document and other locations and the binaries, and other resources, built from these.
+* [Source Code and Binaries](./developer/SourceCodeAndBinaries.html): directory structure of sources of code and non-code components and scripts.
 * [Release Structure](./developer/ReleaseStructure.html): Distance for Windows directory and file structure.
 
 Dependencies:
 
-* [Source Code and Binaries](./developer/SourceCodeAndBinaries.html): documents relationship between source code, documents, images and binaries, PDFs and compiled HTML help, and how the latter relates to the former.
+* [Source Code and Binaries](./developer/SourceCodeAndBinaries.html): summary of the sources of code and non-code components that make up Distance, and the tools used to create the Distance for Windows components. 
 * [Visual Basic Project Dependencies](./developer/VisualBasicProjectDependencies.html): Visual Basic project inter-dependencies.
 
 Miscellaneous:
