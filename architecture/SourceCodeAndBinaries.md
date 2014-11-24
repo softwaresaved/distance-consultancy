@@ -2,12 +2,6 @@
 layout: page
 root: ..
 title: Source code and binaries
-sections: 
-- Introduction
-- pcntBASEpcnt folders
-- pcntBASEpcntExtras folders
-- Source code repositories
-- Third-party components
 ---
 
 ## Introduction

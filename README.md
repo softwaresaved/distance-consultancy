@@ -134,17 +134,7 @@ It is useful to set up Jekyll on your computer so you can preview your changes b
 
 ### Page-specific contents
 
-* Page-specific contents with links down to sections are supported:
-* Add a sections entry in the page header of form:
-
-</p>
-
-    sections:
-    - Section title
-    - Section title
-    - Section title
-
-  - 
+* Page-specific contents with links down to sections are supported for level 2 (`<h2>` in HTML and `##` in MarkDown) headings
 
 ### Site-wide configuration
 

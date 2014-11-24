@@ -2,12 +2,6 @@
 layout: page
 root: ..
 title: How to release a minor version of Distance for Windows
-sections:
-- Introduction
-- Prepare components
-- Build Wise installer
-- Check setup package
-- Archive release
 ---
 
 ## Introduction

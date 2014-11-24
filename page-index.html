@@ -1,0 +1,34 @@
+---
+layout: page
+title: Page Index
+root: .
+---
+
+{% assign sorted_pages = (site.pages | sort: 'title') %}
+{% for apage in sorted_pages %}
+  {% comment %} 
+    Only index pages with titles and don't index this page.
+  {% endcomment %}
+  {% if apage.title and apage.title != page.title %}
+<p>
+<a href="{{ site.baseurl }}{{ apage.url }}">{{ apage.title }}</a>
+    {% assign headings = apage.content | split:'<h2 id="' %}
+    {% if headings.size > 1 %}
+<ul>
+      {% comment %} 
+        offset:1 ignores any preamble to first heading 
+      {% endcomment %}
+      {% for heading in headings offset:1 %}
+        {% assign target_gt_name = heading | split:'</h2>' | first %}
+        {% assign target_gt_name_list = target_gt_name | split:'">' %}
+        {% assign target = target_gt_name_list[0] %}
+        {% assign name = target_gt_name_list[1] %}
+<li>
+<a href="{{ site.baseurl }}{{ apage.url }}#{{target}}">{{name}}</a>
+</li>
+      {% endfor %}
+</ul>
+    {% endif %}
+</p>
+  {% endif %}
+{% endfor %}

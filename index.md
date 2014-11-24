@@ -4,9 +4,11 @@ root: .
 title: Distance Developers Guide
 ---
 
+## Introduction
+
 Welcome to the Distance developer's guide.
 
-## Introduction
+## Notations
 
 Some compilers and other software store file locations using an absolute path, rather than a relative path. This means that, when moving Distance source code, project files etc. from one machine to another, either it must be placed in the same folder on the new machine or all the relevant source code, project files etc. must be updated. As the former is easier than the latter, we have converged upon the following locations for Distance's files where "nnnn" is the major version number:
 

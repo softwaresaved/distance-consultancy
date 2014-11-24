@@ -13,23 +13,28 @@
 
        <h1>{{ page.title }}</h1>
 
-       {% if page.sections %}
+       {% comment %}
+         Pre-filter:
+         - Cannot split on \n so replace with <br />
+         - Remove all sub-section markers.
+       {% endcomment %}
+       {% assign headings = page.content | newline_to_br | replace:'###','' | replace :'####','' | split:'##' %}
+       {% if headings.size > 1 %}
          <p>
            Jump down to:
            <ul>
-           {% for section in page.sections %} 
-             <!-- 
-               % and \ in headings are ignored when Jekyll creates 
-               HTML ids for headings.
-               Jekyll does not like % in heading names in meta-data so
-               we use 'pcnt'
-               These Liquid filters take section names and do the 
-               corresponding replacements:
-               - Replace \ with '' in href
-               - Replace pcnt with '' in href
-               - Replace pcnt with % in link
-             -->
-             <li> <a href="#{{section | replace:'\','' | replace:'pcnt',''| slugify}}">{{section | replace:'pcnt','%'}}</a> </li>
+           {% comment %} 
+             offset:1 ignores any preamble to first heading 
+           {% endcomment %}
+           {% for heading in headings offset:1 %}
+             {% assign section = heading | split:'<br />' | first %}
+               {% comment %} 
+                 % and \ in headings are ignored when Jekyll creates 
+                 HTML ids for headings.
+                 These Liquid filters take section names and do the 
+                 corresponding replacements.
+               {% endcomment %}
+             <li> <a href="#{{ section | replace:'\','' | replace:'%',''| slugify }}">{{ section }}</a> </li>
            {% endfor %}
            </ul>
          </p>

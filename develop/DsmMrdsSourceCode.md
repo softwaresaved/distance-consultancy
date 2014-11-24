@@ -2,9 +2,6 @@
 layout: page
 root: ..
 title: How to get DSM and MRDS R Source Code
-sections:
-- Introduction
-- Get DSM and MRDS source code
 ---
 
 ## Introduction

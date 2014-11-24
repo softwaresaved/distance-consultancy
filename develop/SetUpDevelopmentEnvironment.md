@@ -2,11 +2,6 @@
 layout: page
 root: ..
 title: How to set up a development environment
-sections:
-- Introduction
-- Virtual machine
-- Required tools
-- Logical drives
 ---
 
 ## Introduction

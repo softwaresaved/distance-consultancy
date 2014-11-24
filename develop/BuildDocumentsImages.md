@@ -2,25 +2,6 @@
 layout: page
 root: ..
 title: How to build documents and images
-sections:
-- Find out tool versions
-- Edit text files
-- Edit Distance icon
-- Copy Distance icon for use in Visual Basic and release
-- Create splash screen for new version
-- Copy splash screen for use in Visual Basic and release
-- Update user guide version number
-- Build HTML Help
-- Copy HTML Help for use in Visual Basic and release
-- Build HTML Help from command prompt
-- Update title slide with splash screen
-- Build title page image
-- Build user guide
-- Build user guide from command prompt
-- Add title page image to user guide
-- Build user guide PDF
-- Build user guide PDF from command prompt
-- Copy user guide PDF for use in Visual Basic and release
 ---
 
 ## Find out tool versions

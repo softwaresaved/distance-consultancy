@@ -2,14 +2,6 @@
 layout: page
 root: ..
 title: How to build R components
-sections:
-- Find out tool versions
-- Build R DSM and MRDS analysis engines
-- Install source package and build zip via package
-- Copy R packages for use in Visual Basic and release
-- How to write tests
-- How to run tests from within R
-- How to run tests from outwith R
 ---
 
 ## Find out tool versions

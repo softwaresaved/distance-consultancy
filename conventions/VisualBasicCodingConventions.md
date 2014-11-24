@@ -2,12 +2,6 @@
 layout: page
 root: ..
 title: Visual Basic coding conventions
-sections:
-- Introduction
-- Class Naming Conventions
-- Object Naming Conventions
-- Constant and Variable Coding Conventions
-- Structured Coding Conventions
 ---
 
 ## Introduction

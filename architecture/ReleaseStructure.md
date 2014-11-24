@@ -2,14 +2,6 @@
 layout: page
 root: ..
 title: Release structure
-sections:
-- Introduction
-- Main folder
-- BACKUP folder
-- Help folder
-- RPackages folder
-- Sample Projects folder
-- Sample Projects\Templates folder
 ---
 
 ## Introduction

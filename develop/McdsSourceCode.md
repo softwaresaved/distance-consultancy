@@ -2,10 +2,6 @@
 layout: page
 root: ..
 title: How to get MCDS Fortran Source Code
-sections:
-- Introduction
-- Get MCDS source code using Free Software Foundation CVS client
-- Get MCDS source code using TortoiseCVS
 ---
 
 ## Introduction

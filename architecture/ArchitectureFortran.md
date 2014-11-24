@@ -2,11 +2,6 @@
 layout: page
 root: ..
 title: Distance for Windows and Fortran
-sections:
-- Introduction
-- Distance for Windows and Fortran interface
-- Visual Basic and Fortran interface
-- Miscellaneous MCDS implementation details
 ---
 
 ## Introduction

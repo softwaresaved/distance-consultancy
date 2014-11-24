@@ -2,11 +2,6 @@
 layout: page
 root: ..
 title: Distance for Windows and R
-sections:
-- Introduction
-- Distance for Windows and R interface
-- Visual Basic and R interface
-- Miscellaneous DSM and MRDS implementation details
 ---
 
 ## Introduction

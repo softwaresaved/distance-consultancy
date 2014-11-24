@@ -2,12 +2,6 @@
 layout: page
 root: ..
 title: How to build Fortran components
-sections:
-- Find out tool versions
-- Build MCDS analysis engine
-- Copy MCDS.exe for use in Visual Basic and release
-- Build MCDS analysis engine NMake file
-- Build MCDS analysis engine from command prompt using NMake file
 ---
 
 ## Find out tool versions
