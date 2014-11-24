@@ -1,3 +1,4 @@
+Misc\GenerateLicenseKey\GenerateLicenseKey.vbp
 Map\Legend\D6Legend.vbp
 Misc\CodeTimer\CTmr4.vbp
 Misc\CommonDialog\CDlg3.vbp
