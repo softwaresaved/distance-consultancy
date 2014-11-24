@@ -166,6 +166,8 @@ It is useful to set up Jekyll on your computer so you can preview your changes b
 
 * Jekyll does not like non-UTF-8 characters. These can be stripped out on Windows using Git Bash, via:
 
+<p/>
+
     # Purge the characters.
     iconv -f utf-8 -t utf-8 -c before.md > after.md
     # Compare the files to see what was replaced.
