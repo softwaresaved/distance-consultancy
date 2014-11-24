@@ -1,4 +1,4 @@
----
+--
 layout: page
 root: .
 title: Distance Developers Guide
@@ -94,4 +94,4 @@ Interfaces:
 
 * [DLL base addresses](./reference/DllBaseAddresses.html): DLL addresses used to date in Distance components.
 * [File extensions](./reference/FileExtensions.html): Commonly-occurring file extensions.
-* [Page index](./page-index.html)
+* [Site map](./site-map.html)
