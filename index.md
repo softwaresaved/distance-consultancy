@@ -46,6 +46,10 @@ Day-to-day development:
 * [Distance for Windows quick start setup](./develop/QuickStartSetup.html): summary of commands to install Distance for Windows, Distance R packages, R and RStudio which can help when testing Distance for Windows installers.
 * [How to release MCDS on SourceForge](./develop/ReleaseMcds.html)
 
+## Managing infrastructure
+
+* [How to back up project resources](./develop/BackUpResources.html)
+
 ## Architecture
 
 Components:
