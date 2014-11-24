@@ -343,7 +343,7 @@ Check Distance M.N and R:
 Check installation folder:
 
 * Browse to C:\Program Files\Distance M
-* Check the folder contents match those in [Release Structure](../architecture/ReleaseStructure.html).
+* Check the folder contents match those in [Release structure](../architecture/ReleaseStructure.html).
 
 ---
 

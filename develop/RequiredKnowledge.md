@@ -1,7 +1,7 @@
 ---
 layout: page
 root: ..
-title: Required Knowledge
+title: Required knowledge
 ---
 
 To develop Distance you need to have a working knowledge of the following:

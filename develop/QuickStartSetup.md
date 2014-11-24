@@ -1,7 +1,7 @@
 ---
 layout: page
 root: ..
-title: Distance for Windows Quick Start Setup
+title: Distance for Windows quick start setup
 ---
 
 This page provides a summary of the commands needed to install Distance for Windows and its pre-requisites.

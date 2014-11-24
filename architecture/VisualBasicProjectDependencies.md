@@ -1,7 +1,7 @@
 ---
 layout: page
 root: ..
-title: Visual Basic Project Dependencies
+title: Visual Basic project dependencies
 ---
 
 Dependencies of Distance's Visual Basic projects.

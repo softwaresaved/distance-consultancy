@@ -1,7 +1,7 @@
 ---
 layout: page
 root: ..
-title: Non-code Components
+title: Non-code components
 ---
 
 Distance has a number of non-code components.

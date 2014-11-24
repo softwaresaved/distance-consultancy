@@ -19,7 +19,7 @@ The pages in this guide were written using Distance for Windows 6.2 release and 
 
 ## Developing Distance
 
-* [Required Knowledge](./develop/RequiredKnowledge.html)
+* [Required knowledge](./develop/RequiredKnowledge.html)
 * [How to set up a development environment](./develop/SetUpDevelopmentEnvironment.html)
 
 Source code access and management:
@@ -33,7 +33,6 @@ Day-to-day development:
 * [How to build Fortran components](./develop/BuildFortran.html)
 * [How to build Visual Basic components](./develop/BuildVisualBasic.html)
 * [How to register components and generate licence keys](./develop/RegisterGenerateLicenceKey.html)
-
 * [How to build documents and images](./develop/BuildDocumentsImages.html)
 
 ## Coding conventions
@@ -54,19 +53,19 @@ Day-to-day development:
 
 Components:
 
-* [Code Components](./architecture/CodeComponents.html): code-based components.
-* [Non-code Components](./architecture/NonCodeComponents.html): non-code components.
-* [Third-party Components](./architecture/ThirdPartyComponents.html): third-party components written by others and which are needed to build Distance and/or are shipped with Distance.
+* [Code components](./architecture/CodeComponents.html): code-based components.
+* [Non-code components](./architecture/NonCodeComponents.html): non-code components.
+* [Third-party components](./architecture/ThirdPartyComponents.html): third-party components written by others and which are needed to build Distance and/or are shipped with Distance.
 
 Folder structures:
 
-* [Source Code and Binaries](./architecture/SourceCodeAndBinaries.html): folder structure of sources of code and non-code components and scripts.
-* [Release Structure](./architecture/ReleaseStructure.html): Distance for Windows folder and file structure.
+* [Source code and binaries](./architecture/SourceCodeAndBinaries.html): folder structure of sources of code and non-code components and scripts.
+* [Release structure](./architecture/ReleaseStructure.html): Distance for Windows folder and file structure.
 
 Dependencies:
 
-* [Source Code and Binaries](./architecture/SourceCodeAndBinaries.html): summary of the sources of code and non-code components that make up Distance, and the tools used to create the Distance for Windows components. 
-* [Visual Basic Project Dependencies](./architecture/VisualBasicProjectDependencies.html): Visual Basic project inter-dependencies.
+* [Source code and binaries](./architecture/SourceCodeAndBinaries.html): summary of the sources of code and non-code components that make up Distance, and the tools used to create the Distance for Windows components. 
+* [Visual Basic project dependencies](./architecture/VisualBasicProjectDependencies.html): Visual Basic project inter-dependencies.
 
 Interfaces:
 
@@ -75,6 +74,6 @@ Interfaces:
 
 ## Reference
 
-* [DLL Base Addresses](./reference/DllBaseAddresses.html): DLL addresses used to date in Distance components.
+* [DLL base addresses](./reference/DllBaseAddresses.html): DLL addresses used to date in Distance components.
 * [File extensions](./reference/FileExtensions.html): Commonly-occurring file extensions.
 * [Page index](./page-index.html)

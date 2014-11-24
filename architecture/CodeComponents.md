@@ -1,7 +1,7 @@
 ---
 layout: page
 root: ..
-title: Code Components
+title: Code components
 ---
 
 Distance is very modular - it is made up of a large number of semi-independent components written in a variety of development environments (programming languages). These components interact through sets of well-defined interfaces. Many of the components are implemented as ActiveX components - OCXs, DLLs, EXEs etc. and the interaction is largely through calling public methods, setting public properties, etc. Others (e.g. the MCDS, MRDS and DSM analysis engines) are stand-alone executables or libraries and the interaction with these is largely through writing to and reading from text files.

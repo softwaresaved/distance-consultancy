@@ -1,7 +1,7 @@
 ---
 layout: page
 root: ..
-title: Source Code and Binaries
+title: Source code and binaries
 ---
 
 Summary of the sources of code and non-code components that make up Distance, and the tools used to create the Distance for Windows components. This includes the location of scripts used to compile the user's guide and build the Distance for Windows installer. This page also documents the folder structures currently assumed by Distance's scripts and project files.
@@ -158,8 +158,8 @@ Many of the Visual Basic project folders have Graphics\ sub-folders with icons, 
 ## Third-party components
 
 * Locations are those expected by the Wise Installer.
-* "VB" denotes components explicity mentioned in Visual Basic projects - see [Visual Basic Project Dependencies](./VisualBasicProjectDependencies.html).
-* "Release" denotes components arising within a Distance for Windows release - see [Release Structure](./ReleaseStructure.html).
+* "VB" denotes components explicity mentioned in Visual Basic projects - see [Visual Basic project dependencies](./VisualBasicProjectDependencies.html).
+* "Release" denotes components arising within a Distance for Windows release - see [Release structure](./ReleaseStructure.html).
 
 | File | Location | VB | Install |
 | ---- | -------- | -- | ------- |

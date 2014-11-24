@@ -1,7 +1,7 @@
 ---
 layout: page
 root: ..
-title: Release Structure
+title: Release structure
 ---
 
 Distance for Windows components and files. These are installed by the Distance for Windows installer, and the source locations they originate from.
