@@ -6,7 +6,7 @@ Mike Jackson, The Software Sustainability Institute / EPCC, The University of Ed
 Introduction
 ------------
 
-Additional recommendations for [Developer Experience Review](./DeveloperExperienceReview.md). These arose when exploring the Distance VM to understand how to build and release a minor version of Distance for Windows. These activities are documented in [How to release a minor version of Distance for Windows](./developer/ReleaseMinor.md) and its related pages.
+Additional recommendations for [Developer Experience Review](./DeveloperExperienceReview.md). These arose when exploring the Distance VM to understand how to build and release a minor version of Distance for Windows. These activities are documented in [How to release a minor version of Distance for Windows](http://softwaresaved.github.io/distance-consultancy/develop/ReleaseMinor.html).
 
 Automate build, copy and replace tasks
 --------------------------------------
@@ -139,7 +139,7 @@ Document what checks need to be done.
 Document purpose of BACKUP directory in an installation
 -------------------------------------------------------
 
-When installing Distance on Windows 7 the installation's BACKUP directory contained a number of libraries - see [Installed Components](./developer/InstalledComponents.md). However, when installing on Windows XP it only contained scripten.exe. Document that this BACKUP directory does.
+When installing Distance on Windows 7 the installation's BACKUP directory contained a number of libraries - see [ReleaseStructure](http://softwaresaved.github.io/distance-consultancy/architecture/ReleaseStructure.html). However, when installing on Windows XP it only contained scripten.exe. Document that this BACKUP directory does.
 
 Provide DLL base addresses
 --------------------------
