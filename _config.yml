@@ -4,14 +4,19 @@ email: distance-sampling@googlegroups.com
 project_name: Distance
 project_site: http://distancesampling.org/
 
-baseurl: /distance-consultancy # gh-pages site subpath
+# gh-pages site subpath
+site: http://softwaresaved.github.io/distance-consultancy/
+baseurl: /distance-consultancy 
 description: Distance Sampling project developer's guide
 
+# GitHub username and repository URL
 github_username: DistanceDevelopment
 github_url: https://github.com/softwaresaved/distance-consultancy/
 
+# Location of Distance VM scripts
 distance_vmscripts: https://github.com/softwaresaved/distance-consultancy/tree/master/vmscripts
 
+# Jekyll settings
 theme_name: orderedlist
 theme_url: https://github.com/orderedlist
 
