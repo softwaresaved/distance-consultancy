@@ -103,6 +103,7 @@ It is useful to set up Jekyll on your computer so you can preview your changes b
 ### Page format
 
 * Pages can be written in HTML or MarkDown.
+* Level 1 headings  (`<h1>` in HTML and `#` in MarkDown) should be avoided on pages.
 
 ### MarkDown page headers
 
@@ -135,6 +136,10 @@ It is useful to set up Jekyll on your computer so you can preview your changes b
 ### Page-specific contents
 
 * Page-specific contents with links down to sections are supported for level 2 (`<h2>` in HTML and `##` in MarkDown) headings
+
+### Site map 
+
+* Site map indexes level 2 (`<h2>` in HTML and `##` in MarkDown) and level 3 (`<h3>` in HTML and `###` in MarkDown) headings
 
 ### Site-wide configuration
 
