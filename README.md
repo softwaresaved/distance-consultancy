@@ -1,21 +1,20 @@
 
-Distance Developer's Guide 
-==========================
+# Distance Developer's Guide 
 
 This repository contains the pages for the Distance Developer's Guide web site. It is written in HTML and [MarkDown](http://daringfireball.net/projects/markdown/syntax), uses [Jekyll](http://jekyllrb.com/) templates and is rendered via [GitHub pages](https://pages.github.com/).
 
 To view the web site, visit http://softwaresaved.github.io/distance-consultancy.
 
+## Editing the web site
+
 The following sections describe how to edit and preview the web site.
 
-Install Git for Windows
------------------------
+### Install Git for Windows
 
 * Download from http://msysgit.github.io/
 * Double-click exe (e.g. Git-1.9.4-preview20140929.exe) to install
 
-Fork and clone this repository
-------------------------------
+### Fork and clone this repository
 
 * [Sign in](http://github.com/login) to GitHub
 * [Fork](https://github.com/softwaresaved/distance-consultancy/fork) this repository
@@ -36,8 +35,7 @@ Fork and clone this repository
     git fetch origin gh-pages
     git checkout gh-pages
 
-Set up Jekyll
--------------
+### Set up Jekyll
 
 It is useful to set up Jekyll on your computer so you can preview your changes before commiting and pushing them.
 
@@ -76,8 +74,7 @@ It is useful to set up Jekyll on your computer so you can preview your changes b
     
         bundle install
 
-Edit pages
-----------
+### Edit pages
 
 * Edit pages using your favourite editor
 * Preview how the pages will look on the web site, within the Ruby command prompt, 
@@ -99,10 +96,16 @@ Edit pages
 
 * Create a pull request from your fork on GitHub to this repository
 
-Hints and tips
---------------
+---
+
+## Hints and tips
+
+### Page format
 
 * Pages can be written in HTML or MarkDown.
+
+### MarkDown page headers
+
 * MarkDown pages should have a header of the form:
 
 <p/>
@@ -121,11 +124,29 @@ Hints and tips
     root: .
     ---
 
+### Relative links
+
 * Relative links between MarkDown pages are allowed but use a .html suffix e.g.
 
 <p/>
 
     [How to build R components](./develop/BuildR.html)
+
+### Page-specific contents
+
+* Page-specific contents with links down to sections are supported:
+* Add a sections entry in the page header of form:
+
+</p>
+
+    sections:
+    - Section title
+    - Section title
+    - Section title
+
+  - 
+
+### Site-wide configuration
 
 * Site-wide configuration properties are in [_config.yml](./config.yml).
 * A configuration property, NAME, can be referenced in a page using:
@@ -140,6 +161,9 @@ Hints and tips
 
 * Project-specific properties can be defined.
 * [_config.yml](./config.yml) baseurl holds the sub-path of the web site. This should match the name of the GitHub project hosting the web site e.g. distance-consultancy.
+
+### Non-UTF-8 characters
+
 * Jekyll does not like non-UTF-8 characters. These can be stripped out on Windows using Git Bash, via:
 
     # Purge the characters.
