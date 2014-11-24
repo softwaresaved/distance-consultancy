@@ -19,6 +19,8 @@ The pages in this guide were written using Distance for Windows 6.2 release and 
 
 ## Developing Distance
 
+Getting started:
+
 * [Required knowledge](./develop/RequiredKnowledge.html)
 * [How to set up a development environment](./develop/SetUpDevelopmentEnvironment.html)
 
@@ -35,19 +37,29 @@ Day-to-day development:
 * [How to register components and generate licence keys](./develop/RegisterGenerateLicenceKey.html)
 * [How to build documents and images](./develop/BuildDocumentsImages.html)
 
-## Coding conventions
+Coding conventions:
 
 * [Visual Basic coding conventions](./conventions/VisualBasicCodingConventions.html)
+
+Issue and bug management:
+
+* [Bugzilla](http://www.ruwpa.st-and.ac.uk/distance/bugzilla)
+* [distance-sampling](https://groups.google.com/forum/#!forum/distance-sampling) GoogleGroup archive.
+* [distance-sampling](http://www.jiscmail.ac.uk/lists/distance-sampling.html) JISCMail archive, for discussions up to June 2014.
+* Known problems, restrictions and workarounds for specific releases:
+  - [Distance 6.2 and R](http://distancesampling.org/Distance/old-versions/d62-r-install-details.html)
+  - [Distance 6.0 Release 2](http://distancesampling.org/Distance/old-versions/d60knownproblems.html).
+  - [Distance 5.0 Release 2](http://distancesampling.org/Distance/old-versions/d50knownproblems.html).
+  - [Distance 4.1 Release 2](http://distancesampling.org/Distance/old-versions/d41knownproblems.html).
+  - [Distance 3.5 Release 6](http://distancesampling.org/Distance/old-versions/distanceknownproblems.html).
+
+
 
 ## Releasing Distance
 
 * [How to release a minor version of Distance for Windows](./develop/ReleaseMinor.html)
 * [Distance for Windows quick start setup](./develop/QuickStartSetup.html): summary of commands to install Distance for Windows, Distance R packages, R and RStudio which can help when testing Distance for Windows installers.
 * [How to release MCDS on SourceForge](./develop/ReleaseMcds.html)
-
-## Managing infrastructure
-
-* [How to back up project resources](./develop/BackUpResources.html)
 
 ## Architecture
 
@@ -71,6 +83,10 @@ Interfaces:
 
 * [Distance for Windows and Fortran](./architecture/ArchitectureFortran.html): interface between Visual Basic and Fortran (for MCDS)
 * [Distance for Windows and R](./architecture/ArchitectureR.html): interface between Visual Basic and R (for DSM and MRDS)
+
+## Managing infrastructure
+
+* [How to back up project resources](./develop/BackUpResources.html)
 
 ## Reference
 
