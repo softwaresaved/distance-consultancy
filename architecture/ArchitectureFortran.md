@@ -2,35 +2,42 @@
 layout: page
 root: ..
 title: Distance for Windows and Fortran
+sections:
+- Introduction
+- Distance for Windows and Fortran interface
+- Visual Basic and Fortran interface
+- Miscellaneous MCDS implementation details
 ---
 
-The following analyses are done via Fortran:
+## Introduction
+
+Distance currently has one Fortran-based analysis engine, MCDS, that does two types of analysis:
 
 * Conventional distance sampling (CDS)
 * Multiple covariate distance sampling (MCDS)
 
-The same analysis engine is used for both:
-
-* Stand-alone application, MCDS.exe
-* For full details of usage and input/output file formats, see Appendix - MCDS Engine Reference, user's guide, p307-344
-
 ---
 
-## Distance for Windows <=> Fortran interface
+## Distance for Windows and Fortran interface
 
 * Create:
   - Command file
   - Input file
-* Invokes MCDS.exe via Ec.exe e.g.:
+  - For full details of input file formats, see Appendix - MCDS Engine Reference, user's guide, p307-344
+* Invokes MCDS.exe via Ec.exe
+  - For full details of usage, see Appendix - MCDS Engine Reference, user's guide, p307-344
+  - For example:
 
 <p/>
 
     C:\Programs\DISTAN~1\ec "C:\Programs\DISTAN~1\MCDS.exe 0, C:\Users\mjj\AppData\Local\Temp\dst3C5.tmp \options 2>C:\Users\mjj\AppData\Local\Temp\dst3C4.tmp" 
 
+
 * Wait for results:
   - Exits with success
   - Shut down with Internal Error message
   - Crash with Fortran runtime error - rare
+  - For full details of output file formats and return codes, see Appendix - MCDS Engine Reference, user's guide, p307-344
 
 Ec.exe 
 
@@ -58,7 +65,7 @@ Ec.exe
        v      Display program version number
        ?      Display this help message
 
-See Visual Basic <=> Fortran interface below for more details.
+See Visual Basic and Fortran interface below for more details.
 
 ### How to capture input files
 
@@ -154,7 +161,7 @@ Fortran debugging output:
 
 ---
 
-## Visual Basic <=> Fortran interface
+## Visual Basic and Fortran interface
 
 Microsoft Jet database, DistIni.mdb, settings:
 

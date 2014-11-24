@@ -2,16 +2,23 @@
 layout: page
 root: ..
 title: Distance for Windows and R
+sections:
+- Introduction
+- Distance for Windows and R interface
+- Visual Basic and R interface
+- Miscellaneous DSM and MRDS implementation details
 ---
 
-Analysis engines:
+## Introduction
+
+Distance currently has two R-based analysis engines:
 
 * MRDS fits detection functions to point and line transect distance sampling survey data
 * DSM fits density surface models to spatially-referenced distance sampling data
 
 ---
 
-## Distance for Windows <=> R interface
+## Distance for Windows and R interface
 
 * Create input files.
 * Invoke R e.g.:
@@ -23,7 +30,7 @@ Analysis engines:
 * Wait for results
 * Read results
 
-See Visual Basic <=> R interface below for more details.
+See Visual Basic and R interface below for more details.
 
 ### Input files
 
@@ -99,7 +106,7 @@ Within R batch mode e.g.
 
     Rcmd.exe BATCH in.r log.r
 
-### CDS and MCDS analysis engine <=> R
+### CDS and MCDS analysis engine and R
 
 From Exporting CDS Results from Analysis Details Results, user's guide, p115:
 
@@ -149,7 +156,7 @@ From Exporting MCDS Results, user's guide, p144:
 
 --- 
 
-## Visual Basic <=> R interface
+## Visual Basic and R interface
 
 Microsoft Jet database, DistIni.mdb, settings:
 

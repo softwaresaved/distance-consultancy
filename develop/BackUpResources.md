@@ -2,6 +2,11 @@
 layout: page
 root: ..
 title: How to back up project resources
+sections:
+- Back up GitHub repository
+- Back up GitHub issues
+- Back up SourceForge CVS repository
+- Back up Bugzilla bug reports
 ---
 
 ## Back up GitHub repository

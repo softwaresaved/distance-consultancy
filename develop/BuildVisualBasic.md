@@ -2,6 +2,17 @@
 layout: page
 root: ..
 title: How to build Visual Basic components
+sections:
+- Find out tool versions
+- View Visual Basic project dependencies
+- Build single Visual Basic project
+- Build all Visual Basic projects
+- Remove all Visual Basic binaries
+- Set DLL base address
+- View binary (dll, ocx, exe) meta-data
+- Update binary (dll, ocx, exe) meta-data
+- View binary (dll, ocx, exe) meta-data
+- View version compatibility
 ---
 
 ## Find out tool versions

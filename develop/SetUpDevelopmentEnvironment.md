@@ -2,7 +2,14 @@
 layout: page
 root: ..
 title: How to set up a development environment
+sections:
+- Introduction
+- Virtual machine
+- Required tools
+- Logical drives
 ---
+
+## Introduction
 
 **Important!** Do not do development and test Distance setup packages or install Distance releases on the same machine. This results in the Distance executable and support components being in two places on the computer, which may get confusing!
 

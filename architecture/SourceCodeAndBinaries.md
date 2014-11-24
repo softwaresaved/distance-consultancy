@@ -2,13 +2,21 @@
 layout: page
 root: ..
 title: Source code and binaries
+sections: 
+- Introduction
+- pcntBASEpcnt folders
+- pcntBASEpcntExtras folders
+- Source code repositories
+- Third-party components
 ---
+
+## Introduction
 
 Summary of the sources of code and non-code components that make up Distance, and the tools used to create the Distance for Windows components. This includes the location of scripts used to compile the user's guide and build the Distance for Windows installer. This page also documents the folder structures currently assumed by Distance's scripts and project files.
 
 ---
 
-## %BASE%
+## %BASE% folders
 
 | Source | Tooling | Output |
 | ------ | ------- | ------ |
@@ -105,7 +113,7 @@ Many of the Visual Basic project folders have Graphics\ sub-folders with icons, 
 
 ---
 
-## %BASE%Extras
+## %BASE%Extras folders
 
 | Source | Tooling | Output |
 | ------ | ------- | ------ |

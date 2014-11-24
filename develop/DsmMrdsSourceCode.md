@@ -2,18 +2,19 @@
 layout: page
 root: ..
 title: How to get DSM and MRDS R Source Code
+sections:
+- Introduction
+- Get DSM and MRDS source code
 ---
 
-DSM and MRDS source code is written in R and is hosted on GitHub:
+## Introduction
 
-* [https://github.com/DistanceDevelopment/dsm](https://github.com/DistanceDevelopment/dsm)
-* [https://github.com/DistanceDevelopment/mrds](https://github.com/DistanceDevelopment/mrds)
+* DSM and MRDS source code is written in R and is hosted on GitHub:
+  - [https://github.com/DistanceDevelopment/dsm](https://github.com/DistanceDevelopment/dsm)
+  - [https://github.com/DistanceDevelopment/mrds](https://github.com/DistanceDevelopment/mrds)
+* The source code can be browsed above.
 
-The source code can be browsed above.
-
----
-
-## Get the DSM and MRDS source code
+## Get DSM and MRDS source code
 
 * DSM and MRDS source code can be clonsed anonymously
 * Start Git Bash, or your preferred Git client

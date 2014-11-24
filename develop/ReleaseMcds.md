@@ -2,7 +2,14 @@
 layout: page
 root: ..
 title: How to release MCDS on SourceForge
+sections:
+- Introduction
+- Export MCDS from CVS
+- Prepare binary bundle
+- Release on SourceForge
 ---
+
+## Introduction
 
 This section describes the process of releasing source and binary distributions of the standalone Fortran MCDS analysis engine.
 

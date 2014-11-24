@@ -2,6 +2,11 @@
 layout: page
 root: ..
 title: How to register components and generate licence keys
+sections:
+- Register component with registry
+- Unregister component from registry
+- Check component registry entry
+- Generate licence key for component
 ---
 
 ## Register component with registry

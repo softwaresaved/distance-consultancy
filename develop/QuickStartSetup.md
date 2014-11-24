@@ -2,7 +2,18 @@
 layout: page
 root: ..
 title: Distance for Windows quick start setup
+sections:
+- Introduction
+- Distance for Windows
+- R
+- RStudio
+- Distance R packages
+- Configure Distance for Windows and R
+- Run Distance R MarkDown files
+- Examples of paths with spaces causing problems
 ---
+
+## Introduction
 
 This page provides a summary of the commands needed to install Distance for Windows and its pre-requisites.
 
