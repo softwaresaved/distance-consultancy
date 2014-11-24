@@ -5,7 +5,6 @@ project_name: Distance
 project_site: http://distancesampling.org/
 
 # gh-pages site subpath
-site: http://softwaresaved.github.io/distance-consultancy/
 baseurl: /distance-consultancy 
 description: Distance Sampling project developer's guide
 
