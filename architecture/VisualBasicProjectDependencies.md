@@ -255,6 +255,9 @@ All dependencies are recorded in Visual Basic as References except for those pro
 | | mo20.ocx |
 | | stdole2.tlb |
 | | |
+| Misc\GenerateLicenseKey\GenerateLicenseKey.vbp | |
+| | none |
+| | |
 | Misc\LabelLine\LLine3.vbp | Label line 3.0 |
 | | stdole2.tlb |
 | | |

@@ -85,3 +85,4 @@ In what follows, all components are VB6 unless otherwise stated.
 | LLine3.ocx | Labels with 3D lines |
 | LogWin3.ocx | Log window |
 | SList4.ocx | Section list - efficient drop-down combo box for long lists |
+| GenerateLicenseKey.exe | Executable to generate license keys for components. This is not shipped but is needed when developing new analysis engines. |

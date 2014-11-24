@@ -82,6 +82,7 @@ Summary of the sources of code and non-code components that make up Distance, an
 | LogWindow\LogWin3.vbp | VB | ocx |
 | PrjParams\PrjParamsnnnn.vbp | VB | dll |
 | SectionList\SList4.vbp | VB | ocx |
+| GenerateLicenseKey\GenerateLicenseKey.vbp (executable to generate license keys for components - this is not shipped but is needed when developing new analysis engines) | VB | exe |
 | | | |
 | **Numerical Server\\** | | |
 | NEngineHost\DnnnnNEH.vbp | VB | exe |
