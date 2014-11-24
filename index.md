@@ -32,6 +32,8 @@ Day-to-day development:
 * [How to build R components](./develop/BuildR.html)
 * [How to build Fortran components](./develop/BuildFortran.html)
 * [How to build Visual Basic components](./develop/BuildVisualBasic.html)
+* [How to register components and generate licence keys](./develop/RegisterGenerateLicenceKey.html)
+
 * [How to build documents and images](./develop/BuildDocumentsImages.html)
 
 ## Coding conventions
