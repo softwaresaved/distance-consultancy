@@ -137,6 +137,15 @@ It is useful to set up Jekyll on your computer so you can preview your changes b
 
 * Page-specific contents with links down to sections are supported for level 2 (`<h2>` in HTML and `##` in MarkDown) headings
 
+### Images
+
+* Put images in sub-directories of assets
+* Link to them using e.g.
+
+<p/>
+
+    [Some image]({{ site.url }}/assets/somedirectory/someimage.jpg)
+
 ### Site map 
 
 * Site map indexes level 2 (`<h2>` in HTML and `##` in MarkDown) and level 3 (`<h3>` in HTML and `###` in MarkDown) headings

@@ -21,3 +21,4 @@ theme_url: https://github.com/orderedlist
 
 # Build settings
 markdown: kramdown
+exclude: [internal]
