@@ -144,7 +144,7 @@ It is useful to set up Jekyll on your computer so you can preview your changes b
 
 <p/>
 
-    [Some image]({{ site.url }}/assets/somedirectory/someimage.jpg)
+    [Some image]({{ site.baseurl }}/assets/somedirectory/someimage.jpg)
 
 ### Site map 
 

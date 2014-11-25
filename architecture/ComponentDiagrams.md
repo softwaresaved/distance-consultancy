@@ -6,7 +6,7 @@ title: Component diagrams
 
 ## Analysis components 
 
-![Analysis components]({{ site.url }}/assets/architecture/AnalysisDiagram.jpg)
+![Analysis components]({{ site.baseurl }}/assets/architecture/AnalysisDiagram.jpg)
 
 Distance's analysis components. 
 
@@ -16,7 +16,7 @@ Distance's analysis components.
 
 ## GUI components 
 
-![GUI components]({{ site.url }}/assets/architecture/GUIDiagram.jpg)
+![GUI components]({{ site.baseurl }}/assets/architecture/GUIDiagram.jpg)
 
 Distance's GUI components. 
 
