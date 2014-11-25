@@ -13,156 +13,56 @@ Distance currently has one Fortran-based analysis engine, MCDS, that does two ty
 
 ---
 
-## Distance for Windows and Fortran interface
+## MCDS
 
-* Create:
-  - Command file
-  - Input file
-  - For full details of input file formats, see Appendix - MCDS Engine Reference, user's guide, p307-344
-* Invokes MCDS.exe via Ec.exe
-  - For full details of usage, see Appendix - MCDS Engine Reference, user's guide, p307-344
-  - For example:
-
-<p/>
-
-    C:\Programs\DISTAN~1\ec "C:\Programs\DISTAN~1\MCDS.exe 0, C:\Users\mjj\AppData\Local\Temp\dst3C5.tmp \options 2>C:\Users\mjj\AppData\Local\Temp\dst3C4.tmp" 
-
-
-* Wait for results:
-  - Exits with success
-  - Shut down with Internal Error message
-  - Crash with Fortran runtime error - rare
-  - For full details of output file formats and return codes, see Appendix - MCDS Engine Reference, user's guide, p307-344
-
-Ec.exe 
-
-* Execute command line after parsing and removing Windows NT-compatible redirection symbols
-* Used to capture standard output and standard error.
-* See [Compaq Visual Fortran Release Notes August 2002](http://h21007.www2.hp.com/portal/download/files/unprot/Fortran/docs/visual/relnotes.htm).
-* See [Redirecting Command-Line Output to Files](https://www.xlsoft.com/jp/products/intel/cvf/docs/vf-html_e/pg/pgsredir.htm):
-  - 'The EC tool is located on the Visual Fortran CD-ROM in the x86\Usupport\Misc\Win95 folder'.
-
-<p/>
-
-    >ec
-
-    EC - Version: X1.11   Built: Mar 13 1997  17:12:09
-
-    Usage is: EC [-sw -sw] "Command line > out_file 2>&1"
-
-    Switches are:
-       l      Toggle display of command execution
-       c      Toggle use of command shell
-       s      Toggle display of result codes of execution
-       t      Toggle Windows 95 style processing
-       n      Toggle use of new console windows
-       y      Toggle display of consoles
-       v      Display program version number
-       ?      Display this help message
-
-See Visual Basic and Fortran interface below for more details.
-
-### How to capture input files
-
-* Select Tools => Preferences...
-* Click Analysis tab
-* Check Debug mode (create command files but don't run engine)
-
-If reusing files elsewhere check to ensure that any paths within the files are updated.
-
-### How to capture output
-
-* Select Tools => Preferences...
-* Click Analysis tab
-* Check Capture command line output from CDS and MCDS engines in WinNT
-
-### How to run stand-alone
-
-At command prompt:
-
-    MCDS 0|1 INPUT_COMMAND_FILE
-
-* 0 - run mode
-* 1 - import mode - used for Distance Project Import
-
-Example using files in C:\Users\mjj\Local Documents\DISTANCE\mcds-dst-tmp-files:
-
-    mcds.exe 0 dstA705.tmp
-    2
-
-### Input and output files
-
-Command file structure:
-
-    Output file
-    Log file
-    Stats file
-    Plot file
-    Bootstrap file|None
-    Bootstrap progress file|None
-    OPTIONS;
-    ...general options
-    END;
-    DATA;
-    ...column names...
-    Fields=STR_LABEL, STR_AREA, SMP_LABEL, SMP_EFFORT, DISTANCE, SIZE;
-    ...location of TAB-delimited flat data file...
-    Infile=C:\Users\mjj\Local Documents\DISTANCE\mcds-dst-tmp-files\dstA6A6.tmp /NoEcho;
-    END
-    ESTIMATE;
-    ...estimation options
-    END;
-
-Output files:
-
-* Correspond to command file header values
-* Output file
-  - TABPage titleTAB
-  - ...
-  - Human-readable only - not for machine processing beyond pagination
-* Log file
-  - Copy of input commands
-  - Error outputs from analysis engine
-* Stats file
-  - Engine statistics
-  - Sets of records, one per line
-* Plot file
-  - Data to construct high resolution qq and histogram plots in the Distance interface
-* Bootstrap file
-  - As for Stats but one set of records for each bootstrap
-* Bootstrap progress file
-  - Empty until bootstrapping starts
-  - 3-digit integer between 000...100 - percentage of way through bootstrap
-
-### Error and warning messages
-
-Occur in output and log files:
-
-* Warnings
-* Errors
-* Internal errors
-
-Fortran debugging output:
-
-* Dumped onto the command-line / standard output
-
-### Exit codes
-
-* 1 - analysis ran OK
-* 2 - warnings, see log file for details
-* 3 - errors, see log file for details
-* 4 - file errors e.g. could not find the specified command file
-* N - major error
+MCDS is a standalone executable. For full details of MCDS usage, input file formats, output file formats and return codes, see Appendix - MCDS Engine Reference, Distance 6.2 Release 1 User's Guide, p307-344
 
 ---
 
-## Visual Basic and Fortran interface
+## How Distance for Windows invokes MCDS
 
-Microsoft Jet database, DistIni.mdb, settings:
+Distance for Windows invokes MCDS as follows:
 
-* Table: ProjectSettingsMemo
-* Section: AnalysisEngine
-* Field: Setting - value ';' delimited entries of form 'Name=Value'
+* Create MCDS input data file
+  - A plain-text tab-delimited flat data file
+* Create MCDS command file. A plain-text file which specifies:
+  - Output file
+  - Log file
+  - Stats file
+  - Plot file
+  - Bootstrap file (optional - if none then the value None is used)
+  - Bootstrap progress file (optional - if none then the value None is used)
+  - Column names e.g. `Fields=STR_LABEL, STR_AREA, SMP_LABEL, SMP_EFFORT, DISTANCE, SIZE;`
+  - Absolute path to input data file e.g. `Infile=C:\Users\mjj\Local Documents\DISTANCE\mcds-dst-tmp-files\dstA6A6.tmp /NoEcho;`
+* Invoke MCDS.exe via [Ec.exe](../develop/BuildFortran.html#run-ec-exe), a stand-alone executable to capture standard output and standard error. For example:
+
+<p/>
+
+    C:\Programs\DISTAN~1\Ec "C:\Programs\DISTAN~1\MCDS.exe 0, C:\Users\mjj\AppData\Local\Temp\dst3C5.tmp \options 2>C:\Users\mjj\AppData\Local\Temp\dst3C4.tmp" 
+
+* Wait for results. This is one of:
+  - Exits with success
+    - 1 - analysis ran OK
+  - Shuts down with Internal Error message
+    - 2 - warnings, see log file for details,
+    - 3 - errors, see log file for details
+    - 4 - file errors e.g. could not find the specified command file
+    - N - major error
+  - In rare circumstances, crashes with a Fortran runtime error
+* Parses output files:
+  - Output file - a human-readable file, not for machine processing beyond pagination, which includes any warnings and errors
+  - Log file - copy of input commands and warnings and error outputs from MCDS
+  - Stats file - engine statistics formatted as sets of records, one per line
+  - Plot file - data to construct high resolution qq and histogram plots
+  - Bootstrap file -  As for Stats but one set of records for each bootstrap
+  - Bootstrap progress file - 3-digit integers between 000...100 representing percentage progress through bootstrap
+
+---
+
+## MCDS invocation implementation details
+
+* The Microsoft Jet database, DistIni.mdb, records information about CDS and MCDS within the ProjectSettingsMemo table, AnalysisEngine section, Setting field. 
+* Field values are  ';' delimited entries of form 'Name=Value'.
 * Entries of note are as follows:
 
 | Key | ExeName | PrgProgId | EngIntProgId | LogPropId | ResProgId | 
@@ -170,7 +70,7 @@ Microsoft Jet database, DistIni.mdb, settings:
 | CDS | MCDS.exe | D6CDSPrp.CDSProperties | D6CDSNEI.CDSNEngineInterface | D6CDSDet.CDSLog | D6CDSDet.CDSResults |
 | MCDS | MCDS.exe | D6CDSPrp.CDSProperties | D6CDSNEI.CDSNEngineInterface | D6CDSDet.CDSLog | D6CDSDet.CDSResults |
 
-Analysis Engines\CDS\NEngineInterface\ classes implement the following design:
+Analysis Engines\CDS\NEngineInterface\ classes implement the MCDS.exe ivocation:
 
 * Call reset to delete current results, if there are any
   - This is necessary if, for example, the analysis engine has changed and the data are stored in a completely different format
@@ -180,16 +80,14 @@ Analysis Engines\CDS\NEngineInterface\ classes implement the following design:
 * Run analysis
 * Read in results
 
-Analysis Engines\CDS\NEngineInterface\Classes\InputFileMaker.cls:
+Analysis Engines\CDS\NEngineInterface\Classes\InputFileMaker.cls, Function Makefile:
 
-* Function Makefile 
-  - Creates CDS input files
+* Creates CDS input files
 
-Analysis Engines\CDS\NEngineInterface\Classes\CDSNEngineInterface.cls:
+Analysis Engines\CDS\NEngineInterface\Classes\CDSNEngineInterface.cls,  Function RunItem:
 
-* Function RunItem:
-  - Calls CDSProcess.EngineName(IsMCDS=True\|False) to get engine file name
-  - Calls CDSProcess.RunEngine(engine file name, IsMCDS=True\|False, input file name, command file name)
+* Calls CDSProcess.EngineName(IsMCDS=True\|False) to get engine file name
+* Calls CDSProcess.RunEngine(engine file name, IsMCDS=True\|False, input file name, command file name)
 
 Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Classes\CDSProcess.cls:
 
@@ -205,19 +103,17 @@ Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Classes\CDSProcess.cls:
 
 ---
 
-## Miscellaneous MCDS implementation details
+## MCDS implementation notes
 
-Random numbers:
+### Random numbers
 
-* Compaq Visual Fortran function random_number
-* Seeded from clock or a user-defined value
-* Bootstrap resampling
-* Two congruential generators - see L'Ecuyer 1988 or Visual Fortran manual for more details
+MCDS generates random numbers using the Compaq Visual Fortran function random_number, seeded from clock or a user-defined value. Two random number congruential generators are used. See L'Ecuyer 1988 or the Visual Fortran manual for more details.
 
-Covariates:
+Random numbers are used for to bootstrap resampling
 
-* Set in PARAMS.INC
-* MAXFACS is the number of factor levels per covariate:
+### Covariates
+
+Covariates are set in the Fortran file PARAMS.INC.  MAXFACS specifies the number of factor levels per covariate:
 
 <p/>
 
@@ -225,10 +121,9 @@ Covariates:
     ...
     $          MAXFACS=200,MAXCV=MAXCOVS*(MAXFACS-1))
 
-* Default is 200.
-* One developer has tried with 50 factors which seems to work.
+The default is 200. One developer has tried with 50 factors which seems to work.
 
-Stack size:
+### Stack sizes
 
 | Hexadecimal | Decimal   | MB  |
 | ----------- | --------- | --- |

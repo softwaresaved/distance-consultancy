@@ -6,6 +6,7 @@ title: Required knowledge
 
 To develop Distance you need to have a working knowledge of the following:
 
+* Distance for Windows. See, for example, Distance 6.2 Release 1 User's Guide.
 * Microsoft Visual Basic 6.0 programming
 * Microsoft Data Access Objects (DAO)
 * Microsoft Component Object Model (COM) i.e. ActiveX, etc.

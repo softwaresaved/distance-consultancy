@@ -172,3 +172,95 @@ Distance's R tests are written in [testthat](http://cran.r-project.org/web/packa
 <p/>
 
     R -file testthat.R
+
+---
+
+## Run MRDS and DSM within R using captured input files
+
+Within R GUI:
+
+* Start R GUI
+* Cut and paste in.r commands
+
+Within R batch mode:
+
+* Start R command prompt
+* Run:
+
+<p/>
+
+    Rcmd.exe BATCH in.r log.r
+
+---
+
+## Capture MCDS and DSM input files from within Distance for Windows
+
+* Select Tools => Preferences...
+* Click Analysis tab
+* Check Debug mode (create command files but don't run engine)
+* Check Temp folder
+
+If reusing files elsewhere check to ensure that any paths within the files are updated.
+
+---
+
+## Reproduce CDS and MCDS plots of detection function and pdf using R
+
+* Within Distance for Windows, select Analysis - Results => Copy Plot to Clipboard
+* Save clipboard contents to a text file e.g. plot.txt
+* Run the following within R:
+
+<p/>
+
+    #this reads in the file just created
+    forplot<-read.table(file="plot.txt", header=T, sep="\t", dec=".")
+    #note, depending on your language, dec might be "," rather than "."
+    #this plots the detection function or pdf (if point transects)
+    plot(forplot$C1, forplot$C2, type="l", ylim=c(0,max(forplot$C4)),
+    xlab="Distance", ylab="Detection probability")
+    #Define labels as you wish
+    #this adds in the data bars
+    lines(c(0,0), c(forplot$C3[1], forplot$C4[1]))
+    lines(forplot$C3, forplot$C4)
+
+---
+
+## Reproduce CDS and MCDS qq-plots using R
+
+* Within Distance for Windows, select Analysis - Results => Copy Plot to Clipboard
+* Save clipboard contents to a text file e.g. plot.txt
+* Run the following within R:
+
+<p/>
+
+    #this reads in the file just created
+    forplot<-read.table(file="plot.txt", header=T, sep="\t", dec=".")
+    #note, depending on your language, dec might be "," rather than "."
+    #this plots the detection function or pdf (if point transects)
+    plot(forplot$C1, forplot$C2, type="p", ylim=c(0,max(forplot$C4)),
+    pch = ".", xlab="Empirical distribution function",
+    ylab="Fitted cumulative distribution function")
+    #Define labels as you wish
+    #this adds in the (0,0) (1,1) line
+    lines(c(0,1), c(0,1))
+
+---
+
+## Reproduce MCDS plots of detection functions produced with non-factor covariates within using R
+
+* Within Distance for Windows, select Analysis - Results => Copy Plot to Clipboard
+* Save clipboard contents to a text file e.g. plot.txt
+* Run the following within R:
+
+<p/>
+
+    #this reads in the file just created
+    forplot<-read.table(file="plot.txt", header=T, sep="\t", dec=".")
+    #note, depending on your language, dec might be "," rather than "."
+    #this plots the detection function or pdf (if point transects)
+    plot(forplot$C1, forplot$C2, type="l", ylim=c(0,1),
+    xlab="Distance", ylab="Detection probability")
+    #Define labels as you wish
+    #this adds in other two lines
+    lines(forplot$C3, forplot$C4, lty=2)
+    lines(forplot$C5, forplot$C6, lty=3)
