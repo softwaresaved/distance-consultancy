@@ -67,6 +67,7 @@ Issue and bug management:
 
 Components:
 
+* [Component diagrams](./architecture/ComponentDiagrams.html): diagrams of analysis and GUI components and their dependencies.
 * [Code components](./architecture/CodeComponents.html): code-based components.
 * [Non-code components](./architecture/NonCodeComponents.html): non-code components.
 * [Third-party components](./architecture/ThirdPartyComponents.html): third-party components written by others and which are needed to build Distance and/or are shipped with Distance.
