@@ -156,7 +156,7 @@ All dependencies are recorded in Visual Basic as References except for those pro
 | | Design Engine\Engine\DnnnnDesEng.vbp |
 | | DAO350.dll |
 | | |
-| Design Engine\Properties\DnnnnDesPrp.vbp | Distance nnnn Design Engine Properties Interfzce|
+| Design Engine\Properties\DnnnnDesPrp.vbp | Distance nnnn Design Engine Properties Interface|
 | | Misc\LabelLine\LLine3.vbp (component) |
 | | Utilities\DnnnnUtil.vbp |
 | | Misc\PrjParams\PrjParams6.vbp |
