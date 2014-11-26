@@ -1,7 +1,7 @@
 ---
 layout: page
 root: ..
-title: Distance for Windows and Fortran
+title: Visual Basic and Fortran
 ---
 
 ## Introduction
