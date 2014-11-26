@@ -61,45 +61,74 @@ Distance for Windows invokes MCDS as follows:
 
 ## MCDS invocation implementation details
 
-* The Microsoft Jet database, DistIni.mdb, records information about CDS and MCDS within the ProjectSettingsMemo table, AnalysisEngine section, Setting field. 
-* Field values are  ';' delimited entries of form 'Name=Value'.
-* Entries of note are as follows:
+### Microsoft Jet database configuration
+
+The Microsoft Jet database, DistIni.mdb, records information about CDS and MCDS within
+
+ProjectSettingsMemo table, AnalysisEngine section
+
+* Field values are ';'-delimited entries of form 'Name=Value'.
+* Entries of note are:
 
 | Key | ExeName | PrgProgId | EngIntProgId | LogPropId | ResProgId | 
 | --- | ------- | --------- | ------------ | --------- | --------- |
 | CDS | MCDS.exe | D6CDSPrp.CDSProperties | D6CDSNEI.CDSNEngineInterface | D6CDSDet.CDSLog | D6CDSDet.CDSResults |
 | MCDS | MCDS.exe | D6CDSPrp.CDSProperties | D6CDSNEI.CDSNEngineInterface | D6CDSDet.CDSLog | D6CDSDet.CDSResults |
 
-Analysis Engines\CDS\NEngineInterface\ classes implement the MCDS.exe ivocation:
+ProjectSettingsBoolean table, AnalysisDetails section:
 
-* Call reset to delete current results, if there are any
-  - This is necessary if, for example, the analysis engine has changed and the data are stored in a completely different format
-* Set lock on data, if appropriate
-* Make data file
-* Make input file
-* Run analysis
-* Read in results
+| Key | 
+| --- |
+| UseEC |
 
-Analysis Engines\CDS\NEngineInterface\Classes\InputFileMaker.cls, Function Makefile:
+### Visual Basic
 
-* Creates CDS input files
+Class Analysis Engines\CDS\NEngineInterface\Classes\CDSNEngineInterface.cls:
 
-Analysis Engines\CDS\NEngineInterface\Classes\CDSNEngineInterface.cls,  Function RunItem:
+* Function RunItem:
+  - Calls DatabaseInterface.MakeFiles to create input data and command files
+  - Calls CDSProcess.EngineName to get engine file name, which depends on whether a MCDS or CDS analysis is to be run
+  - Gets database ProjectSettingsBoolean table AnalysisDetails section Setting value for key "UseEC" to see if EC.exe is to be used
+  - Call CDSProcess.RunEngines to run MCDS.exe
+* Sub RunFinished:
+  - Handles return codes from MCDS.exe run
+  - Calls DatabaseInterface.SaveResults to process files and update state
 
-* Calls CDSProcess.EngineName(IsMCDS=True\|False) to get engine file name
-* Calls CDSProcess.RunEngine(engine file name, IsMCDS=True\|False, input file name, command file name)
+Class Analysis Engines\CDS\NEngineInterface\Classes\DatabaseInterface.cls:
 
-Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Classes\CDSProcess.cls:
+* Interfaces between database and MCDS.exe files
+* Function MakeFiles:
+  - Gets from current state whether MCDS or CDS has been requested
+  - Calls DataFileMaker.MakeFile to create input data file
+  - Calls InputFileMaker.MakeFile to create command file
+* Function SaveResults:
+  - Reads output files and command-line output file
 
-* Property Get EngineName
-  - Invokes GetEngineName as a property
+Class Analysis Engines\CDS\NEngineInterface\Classes\DataFileMaker.cls:
+
+* Function MakeFile:
+  - Gets data from database 
+  - Creates input data file name if not already specified
+  - Creates input data file, the nature of which, in part, depends on whether CDS or MCDS has been requested
+
+Class Analysis Engines\CDS\NEngineInterface\Classes\InputFileMaker.cls:
+
+* Function MakeFile:
+  - Creates command-line (to capture command-line output), output, log, stats, plot, bootstrap and bootstrap plot file names if not already specified
+  - Creates command file, the nature of which, in part, depends on whether CDS or MCDS has been requested
+
+Class Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Classes\CDSProcess.cls:
+
 * Function GetEngineName:
-  - Gets database, ProjectSettingsMemo table, AnalysisEngine section, Setting value for Key=="MCDS" if IsMCDS flag is True) else Key=="CDS" and parses Name=Value pairs in Setting value to get ExeName
-  - ExeName is assumed to be in App.Path, same folder as D6NEIUtil.dll
+  - Gets database ProjectSettingsMemo table AnalysisEngine section Setting value for key "MCDS" or "CDS" depending on whether MCDS or CDS is requested
+  - Parses "Name=Value" pairs in Setting value to get value for "ExeName", the name of the executable
+  - Executable is assumed to be in App.Path, in the same folder as DnnnNEIUtil.dll
 * Sub RunEngine:
-  - If Windows NT and EC usage required, invokes`PATH\ec "PATH\MCDS.exe MODE INPUT_COMMAND_FILE \options 2>LOG_FILE"`
-  - Otherwise invokes `PATH\MCDS.exe MODE INPUT_COMMAND_FILE \options 2>LOG_FILE`
-  - MODE is 0\|1
+  - If running under Windows NT and EC.exe is to be used, then invokes:
+    - `PATH\ec "PATH\MCDS.exe MODE COMMAND_FILE \options 2>COMMAND_LINE_FILE"`
+  - Otherwise, invokes:
+    - `PATH\MCDS.exe MODE COMMAND_FILE \options 2>COMMAND_LINE_FILE`
+  - MODE is 0 or 1 depending on the call to RunEngine - if called from CDSNEngineInterface.RunItem then it's 0
 
 ---
 
