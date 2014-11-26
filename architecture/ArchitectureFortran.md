@@ -70,6 +70,21 @@ ProjectSettingsMemo table:
 | AnalysisEngineDefaultDefinition | CDS | "Engine=CDS;<br/>Options;<br/>Stratification=None;<br/>Sample /LayerType=20;<br/>Selection=Sequential;<br/>Lookahead=1;<br/>Maxterms=5;<br/>Confidence=95;<br/>Print=Selection;<br/>End;<br/>Data /Structure=Flat;<br/>End;<br/>Estimate;<br/>Distance;<br/>Density by All;<br/>Encounter by All;<br/>Detection by All;<br/>Size by All;<br/>Estimator /Key=HN /Adjust=CO /Criterion=AIC;<br/>Monotone=Strict;<br/>Pick=AIC;<br/>GOF;<br/>Cluster /Bias=GXLOG;<br/>VarN=Empirical;<br/>End;" |
 | AnalysisEngineDefaultDefinition | MCDS | "Engine=MCDS;<br/>Options;<br/>Stratification=None;<br/>Sample /LayerType=20;<br/>Selection=Specify;<br/>Confidence=95;<br/>Print=All;<br/>End;<br/>Data /Structure=Flat;<br/>End;<br/>Estimate;<br/>Distance;<br/>Density by All;<br/>Encounter by All;<br/>Detection by All;<br/>Size by All;<br/>Estimator /Key=HN /Adjust=CO /NAP=0;<br/>Monotone=None;<br/>Pick=AIC;<br/>GOF;<br/>Cluster /Bias=GXLOG;<br/>VarN=Empirical;<br/>End;" |
 
+The AnalysisEngine values are as follows:
+
+| Name | Value |
+| ---- | ---- |
+| Description | Human-readable description of analysis engine |
+| Order | Position in Model Definition Properties dialog |
+| PrpProgID | Properties library and class name |
+| PrpLicense | Licence key for above value, created using [GenerateLicenseKey.exe](../develop/RegisterGenerateLicenceKey.html#generate-licence-key-for-component) |
+| EngIntProgID | NEngine interface library and class name |
+| LogProgID | Details library and Log class name |
+| LogLicense | Licence key for above value, created using [GenerateLicenseKey.exe](../develop/RegisterGenerateLicenceKey.html#generate-licence-key-for-component) |
+| ResProgID | Results library and class name |
+| ResLicense | Licence key for above value, created using [GenerateLicenseKey.exe](../develop/RegisterGenerateLicenceKey.html#generate-licence-key-for-component) |
+| ExeName | Analysis engine executable name |
+
 ProjectSettingsBoolean table:
 
 | Section | Key | 

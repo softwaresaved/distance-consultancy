@@ -65,6 +65,22 @@ ProjectSettingsMemo table:
 | AnalysisEngineDefaultDefinition | MRDS | Engine=MRDS; |
 | R | Path | |
 
+The AnalysisEngine values are as follows:
+
+| Name | Value |
+| ---- | ---- |
+| Description | Human-readable description of analysis engine |
+| Order | Position in Model Definition Properties dialog |
+| PrpProgID | Properties library and class name |
+| PrpLicense | Licence key for above value, created using [GenerateLicenseKey.exe](../develop/RegisterGenerateLicenceKey.html#generate-licence-key-for-component) |
+| EngIntProgID | NEngine interface library and class name |
+| LogProgID | Details library and Log class name |
+| LogLicense | Licence key for above value, created using [GenerateLicenseKey.exe](../develop/RegisterGenerateLicenceKey.html#generate-licence-key-for-component) |
+| ResProgID | Results library and class name |
+| ResLicense | Licence key for above value, created using [GenerateLicenseKey.exe](../develop/RegisterGenerateLicenceKey.html#generate-licence-key-for-component) |
+| PackageName | R package name |
+| SupportFileName | R support file name |
+
 ProjectSettingsBoolean table:
 
 | Section | Key | 
