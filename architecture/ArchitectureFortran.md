@@ -59,76 +59,78 @@ Distance for Windows invokes MCDS as follows:
 
 ---
 
-## MCDS invocation implementation details
+## Microsoft Jet database configuration
 
-### Microsoft Jet database configuration
+ProjectSettingsMemo table:
 
-The Microsoft Jet database, DistIni.mdb, records information about CDS and MCDS within
+| Section | Key | Setting |
+| ------- | --- | ------- |
+| AnalysisEngine | CDS | Description=Conventional distance sampling;<br/>Order=1;<br/>PrpProgID=D6CDSPrp.CDSProperties;<br/>PrpLicense=olvnunjlmlnnnlukjlmj;<br/>EngIntProgID=D6CDSNEI.CDSNEngineInterface;<br/>LogProgID=D6CDSDet.CDSLog;<br/>LogLicense=cgpgobbcgbhbcb;<br/>ResProgID=D6CDSDet.CDSResults;<br/>ResLicense=ononwlpmlmjlmpmpqj;<br/>ExeName=MCDS.exe; |
+| AnalysisEngine | MCDS | Description=Multiple covariates distance sampling;<br/>Order=2;<br/>PrpProgID=D6CDSPrp.CDSProperties;<br/>PrpLicense=olvnunjlmlnnnlukjlmj;<br/>EngIntProgID=D6CDSNEI.CDSNEngineInterface;<br/>LogProgID=D6CDSDet.CDSLog;<br/>LogLicense=cgpgobbcgbhbcb;<br/>ResProgID=D6CDSDet.CDSResults;<br/>ResLicense=ononwlpmlmjlmpmpqj;<br/>ExeName=MCDS.exe; |
+| AnalysisEngineDefaultDefinition | CDS | "Engine=CDS;<br/>Options;<br/>Stratification=None;<br/>Sample /LayerType=20;<br/>Selection=Sequential;<br/>Lookahead=1;<br/>Maxterms=5;<br/>Confidence=95;<br/>Print=Selection;<br/>End;<br/>Data /Structure=Flat;<br/>End;<br/>Estimate;<br/>Distance;<br/>Density by All;<br/>Encounter by All;<br/>Detection by All;<br/>Size by All;<br/>Estimator /Key=HN /Adjust=CO /Criterion=AIC;<br/>Monotone=Strict;<br/>Pick=AIC;<br/>GOF;<br/>Cluster /Bias=GXLOG;<br/>VarN=Empirical;<br/>End;" |
+| AnalysisEngineDefaultDefinition | MCDS | "Engine=MCDS;<br/>Options;<br/>Stratification=None;<br/>Sample /LayerType=20;<br/>Selection=Specify;<br/>Confidence=95;<br/>Print=All;<br/>End;<br/>Data /Structure=Flat;<br/>End;<br/>Estimate;<br/>Distance;<br/>Density by All;<br/>Encounter by All;<br/>Detection by All;<br/>Size by All;<br/>Estimator /Key=HN /Adjust=CO /NAP=0;<br/>Monotone=None;<br/>Pick=AIC;<br/>GOF;<br/>Cluster /Bias=GXLOG;<br/>VarN=Empirical;<br/>End;" |
 
-ProjectSettingsMemo table, AnalysisEngine section
+ProjectSettingsBoolean table:
 
-* Field values are ';'-delimited entries of form 'Name=Value'.
-* Entries of note are:
+| Section | Key | 
+| ------- | --- |
+| AnalysisEngineCDS | RequiresGeoObjects |
+| AnalysisEngineCDS | RunInProcess |
+| AnalysisEngineMCDS | RequiresGeoObjects |
+| AnalysisEngineMCDS | RunInProcess |
+| AnalysisDetails | UseEC |
 
-| Key | ExeName | PrgProgId | EngIntProgId | LogPropId | ResProgId | 
-| --- | ------- | --------- | ------------ | --------- | --------- |
-| CDS | MCDS.exe | D6CDSPrp.CDSProperties | D6CDSNEI.CDSNEngineInterface | D6CDSDet.CDSLog | D6CDSDet.CDSResults |
-| MCDS | MCDS.exe | D6CDSPrp.CDSProperties | D6CDSNEI.CDSNEngineInterface | D6CDSDet.CDSLog | D6CDSDet.CDSResults |
+---
 
-ProjectSettingsBoolean table, AnalysisDetails section:
-
-| Key | 
-| --- |
-| UseEC |
-
-### Visual Basic
+## MCDS Visual Basic invocation implementation overview
 
 Class Analysis Engines\CDS\NEngineInterface\Classes\CDSNEngineInterface.cls:
 
 * Function RunItem:
   - Calls DatabaseInterface.MakeFiles to create input data and command files
-  - Calls CDSProcess.EngineName to get engine file name, which depends on whether a MCDS or CDS analysis is to be run
-  - Gets database ProjectSettingsBoolean table AnalysisDetails section Setting value for key "UseEC" to see if EC.exe is to be used
-  - Call CDSProcess.RunEngines to run MCDS.exe
+  - Calls CDSProcess.EngineName to get engine file name, which depends on whether a CDS or MCDS analysis is to be run (but, at present, is always MCDS.exe)
+  - Gets database ProjectSettingsBoolean table AnalysisDetails section value for UseEC to see if EC.exe is to be used
+  - Call CDSProcess.RunEngine to run the analysis engine
 * Sub RunFinished:
-  - Handles return codes from MCDS.exe run
+  - Handles return codes from the analysis engine run
   - Calls DatabaseInterface.SaveResults to process files and update state
 
 Class Analysis Engines\CDS\NEngineInterface\Classes\DatabaseInterface.cls:
 
-* Interfaces between database and MCDS.exe files
+* Interface between database and MCDS.exe files
 * Function MakeFiles:
-  - Gets from current state whether MCDS or CDS has been requested
+  - Gets from current state whether CDS or MCDS has been requested
   - Calls DataFileMaker.MakeFile to create input data file
   - Calls InputFileMaker.MakeFile to create command file
 * Function SaveResults:
-  - Reads output files and command-line output file
+  - Processes output files and command-line output file
 
 Class Analysis Engines\CDS\NEngineInterface\Classes\DataFileMaker.cls:
 
 * Function MakeFile:
   - Gets data from database 
   - Creates input data file name if not already specified
-  - Creates input data file, the nature of which, in part, depends on whether CDS or MCDS has been requested
+  - Creates input data file, adding CDS or MCDS-specific content depending upon the analysis to be run
 
 Class Analysis Engines\CDS\NEngineInterface\Classes\InputFileMaker.cls:
 
 * Function MakeFile:
-  - Creates command-line (to capture command-line output), output, log, stats, plot, bootstrap and bootstrap plot file names if not already specified
-  - Creates command file, the nature of which, in part, depends on whether CDS or MCDS has been requested
+  - Creates command-line file name (to capture command-line output)
+  - Creates output, log, stats, plot, bootstrap and bootstrap plot file names, if not already specified
+  - Creates command file, adding CDS or MCDS-specific content depending upon the analysis to be run
 
 Class Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Classes\CDSProcess.cls:
 
 * Function GetEngineName:
-  - Gets database ProjectSettingsMemo table AnalysisEngine section Setting value for key "MCDS" or "CDS" depending on whether MCDS or CDS is requested
-  - Parses "Name=Value" pairs in Setting value to get value for "ExeName", the name of the executable
+  - Gets database ProjectSettingsMemo table AnalysisEngine section value for the requested analysis (i.e. CDS or MCDS)
+  - Parses Name=Value pairs to get value for ExeName, the name of the executable
   - Executable is assumed to be in App.Path, in the same folder as DnnnNEIUtil.dll
 * Sub RunEngine:
-  - If running under Windows NT and EC.exe is to be used, then invokes:
+  - Calls, if running under Windows NT and EC.exe is to be used:
     - `PATH\ec "PATH\MCDS.exe MODE COMMAND_FILE \options 2>COMMAND_LINE_FILE"`
-  - Otherwise, invokes:
+  - Otherwise, calls:
     - `PATH\MCDS.exe MODE COMMAND_FILE \options 2>COMMAND_LINE_FILE`
-  - MODE is 0 or 1 depending on the call to RunEngine - if called from CDSNEngineInterface.RunItem then it's 0
+  - MODE is 0 or 1 depending on the call to RunEngine - if called from CDSNEngineInterface.RunItem then it is 0
 
 ---
 

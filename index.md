@@ -84,7 +84,7 @@ Dependencies:
 
 Interfaces:
 
-* [Distance for Windows and Fortran](./architecture/ArchitectureFortran.html): interface between Visual Basic and Fortran (for MCDS)
+* [Distance for Windows and Fortran](./architecture/ArchitectureFortran.html): interface between Visual Basic and Fortran (for CDS and MCDS)
 * [Distance for Windows and R](./architecture/ArchitectureR.html): interface between Visual Basic and R (for DSM and MRDS)
 
 ## Managing infrastructure
