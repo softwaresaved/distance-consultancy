@@ -144,4 +144,4 @@ To see command-line usage:
 
 <p/>
 
-    Ec MCDS.exe 0, dst3C5.tmp \options 2>dst3C4.tmp
+    Ec MCDS.exe 0 dst3C5.tmp \options 2>dst3C4.tmp
