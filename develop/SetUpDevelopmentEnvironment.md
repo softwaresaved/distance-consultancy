@@ -152,7 +152,7 @@ Miscellaneous:
   - Optional
 * Concurrent Version System or TortoiseCVS - see below
 
-# R DSM and MCDS engines
+### R DSM and MCDS engines
 
 * See [Set up R development environment](./SetUpDevelopmentR.html).
 
