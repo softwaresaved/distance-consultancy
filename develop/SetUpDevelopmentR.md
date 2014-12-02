@@ -6,10 +6,11 @@ title: Set up R development environment
 
 ## Install required tools
 
-### [R](http://www.r-project.org)
+### R
 
 Summary:
 
+* [R](http://www.r-project.org)
 * Develop and test R code e.g. MRDS and DSM analysis engines
 * Build R packages via R CMD
 * Recommended version: 3.1.0, 32-bit
@@ -17,7 +18,7 @@ Summary:
 
 Download and install:
 
-* Download R:
+* Download R
   - [R for Windows (32/64 bit)](http://cran.r-project.org/bin/windows/base/) - current release is 3.1.2
   - [Previous Releases of R for Windows](http://cran.r-project.org/bin/windows/base/old/)
   - [R-3.1.0 for Windows (32/64 bit)](http://cran.r-project.org/bin/windows/base/old/3.1.0/)
@@ -42,18 +43,18 @@ Create shortcuts (optional):
 
 * Right-click on desktop
 * Select New => Shortcut
-* In Type the location of the item, enter 'Rterm'
-* Click Next
+* In Type the location of the item, enter 'Rterm'* Click Next
 * In Type a name for this shortcut, enter 'Rterm i386'
 * Click Finish
 * Double-click Rterm i386
 
 ---
 
-### [Rtools](http://cran.r-project.org/bin/windows/Rtools/)
+### Rtools
 
 Summary:
 
+* [Rtools](http://cran.r-project.org/bin/windows/Rtools)
 * Utilities for building R packages on Windows
 * Recommended version: 3.1
 * License: GNU General Public License v2
@@ -123,10 +124,11 @@ For example:
 
 ---
 
-### [Git for Windows](http://msysgit.github.io/)
+### Git for Windows
 
 Summary:
 
+* [Git for Windows](http://msysgit.github.io/)
 * R source code management using Git
 * Both command-line, Git Bash, and GUI, Git GUI tools
 * Recommended version: any
@@ -134,7 +136,7 @@ Summary:
 
 Download and install:
 
-* Download from [Git for Windows](http://msysgit.github.io/) by clicking on Download button
+* Download from above by clicking on Download button
 * Double-click exe e.g. Git-1.9.4-preview20140929.exe
 * Git Bash and Git GUI will both be installed
 
@@ -142,10 +144,11 @@ Download and install:
 
 ## Install optional tools
 
-### [RStudio](http://www.rstudio.com/)
+### RStudio
 
 Summary:
 
+* [RStudio](http://www.rstudio.com/)
 * Edit and run .Rmd [R Markdown](http://rmarkdown.rstudio.com/) files e.g. R vignettes on the [Distance](http://distancesampling.org) web site
 * Recommended version: any that is compliant with R above
 * License: GNU Affero General Public License
@@ -159,20 +162,22 @@ Download and install:
 
 ---
 
-### [Tinn-R Editor](http://sourceforge.net/projects/tinn-r/)
+### Tinn-R Editor
 
 Summary:
 
+* [Tinn-R Editor](http://sourceforge.net/projects/tinn-r/)
 * Develop and test R code within a GUI
 * Recommended version: -
 * License: GNU General Public License
 
 ---
 
-### [packrat](http://cran.r-project.org/web/packages/packrat/)
+### packrat
 
 Summary:
 
+* [packrat](http://cran.r-project.org/web/packages/packrat/)
 * R package dependency management
 * Recommended version: - 
 * License: GNU General Public License 2
