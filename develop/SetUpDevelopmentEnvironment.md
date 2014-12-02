@@ -150,6 +150,7 @@ Miscellaneous:
   - Part of Compaq Visual Fortran
 * Array Visualizer
   - Optional
+* Concurrent Version System or TortoiseCVS - see below
 
 # R DSM and MCDS engines
 
@@ -201,6 +202,41 @@ Miscellaneous:
 | xls | Microsoft Excel |
 | zip | WinZip |
 
+---
+
+## How to install tools
+
+### [TortoiseCVS](http://www.tortoisecvs.org/)
+
+Summary:
+
+* Fortran source code management using CVS
+* Recommended version: any
+* License: GNU General Public License
+
+Download and install:
+
+* Download from [Downloads](http://www.tortoisecvs.org/download.shtml)
+* Double-click .exe e.g. TortoiseCVS-1.12.5.exe
+
+### [Concurrent Version System](http://www.nongnu.org/cvs/)
+
+Summary:
+
+* Fortran source code management using CVS
+* Recommended version: any
+* License: GNU General Public License
+
+Download and install:
+
+* Download from [FTP directory](http://ftp.gnu.org/non-gnu/cvs/) 
+  - Binary releases are within a [binary/stable/](http://ftp.gnu.org/non-gnu/cvs/binary/stable/x86-woe/) sub-directory
+* Unzip .zip e.g. cvs-1-11-22.zip 
+* cvs.exe is used as-is e.g.:
+
+    > cvs.exe
+    Concurrent Versions System (CVS) 1.11.22 (client)
+    Copyright (C) 2006 Free Software Foundation, Inc.
 
 ---
 
