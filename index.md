@@ -24,7 +24,7 @@ The pages in this guide were written using Distance for Windows 6.2 release and 
 Getting started:
 
 * [Required knowledge](./develop/RequiredKnowledge.html)
-* [How to set up a development environment](./develop/SetUpDevelopmentEnvironment.html)
+* [Set up a development environment](./develop/SetUpDevelopmentEnvironment.html)
 * [Set up R development environment](./develop/SetUpDevelopmentR.html)
 
 Source code access and management:
