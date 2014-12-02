@@ -25,6 +25,7 @@ Getting started:
 
 * [Required knowledge](./develop/RequiredKnowledge.html)
 * [How to set up a development environment](./develop/SetUpDevelopmentEnvironment.html)
+* [Set up R development environment](./develop/SetUpDevelopmentR.html)
 
 Source code access and management:
 
