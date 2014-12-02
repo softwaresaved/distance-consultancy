@@ -206,10 +206,11 @@ Miscellaneous:
 
 ## How to install tools
 
-### [TortoiseCVS](http://www.tortoisecvs.org/)
+### TortoiseCVS
 
 Summary:
 
+* [TortoiseCVS](http://www.tortoisecvs.org/)
 * Fortran source code management using CVS
 * Recommended version: any
 * License: GNU General Public License
@@ -219,10 +220,11 @@ Download and install:
 * Download from [Downloads](http://www.tortoisecvs.org/download.shtml)
 * Double-click .exe e.g. TortoiseCVS-1.12.5.exe
 
-### [Concurrent Version System](http://www.nongnu.org/cvs/)
+### Concurrent Version System
 
 Summary:
 
+* [Concurrent Version System](http://www.nongnu.org/cvs/)
 * Fortran source code management using CVS
 * Recommended version: any
 * License: GNU General Public License
