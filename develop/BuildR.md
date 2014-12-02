@@ -143,6 +143,12 @@ Distance's R tests are written in [testthat](http://cran.r-project.org/web/packa
 
     test_file("tests/testthat/")
 
+* To run all the tests in a package do, e.g.:
+
+<p/>
+
+    test_package("dsm")
+
 * To display only a '.' for passed tests and 'E' for failed tests add a 'minimal' argument, e.g.:
 
 <p/>
