@@ -168,7 +168,7 @@ Download and install:
 | - | - |
 | Web site | [Tinn-R Editor](http://sourceforge.net/projects/tinn-r/) |
 | Used for | Develop and test R code within a GUI |
-| Recommended version | |
+| Recommended version | - |
 | License | GNU General Public License |
 
 ---
@@ -178,7 +178,7 @@ Download and install:
 | - | - |
 | Web site | [packrat](http://cran.r-project.org/web/packages/packrat/) |
 | Used for | R package dependency management |
-| Recommended version | |
+| Recommended version | - |
 | License | GNU General Public License 2 |
 
 Download and install:

@@ -6,6 +6,7 @@ title: Set up Fortran development environment
 
 ## Compaq Visual Fortran 6.6 Professional
 
+| - | - |
 | Use | Fortran development, edit .dsw projects, compile into .exe e.g. build MCDS.exe analysis engine |
 | Recommended version | - |
 | License | proprietary |
@@ -19,6 +20,7 @@ Download and install:
 
 ## Ec.exe
 
+| - | - |
 | Use | Stand-alone executable to capture standard output and standard error when running another executable |
 | Recommended version | - |
 | License | proprietary |
@@ -33,8 +35,9 @@ Download and install:
 
 ## IMSL Numerical routines
 
+| - | - |
 | Use | High-performance mathematical and statistical Fortran algorithms. |
-| Recommended version | |
+| Recommended version | - |
 | License | proprietary |
 
 Download and install:
@@ -45,6 +48,7 @@ Download and install:
 
 ## Array Visualizer (optional)
 
+| - | - |
 | Use | View and analyse array data graphically |
 | Recommended version | - |
 | License | proprietary |
@@ -57,10 +61,11 @@ Download and install:
 
 ## TortoiseCVS
 
-* [TortoiseCVS](http://www.tortoisecvs.org/)
-* Fortran source code management using CVS
-* Recommended version: any
-* License: GNU General Public License
+| - | - |
+| Web site | [TortoiseCVS](http://www.tortoisecvs.org/) |
+| Use | Fortran source code management using CVS |
+| Recommended version | any |
+| License | GNU General Public License |
 
 Download and install:
 
@@ -71,10 +76,11 @@ Download and install:
 
 ## Concurrent Version System
 
-* [Concurrent Version System](http://www.nongnu.org/cvs/)
-* Fortran source code management using CVS
-* Recommended version: any
-* License: GNU General Public License
+| - | - |
+| Web site | [Concurrent Version System](http://www.nongnu.org/cvs/) |
+| Use | Fortran source code management using CVS |
+| Recommended version | any |
+| License | GNU General Public License |
 
 Download and install:
 
@@ -82,6 +88,8 @@ Download and install:
   - Binary releases are within a [binary/stable/](http://ftp.gnu.org/non-gnu/cvs/binary/stable/x86-woe/) sub-directory
 * Unzip .zip e.g. cvs-1-11-22.zip 
 * cvs.exe is used as-is e.g.:
+
+<p/>
 
     > cvs.exe
     Concurrent Versions System (CVS) 1.11.22 (client)
