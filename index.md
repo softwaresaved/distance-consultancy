@@ -25,6 +25,7 @@ Getting started:
 
 * [Required knowledge](./develop/RequiredKnowledge.html)
 * [Set up a development environment](./develop/SetUpDevelopmentEnvironment.html)
+* [Set up Fortran development environment](./develop/SetUpDevelopmentFortran.html)
 * [Set up R development environment](./develop/SetUpDevelopmentR.html)
 
 Source code access and management:
