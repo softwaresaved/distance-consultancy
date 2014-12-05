@@ -165,6 +165,8 @@ Many of the Visual Basic project folders have Graphics\ sub-folders with icons, 
 
 <p/>
 
+Summary:
+
 | File | Location | VB | Install |
 | ---- | -------- | -- | ------- |
 | **Common Controls Replacement Project (CCRP)** | | | |
