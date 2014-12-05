@@ -66,8 +66,8 @@ Download and install:
 
 Install the following R packages using install.packages:
 
-| Package |   |
-| ------- | - |
+| Package | Details |
+| ------- | ------- |
 | Web site | [roxygen2](http://cran.r-project.org/web/packages/roxygen2/) |
 | Use | Tools for auto-generating API documentation |
 | License | GNU General Public License 2 and 3 |
@@ -89,8 +89,8 @@ For example:
 
 Install the following R packages for MRDS:
 
-| Package |   |
-| ------- | - |
+| Package | Details |
+| ------- | ------- |
 | Web site | [optimx](http://cran.r-project.org/web/packages/optimx/) |
 | License | GNU General Public License 2 |
 | | |
@@ -104,8 +104,8 @@ For example:
 
 Install the following R packages for DSM:
 
-| Package |   |
-| ------- | - |
+| Package | Details |
+| ------- | ------- |
 | Web site | [ggplot2](http://cran.r-project.org/web/packages/ggplot2/) |
 | License | GNU General Public License 2 |
 | | |
