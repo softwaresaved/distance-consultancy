@@ -168,17 +168,6 @@ Locations are those expected by the Wise Installer.
 | File | Location | Visual Basic | Install |
 | ---- | -------- | ------------ | ------- |
 | **Common Controls Replacement Project (CCRP)** | | | |
-| [http://distanceengines.cvs.sourceforge.net](http://distanceengines.cvs.sourceforge.net) | CVS | %BASE%\Analysis Engines\CDS\Engine\mcds\ |
-
-check
-
-| File | Location | Visual Basic | Install |
-| ---- | -------- | ------------ | ------- |
-| | | | |
-
-check
-
-| **Common Controls Replacement Project (CCRP)** | | | |
 | ccrpbds6.dll | C:\Program Files\CCRP\ccrpbds6-b2\ | Y | Y |
 | | | | |
 | **Compaq Visual Fortran Professional** | | | |
