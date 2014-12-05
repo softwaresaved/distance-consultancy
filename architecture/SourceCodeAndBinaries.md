@@ -165,6 +165,12 @@ Locations are those expected by the Wise Installer.
 
 "Release" denotes components arising within a Distance for Windows release - see [Release structure](./ReleaseStructure.html).
 
+| Repository | Type | Local Folder |
+| ---------- | ---- | ------------ |
+| [http://distanceengines.cvs.sourceforge.net](http://distanceengines.cvs.sourceforge.net) | CVS | %BASE%\Analysis Engines\CDS\Engine\mcds\ |
+
+check
+
 | File | Location | VB | Install |
 | ---- | -------- | -- | ------- |
 | | | | |
