@@ -6,8 +6,8 @@ title: Set up Fortran development environment
 
 ## Compaq Visual Fortran 6.6 Professional
 
-| Web site | |
-| - | - |
+| Web site | - |
+| -------- | ------- |
 | Use | Fortran development, edit .dsw projects, compile into .exe e.g. build MCDS.exe analysis engine |
 | Recommended version | - |
 | License | proprietary |
