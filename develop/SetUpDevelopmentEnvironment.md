@@ -215,7 +215,7 @@ These are required to build Distance as shown in [Source code and binaries](../a
 
 ---
 
-## Miscellaneous:
+## Other tools for Visual Basic-related development
 
 ### Common Controls Replacement Project Context menu Register-Unregister (optional)
 
@@ -249,41 +249,12 @@ Install:
 
 ---
 
-## Release build tools
-
-### Wise Installation System 9.02
-
-* Edit .wse projects
-* Build installer .exe e.g. Distance installer
-
-Install:
-
-* Run Wise\Wise902.exe
-* Enter registration code
-* Install VB6SP6 runtime:
-  - Start Wise by selecting Start => All Programs => Wise Solutions => Wise Installation System
-  - Select Help => Download Runtimes
-  - Click Next 
-  - Under Available runtimes, check Visual Basic 6 service pack 6
-  - Click Next 
-  - Click Finish
-
-### WinZip and WinZip Self Extractor
-
-* Bundle installer .exe and .rtf into .zip
-* Convert .zip to self-extracting .exe e.g. Distance self-extracting installer
-
-Install:
-
-* Install WinZip by running WinZip\WinZip100.exe
-* Enter registration code from WinZip\winzip10serial_number.txt  
-* Install self-extractor by running Winzip\winzipse22.exe
-* Enter registration code from WinZip\winzipseserial_number.txt  
+## Documentation and image tools
 
 ### Microsoft Word 2003
 
 * Edit .doc documents e.g. Distance user's guide and built-in help
-* **Not* to be used to edit .rtf files
+* **Not** to be used to edit .rtf files
 
 Install:
 
@@ -296,6 +267,38 @@ Install:
 Install:
 
 * Comes with Microsoft Windows
+
+### Axialis IconWorkshop 6 (optional)
+
+* Edit .ico icons
+
+Install:
+
+* Run IconWorkshop\IconWorkshop-Home-6.3.3.0-Eng.exe
+* Enter registration code
+* Start IconWorkshop by selecting Start => All Programs => Axialis Software => Axialis IconWorkshop
+* Select Help => Check for Updates...
+* Install updates
+
+### Microsoft PowerPoint
+
+* Edit .ppt slides
+* Convert .ppt slides to Windows Metafile .wmf files
+
+Install:
+
+* See [Microsoft Office](#microsoft-office) above
+
+### Microsoft PhotoDraw
+
+* Edit Microsoft Image Composer .mix files e.g. Distance splash screen
+* Convert .mix to .jpg
+* Free with Microsoft Office 2000 Premium
+* **Note** Has been known to screw up the image handling so it is recommended that you don't install this on your machine, but install it within a VMWare virtual machine
+
+Install:
+
+* Install from CD
 
 ### Windows HTML Help Workshop
 
@@ -346,46 +349,38 @@ Install:
 
 * Install from CD
 
-### ESRI ArcGIS (optional)
+--
 
-* View and edit ESRI shapefiles from geographic projects
-* Version 3 or above
+## Release build tools
 
-Install:
+### Wise Installation System 9.02
 
-* Install from CD
-
-### Axialis IconWorkshop 6 (optional)
-
-* Edit .ico icons
+* Edit .wse projects
+* Build installer .exe e.g. Distance installer
 
 Install:
 
-* Run IconWorkshop\IconWorkshop-Home-6.3.3.0-Eng.exe
+* Run Wise\Wise902.exe
 * Enter registration code
-* Start IconWorkshop by selecting Start => All Programs => Axialis Software => Axialis IconWorkshop
-* Select Help => Check for Updates...
-* Install updates
+* Install VB6SP6 runtime:
+  - Start Wise by selecting Start => All Programs => Wise Solutions => Wise Installation System
+  - Select Help => Download Runtimes
+  - Click Next 
+  - Under Available runtimes, check Visual Basic 6 service pack 6
+  - Click Next 
+  - Click Finish
 
-### Microsoft PowerPoint
+### WinZip and WinZip Self Extractor
 
-* Edit .ppt slides
-* Convert .ppt slides to Windows Metafile .wmf files
-
-Install:
-
-* See [Microsoft Office](#microsoft-office) above
-
-### Microsoft PhotoDraw
-
-* Edit Microsoft Image Composer .mix files e.g. Distance splash screen
-* Convert .mix to .jpg
-* Free with Microsoft Office 2000 Premium
-* **Note** Has been known to screw up the image handling so it is recommended that you don't install this on your machine, but install it within a VMWare virtual machine
+* Bundle installer .exe and .rtf into .zip
+* Convert .zip to self-extracting .exe e.g. Distance self-extracting installer
 
 Install:
 
-* Install from CD
+* Install WinZip by running WinZip\WinZip100.exe
+* Enter registration code from WinZip\winzip10serial_number.txt  
+* Install self-extractor by running Winzip\winzipse22.exe
+* Enter registration code from WinZip\winzipseserial_number.txt  
 
 ---
 
@@ -401,7 +396,7 @@ Install:
 
 ---
 
-## General
+## General tools
 
 ### VMWare Player (optional)
 
@@ -425,11 +420,19 @@ Install:
 
 * Get copy from Len
 
-### Microsoft Excel
+### ESRI ArcGIS (optional)
+
+* View and edit ESRI shapefiles from geographic projects
+* Version 3 or above
+
+Install:
+
+* Install from CD
+
+### Microsoft Excel (optional)
 
 * Edit .xls files e.g. Distance sample project raw data
 
 Install:
 
 * See [Microsoft Office](#microsoft-office) above
-
