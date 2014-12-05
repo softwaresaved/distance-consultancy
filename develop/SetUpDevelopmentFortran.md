@@ -21,8 +21,8 @@ Download and install:
 
 ## Ec.exe
 
-| Web site | |
-| - | - |
+| Web site | - |
+| -------- | ------- |
 | Use | Stand-alone executable to capture standard output and standard error when running another executable |
 | Recommended version | - |
 | License | proprietary |
@@ -37,8 +37,8 @@ Download and install:
 
 ## IMSL Numerical routines
 
-| Web site | |
-| - | - |
+| Web site | - |
+| -------- | ------- |
 | Use | High-performance mathematical and statistical Fortran algorithms. |
 | Recommended version | - |
 | License | proprietary |
@@ -51,8 +51,8 @@ Download and install:
 
 ## Array Visualizer (optional)
 
-| Web site | |
-| - | - |
+| Web site | - |
+| -------- | ------- |
 | Use | View and analyse array data graphically |
 | Recommended version | - |
 | License | proprietary |
@@ -66,7 +66,7 @@ Download and install:
 ## TortoiseCVS
 
 | Web site | [TortoiseCVS](http://www.tortoisecvs.org/) |
-| - | - |
+| -------- | ------------------------------------------ |
 | Use | Fortran source code management using CVS |
 | Recommended version | any |
 | License | GNU General Public License |
@@ -81,7 +81,7 @@ Download and install:
 ## Concurrent Version System
 
 | Web site | [Concurrent Version System](http://www.nongnu.org/cvs/) |
-| - | - |
+| -------- | ------------------------------------------------------- |
 | Use | Fortran source code management using CVS |
 | Recommended version | any |
 | License | GNU General Public License |
