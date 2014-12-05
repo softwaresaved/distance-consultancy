@@ -173,9 +173,6 @@ Locations are those expected by the Wise Installer.
 | **Compaq Visual Fortran Professional** | | | |
 | Ec.exe | %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Ec.exe <br/> %BASE%\Numerical Server\NEngineHost\EC.EXE | n/a | Y |
 | | | | |
-
-check
-
 | **ComponentOne VSFlex** | | | |
 | VSFLEX7D.OCX | C:\WINDOWS\system32\ | Y | Y |
 | | | | |
