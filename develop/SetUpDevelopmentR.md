@@ -49,7 +49,7 @@ Create shortcuts (optional):
 ## Rtools
 
 | Web site | [Rtools](http://cran.r-project.org/bin/windows/Rtools) |
-| -- | -- |
+| -------- | ------------------------------------------------------ |
 | Use | Utilities for building R packages on Windows |
 | Recommended version | 3.1 |
 | License | GNU General Public License v2 |
@@ -66,8 +66,8 @@ Download and install:
 
 Install the following R packages using install.packages:
 
-| Package | |
-| - | - |
+| Package |   |
+| ------- | - |
 | Web site | [roxygen2](http://cran.r-project.org/web/packages/roxygen2/) |
 | Use | Tools for auto-generating API documentation |
 | License | GNU General Public License 2 and 3 |
@@ -89,8 +89,8 @@ For example:
 
 Install the following R packages for MRDS:
 
-| Package | |
-| - | - |
+| Package |   |
+| ------- | - |
 | Web site | [optimx](http://cran.r-project.org/web/packages/optimx/) |
 | License | GNU General Public License 2 |
 | | |
@@ -104,8 +104,8 @@ For example:
 
 Install the following R packages for DSM:
 
-| Package | |
-| - | - |
+| Package |   |
+| ------- | - |
 | Web site | [ggplot2](http://cran.r-project.org/web/packages/ggplot2/) |
 | License | GNU General Public License 2 |
 | | |
@@ -135,7 +135,7 @@ For example:
 ## Git for Windows
 
 | Web site | [Git for Windows](http://msysgit.github.io/) |
-| - | - |
+| -------- | -------------------------------------------- |
 | Use | R source code management using Git |
 | Recommended version | any |
 | License | GNU Lesser-GPL |
@@ -151,7 +151,7 @@ Download and install:
 ## RStudio (optional)
 
 | Web site | [RStudio](http://www.rstudio.com/) |
-| - | - |
+| -------- | ---------------------------------- |
 | Use | Edit and run .Rmd [R Markdown](http://rmarkdown.rstudio.com/) files e.g. R vignettes on the [Distance](http://distancesampling.org) web site |
 | Recommended version | any compliant with R above |
 | License | GNU Affero General Public License |
@@ -168,7 +168,7 @@ Download and install:
 ## Tinn-R Editor (optional)
 
 | Web site | [Tinn-R Editor](http://sourceforge.net/projects/tinn-r/) |
-| - | - |
+| -------- | -------------------------------------------------------- |
 | Use | Develop and test R code within a GUI |
 | Recommended version | - |
 | License | GNU General Public License |
@@ -178,7 +178,7 @@ Download and install:
 ## packrat (optional)
 
 | Web site | [packrat](http://cran.r-project.org/web/packages/packrat/) |
-| - | - |
+| -------- | ---------------------------------------------------------- |
 | Use | R package dependency management |
 | Recommended version | - |
 | License | GNU General Public License 2 |
