@@ -159,13 +159,11 @@ Many of the Visual Basic project folders have Graphics\ sub-folders with icons, 
 
 ## Third-party components
 
-* Locations are those expected by the Wise Installer.
-* "VB" denotes components explicity mentioned in Visual Basic projects - see [Visual Basic project dependencies](./VisualBasicProjectDependencies.html).
-* "Release" denotes components arising within a Distance for Windows release - see [Release structure](./ReleaseStructure.html).
+Locations are those expected by the Wise Installer.
 
-<p/>
+"VB" denotes components explicity mentioned in Visual Basic projects - see [Visual Basic project dependencies](./VisualBasicProjectDependencies.html).
 
-Summary:
+"Release" denotes components arising within a Distance for Windows release - see [Release structure](./ReleaseStructure.html).
 
 | File | Location | VB | Install |
 | ---- | -------- | -- | ------- |
