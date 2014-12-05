@@ -167,6 +167,7 @@ Locations are those expected by the Wise Installer.
 
 | File | Location | Visual Basic | Install |
 | ---- | -------- | ------------ | ------- |
+| **Common Controls Replacement Project (CCRP)** | | | |
 | [http://distanceengines.cvs.sourceforge.net](http://distanceengines.cvs.sourceforge.net) | CVS | %BASE%\Analysis Engines\CDS\Engine\mcds\ |
 
 check
