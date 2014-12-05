@@ -7,7 +7,7 @@ title: Set up R development environment
 ## R
 
 | Web site | [R](http://www.r-project.org) |
-| - | - |
+| -------- | ----------------------------- |
 | Use | Develop and test R code e.g. MRDS and DSM analysis engines <br/> Build R packages via R CMD |
 | Recommended version | 3.1.0, 32-bit |
 | License | GNU General Public License |
