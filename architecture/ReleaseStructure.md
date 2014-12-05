@@ -227,7 +227,7 @@ Sample Distance project files and folders and raw data for the user's guide.
 Each .dst file has a corresponding .dat\ folder (not shown).
 
 | File / folder |
-| ---- ---------|
+| --------------|
 | Example1.xls |
 | Example1Backup.txt |
 | Example2.xls |

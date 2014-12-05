@@ -163,6 +163,8 @@ Many of the Visual Basic project folders have Graphics\ sub-folders with icons, 
 * "VB" denotes components explicity mentioned in Visual Basic projects - see [Visual Basic project dependencies](./VisualBasicProjectDependencies.html).
 * "Release" denotes components arising within a Distance for Windows release - see [Release structure](./ReleaseStructure.html).
 
+<p/>
+
 | File | Location | VB | Install |
 | ---- | -------- | -- | ------- |
 | **Common Controls Replacement Project (CCRP)** | | | |
