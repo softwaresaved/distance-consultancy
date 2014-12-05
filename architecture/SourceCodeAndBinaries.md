@@ -167,6 +167,9 @@ Locations are those expected by the Wise Installer.
 
 | File | Location | VB | Install |
 | ---- | -------- | -- | ------- |
+
+check
+
 | **Common Controls Replacement Project (CCRP)** | | | |
 | ccrpbds6.dll | C:\Program Files\CCRP\ccrpbds6-b2\ | Y | Y |
 | | | | |
