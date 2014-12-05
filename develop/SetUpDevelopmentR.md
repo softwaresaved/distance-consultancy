@@ -49,7 +49,7 @@ Create shortcuts (optional):
 ## Rtools
 
 | Web site | [Rtools](http://cran.r-project.org/bin/windows/Rtools) |
-| - | - |
+| -- | -- |
 | Use | Utilities for building R packages on Windows |
 | Recommended version | 3.1 |
 | License | GNU General Public License v2 |
