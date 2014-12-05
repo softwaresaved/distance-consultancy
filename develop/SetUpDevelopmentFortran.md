@@ -6,6 +6,7 @@ title: Set up Fortran development environment
 
 ## Compaq Visual Fortran 6.6 Professional
 
+| Web site | |
 | - | - |
 | Use | Fortran development, edit .dsw projects, compile into .exe e.g. build MCDS.exe analysis engine |
 | Recommended version | - |
@@ -20,6 +21,7 @@ Download and install:
 
 ## Ec.exe
 
+| Web site | |
 | - | - |
 | Use | Stand-alone executable to capture standard output and standard error when running another executable |
 | Recommended version | - |
@@ -35,6 +37,7 @@ Download and install:
 
 ## IMSL Numerical routines
 
+| Web site | |
 | - | - |
 | Use | High-performance mathematical and statistical Fortran algorithms. |
 | Recommended version | - |
@@ -48,6 +51,7 @@ Download and install:
 
 ## Array Visualizer (optional)
 
+| Web site | |
 | - | - |
 | Use | View and analyse array data graphically |
 | Recommended version | - |
@@ -61,8 +65,8 @@ Download and install:
 
 ## TortoiseCVS
 
-| - | - |
 | Web site | [TortoiseCVS](http://www.tortoisecvs.org/) |
+| - | - |
 | Use | Fortran source code management using CVS |
 | Recommended version | any |
 | License | GNU General Public License |
@@ -76,8 +80,8 @@ Download and install:
 
 ## Concurrent Version System
 
-| - | - |
 | Web site | [Concurrent Version System](http://www.nongnu.org/cvs/) |
+| - | - |
 | Use | Fortran source code management using CVS |
 | Recommended version | any |
 | License | GNU General Public License |

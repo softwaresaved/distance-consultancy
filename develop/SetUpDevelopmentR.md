@@ -6,10 +6,9 @@ title: Set up R development environment
 
 ## R
 
-| - | - |
 | Web site | [R](http://www.r-project.org) |
-| Use | Develop and test R code e.g. MRDS and DSM analysis engines
-| | Build R packages via R CMD |
+| - | - |
+| Use | Develop and test R code e.g. MRDS and DSM analysis engines <br/> Build R packages via R CMD |
 | Recommended version | 3.1.0, 32-bit |
 | License | GNU General Public License |
 
@@ -49,8 +48,8 @@ Create shortcuts (optional):
 
 ## Rtools
 
-| - | - |
 | Web site | [Rtools](http://cran.r-project.org/bin/windows/Rtools) |
+| - | - |
 | Use | Utilities for building R packages on Windows |
 | Recommended version | 3.1 |
 | License | GNU General Public License v2 |
@@ -67,17 +66,18 @@ Download and install:
 
 Install the following R packages using install.packages:
 
+| Package | |
 | - | - |
-| Package | [roxygen2](http://cran.r-project.org/web/packages/roxygen2/) |
+| Web site | [roxygen2](http://cran.r-project.org/web/packages/roxygen2/) |
 | Use | Tools for auto-generating API documentation |
 | License | GNU General Public License 2 and 3 |
 | | |
-| Package | [devtools](http://cran.r-project.org/web/packages/devtools/) |
+| Web site | [devtools](http://cran.r-project.org/web/packages/devtools/) |
 | Use | Tools for preparing and creating R packages
 | | Needs Rtools and roxygen2. |
 | License | GNU General Public License 2 and 3 |
 | | |
-| Package | [testthat](http://cran.r-project.org/web/packages/testthat/) |
+| Web site | [testthat](http://cran.r-project.org/web/packages/testthat/) |
 | Use | Unit testing framework |
 | License | MIT license |
 
@@ -89,11 +89,12 @@ For example:
 
 Install the following R packages for MRDS:
 
+| Package | |
 | - | - |
-| Package | [optimx](http://cran.r-project.org/web/packages/optimx/) |
+| Web site | [optimx](http://cran.r-project.org/web/packages/optimx/) |
 | License | GNU General Public License 2 |
 | | |
-| Package | [Rsolnp](http://cran.r-project.org/web/packages/Rsolnp/) |
+| Web site | [Rsolnp](http://cran.r-project.org/web/packages/Rsolnp/) |
 | License | GNU General Public License 2 and 3 |
 
 For example:
@@ -103,20 +104,21 @@ For example:
 
 Install the following R packages for DSM:
 
+| Package | |
 | - | - |
-| Package | [ggplot2](http://cran.r-project.org/web/packages/ggplot2/) |
+| Web site | [ggplot2](http://cran.r-project.org/web/packages/ggplot2/) |
 | License | GNU General Public License 2 |
 | | |
-| Package | [statmod](http://cran.r-project.org/web/packages/statmod/) |
+| Web site | [statmod](http://cran.r-project.org/web/packages/statmod/) |
 | License | GNU General Public License 2 and 3 |
 | | |
-| Package | [tweedie](http://cran.r-project.org/web/packages/tweedie/) |
+| Web site | [tweedie](http://cran.r-project.org/web/packages/tweedie/) |
 | License | GNU General Public License 2 and 3 |
 | | |
-| Package | [Distance](http://cran.r-project.org/web/packages/Distance/) |
+| Web site | [Distance](http://cran.r-project.org/web/packages/Distance/) |
 | License | GNU General Public License 2 and 3 |
 | | |
-| Package | [mrds](http://cran.r-project.org/web/packages/mrds/) |
+| Web site | [mrds](http://cran.r-project.org/web/packages/mrds/) |
 |  | You can install this locally during development |
 | License | GNU General Public License 2 and 3 |
 
@@ -132,8 +134,8 @@ For example:
 
 ## Git for Windows
 
-| - | - |
 | Web site | [Git for Windows](http://msysgit.github.io/) |
+| - | - |
 | Use | R source code management using Git |
 | Recommended version | any |
 | License | GNU Lesser-GPL |
@@ -148,9 +150,9 @@ Download and install:
 
 ## RStudio (optional)
 
-| - | - |
 | Web site | [RStudio](http://www.rstudio.com/) |
-| Edit and run .Rmd [R Markdown](http://rmarkdown.rstudio.com/) files e.g. R vignettes on the [Distance](http://distancesampling.org) web site |
+| - | - |
+| Use | Edit and run .Rmd [R Markdown](http://rmarkdown.rstudio.com/) files e.g. R vignettes on the [Distance](http://distancesampling.org) web site |
 | Recommended version | any compliant with R above |
 | License | GNU Affero General Public License |
 
@@ -165,9 +167,9 @@ Download and install:
 
 ## Tinn-R Editor (optional)
 
-| - | - |
 | Web site | [Tinn-R Editor](http://sourceforge.net/projects/tinn-r/) |
-| Used for | Develop and test R code within a GUI |
+| - | - |
+| Use | Develop and test R code within a GUI |
 | Recommended version | - |
 | License | GNU General Public License |
 
@@ -175,9 +177,9 @@ Download and install:
 
 ## packrat (optional)
 
-| - | - |
 | Web site | [packrat](http://cran.r-project.org/web/packages/packrat/) |
-| Used for | R package dependency management |
+| - | - |
+| Use | R package dependency management |
 | Recommended version | - |
 | License | GNU General Public License 2 |
 
