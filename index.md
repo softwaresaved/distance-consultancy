@@ -24,9 +24,10 @@ The pages in this guide were written using Distance for Windows 6.2 release and 
 Getting started:
 
 * [Required knowledge](./develop/RequiredKnowledge.html)
-* [Set up a development environment](./develop/SetUpDevelopmentEnvironment.html)
+* [Set up development environment](./develop/SetUpDevelopmentEnvironment.html)
 * [Set up Fortran development environment](./develop/SetUpDevelopmentFortran.html)
 * [Set up R development environment](./develop/SetUpDevelopmentR.html)
+* [File types and tools](./develop/FileTypesTools.html) - files and directories and their corresponding tools.
 
 Source code access and management:
 

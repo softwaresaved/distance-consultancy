@@ -6,13 +6,9 @@ title: Set up Fortran development environment
 
 ## Compaq Visual Fortran 6.6 Professional
 
-| Web site | - |
-| -------- | ------- |
-| Use | Fortran development, edit .dsw projects, compile into .exe e.g. build MCDS.exe analysis engine |
-| Recommended version | - |
-| License | proprietary |
+* Fortran development, edit .dsw projects, compile into .exe e.g. build MCDS.exe analysis engine
 
-Download and install:
+Install:
 
 * Install from Fortran CD
 * Update to 6.6C by running %BASE%Extras\DistanceDevCD\FORTRAN\CVF-66-66C3.exe
@@ -21,13 +17,9 @@ Download and install:
 
 ## Ec.exe
 
-| Web site | - |
-| -------- | ------- |
-| Use | Stand-alone executable to capture standard output and standard error when running another executable |
-| Recommended version | - |
-| License | proprietary |
+* Stand-alone executable to capture standard output and standard error when running another executable
 
-Download and install:
+Install:
 
 * Provided as part of Compaq Visual Fortran Professional. See also:
   - %BASE%\Analysis Engines\Shared Stuff\NEngineInterfaceUtilities\Ec.exe
@@ -37,13 +29,9 @@ Download and install:
 
 ## IMSL Numerical routines
 
-| Web site | - |
-| -------- | ------- |
-| Use | High-performance mathematical and statistical Fortran algorithms. |
-| Recommended version | - |
-| License | proprietary |
+* High-performance mathematical and statistical Fortran algorithms
 
-Download and install:
+Install:
 
 *  Provided as part of Compaq Visual Fortran Professional
 
@@ -51,13 +39,9 @@ Download and install:
 
 ## Array Visualizer (optional)
 
-| Web site | - |
-| -------- | ------- |
-| Use | View and analyse array data graphically |
-| Recommended version | - |
-| License | proprietary |
+* View and analyse array data graphically
 
-Download and install:
+Install:
 
 * Install from CD
 
@@ -65,13 +49,11 @@ Download and install:
 
 ## TortoiseCVS
 
-| Web site | [TortoiseCVS](http://www.tortoisecvs.org/) |
-| -------- | ------------------------------------------ |
-| Use | Fortran source code management using CVS |
-| Recommended version | any |
-| License | GNU General Public License |
+* [TortoiseCVS](http://www.tortoisecvs.org/)
+* Fortran source code management using CVS
+* GNU General Public License
 
-Download and install:
+Install:
 
 * Download from [Downloads](http://www.tortoisecvs.org/download.shtml)
 * Double-click .exe e.g. TortoiseCVS-1.12.5.exe
@@ -80,13 +62,11 @@ Download and install:
 
 ## Concurrent Version System
 
-| Web site | [Concurrent Version System](http://www.nongnu.org/cvs/) |
-| -------- | ------------------------------------------------------- |
-| Use | Fortran source code management using CVS |
-| Recommended version | any |
-| License | GNU General Public License |
+* [Concurrent Version System](http://www.nongnu.org/cvs/)
+* Fortran source code management using CVS
+* GNU General Public License
 
-Download and install:
+Install:
 
 * Download from [FTP directory](http://ftp.gnu.org/non-gnu/cvs/) 
   - Binary releases are within a [binary/stable/](http://ftp.gnu.org/non-gnu/cvs/binary/stable/x86-woe/) sub-directory
