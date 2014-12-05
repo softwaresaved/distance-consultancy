@@ -171,8 +171,8 @@ Locations are those expected by the Wise Installer.
 
 check
 
-| File | Location | VB | Install |
-| ---- | -------- | -- | ------- |
+| File | Location | Visual Basic | Install |
+| ---- | -------- | ------------ | ------- |
 | | | | |
 
 check
