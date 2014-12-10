@@ -176,3 +176,19 @@ Install:
     devtools::install_github("rstudio/packrat")
 
 * For more information, see [Packrat Reproducible package management for R](http://rstudio.github.io/packrat/)
+
+---
+
+## gdata (optional)
+
+* [gdata](http://cran.r-project.org/web/packages/gdata)
+* R data manipulation tools including routines to read data in Microsoft Excel spreadsheets.
+* GNU General Public License 2
+
+---
+
+## ActiveState ActivePerl (optional)
+
+* [ActivePerl](http://www.activestate.com/activeperl/)
+* A pre-requisite for gdata above.
+* ActiveState Community Edition Software License Agreement
