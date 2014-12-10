@@ -69,6 +69,103 @@ R:
 
 ---
 
+## Build R DSM and MRDS analysis engines from within R
+
+* Start R
+* Load the devtools library:
+
+<p/>
+
+    library(devtools)
+
+* Check package (--no-manual suppresses an attempt to build a PDF of the manual):
+
+<p/>
+
+    check("dsm", args="--no-manual")
+    check("mrds", args="--no-manual")
+
+* Install source package:
+
+<p/>
+
+    install("mrds")
+    install("dsm")
+
+* Build zip:
+
+<p/>
+
+    build("dsm",binary=T)
+    build("mrds",binary=T)
+
+* The zip files will be named:
+
+<p/>
+
+    dsm_M.N.R.zip
+    mrds_M.N.R.zip
+
+* Major version number (M), minor version number (N), revision number (R) depend on Version value in DESCRIPTION file e.g.
+  - For DSM, `Version: 2.2.3`
+  - For MRDS, `Version: 2.1.5`
+
+---
+
+## Create R DSM and MRDS Roxygen documentation
+
+* Start R
+* Change into the parent of the directory for which documentation is to be created
+
+* Load the devtools library:
+
+<p/>
+
+    library(devtools)
+   
+* Load the files into a package environment e.g.
+
+<p/>
+
+    load_all("dsm")
+    load_all("mrds")
+
+* Document the package e.g.
+
+<p/>
+
+    document("dsm")
+    document("mrds")
+
+---
+
+## Run DSM and MRDS examples
+
+* Start R
+* Change into the parent of the directory for which documentation is to be created
+
+* Load the devtools library:
+
+<p/>
+
+    library(devtools)
+
+* Load the files into a package environment e.g.
+
+<p/>
+
+    load_all("dsm")
+    load_all("mrds")
+
+* Run the examples e.g.
+
+<p/>
+
+    run_examples("dsm")
+    run_examples("mrds")
+
+---
+
 ## Install source package and build zip via package
 
 Alternatively, one can build a .tar.gz package:
