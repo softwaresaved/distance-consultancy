@@ -284,11 +284,11 @@ This assumes that:
 
     start /WAIT "" "C:\Program Files\Microsoft Office 2003\OFFICE11\winword.exe" distance-master.doc /q /n /mFilePrintDefault /mFileSave /mFileExit 
 
-* Copy file:
+* Move file:
 
 <p/>
 
-    copy "%userprofile%\My Documents" %BASE%Extras\External Documentation\Documents\Manual\distance-master.pdf
+    move "%userprofile%\My Documents\distance-master.pdf" %BASE%Extras\External Documentation\Documents\Manual\
 
 * Check:
   - Double-click %BASE%Extras\External Documentation\Documents\Manual\distance-master.pdf
