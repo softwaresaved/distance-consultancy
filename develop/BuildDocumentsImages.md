@@ -265,9 +265,8 @@ This assumes that:
 * Adobe PDF is the default printer
 * Adobe PDF will not prompt for a file name or display the PDF. To configure this:
   - Select Start => Printers and Faxes
-  - Right-click Adobe PDF => Preferences
-  - Click  Printing Preferences...
-  - Select Adobe PDF Output Folder: My Documents\*.pdf
+  - Right-click Adobe PDF => Printing Preferences...
+  - Select Adobe PDF Output Folder: My Documents\\*.pdf
   - Uncheck View Adobe PDF results
   - Click OK
 
@@ -283,7 +282,7 @@ This assumes that:
 
 <p/>
 
-    start /WAIT "" "C:\Program Files (x86)\Microsoft Office\Office11\winword.exe" distance-master.doc /q /n /mFilePrintDefault /mFileSave /mFileExit 
+    start /WAIT "" "C:\Program Files\Microsoft Office 2003\OFFICE11\winword.exe" distance-master.doc /q /n /mFilePrintDefault /mFileSave /mFileExit 
 
 * Copy file:
 
