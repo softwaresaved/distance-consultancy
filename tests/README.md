@@ -21,7 +21,7 @@ Tolerances are used to avoid numerical precision issues.
 Example test scripts
 --------------------
 
-This directory provides example test scripts showing R testthat functions for validating MCDS using a set of input files and known-correct output files for these input files. It provides examples of:
+This directory provides example test scripts showing R [testthat](http://cran.r-project.org/web/packages/testthat/index.html) functions for validating MCDS using a set of input files and known-correct output files for these input files. It provides examples of:
 
 * Using R's system2 command to run MCDS.exe from the command-line
 * Testing the return code
